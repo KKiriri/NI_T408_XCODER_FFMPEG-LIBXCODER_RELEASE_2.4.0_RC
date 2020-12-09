@@ -1,0 +1,221 @@
+\hypertarget{ni__device__test_8h}{}\section{ni\+\_\+device\+\_\+test.\+h File Reference}
+\label{ni__device__test_8h}\index{ni\_device\_test.h@{ni\_device\_test.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct__device__state}{\+\_\+device\+\_\+state}}
+\item 
+struct \mbox{\hyperlink{struct__tx__data}{\+\_\+tx\+\_\+data}}
+\item 
+struct \mbox{\hyperlink{struct_recv_data_struct__}{Recv\+Data\+Struct\+\_\+}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{ni__device__test_8h_ac52843a63d161bc12b9d52990114f51b}{L\+R\+E\+T\+U\+RN}}~goto end;
+\item 
+\#define \mbox{\hyperlink{ni__device__test_8h_a29fd18bed01c4d836c7ebfe73a125c3f}{E\+ND}}~end\+:
+\item 
+\#define \mbox{\hyperlink{ni__device__test_8h_a7fb4f59dd9e3c45fc8a68ae88a47b756}{N\+V\+M\+E\+\_\+\+C\+M\+D\+\_\+\+S\+E\+M\+\_\+\+P\+R\+O\+T\+E\+CT}}~1
+\item 
+\#define \mbox{\hyperlink{ni__device__test_8h_afddfc0468a0fb0d80c116b5e16b9be17}{F\+I\+L\+E\+\_\+\+N\+A\+M\+E\+\_\+\+L\+EN}}~256
+\item 
+\#define \mbox{\hyperlink{ni__device__test_8h_a32a7450a8f17e7886cfccc12d1494a97}{X\+C\+O\+D\+E\+R\+\_\+\+A\+P\+P\+\_\+\+T\+R\+A\+N\+S\+C\+O\+DE}}~0
+\item 
+\#define \mbox{\hyperlink{ni__device__test_8h_ac82ff02954350ef02dfea1ad8b8fe284}{X\+C\+O\+D\+E\+R\+\_\+\+A\+P\+P\+\_\+\+D\+E\+C\+O\+DE}}~1
+\item 
+\#define \mbox{\hyperlink{ni__device__test_8h_a1cad8e18d49fd29509de9127700d1b59}{X\+C\+O\+D\+E\+R\+\_\+\+A\+P\+P\+\_\+\+E\+N\+C\+O\+DE}}~2
+\item 
+\#define \mbox{\hyperlink{ni__device__test_8h_ae50230b3f6e89eccd6da7b4999fc7fd2}{E\+N\+C\+\_\+\+C\+O\+N\+F\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+S\+I\+ZE}}~0x100
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct__device__state}{\+\_\+device\+\_\+state}} \mbox{\hyperlink{ni__device__test_8h_a7eed090cbf1c12074ab5b9735903520b}{device\+\_\+state\+\_\+t}}
+\item 
+typedef struct \mbox{\hyperlink{struct__tx__data}{\+\_\+tx\+\_\+data}} \mbox{\hyperlink{ni__device__test_8h_a74d47b20f1cc8fbc38baa0e170fae378}{tx\+\_\+data\+\_\+t}}
+\item 
+typedef struct \mbox{\hyperlink{struct_recv_data_struct__}{Recv\+Data\+Struct\+\_\+}} \mbox{\hyperlink{ni__device__test_8h_a5f43617741c293f248e311866bc0d69d}{rx\+\_\+data\+\_\+t}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{ni__device__test_8h_a4dcb9ce6c7eb55007942b16ab253a2ad}{decoder\+\_\+send\+\_\+data}} (\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$p\+\_\+dec\+\_\+ctx, \mbox{\hyperlink{ni__device__api_8h_a4670be36ead87481f4a7c8b76e2b5dac}{ni\+\_\+session\+\_\+data\+\_\+io\+\_\+t}} $\ast$p\+\_\+in\+\_\+data, int st\+Flag, int input\+\_\+video\+\_\+width, int input\+\_\+video\+\_\+height, int pfs, int file\+Size, unsigned long $\ast$sent\+Total, int printT, \mbox{\hyperlink{ni__device__test_8h_a7eed090cbf1c12074ab5b9735903520b}{device\+\_\+state\+\_\+t}} $\ast$x\+State)
+\begin{DoxyCompactList}\small\item\em Send decoder input data. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{ni__device__test_8h_a170ee2a6d357f7b694915dd30e97b802}{decoder\+\_\+receive\+\_\+data}} (\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$p\+\_\+dec\+\_\+ctx, \mbox{\hyperlink{ni__device__api_8h_a4670be36ead87481f4a7c8b76e2b5dac}{ni\+\_\+session\+\_\+data\+\_\+io\+\_\+t}} $\ast$p\+\_\+out\+\_\+data, int output\+\_\+video\+\_\+width, int output\+\_\+video\+\_\+height, F\+I\+LE $\ast$pfr, unsigned long long $\ast$recv\+Total, int printT, int write\+To\+File, \mbox{\hyperlink{ni__device__test_8h_a7eed090cbf1c12074ab5b9735903520b}{device\+\_\+state\+\_\+t}} $\ast$x\+State)
+\begin{DoxyCompactList}\small\item\em Receive output data from decoder. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{ni__device__test_8h_a44528219b8d8d953dff596ab44615059}{encoder\+\_\+send\+\_\+data}} (\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$p\+\_\+enc\+\_\+ctx, \mbox{\hyperlink{ni__device__api_8h_a4670be36ead87481f4a7c8b76e2b5dac}{ni\+\_\+session\+\_\+data\+\_\+io\+\_\+t}} $\ast$p\+\_\+in\+\_\+data, int st\+Flag, int input\+\_\+video\+\_\+width, int input\+\_\+video\+\_\+height, int pfs, int file\+Size, unsigned long $\ast$sent\+Size, int height\+\_\+aligned, \mbox{\hyperlink{ni__device__test_8h_a7eed090cbf1c12074ab5b9735903520b}{device\+\_\+state\+\_\+t}} $\ast$x\+State)
+\item 
+int \mbox{\hyperlink{ni__device__test_8h_a21176f459223afa58e5b0578867af142}{encoder\+\_\+send\+\_\+data2}} (\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$p\+\_\+enc\+\_\+ctx, \mbox{\hyperlink{ni__device__api_8h_a4670be36ead87481f4a7c8b76e2b5dac}{ni\+\_\+session\+\_\+data\+\_\+io\+\_\+t}} $\ast$p\+\_\+out\+\_\+data, int st\+Flag, int input\+\_\+video\+\_\+width, int input\+\_\+video\+\_\+height, int pfs, int file\+Size, unsigned long $\ast$sent\+Size, int aligned\+\_\+height, \mbox{\hyperlink{ni__device__test_8h_a7eed090cbf1c12074ab5b9735903520b}{device\+\_\+state\+\_\+t}} $\ast$x\+State)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{ni__device__test_8h_ae50230b3f6e89eccd6da7b4999fc7fd2}\label{ni__device__test_8h_ae50230b3f6e89eccd6da7b4999fc7fd2}} 
+\index{ni\_device\_test.h@{ni\_device\_test.h}!ENC\_CONF\_STRUCT\_SIZE@{ENC\_CONF\_STRUCT\_SIZE}}
+\index{ENC\_CONF\_STRUCT\_SIZE@{ENC\_CONF\_STRUCT\_SIZE}!ni\_device\_test.h@{ni\_device\_test.h}}
+\subsubsection{\texorpdfstring{ENC\_CONF\_STRUCT\_SIZE}{ENC\_CONF\_STRUCT\_SIZE}}
+{\footnotesize\ttfamily \#define E\+N\+C\+\_\+\+C\+O\+N\+F\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+S\+I\+ZE~0x100}
+
+
+
+Definition at line 53 of file ni\+\_\+device\+\_\+test.\+h.
+
+\mbox{\Hypertarget{ni__device__test_8h_a29fd18bed01c4d836c7ebfe73a125c3f}\label{ni__device__test_8h_a29fd18bed01c4d836c7ebfe73a125c3f}} 
+\index{ni\_device\_test.h@{ni\_device\_test.h}!END@{END}}
+\index{END@{END}!ni\_device\_test.h@{ni\_device\_test.h}}
+\subsubsection{\texorpdfstring{END}{END}}
+{\footnotesize\ttfamily \#define E\+ND~end\+:}
+
+
+
+Definition at line 40 of file ni\+\_\+device\+\_\+test.\+h.
+
+\mbox{\Hypertarget{ni__device__test_8h_afddfc0468a0fb0d80c116b5e16b9be17}\label{ni__device__test_8h_afddfc0468a0fb0d80c116b5e16b9be17}} 
+\index{ni\_device\_test.h@{ni\_device\_test.h}!FILE\_NAME\_LEN@{FILE\_NAME\_LEN}}
+\index{FILE\_NAME\_LEN@{FILE\_NAME\_LEN}!ni\_device\_test.h@{ni\_device\_test.h}}
+\subsubsection{\texorpdfstring{FILE\_NAME\_LEN}{FILE\_NAME\_LEN}}
+{\footnotesize\ttfamily \#define F\+I\+L\+E\+\_\+\+N\+A\+M\+E\+\_\+\+L\+EN~256}
+
+
+
+Definition at line 47 of file ni\+\_\+device\+\_\+test.\+h.
+
+\mbox{\Hypertarget{ni__device__test_8h_ac52843a63d161bc12b9d52990114f51b}\label{ni__device__test_8h_ac52843a63d161bc12b9d52990114f51b}} 
+\index{ni\_device\_test.h@{ni\_device\_test.h}!LRETURN@{LRETURN}}
+\index{LRETURN@{LRETURN}!ni\_device\_test.h@{ni\_device\_test.h}}
+\subsubsection{\texorpdfstring{LRETURN}{LRETURN}}
+{\footnotesize\ttfamily \#define L\+R\+E\+T\+U\+RN~goto end;}
+
+
+
+Definition at line 39 of file ni\+\_\+device\+\_\+test.\+h.
+
+\mbox{\Hypertarget{ni__device__test_8h_a7fb4f59dd9e3c45fc8a68ae88a47b756}\label{ni__device__test_8h_a7fb4f59dd9e3c45fc8a68ae88a47b756}} 
+\index{ni\_device\_test.h@{ni\_device\_test.h}!NVME\_CMD\_SEM\_PROTECT@{NVME\_CMD\_SEM\_PROTECT}}
+\index{NVME\_CMD\_SEM\_PROTECT@{NVME\_CMD\_SEM\_PROTECT}!ni\_device\_test.h@{ni\_device\_test.h}}
+\subsubsection{\texorpdfstring{NVME\_CMD\_SEM\_PROTECT}{NVME\_CMD\_SEM\_PROTECT}}
+{\footnotesize\ttfamily \#define N\+V\+M\+E\+\_\+\+C\+M\+D\+\_\+\+S\+E\+M\+\_\+\+P\+R\+O\+T\+E\+CT~1}
+
+
+
+Definition at line 44 of file ni\+\_\+device\+\_\+test.\+h.
+
+\mbox{\Hypertarget{ni__device__test_8h_ac82ff02954350ef02dfea1ad8b8fe284}\label{ni__device__test_8h_ac82ff02954350ef02dfea1ad8b8fe284}} 
+\index{ni\_device\_test.h@{ni\_device\_test.h}!XCODER\_APP\_DECODE@{XCODER\_APP\_DECODE}}
+\index{XCODER\_APP\_DECODE@{XCODER\_APP\_DECODE}!ni\_device\_test.h@{ni\_device\_test.h}}
+\subsubsection{\texorpdfstring{XCODER\_APP\_DECODE}{XCODER\_APP\_DECODE}}
+{\footnotesize\ttfamily \#define X\+C\+O\+D\+E\+R\+\_\+\+A\+P\+P\+\_\+\+D\+E\+C\+O\+DE~1}
+
+
+
+Definition at line 50 of file ni\+\_\+device\+\_\+test.\+h.
+
+\mbox{\Hypertarget{ni__device__test_8h_a1cad8e18d49fd29509de9127700d1b59}\label{ni__device__test_8h_a1cad8e18d49fd29509de9127700d1b59}} 
+\index{ni\_device\_test.h@{ni\_device\_test.h}!XCODER\_APP\_ENCODE@{XCODER\_APP\_ENCODE}}
+\index{XCODER\_APP\_ENCODE@{XCODER\_APP\_ENCODE}!ni\_device\_test.h@{ni\_device\_test.h}}
+\subsubsection{\texorpdfstring{XCODER\_APP\_ENCODE}{XCODER\_APP\_ENCODE}}
+{\footnotesize\ttfamily \#define X\+C\+O\+D\+E\+R\+\_\+\+A\+P\+P\+\_\+\+E\+N\+C\+O\+DE~2}
+
+
+
+Definition at line 51 of file ni\+\_\+device\+\_\+test.\+h.
+
+\mbox{\Hypertarget{ni__device__test_8h_a32a7450a8f17e7886cfccc12d1494a97}\label{ni__device__test_8h_a32a7450a8f17e7886cfccc12d1494a97}} 
+\index{ni\_device\_test.h@{ni\_device\_test.h}!XCODER\_APP\_TRANSCODE@{XCODER\_APP\_TRANSCODE}}
+\index{XCODER\_APP\_TRANSCODE@{XCODER\_APP\_TRANSCODE}!ni\_device\_test.h@{ni\_device\_test.h}}
+\subsubsection{\texorpdfstring{XCODER\_APP\_TRANSCODE}{XCODER\_APP\_TRANSCODE}}
+{\footnotesize\ttfamily \#define X\+C\+O\+D\+E\+R\+\_\+\+A\+P\+P\+\_\+\+T\+R\+A\+N\+S\+C\+O\+DE~0}
+
+
+
+Definition at line 49 of file ni\+\_\+device\+\_\+test.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{ni__device__test_8h_a7eed090cbf1c12074ab5b9735903520b}\label{ni__device__test_8h_a7eed090cbf1c12074ab5b9735903520b}} 
+\index{ni\_device\_test.h@{ni\_device\_test.h}!device\_state\_t@{device\_state\_t}}
+\index{device\_state\_t@{device\_state\_t}!ni\_device\_test.h@{ni\_device\_test.h}}
+\subsubsection{\texorpdfstring{device\_state\_t}{device\_state\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct__device__state}{\+\_\+device\+\_\+state}}  \mbox{\hyperlink{ni__device__test_8h_a7eed090cbf1c12074ab5b9735903520b}{device\+\_\+state\+\_\+t}}}
+
+\mbox{\Hypertarget{ni__device__test_8h_a5f43617741c293f248e311866bc0d69d}\label{ni__device__test_8h_a5f43617741c293f248e311866bc0d69d}} 
+\index{ni\_device\_test.h@{ni\_device\_test.h}!rx\_data\_t@{rx\_data\_t}}
+\index{rx\_data\_t@{rx\_data\_t}!ni\_device\_test.h@{ni\_device\_test.h}}
+\subsubsection{\texorpdfstring{rx\_data\_t}{rx\_data\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_recv_data_struct__}{Recv\+Data\+Struct\+\_\+}}  \mbox{\hyperlink{ni__device__test_8h_a5f43617741c293f248e311866bc0d69d}{rx\+\_\+data\+\_\+t}}}
+
+\mbox{\Hypertarget{ni__device__test_8h_a74d47b20f1cc8fbc38baa0e170fae378}\label{ni__device__test_8h_a74d47b20f1cc8fbc38baa0e170fae378}} 
+\index{ni\_device\_test.h@{ni\_device\_test.h}!tx\_data\_t@{tx\_data\_t}}
+\index{tx\_data\_t@{tx\_data\_t}!ni\_device\_test.h@{ni\_device\_test.h}}
+\subsubsection{\texorpdfstring{tx\_data\_t}{tx\_data\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct__tx__data}{\+\_\+tx\+\_\+data}}  \mbox{\hyperlink{ni__device__test_8h_a74d47b20f1cc8fbc38baa0e170fae378}{tx\+\_\+data\+\_\+t}}}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ni__device__test_8h_a170ee2a6d357f7b694915dd30e97b802}\label{ni__device__test_8h_a170ee2a6d357f7b694915dd30e97b802}} 
+\index{ni\_device\_test.h@{ni\_device\_test.h}!decoder\_receive\_data@{decoder\_receive\_data}}
+\index{decoder\_receive\_data@{decoder\_receive\_data}!ni\_device\_test.h@{ni\_device\_test.h}}
+\subsubsection{\texorpdfstring{decoder\_receive\_data()}{decoder\_receive\_data()}}
+{\footnotesize\ttfamily int decoder\+\_\+receive\+\_\+data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$}]{p\+\_\+dec\+\_\+ctx,  }\item[{\mbox{\hyperlink{ni__device__api_8h_a4670be36ead87481f4a7c8b76e2b5dac}{ni\+\_\+session\+\_\+data\+\_\+io\+\_\+t}} $\ast$}]{p\+\_\+out\+\_\+data,  }\item[{int}]{output\+\_\+video\+\_\+width,  }\item[{int}]{output\+\_\+video\+\_\+height,  }\item[{F\+I\+LE $\ast$}]{p\+\_\+file,  }\item[{unsigned long long $\ast$}]{total\+\_\+bytes\+\_\+recieved,  }\item[{int}]{print\+\_\+time,  }\item[{int}]{write\+\_\+to\+\_\+file,  }\item[{\mbox{\hyperlink{ni__device__test_8h_a7eed090cbf1c12074ab5b9735903520b}{device\+\_\+state\+\_\+t}} $\ast$}]{p\+\_\+device\+\_\+state }\end{DoxyParamCaption})}
+
+
+
+Receive output data from decoder. 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 240 of file ni\+\_\+device\+\_\+test.\+c.
+
+\mbox{\Hypertarget{ni__device__test_8h_a4dcb9ce6c7eb55007942b16ab253a2ad}\label{ni__device__test_8h_a4dcb9ce6c7eb55007942b16ab253a2ad}} 
+\index{ni\_device\_test.h@{ni\_device\_test.h}!decoder\_send\_data@{decoder\_send\_data}}
+\index{decoder\_send\_data@{decoder\_send\_data}!ni\_device\_test.h@{ni\_device\_test.h}}
+\subsubsection{\texorpdfstring{decoder\_send\_data()}{decoder\_send\_data()}}
+{\footnotesize\ttfamily int decoder\+\_\+send\+\_\+data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$}]{p\+\_\+dec\+\_\+ctx,  }\item[{\mbox{\hyperlink{ni__device__api_8h_a4670be36ead87481f4a7c8b76e2b5dac}{ni\+\_\+session\+\_\+data\+\_\+io\+\_\+t}} $\ast$}]{p\+\_\+in\+\_\+data,  }\item[{int}]{sos\+\_\+flag,  }\item[{int}]{input\+\_\+video\+\_\+width,  }\item[{int}]{input\+\_\+video\+\_\+height,  }\item[{int}]{pkt\+\_\+size,  }\item[{int}]{file\+\_\+size,  }\item[{unsigned long $\ast$}]{total\+\_\+bytes\+\_\+sent,  }\item[{int}]{print\+\_\+time,  }\item[{\mbox{\hyperlink{ni__device__test_8h_a7eed090cbf1c12074ab5b9735903520b}{device\+\_\+state\+\_\+t}} $\ast$}]{p\+\_\+device\+\_\+state }\end{DoxyParamCaption})}
+
+
+
+Send decoder input data. 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 84 of file ni\+\_\+device\+\_\+test.\+c.
+
+\mbox{\Hypertarget{ni__device__test_8h_a44528219b8d8d953dff596ab44615059}\label{ni__device__test_8h_a44528219b8d8d953dff596ab44615059}} 
+\index{ni\_device\_test.h@{ni\_device\_test.h}!encoder\_send\_data@{encoder\_send\_data}}
+\index{encoder\_send\_data@{encoder\_send\_data}!ni\_device\_test.h@{ni\_device\_test.h}}
+\subsubsection{\texorpdfstring{encoder\_send\_data()}{encoder\_send\_data()}}
+{\footnotesize\ttfamily int encoder\+\_\+send\+\_\+data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$}]{p\+\_\+enc\+\_\+ctx,  }\item[{\mbox{\hyperlink{ni__device__api_8h_a4670be36ead87481f4a7c8b76e2b5dac}{ni\+\_\+session\+\_\+data\+\_\+io\+\_\+t}} $\ast$}]{p\+\_\+in\+\_\+data,  }\item[{int}]{st\+Flag,  }\item[{int}]{input\+\_\+video\+\_\+width,  }\item[{int}]{input\+\_\+video\+\_\+height,  }\item[{int}]{pfs,  }\item[{int}]{file\+Size,  }\item[{unsigned long $\ast$}]{sent\+Size,  }\item[{int}]{height\+\_\+aligned,  }\item[{\mbox{\hyperlink{ni__device__test_8h_a7eed090cbf1c12074ab5b9735903520b}{device\+\_\+state\+\_\+t}} $\ast$}]{x\+State }\end{DoxyParamCaption})}
+
+
+
+Definition at line 350 of file ni\+\_\+device\+\_\+test.\+c.
+
+\mbox{\Hypertarget{ni__device__test_8h_a21176f459223afa58e5b0578867af142}\label{ni__device__test_8h_a21176f459223afa58e5b0578867af142}} 
+\index{ni\_device\_test.h@{ni\_device\_test.h}!encoder\_send\_data2@{encoder\_send\_data2}}
+\index{encoder\_send\_data2@{encoder\_send\_data2}!ni\_device\_test.h@{ni\_device\_test.h}}
+\subsubsection{\texorpdfstring{encoder\_send\_data2()}{encoder\_send\_data2()}}
+{\footnotesize\ttfamily int encoder\+\_\+send\+\_\+data2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$}]{p\+\_\+enc\+\_\+ctx,  }\item[{\mbox{\hyperlink{ni__device__api_8h_a4670be36ead87481f4a7c8b76e2b5dac}{ni\+\_\+session\+\_\+data\+\_\+io\+\_\+t}} $\ast$}]{p\+\_\+out\+\_\+data,  }\item[{int}]{st\+Flag,  }\item[{int}]{input\+\_\+video\+\_\+width,  }\item[{int}]{input\+\_\+video\+\_\+height,  }\item[{int}]{pfs,  }\item[{int}]{file\+Size,  }\item[{unsigned long $\ast$}]{sent\+Size,  }\item[{int}]{aligned\+\_\+height,  }\item[{\mbox{\hyperlink{ni__device__test_8h_a7eed090cbf1c12074ab5b9735903520b}{device\+\_\+state\+\_\+t}} $\ast$}]{x\+State }\end{DoxyParamCaption})}
+
+
+
+Definition at line 483 of file ni\+\_\+device\+\_\+test.\+c.
+

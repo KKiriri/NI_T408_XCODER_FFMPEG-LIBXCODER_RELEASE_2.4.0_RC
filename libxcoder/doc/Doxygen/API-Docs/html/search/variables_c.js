@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['name',['name',['../struct__ni__card__info.html#a5ac083a645d964373f022d03df4849c8',1,'_ni_card_info::name()'],['../struct__ni__queue__t.html#abc1e86d7c344fe34ff09e72d4595ab7e',1,'_ni_queue_t::name()']]],
+  ['niparamT408',['niParamT408',['../struct__ni__encoder__config__t.html#a1f7eb1f2672d51cc8a188f83e0cd3e71',1,'_ni_encoder_config_t']]],
+  ['nrcbenable',['nrCbEnable',['../struct__ni__t408__config__t.html#a556db0011f8c283748d38093092c1563',1,'_ni_t408_config_t::nrCbEnable()'],['../struct__ni__encoder__change__params__t.html#a556db0011f8c283748d38093092c1563',1,'_ni_encoder_change_params_t::nrCbEnable()']]],
+  ['nrcrenable',['nrCrEnable',['../struct__ni__t408__config__t.html#acee109a61abe6ce43c63c7924e42b2da',1,'_ni_t408_config_t::nrCrEnable()'],['../struct__ni__encoder__change__params__t.html#acee109a61abe6ce43c63c7924e42b2da',1,'_ni_encoder_change_params_t::nrCrEnable()']]],
+  ['nrinterweightcb',['nrInterWeightCb',['../struct__ni__t408__config__t.html#a82fa586ef2b68c8095f8efac3de9980b',1,'_ni_t408_config_t::nrInterWeightCb()'],['../struct__ni__encoder__change__params__t.html#a82fa586ef2b68c8095f8efac3de9980b',1,'_ni_encoder_change_params_t::nrInterWeightCb()']]],
+  ['nrinterweightcr',['nrInterWeightCr',['../struct__ni__t408__config__t.html#a74f5c8aec093eefb24e8c81971f560ab',1,'_ni_t408_config_t::nrInterWeightCr()'],['../struct__ni__encoder__change__params__t.html#a74f5c8aec093eefb24e8c81971f560ab',1,'_ni_encoder_change_params_t::nrInterWeightCr()']]],
+  ['nrinterweighty',['nrInterWeightY',['../struct__ni__t408__config__t.html#a572ab28c94c7239c17d6ff712f24b892',1,'_ni_t408_config_t::nrInterWeightY()'],['../struct__ni__encoder__change__params__t.html#a572ab28c94c7239c17d6ff712f24b892',1,'_ni_encoder_change_params_t::nrInterWeightY()']]],
+  ['nrintraweightcb',['nrIntraWeightCb',['../struct__ni__t408__config__t.html#aa8a865dc5d4a14ca3ca0dcd73f7b8613',1,'_ni_t408_config_t::nrIntraWeightCb()'],['../struct__ni__encoder__change__params__t.html#aa8a865dc5d4a14ca3ca0dcd73f7b8613',1,'_ni_encoder_change_params_t::nrIntraWeightCb()']]],
+  ['nrintraweightcr',['nrIntraWeightCr',['../struct__ni__t408__config__t.html#a2d292036b89b683d075e6b729abbc47f',1,'_ni_t408_config_t::nrIntraWeightCr()'],['../struct__ni__encoder__change__params__t.html#a2d292036b89b683d075e6b729abbc47f',1,'_ni_encoder_change_params_t::nrIntraWeightCr()']]],
+  ['nrintraweighty',['nrIntraWeightY',['../struct__ni__t408__config__t.html#ac74e34b49c74dc5c5b039df43a2d6fff',1,'_ni_t408_config_t::nrIntraWeightY()'],['../struct__ni__encoder__change__params__t.html#ac74e34b49c74dc5c5b039df43a2d6fff',1,'_ni_encoder_change_params_t::nrIntraWeightY()']]],
+  ['nrnoiseestenable',['nrNoiseEstEnable',['../struct__ni__t408__config__t.html#a7bac97c4d1967ed8c31034e3c402e31f',1,'_ni_t408_config_t::nrNoiseEstEnable()'],['../struct__ni__encoder__change__params__t.html#a7bac97c4d1967ed8c31034e3c402e31f',1,'_ni_encoder_change_params_t::nrNoiseEstEnable()']]],
+  ['nrnoisesigmacb',['nrNoiseSigmaCb',['../struct__ni__t408__config__t.html#a551fcc5ea682e36c1fe82833645cbeba',1,'_ni_t408_config_t::nrNoiseSigmaCb()'],['../struct__ni__encoder__change__params__t.html#a551fcc5ea682e36c1fe82833645cbeba',1,'_ni_encoder_change_params_t::nrNoiseSigmaCb()']]],
+  ['nrnoisesigmacr',['nrNoiseSigmaCr',['../struct__ni__t408__config__t.html#a273b9f2be635c0d0531f0f5cb224bc04',1,'_ni_t408_config_t::nrNoiseSigmaCr()'],['../struct__ni__encoder__change__params__t.html#a273b9f2be635c0d0531f0f5cb224bc04',1,'_ni_encoder_change_params_t::nrNoiseSigmaCr()']]],
+  ['nrnoisesigmay',['nrNoiseSigmaY',['../struct__ni__t408__config__t.html#a56f22b5e6fafd5a1e4020b03324ba78d',1,'_ni_t408_config_t::nrNoiseSigmaY()'],['../struct__ni__encoder__change__params__t.html#a56f22b5e6fafd5a1e4020b03324ba78d',1,'_ni_encoder_change_params_t::nrNoiseSigmaY()']]],
+  ['nryenable',['nrYEnable',['../struct__ni__t408__config__t.html#a98953814185368ffca54fd85f3b37c85',1,'_ni_t408_config_t::nrYEnable()'],['../struct__ni__encoder__change__params__t.html#a98953814185368ffca54fd85f3b37c85',1,'_ni_encoder_change_params_t::nrYEnable()']]],
+  ['num_5fref_5fpic_5fl0',['num_ref_pic_L0',['../struct__ni__gop__params.html#a6eb557619f61c6b3b4e69c7931ba3b80',1,'_ni_gop_params']]],
+  ['number_5fof_5fbuffers',['number_of_buffers',['../struct__ni__queue__buffer__pool__t.html#aa395e0bf9ca757f1a1d117c8bc6339fb',1,'_ni_queue_buffer_pool_t']]],
+  ['number_5fof_5fframes',['number_of_frames',['../ni__device__test_8c.html#a69fca2b19f700e9a712f40f300bc39c0',1,'ni_device_test.c']]],
+  ['number_5fof_5fpackets',['number_of_packets',['../ni__device__test_8c.html#ae17955806ef57ac3e4d72bcbe00da018',1,'ni_device_test.c']]],
+  ['numtickspocdiffone',['numTicksPocDiffOne',['../struct__ni__t408__config__t.html#a8c4d2f78ba851272fdf16c530678e8e5',1,'_ni_t408_config_t']]],
+  ['numunitsintick',['numUnitsInTick',['../struct__ni__t408__config__t.html#aca700eee67b3ca184301cdc6816f42f0',1,'_ni_t408_config_t']]]
+];

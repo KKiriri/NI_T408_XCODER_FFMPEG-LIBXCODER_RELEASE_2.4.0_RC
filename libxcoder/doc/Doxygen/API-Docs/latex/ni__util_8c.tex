@@ -1,0 +1,562 @@
+\hypertarget{ni__util_8c}{}\section{ni\+\_\+util.\+c File Reference}
+\label{ni__util_8c}\index{ni\_util.c@{ni\_util.c}}
+
+
+Exported utility routines.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$inttypes.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}ni\+\_\+nvme.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ni\+\_\+util.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{ni__util_8c_a2c7f5baf531515c1b4bf5f02a1184312}{M\+A\+X\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+P\+O\+O\+L\+\_\+\+SZ}}~16
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{ni__util_8c_a84a20191859b67482c5128260aa3ca36}{ni\+\_\+buffer\+\_\+pool\+\_\+free}} (int pool\+\_\+id)
+\item 
+void \mbox{\hyperlink{ni__util_8c_a8797764af45000fa098705ed6d96d63e}{ni\+\_\+buffer\+\_\+pool\+\_\+init}} (void)
+\item 
+\mbox{\hyperlink{ni__util_8h_aecbc45db1f33b1a7eb1b32a6be3e7cce}{ni\+\_\+queue\+\_\+node\+\_\+t}} $\ast$ \mbox{\hyperlink{ni__util_8c_ae7333ac4c988b40ca44bfae2c126e0cc}{ni\+\_\+buffer\+\_\+pool\+\_\+allocate\+\_\+buffer}} (\mbox{\hyperlink{ni__util_8h_a2073cf1ad2ff0a62fb2ff0fbd69a68f0}{ni\+\_\+queue\+\_\+buffer\+\_\+pool\+\_\+t}} $\ast$\mbox{\hyperlink{ni__util_8c_a28bff01436d62a41954847664ee5e2e2}{p\+\_\+buffer\+\_\+pool}})
+\item 
+int32\+\_\+t \mbox{\hyperlink{ni__util_8c_a4ddbac751a75384d57517252fb6693d5}{ni\+\_\+buffer\+\_\+pool\+\_\+initialize}} (int32\+\_\+t pool\+\_\+id, int32\+\_\+t number\+\_\+of\+\_\+buffers)
+\item 
+\mbox{\hyperlink{ni__util_8h_aecbc45db1f33b1a7eb1b32a6be3e7cce}{ni\+\_\+queue\+\_\+node\+\_\+t}} $\ast$ \mbox{\hyperlink{ni__util_8c_afebe1cda61e118deb6dd1d95bb806622}{ni\+\_\+buffer\+\_\+pool\+\_\+expand}} (\mbox{\hyperlink{ni__util_8h_a2073cf1ad2ff0a62fb2ff0fbd69a68f0}{ni\+\_\+queue\+\_\+buffer\+\_\+pool\+\_\+t}} $\ast$pool)
+\item 
+\mbox{\hyperlink{ni__util_8h_aecbc45db1f33b1a7eb1b32a6be3e7cce}{ni\+\_\+queue\+\_\+node\+\_\+t}} $\ast$ \mbox{\hyperlink{ni__util_8c_a7527d62f87f3248abf72ed2d4a94da2b}{ni\+\_\+buffer\+\_\+pool\+\_\+get\+\_\+queue\+\_\+buffer}} (int32\+\_\+t pool\+\_\+id)
+\item 
+void \mbox{\hyperlink{ni__util_8c_abcb6717061a633d83f4102b056681e73}{ni\+\_\+buffer\+\_\+pool\+\_\+return\+\_\+buffer}} (\mbox{\hyperlink{ni__util_8h_aecbc45db1f33b1a7eb1b32a6be3e7cce}{ni\+\_\+queue\+\_\+node\+\_\+t}} $\ast$buf, int32\+\_\+t poo\+Id)
+\item 
+int32\+\_\+t \mbox{\hyperlink{ni__util_8c_a3d96dc9639a7684b22f9f9620a659434}{ni\+\_\+get\+\_\+frame\+\_\+index}} (uint32\+\_\+t $\ast$value)
+\begin{DoxyCompactList}\small\item\em Get xcoder instance id. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} \mbox{\hyperlink{ni__util_8c_a8600c1ef24a30f4eb38b061948f5af7b}{ni\+\_\+timestamp\+\_\+init}} (\mbox{\hyperlink{ni__util_8h_af31d78a432e1f1dced2f1dcc9711170e}{ni\+\_\+timestamp\+\_\+table\+\_\+t}} $\ast$$\ast$pp\+\_\+table, const char $\ast$name, int32\+\_\+t buffer\+\_\+pool\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Initialize timestamp handling. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} \mbox{\hyperlink{ni__util_8c_a688b761f9525e494a4de7da4e119cb55}{ni\+\_\+timestamp\+\_\+done}} (\mbox{\hyperlink{ni__util_8h_af31d78a432e1f1dced2f1dcc9711170e}{ni\+\_\+timestamp\+\_\+table\+\_\+t}} $\ast$p\+\_\+table)
+\begin{DoxyCompactList}\small\item\em Clean up timestamp handling. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} \mbox{\hyperlink{ni__util_8c_a63c700de32984e5bf0ad4b545ca6fa78}{ni\+\_\+timestamp\+\_\+register}} (\mbox{\hyperlink{ni__util_8h_af31d78a432e1f1dced2f1dcc9711170e}{ni\+\_\+timestamp\+\_\+table\+\_\+t}} $\ast$p\+\_\+table, int64\+\_\+t timestamp, uint64\+\_\+t data\+\_\+info)
+\begin{DoxyCompactList}\small\item\em Register timestamp in timestamp/frameoffset table. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} \mbox{\hyperlink{ni__util_8c_a406be8f927ffa576f539f91525410190}{ni\+\_\+timestamp\+\_\+get}} (\mbox{\hyperlink{ni__util_8h_af31d78a432e1f1dced2f1dcc9711170e}{ni\+\_\+timestamp\+\_\+table\+\_\+t}} $\ast$p\+\_\+table, uint64\+\_\+t frame\+\_\+info, int64\+\_\+t $\ast$p\+\_\+timestamp, int32\+\_\+t threshold, int32\+\_\+t print)
+\begin{DoxyCompactList}\small\item\em Retrieve timestamp from table based on frameoffset info. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} \mbox{\hyperlink{ni__util_8c_ae14915ad338f39fd68476c56119a4504}{ni\+\_\+timestamp\+\_\+get\+\_\+with\+\_\+threshold}} (\mbox{\hyperlink{ni__util_8h_af31d78a432e1f1dced2f1dcc9711170e}{ni\+\_\+timestamp\+\_\+table\+\_\+t}} $\ast$p\+\_\+table, uint64\+\_\+t frame\+\_\+info, int64\+\_\+t $\ast$p\+\_\+timestamp, int32\+\_\+t threshold, int32\+\_\+t print)
+\item 
+void \mbox{\hyperlink{ni__util_8c_a39a1fcca26f15b1997d63d3c807af565}{ni\+\_\+timestamp\+\_\+scan\+\_\+cleanup}} (\mbox{\hyperlink{ni__util_8h_af31d78a432e1f1dced2f1dcc9711170e}{ni\+\_\+timestamp\+\_\+table\+\_\+t}} $\ast$pts\+\_\+list, \mbox{\hyperlink{ni__util_8h_af31d78a432e1f1dced2f1dcc9711170e}{ni\+\_\+timestamp\+\_\+table\+\_\+t}} $\ast$dts\+\_\+list)
+\item 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} \mbox{\hyperlink{ni__util_8c_a9c1c11418348b4e980775ef8e3abd551}{ni\+\_\+timestamp\+\_\+get\+\_\+v2}} (\mbox{\hyperlink{ni__util_8h_af31d78a432e1f1dced2f1dcc9711170e}{ni\+\_\+timestamp\+\_\+table\+\_\+t}} $\ast$p\+\_\+table, uint64\+\_\+t frame\+\_\+offset, int64\+\_\+t $\ast$p\+\_\+timestamp, int32\+\_\+t threshold)
+\begin{DoxyCompactList}\small\item\em Retrieve timestamp from table based on frameoffset info. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} \mbox{\hyperlink{ni__util_8c_a46262ea0247933b2a09f0771df460aa4}{ni\+\_\+queue\+\_\+init}} (\mbox{\hyperlink{ni__util_8h_a0e1cb2c303be6205ec60736b6a519d84}{ni\+\_\+queue\+\_\+t}} $\ast$p\+\_\+queue, const char $\ast$name, int32\+\_\+t buffer\+\_\+pool\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Initialize xcoder queue. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} \mbox{\hyperlink{ni__util_8c_ae861dd38ebfe02d24a2ef9f81ef207c1}{ni\+\_\+queue\+\_\+push}} (\mbox{\hyperlink{ni__util_8h_a0e1cb2c303be6205ec60736b6a519d84}{ni\+\_\+queue\+\_\+t}} $\ast$p\+\_\+queue, uint64\+\_\+t frame\+\_\+info, int64\+\_\+t timestamp)
+\begin{DoxyCompactList}\small\item\em Push into xcoder queue. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} \mbox{\hyperlink{ni__util_8c_ac091bb332dc0b919866a98b6ef1f7716}{ni\+\_\+queue\+\_\+pop}} (\mbox{\hyperlink{ni__util_8h_a0e1cb2c303be6205ec60736b6a519d84}{ni\+\_\+queue\+\_\+t}} $\ast$p\+\_\+queue, uint64\+\_\+t frame\+\_\+info, int64\+\_\+t $\ast$p\+\_\+timestamp, int32\+\_\+t threshold, int32\+\_\+t print)
+\begin{DoxyCompactList}\small\item\em Pop from the xcoder queue. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} \mbox{\hyperlink{ni__util_8c_ae956f1302f7b9162ae56b7913ab843ff}{ni\+\_\+queue\+\_\+pop\+\_\+threshold}} (\mbox{\hyperlink{ni__util_8h_a0e1cb2c303be6205ec60736b6a519d84}{ni\+\_\+queue\+\_\+t}} $\ast$p\+\_\+queue, uint64\+\_\+t frame\+\_\+info, int64\+\_\+t $\ast$p\+\_\+timestamp, int32\+\_\+t threshold, int32\+\_\+t print)
+\item 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} \mbox{\hyperlink{ni__util_8c_aa9223cab35bb7618715e6a08daf28dd7}{ni\+\_\+queue\+\_\+free}} (\mbox{\hyperlink{ni__util_8h_a0e1cb2c303be6205ec60736b6a519d84}{ni\+\_\+queue\+\_\+t}} $\ast$p\+\_\+queue)
+\begin{DoxyCompactList}\small\item\em Free xcoder queue. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} \mbox{\hyperlink{ni__util_8c_a32d1e5f97597336e8d5823d0bab7b0dc}{ni\+\_\+queue\+\_\+print}} (\mbox{\hyperlink{ni__util_8h_a0e1cb2c303be6205ec60736b6a519d84}{ni\+\_\+queue\+\_\+t}} $\ast$p\+\_\+queue)
+\begin{DoxyCompactList}\small\item\em Print xcoder queue info. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{ni__util_8c_ad927bcdaa8ddfbc5b66ba80bba50eccf}{ni\+\_\+atobool}} (const char $\ast$p\+\_\+str, bool b\+\_\+error)
+\begin{DoxyCompactList}\small\item\em Convert string to boolean. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{ni__util_8c_a6d6bc113e6b66abe1389da119516d23a}{ni\+\_\+atoi}} (const char $\ast$p\+\_\+str, bool b\+\_\+error)
+\begin{DoxyCompactList}\small\item\em Convert string to integer. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{ni__util_8c_ae928210de0e72d88f92f02ee969760a2}{ni\+\_\+atof}} (const char $\ast$p\+\_\+str, bool b\+\_\+error)
+\begin{DoxyCompactList}\small\item\em Convert string to floating. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{ni__util_8c_adb9c39ed5d8548ad584f4350002d14e8}{ni\+\_\+parse\+\_\+name}} (const char $\ast$arg, const char $\ast$const $\ast$names, bool b\+\_\+error)
+\begin{DoxyCompactList}\small\item\em Parse name. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{ni__util_8c_a3460195c0dca1dde1976df09f6d98fb2}{ni\+\_\+get\+\_\+utime}} (void)
+\begin{DoxyCompactList}\small\item\em Get system time for log. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Exported utility routines. 
+
+
+
+
+
+\begin{DoxyCopyright}{Copyright}
+(c) 2019 N\+E\+T\+I\+NT Technologies Inc. All rights reserved. 
+\end{DoxyCopyright}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{ni__util_8c_a2c7f5baf531515c1b4bf5f02a1184312}\label{ni__util_8c_a2c7f5baf531515c1b4bf5f02a1184312}} 
+\index{ni\_util.c@{ni\_util.c}!MAX\_BUFFER\_POOL\_SZ@{MAX\_BUFFER\_POOL\_SZ}}
+\index{MAX\_BUFFER\_POOL\_SZ@{MAX\_BUFFER\_POOL\_SZ}!ni\_util.c@{ni\_util.c}}
+\subsubsection{\texorpdfstring{MAX\_BUFFER\_POOL\_SZ}{MAX\_BUFFER\_POOL\_SZ}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+P\+O\+O\+L\+\_\+\+SZ~16}
+
+
+
+Definition at line 41 of file ni\+\_\+util.\+c.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ni__util_8c_ad927bcdaa8ddfbc5b66ba80bba50eccf}\label{ni__util_8c_ad927bcdaa8ddfbc5b66ba80bba50eccf}} 
+\index{ni\_util.c@{ni\_util.c}!ni\_atobool@{ni\_atobool}}
+\index{ni\_atobool@{ni\_atobool}!ni\_util.c@{ni\_util.c}}
+\subsubsection{\texorpdfstring{ni\_atobool()}{ni\_atobool()}}
+{\footnotesize\ttfamily int32\+\_\+t ni\+\_\+atobool (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+\_\+str,  }\item[{bool}]{b\+\_\+error }\end{DoxyParamCaption})}
+
+
+
+Convert string to boolean. 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 948 of file ni\+\_\+util.\+c.
+
+\mbox{\Hypertarget{ni__util_8c_ae928210de0e72d88f92f02ee969760a2}\label{ni__util_8c_ae928210de0e72d88f92f02ee969760a2}} 
+\index{ni\_util.c@{ni\_util.c}!ni\_atof@{ni\_atof}}
+\index{ni\_atof@{ni\_atof}!ni\_util.c@{ni\_util.c}}
+\subsubsection{\texorpdfstring{ni\_atof()}{ni\_atof()}}
+{\footnotesize\ttfamily double ni\+\_\+atof (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+\_\+str,  }\item[{bool}]{b\+\_\+error }\end{DoxyParamCaption})}
+
+
+
+Convert string to floating. 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 995 of file ni\+\_\+util.\+c.
+
+\mbox{\Hypertarget{ni__util_8c_a6d6bc113e6b66abe1389da119516d23a}\label{ni__util_8c_a6d6bc113e6b66abe1389da119516d23a}} 
+\index{ni\_util.c@{ni\_util.c}!ni\_atoi@{ni\_atoi}}
+\index{ni\_atoi@{ni\_atoi}!ni\_util.c@{ni\_util.c}}
+\subsubsection{\texorpdfstring{ni\_atoi()}{ni\_atoi()}}
+{\footnotesize\ttfamily int32\+\_\+t ni\+\_\+atoi (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+\_\+str,  }\item[{bool}]{b\+\_\+error }\end{DoxyParamCaption})}
+
+
+
+Convert string to integer. 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 975 of file ni\+\_\+util.\+c.
+
+\mbox{\Hypertarget{ni__util_8c_ae7333ac4c988b40ca44bfae2c126e0cc}\label{ni__util_8c_ae7333ac4c988b40ca44bfae2c126e0cc}} 
+\index{ni\_util.c@{ni\_util.c}!ni\_buffer\_pool\_allocate\_buffer@{ni\_buffer\_pool\_allocate\_buffer}}
+\index{ni\_buffer\_pool\_allocate\_buffer@{ni\_buffer\_pool\_allocate\_buffer}!ni\_util.c@{ni\_util.c}}
+\subsubsection{\texorpdfstring{ni\_buffer\_pool\_allocate\_buffer()}{ni\_buffer\_pool\_allocate\_buffer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ni__util_8h_aecbc45db1f33b1a7eb1b32a6be3e7cce}{ni\+\_\+queue\+\_\+node\+\_\+t}}$\ast$ ni\+\_\+buffer\+\_\+pool\+\_\+allocate\+\_\+buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__util_8h_a2073cf1ad2ff0a62fb2ff0fbd69a68f0}{ni\+\_\+queue\+\_\+buffer\+\_\+pool\+\_\+t}} $\ast$}]{p\+\_\+buffer\+\_\+pool }\end{DoxyParamCaption})}
+
+
+
+Definition at line 212 of file ni\+\_\+util.\+c.
+
+\mbox{\Hypertarget{ni__util_8c_afebe1cda61e118deb6dd1d95bb806622}\label{ni__util_8c_afebe1cda61e118deb6dd1d95bb806622}} 
+\index{ni\_util.c@{ni\_util.c}!ni\_buffer\_pool\_expand@{ni\_buffer\_pool\_expand}}
+\index{ni\_buffer\_pool\_expand@{ni\_buffer\_pool\_expand}!ni\_util.c@{ni\_util.c}}
+\subsubsection{\texorpdfstring{ni\_buffer\_pool\_expand()}{ni\_buffer\_pool\_expand()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ni__util_8h_aecbc45db1f33b1a7eb1b32a6be3e7cce}{ni\+\_\+queue\+\_\+node\+\_\+t}}$\ast$ ni\+\_\+buffer\+\_\+pool\+\_\+expand (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__util_8h_a2073cf1ad2ff0a62fb2ff0fbd69a68f0}{ni\+\_\+queue\+\_\+buffer\+\_\+pool\+\_\+t}} $\ast$}]{pool }\end{DoxyParamCaption})}
+
+
+
+Definition at line 276 of file ni\+\_\+util.\+c.
+
+\mbox{\Hypertarget{ni__util_8c_a84a20191859b67482c5128260aa3ca36}\label{ni__util_8c_a84a20191859b67482c5128260aa3ca36}} 
+\index{ni\_util.c@{ni\_util.c}!ni\_buffer\_pool\_free@{ni\_buffer\_pool\_free}}
+\index{ni\_buffer\_pool\_free@{ni\_buffer\_pool\_free}!ni\_util.c@{ni\_util.c}}
+\subsubsection{\texorpdfstring{ni\_buffer\_pool\_free()}{ni\_buffer\_pool\_free()}}
+{\footnotesize\ttfamily void ni\+\_\+buffer\+\_\+pool\+\_\+free (\begin{DoxyParamCaption}\item[{int}]{pool\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Definition at line 142 of file ni\+\_\+util.\+c.
+
+\mbox{\Hypertarget{ni__util_8c_a7527d62f87f3248abf72ed2d4a94da2b}\label{ni__util_8c_a7527d62f87f3248abf72ed2d4a94da2b}} 
+\index{ni\_util.c@{ni\_util.c}!ni\_buffer\_pool\_get\_queue\_buffer@{ni\_buffer\_pool\_get\_queue\_buffer}}
+\index{ni\_buffer\_pool\_get\_queue\_buffer@{ni\_buffer\_pool\_get\_queue\_buffer}!ni\_util.c@{ni\_util.c}}
+\subsubsection{\texorpdfstring{ni\_buffer\_pool\_get\_queue\_buffer()}{ni\_buffer\_pool\_get\_queue\_buffer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ni__util_8h_aecbc45db1f33b1a7eb1b32a6be3e7cce}{ni\+\_\+queue\+\_\+node\+\_\+t}}$\ast$ ni\+\_\+buffer\+\_\+pool\+\_\+get\+\_\+queue\+\_\+buffer (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{pool\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Definition at line 288 of file ni\+\_\+util.\+c.
+
+\mbox{\Hypertarget{ni__util_8c_a8797764af45000fa098705ed6d96d63e}\label{ni__util_8c_a8797764af45000fa098705ed6d96d63e}} 
+\index{ni\_util.c@{ni\_util.c}!ni\_buffer\_pool\_init@{ni\_buffer\_pool\_init}}
+\index{ni\_buffer\_pool\_init@{ni\_buffer\_pool\_init}!ni\_util.c@{ni\_util.c}}
+\subsubsection{\texorpdfstring{ni\_buffer\_pool\_init()}{ni\_buffer\_pool\_init()}}
+{\footnotesize\ttfamily void ni\+\_\+buffer\+\_\+pool\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 195 of file ni\+\_\+util.\+c.
+
+\mbox{\Hypertarget{ni__util_8c_a4ddbac751a75384d57517252fb6693d5}\label{ni__util_8c_a4ddbac751a75384d57517252fb6693d5}} 
+\index{ni\_util.c@{ni\_util.c}!ni\_buffer\_pool\_initialize@{ni\_buffer\_pool\_initialize}}
+\index{ni\_buffer\_pool\_initialize@{ni\_buffer\_pool\_initialize}!ni\_util.c@{ni\_util.c}}
+\subsubsection{\texorpdfstring{ni\_buffer\_pool\_initialize()}{ni\_buffer\_pool\_initialize()}}
+{\footnotesize\ttfamily int32\+\_\+t ni\+\_\+buffer\+\_\+pool\+\_\+initialize (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{pool\+\_\+id,  }\item[{int32\+\_\+t}]{number\+\_\+of\+\_\+buffers }\end{DoxyParamCaption})}
+
+
+
+Definition at line 237 of file ni\+\_\+util.\+c.
+
+\mbox{\Hypertarget{ni__util_8c_abcb6717061a633d83f4102b056681e73}\label{ni__util_8c_abcb6717061a633d83f4102b056681e73}} 
+\index{ni\_util.c@{ni\_util.c}!ni\_buffer\_pool\_return\_buffer@{ni\_buffer\_pool\_return\_buffer}}
+\index{ni\_buffer\_pool\_return\_buffer@{ni\_buffer\_pool\_return\_buffer}!ni\_util.c@{ni\_util.c}}
+\subsubsection{\texorpdfstring{ni\_buffer\_pool\_return\_buffer()}{ni\_buffer\_pool\_return\_buffer()}}
+{\footnotesize\ttfamily void ni\+\_\+buffer\+\_\+pool\+\_\+return\+\_\+buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__util_8h_aecbc45db1f33b1a7eb1b32a6be3e7cce}{ni\+\_\+queue\+\_\+node\+\_\+t}} $\ast$}]{buf,  }\item[{int32\+\_\+t}]{poo\+Id }\end{DoxyParamCaption})}
+
+
+
+Definition at line 326 of file ni\+\_\+util.\+c.
+
+\mbox{\Hypertarget{ni__util_8c_a3d96dc9639a7684b22f9f9620a659434}\label{ni__util_8c_a3d96dc9639a7684b22f9f9620a659434}} 
+\index{ni\_util.c@{ni\_util.c}!ni\_get\_frame\_index@{ni\_get\_frame\_index}}
+\index{ni\_get\_frame\_index@{ni\_get\_frame\_index}!ni\_util.c@{ni\_util.c}}
+\subsubsection{\texorpdfstring{ni\_get\_frame\_index()}{ni\_get\_frame\_index()}}
+{\footnotesize\ttfamily int32\+\_\+t ni\+\_\+get\+\_\+frame\+\_\+index (\begin{DoxyParamCaption}\item[{uint32\+\_\+t $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+Get xcoder instance id. 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 362 of file ni\+\_\+util.\+c.
+
+\mbox{\Hypertarget{ni__util_8c_a3460195c0dca1dde1976df09f6d98fb2}\label{ni__util_8c_a3460195c0dca1dde1976df09f6d98fb2}} 
+\index{ni\_util.c@{ni\_util.c}!ni\_get\_utime@{ni\_get\_utime}}
+\index{ni\_get\_utime@{ni\_get\_utime}!ni\_util.c@{ni\_util.c}}
+\subsubsection{\texorpdfstring{ni\_get\_utime()}{ni\_get\_utime()}}
+{\footnotesize\ttfamily uint64\+\_\+t ni\+\_\+get\+\_\+utime (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get system time for log. 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 1036 of file ni\+\_\+util.\+c.
+
+\mbox{\Hypertarget{ni__util_8c_adb9c39ed5d8548ad584f4350002d14e8}\label{ni__util_8c_adb9c39ed5d8548ad584f4350002d14e8}} 
+\index{ni\_util.c@{ni\_util.c}!ni\_parse\_name@{ni\_parse\_name}}
+\index{ni\_parse\_name@{ni\_parse\_name}!ni\_util.c@{ni\_util.c}}
+\subsubsection{\texorpdfstring{ni\_parse\_name()}{ni\_parse\_name()}}
+{\footnotesize\ttfamily int32\+\_\+t ni\+\_\+parse\+\_\+name (\begin{DoxyParamCaption}\item[{const char $\ast$}]{arg,  }\item[{const char $\ast$const $\ast$}]{names,  }\item[{bool}]{b\+\_\+error }\end{DoxyParamCaption})}
+
+
+
+Parse name. 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 1015 of file ni\+\_\+util.\+c.
+
+\mbox{\Hypertarget{ni__util_8c_aa9223cab35bb7618715e6a08daf28dd7}\label{ni__util_8c_aa9223cab35bb7618715e6a08daf28dd7}} 
+\index{ni\_util.c@{ni\_util.c}!ni\_queue\_free@{ni\_queue\_free}}
+\index{ni\_queue\_free@{ni\_queue\_free}!ni\_util.c@{ni\_util.c}}
+\subsubsection{\texorpdfstring{ni\_queue\_free()}{ni\_queue\_free()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} ni\+\_\+queue\+\_\+free (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__util_8h_a0e1cb2c303be6205ec60736b6a519d84}{ni\+\_\+queue\+\_\+t}} $\ast$}]{p\+\_\+queue }\end{DoxyParamCaption})}
+
+
+
+Free xcoder queue. 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 856 of file ni\+\_\+util.\+c.
+
+\mbox{\Hypertarget{ni__util_8c_a46262ea0247933b2a09f0771df460aa4}\label{ni__util_8c_a46262ea0247933b2a09f0771df460aa4}} 
+\index{ni\_util.c@{ni\_util.c}!ni\_queue\_init@{ni\_queue\_init}}
+\index{ni\_queue\_init@{ni\_queue\_init}!ni\_util.c@{ni\_util.c}}
+\subsubsection{\texorpdfstring{ni\_queue\_init()}{ni\_queue\_init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} ni\+\_\+queue\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__util_8h_a0e1cb2c303be6205ec60736b6a519d84}{ni\+\_\+queue\+\_\+t}} $\ast$}]{p\+\_\+queue,  }\item[{const char $\ast$}]{name,  }\item[{int32\+\_\+t}]{buffer\+\_\+pool\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Initialize xcoder queue. 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 575 of file ni\+\_\+util.\+c.
+
+\mbox{\Hypertarget{ni__util_8c_ac091bb332dc0b919866a98b6ef1f7716}\label{ni__util_8c_ac091bb332dc0b919866a98b6ef1f7716}} 
+\index{ni\_util.c@{ni\_util.c}!ni\_queue\_pop@{ni\_queue\_pop}}
+\index{ni\_queue\_pop@{ni\_queue\_pop}!ni\_util.c@{ni\_util.c}}
+\subsubsection{\texorpdfstring{ni\_queue\_pop()}{ni\_queue\_pop()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} ni\+\_\+queue\+\_\+pop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__util_8h_a0e1cb2c303be6205ec60736b6a519d84}{ni\+\_\+queue\+\_\+t}} $\ast$}]{p\+\_\+queue,  }\item[{uint64\+\_\+t}]{frame\+\_\+info,  }\item[{int64\+\_\+t $\ast$}]{p\+\_\+timestamp,  }\item[{int32\+\_\+t}]{threshold,  }\item[{int32\+\_\+t}]{print }\end{DoxyParamCaption})}
+
+
+
+Pop from the xcoder queue. 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+If only one entry, retrieve timestamp without checking 
+
+Definition at line 663 of file ni\+\_\+util.\+c.
+
+\mbox{\Hypertarget{ni__util_8c_ae956f1302f7b9162ae56b7913ab843ff}\label{ni__util_8c_ae956f1302f7b9162ae56b7913ab843ff}} 
+\index{ni\_util.c@{ni\_util.c}!ni\_queue\_pop\_threshold@{ni\_queue\_pop\_threshold}}
+\index{ni\_queue\_pop\_threshold@{ni\_queue\_pop\_threshold}!ni\_util.c@{ni\_util.c}}
+\subsubsection{\texorpdfstring{ni\_queue\_pop\_threshold()}{ni\_queue\_pop\_threshold()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} ni\+\_\+queue\+\_\+pop\+\_\+threshold (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__util_8h_a0e1cb2c303be6205ec60736b6a519d84}{ni\+\_\+queue\+\_\+t}} $\ast$}]{p\+\_\+queue,  }\item[{uint64\+\_\+t}]{frame\+\_\+info,  }\item[{int64\+\_\+t $\ast$}]{p\+\_\+timestamp,  }\item[{int32\+\_\+t}]{threshold,  }\item[{int32\+\_\+t}]{print }\end{DoxyParamCaption})}
+
+If only one entry, retrieve timestamp without checking 
+
+Definition at line 766 of file ni\+\_\+util.\+c.
+
+\mbox{\Hypertarget{ni__util_8c_a32d1e5f97597336e8d5823d0bab7b0dc}\label{ni__util_8c_a32d1e5f97597336e8d5823d0bab7b0dc}} 
+\index{ni\_util.c@{ni\_util.c}!ni\_queue\_print@{ni\_queue\_print}}
+\index{ni\_queue\_print@{ni\_queue\_print}!ni\_util.c@{ni\_util.c}}
+\subsubsection{\texorpdfstring{ni\_queue\_print()}{ni\_queue\_print()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} ni\+\_\+queue\+\_\+print (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__util_8h_a0e1cb2c303be6205ec60736b6a519d84}{ni\+\_\+queue\+\_\+t}} $\ast$}]{p\+\_\+queue }\end{DoxyParamCaption})}
+
+
+
+Print xcoder queue info. 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 896 of file ni\+\_\+util.\+c.
+
+\mbox{\Hypertarget{ni__util_8c_ae861dd38ebfe02d24a2ef9f81ef207c1}\label{ni__util_8c_ae861dd38ebfe02d24a2ef9f81ef207c1}} 
+\index{ni\_util.c@{ni\_util.c}!ni\_queue\_push@{ni\_queue\_push}}
+\index{ni\_queue\_push@{ni\_queue\_push}!ni\_util.c@{ni\_util.c}}
+\subsubsection{\texorpdfstring{ni\_queue\_push()}{ni\_queue\_push()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} ni\+\_\+queue\+\_\+push (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__util_8h_a0e1cb2c303be6205ec60736b6a519d84}{ni\+\_\+queue\+\_\+t}} $\ast$}]{p\+\_\+queue,  }\item[{uint64\+\_\+t}]{frame\+\_\+info,  }\item[{int64\+\_\+t}]{timestamp }\end{DoxyParamCaption})}
+
+
+
+Push into xcoder queue. 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 601 of file ni\+\_\+util.\+c.
+
+\mbox{\Hypertarget{ni__util_8c_a688b761f9525e494a4de7da4e119cb55}\label{ni__util_8c_a688b761f9525e494a4de7da4e119cb55}} 
+\index{ni\_util.c@{ni\_util.c}!ni\_timestamp\_done@{ni\_timestamp\_done}}
+\index{ni\_timestamp\_done@{ni\_timestamp\_done}!ni\_util.c@{ni\_util.c}}
+\subsubsection{\texorpdfstring{ni\_timestamp\_done()}{ni\_timestamp\_done()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} ni\+\_\+timestamp\+\_\+done (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__util_8h_af31d78a432e1f1dced2f1dcc9711170e}{ni\+\_\+timestamp\+\_\+table\+\_\+t}} $\ast$}]{p\+\_\+table }\end{DoxyParamCaption})}
+
+
+
+Clean up timestamp handling. 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 412 of file ni\+\_\+util.\+c.
+
+\mbox{\Hypertarget{ni__util_8c_a406be8f927ffa576f539f91525410190}\label{ni__util_8c_a406be8f927ffa576f539f91525410190}} 
+\index{ni\_util.c@{ni\_util.c}!ni\_timestamp\_get@{ni\_timestamp\_get}}
+\index{ni\_timestamp\_get@{ni\_timestamp\_get}!ni\_util.c@{ni\_util.c}}
+\subsubsection{\texorpdfstring{ni\_timestamp\_get()}{ni\_timestamp\_get()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} ni\+\_\+timestamp\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__util_8h_af31d78a432e1f1dced2f1dcc9711170e}{ni\+\_\+timestamp\+\_\+table\+\_\+t}} $\ast$}]{p\+\_\+table,  }\item[{uint64\+\_\+t}]{frame\+\_\+info,  }\item[{int64\+\_\+t $\ast$}]{p\+\_\+timestamp,  }\item[{int32\+\_\+t}]{threshold,  }\item[{int32\+\_\+t}]{print }\end{DoxyParamCaption})}
+
+
+
+Retrieve timestamp from table based on frameoffset info. 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 457 of file ni\+\_\+util.\+c.
+
+\mbox{\Hypertarget{ni__util_8c_a9c1c11418348b4e980775ef8e3abd551}\label{ni__util_8c_a9c1c11418348b4e980775ef8e3abd551}} 
+\index{ni\_util.c@{ni\_util.c}!ni\_timestamp\_get\_v2@{ni\_timestamp\_get\_v2}}
+\index{ni\_timestamp\_get\_v2@{ni\_timestamp\_get\_v2}!ni\_util.c@{ni\_util.c}}
+\subsubsection{\texorpdfstring{ni\_timestamp\_get\_v2()}{ni\_timestamp\_get\_v2()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} ni\+\_\+timestamp\+\_\+get\+\_\+v2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__util_8h_af31d78a432e1f1dced2f1dcc9711170e}{ni\+\_\+timestamp\+\_\+table\+\_\+t}} $\ast$}]{p\+\_\+table,  }\item[{uint64\+\_\+t}]{frame\+\_\+offset,  }\item[{int64\+\_\+t $\ast$}]{p\+\_\+timestamp,  }\item[{int32\+\_\+t}]{threshold }\end{DoxyParamCaption})}
+
+
+
+Retrieve timestamp from table based on frameoffset info. 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 551 of file ni\+\_\+util.\+c.
+
+\mbox{\Hypertarget{ni__util_8c_ae14915ad338f39fd68476c56119a4504}\label{ni__util_8c_ae14915ad338f39fd68476c56119a4504}} 
+\index{ni\_util.c@{ni\_util.c}!ni\_timestamp\_get\_with\_threshold@{ni\_timestamp\_get\_with\_threshold}}
+\index{ni\_timestamp\_get\_with\_threshold@{ni\_timestamp\_get\_with\_threshold}!ni\_util.c@{ni\_util.c}}
+\subsubsection{\texorpdfstring{ni\_timestamp\_get\_with\_threshold()}{ni\_timestamp\_get\_with\_threshold()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} ni\+\_\+timestamp\+\_\+get\+\_\+with\+\_\+threshold (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__util_8h_af31d78a432e1f1dced2f1dcc9711170e}{ni\+\_\+timestamp\+\_\+table\+\_\+t}} $\ast$}]{p\+\_\+table,  }\item[{uint64\+\_\+t}]{frame\+\_\+info,  }\item[{int64\+\_\+t $\ast$}]{p\+\_\+timestamp,  }\item[{int32\+\_\+t}]{threshold,  }\item[{int32\+\_\+t}]{print }\end{DoxyParamCaption})}
+
+
+
+Definition at line 478 of file ni\+\_\+util.\+c.
+
+\mbox{\Hypertarget{ni__util_8c_a8600c1ef24a30f4eb38b061948f5af7b}\label{ni__util_8c_a8600c1ef24a30f4eb38b061948f5af7b}} 
+\index{ni\_util.c@{ni\_util.c}!ni\_timestamp\_init@{ni\_timestamp\_init}}
+\index{ni\_timestamp\_init@{ni\_timestamp\_init}!ni\_util.c@{ni\_util.c}}
+\subsubsection{\texorpdfstring{ni\_timestamp\_init()}{ni\_timestamp\_init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} ni\+\_\+timestamp\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__util_8h_af31d78a432e1f1dced2f1dcc9711170e}{ni\+\_\+timestamp\+\_\+table\+\_\+t}} $\ast$$\ast$}]{pp\+\_\+table,  }\item[{const char $\ast$}]{name,  }\item[{int32\+\_\+t}]{buffer\+\_\+pool\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Initialize timestamp handling. 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 377 of file ni\+\_\+util.\+c.
+
+\mbox{\Hypertarget{ni__util_8c_a63c700de32984e5bf0ad4b545ca6fa78}\label{ni__util_8c_a63c700de32984e5bf0ad4b545ca6fa78}} 
+\index{ni\_util.c@{ni\_util.c}!ni\_timestamp\_register@{ni\_timestamp\_register}}
+\index{ni\_timestamp\_register@{ni\_timestamp\_register}!ni\_util.c@{ni\_util.c}}
+\subsubsection{\texorpdfstring{ni\_timestamp\_register()}{ni\_timestamp\_register()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} ni\+\_\+timestamp\+\_\+register (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__util_8h_af31d78a432e1f1dced2f1dcc9711170e}{ni\+\_\+timestamp\+\_\+table\+\_\+t}} $\ast$}]{p\+\_\+table,  }\item[{int64\+\_\+t}]{timestamp,  }\item[{uint64\+\_\+t}]{data\+\_\+info }\end{DoxyParamCaption})}
+
+
+
+Register timestamp in timestamp/frameoffset table. 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 437 of file ni\+\_\+util.\+c.
+
+\mbox{\Hypertarget{ni__util_8c_a39a1fcca26f15b1997d63d3c807af565}\label{ni__util_8c_a39a1fcca26f15b1997d63d3c807af565}} 
+\index{ni\_util.c@{ni\_util.c}!ni\_timestamp\_scan\_cleanup@{ni\_timestamp\_scan\_cleanup}}
+\index{ni\_timestamp\_scan\_cleanup@{ni\_timestamp\_scan\_cleanup}!ni\_util.c@{ni\_util.c}}
+\subsubsection{\texorpdfstring{ni\_timestamp\_scan\_cleanup()}{ni\_timestamp\_scan\_cleanup()}}
+{\footnotesize\ttfamily void ni\+\_\+timestamp\+\_\+scan\+\_\+cleanup (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__util_8h_af31d78a432e1f1dced2f1dcc9711170e}{ni\+\_\+timestamp\+\_\+table\+\_\+t}} $\ast$}]{pts\+\_\+list,  }\item[{\mbox{\hyperlink{ni__util_8h_af31d78a432e1f1dced2f1dcc9711170e}{ni\+\_\+timestamp\+\_\+table\+\_\+t}} $\ast$}]{dts\+\_\+list }\end{DoxyParamCaption})}
+
+
+
+Definition at line 483 of file ni\+\_\+util.\+c.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{ni__util_8c_a2fff159ccd79a233c6f9c43d1c8b1d53}\label{ni__util_8c_a2fff159ccd79a233c6f9c43d1c8b1d53}} 
+\index{ni\_util.c@{ni\_util.c}!b\_initialized@{b\_initialized}}
+\index{b\_initialized@{b\_initialized}!ni\_util.c@{ni\_util.c}}
+\subsubsection{\texorpdfstring{b\_initialized}{b\_initialized}}
+{\footnotesize\ttfamily bool b\+\_\+initialized}
+
+
+
+Definition at line 45 of file ni\+\_\+util.\+c.
+
+\mbox{\Hypertarget{ni__util_8c_a28bff01436d62a41954847664ee5e2e2}\label{ni__util_8c_a28bff01436d62a41954847664ee5e2e2}} 
+\index{ni\_util.c@{ni\_util.c}!p\_buffer\_pool@{p\_buffer\_pool}}
+\index{p\_buffer\_pool@{p\_buffer\_pool}!ni\_util.c@{ni\_util.c}}
+\subsubsection{\texorpdfstring{p\_buffer\_pool}{p\_buffer\_pool}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ni__util_8h_a2073cf1ad2ff0a62fb2ff0fbd69a68f0}{ni\+\_\+queue\+\_\+buffer\+\_\+pool\+\_\+t}}$\ast$ p\+\_\+buffer\+\_\+pool\mbox{[}\mbox{\hyperlink{ni__util_8c_a2c7f5baf531515c1b4bf5f02a1184312}{M\+A\+X\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+P\+O\+O\+L\+\_\+\+SZ}}\mbox{]}}
+
+
+
+Definition at line 46 of file ni\+\_\+util.\+c.
+

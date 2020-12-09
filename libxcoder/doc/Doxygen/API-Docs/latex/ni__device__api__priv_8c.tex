@@ -1,0 +1,778 @@
+\hypertarget{ni__device__api__priv_8c}{}\section{ni\+\_\+device\+\_\+api\+\_\+priv.\+c File Reference}
+\label{ni__device__api__priv_8c}\index{ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}}
+
+
+Private functions used by main ni\+\_\+device\+\_\+api\+\_\+c file.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}inttypes.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ni\+\_\+nvme.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ni\+\_\+device\+\_\+api.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ni\+\_\+device\+\_\+api\+\_\+priv.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ni\+\_\+util.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} \mbox{\hyperlink{ni__device__api__priv_8c_abb59b4625fea99e80d14bd2847931671}{ni\+\_\+decoder\+\_\+session\+\_\+open}} (\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$p\+\_\+ctx, \mbox{\hyperlink{ni__device__api_8h_a339e8b5178897f31af91ea5543d8d23a}{ni\+\_\+session\+\_\+config\+\_\+t}} $\ast$p\+\_\+config)
+\begin{DoxyCompactList}\small\item\em Open a xcoder decoder instance. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} \mbox{\hyperlink{ni__device__api__priv_8c_af386d1e714352602189b2773f44f0423}{ni\+\_\+decoder\+\_\+session\+\_\+flush}} (\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$p\+\_\+ctx)
+\begin{DoxyCompactList}\small\item\em Flush decoder output. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} \mbox{\hyperlink{ni__device__api__priv_8c_a23feff26f962a8e869123e734f2a2415}{ni\+\_\+decoder\+\_\+session\+\_\+close}} (\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$p\+\_\+ctx, int eos\+\_\+recieved)
+\begin{DoxyCompactList}\small\item\em Close a xcoder decoder instance. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{ni__device__api__priv_8c_a1e48e0ff6351326925978e73feaa6b0b}{ni\+\_\+decoder\+\_\+session\+\_\+write}} (\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$p\+\_\+ctx, \mbox{\hyperlink{ni__device__api_8h_aa2b6b671c9baca6fd1eb993a13c04188}{ni\+\_\+packet\+\_\+t}} $\ast$p\+\_\+packet)
+\begin{DoxyCompactList}\small\item\em Send a video p\+\_\+packet to decoder. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{ni__device__api__priv_8c_a40781fd86f7027c47857bf557ad0aeab}{ni\+\_\+decoder\+\_\+session\+\_\+read}} (\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$p\+\_\+ctx, \mbox{\hyperlink{ni__device__api_8h_a3105b2de7051b2d7e2676b132b1d8b95}{ni\+\_\+frame\+\_\+t}} $\ast$p\+\_\+frame)
+\begin{DoxyCompactList}\small\item\em Retrieve a Y\+UV p\+\_\+frame from decoder. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} \mbox{\hyperlink{ni__device__api__priv_8c_a9919687c04f1e97d1258fb728325b968}{ni\+\_\+decoder\+\_\+session\+\_\+query}} (\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$p\+\_\+ctx)
+\begin{DoxyCompactList}\small\item\em Query current decoder status. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} \mbox{\hyperlink{ni__device__api__priv_8c_a8f7b9294936186edc2f919982c8e52b9}{ni\+\_\+encoder\+\_\+session\+\_\+open}} (\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$p\+\_\+ctx, \mbox{\hyperlink{ni__device__api_8h_a339e8b5178897f31af91ea5543d8d23a}{ni\+\_\+session\+\_\+config\+\_\+t}} $\ast$p\+\_\+config)
+\begin{DoxyCompactList}\small\item\em Open a xcoder encoder instance. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} \mbox{\hyperlink{ni__device__api__priv_8c_add50b45913de287bbd5c7832ea3e268f}{ni\+\_\+encoder\+\_\+session\+\_\+flush}} (\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$p\+\_\+ctx)
+\begin{DoxyCompactList}\small\item\em Flush encoder output. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} \mbox{\hyperlink{ni__device__api__priv_8c_a3b35d1530c20fce16751f86728b1d9ce}{ni\+\_\+encoder\+\_\+session\+\_\+close}} (\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$p\+\_\+ctx, int eos\+\_\+recieved)
+\begin{DoxyCompactList}\small\item\em Close a xcoder encoder instance. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{ni__device__api__priv_8c_af8702e4df322011fb0841ab5d298514f}{ni\+\_\+encoder\+\_\+session\+\_\+write}} (\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$p\+\_\+ctx, \mbox{\hyperlink{ni__device__api_8h_a3105b2de7051b2d7e2676b132b1d8b95}{ni\+\_\+frame\+\_\+t}} $\ast$p\+\_\+frame)
+\begin{DoxyCompactList}\small\item\em Send a Y\+UV p\+\_\+frame to encoder. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{ni__device__api__priv_8c_abf14c7a62a05e6bc8f11649a88989cde}{ni\+\_\+encoder\+\_\+session\+\_\+read}} (\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$p\+\_\+ctx, \mbox{\hyperlink{ni__device__api_8h_aa2b6b671c9baca6fd1eb993a13c04188}{ni\+\_\+packet\+\_\+t}} $\ast$p\+\_\+packet)
+\begin{DoxyCompactList}\small\item\em Retrieve a video p\+\_\+packet from encoder. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{ni__device__api__priv_8c_a14aa5ca8ff18ae7c6f8c941ea09b141d}{ni\+\_\+encoder\+\_\+session\+\_\+query}} (\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$p\+\_\+ctx)
+\begin{DoxyCompactList}\small\item\em Query current encoder status. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{ni__device__api__priv_8c_a22fee07c1e50f9947ef5b357cc8afe00}{ni\+\_\+query\+\_\+instance\+\_\+status}} (\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$p\+\_\+ctx, \mbox{\hyperlink{ni__defs_8h_a758f24acb02b236820c7390eed53d1cc}{ni\+\_\+device\+\_\+type\+\_\+t}} device\+\_\+type, \mbox{\hyperlink{ni__device__api__priv_8h_a106549e1ec0188f2b02587410f492667}{ni\+\_\+instance\+\_\+mgr\+\_\+general\+\_\+status\+\_\+t}} $\ast$p\+\_\+gen\+\_\+status)
+\begin{DoxyCompactList}\small\item\em Query a particular xcoder instance to get General\+Status data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} \mbox{\hyperlink{ni__device__api__priv_8c_a86587489c5ad377da3ea0e33b8632a88}{ni\+\_\+query\+\_\+stream\+\_\+info}} (\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$p\+\_\+ctx, \mbox{\hyperlink{ni__defs_8h_a758f24acb02b236820c7390eed53d1cc}{ni\+\_\+device\+\_\+type\+\_\+t}} device\+\_\+type, \mbox{\hyperlink{ni__device__api__priv_8h_acf17557193f66a201a669d18cba9bf83}{ni\+\_\+instance\+\_\+mgr\+\_\+stream\+\_\+info\+\_\+t}} $\ast$p\+\_\+stream\+\_\+info)
+\begin{DoxyCompactList}\small\item\em Query a particular xcoder instance to get Stream Info data. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{ni__device__api__priv_8c_ab0ba72a92ca49838aa8164c0d91f2d22}{ni\+\_\+query\+\_\+eos}} (\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$p\+\_\+ctx, \mbox{\hyperlink{ni__defs_8h_a758f24acb02b236820c7390eed53d1cc}{ni\+\_\+device\+\_\+type\+\_\+t}} device\+\_\+type, \mbox{\hyperlink{ni__device__api__priv_8h_a04d0378b675ce7a74c377a505d3e62be}{ni\+\_\+instance\+\_\+mgr\+\_\+stream\+\_\+complete\+\_\+t}} $\ast$p\+\_\+stream\+\_\+complete)
+\begin{DoxyCompactList}\small\item\em Query a particular xcoder instance to get End of Output data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} \mbox{\hyperlink{ni__device__api__priv_8c_a3a05402112c2a7994ed66a3ca913bafa}{ni\+\_\+config\+\_\+instance\+\_\+sos}} (\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$p\+\_\+ctx, \mbox{\hyperlink{ni__defs_8h_a758f24acb02b236820c7390eed53d1cc}{ni\+\_\+device\+\_\+type\+\_\+t}} device\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Send a p\+\_\+config command for Start Of Stream. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} \mbox{\hyperlink{ni__device__api__priv_8c_aa4f3eb88c39d423e0ec6b6c7b33be23b}{ni\+\_\+config\+\_\+instance\+\_\+eos}} (\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$p\+\_\+ctx, \mbox{\hyperlink{ni__defs_8h_a758f24acb02b236820c7390eed53d1cc}{ni\+\_\+device\+\_\+type\+\_\+t}} device\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Send a p\+\_\+config command for End Of Stream. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} \mbox{\hyperlink{ni__device__api__priv_8c_acad2473d8696f7812ddd6f05d844c2d6}{xcoder\+\_\+config\+\_\+instance\+\_\+flush}} (\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$p\+\_\+ctx, \mbox{\hyperlink{ni__defs_8h_a758f24acb02b236820c7390eed53d1cc}{ni\+\_\+device\+\_\+type\+\_\+t}} device\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Send a p\+\_\+config command to flush the stream. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} \mbox{\hyperlink{ni__device__api__priv_8c_aa9eed1ff7f4f51d6b096c835058ae2e7}{ni\+\_\+config\+\_\+instance\+\_\+set\+\_\+encoder\+\_\+params}} (\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$p\+\_\+ctx, \mbox{\hyperlink{ni__device__api_8h_a339e8b5178897f31af91ea5543d8d23a}{ni\+\_\+session\+\_\+config\+\_\+t}} $\ast$p\+\_\+config)
+\begin{DoxyCompactList}\small\item\em Send a p\+\_\+config command to configure encoding parameters. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} \mbox{\hyperlink{ni__device__api__priv_8c_a21d144f6662176f9c287c03dc68a05c0}{ni\+\_\+config\+\_\+instance\+\_\+set\+\_\+encoder\+\_\+frame\+\_\+params}} (\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$p\+\_\+ctx, \mbox{\hyperlink{ni__device__api__priv_8h_a5561ec5967571d6946c19763400f2a2c}{ni\+\_\+encoder\+\_\+frame\+\_\+params\+\_\+t}} $\ast$p\+\_\+params)
+\begin{DoxyCompactList}\small\item\em Send a p\+\_\+config command to configure encoding p\+\_\+frame parameters. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} \mbox{\hyperlink{ni__device__api__priv_8c_a46c634f85759e3e63b1880fe99658fc8}{ni\+\_\+config\+\_\+instance\+\_\+update\+\_\+encoder\+\_\+params}} (\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$p\+\_\+ctx, \mbox{\hyperlink{ni__device__api_8h_a339e8b5178897f31af91ea5543d8d23a}{ni\+\_\+session\+\_\+config\+\_\+t}} $\ast$p\+\_\+config, \mbox{\hyperlink{ni__device__api_8h_a427bd615ace53eaae95b20f3c5ba121f}{ni\+\_\+param\+\_\+change\+\_\+flags\+\_\+t}} change\+\_\+flags)
+\begin{DoxyCompactList}\small\item\em Send a p\+\_\+config command to update encoding parameters. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{ni__device__api__priv_8c_a76149cc07ed5ba1ca257ac4426adec8b}{ni\+\_\+create\+\_\+frame}} (\mbox{\hyperlink{ni__device__api_8h_a3105b2de7051b2d7e2676b132b1d8b95}{ni\+\_\+frame\+\_\+t}} $\ast$p\+\_\+frame, uint32\+\_\+t read\+\_\+length, uint64\+\_\+t $\ast$frame\+\_\+offset)
+\begin{DoxyCompactList}\small\item\em Get info from received p\+\_\+frame. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{ni__device__api__priv_8c_a7d32a0120441bf6ec06b76fc228f0da1}{ni\+\_\+create\+\_\+packet}} (\mbox{\hyperlink{ni__device__api_8h_aa2b6b671c9baca6fd1eb993a13c04188}{ni\+\_\+packet\+\_\+t}} $\ast$p\+\_\+packet, uint32\+\_\+t $\ast$p\+\_\+value, uint32\+\_\+t max\+\_\+size, uint32\+\_\+t $\ast$p\+\_\+partial\+\_\+data)
+\begin{DoxyCompactList}\small\item\em Get info from received p\+\_\+packet. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ni__device__api__priv_8c_a850bccea506c5e90f0b7d5f90204ce47}{ni\+\_\+populate\+\_\+device\+\_\+capability\+\_\+struct}} (\mbox{\hyperlink{ni__device__api_8h_a9d89ffd5129cb745f92b64f6af725613}{ni\+\_\+device\+\_\+capability\+\_\+t}} $\ast$p\+\_\+cap, void $\ast$p\+\_\+data)
+\begin{DoxyCompactList}\small\item\em Get info from received xcoder capability. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ni__device__api__priv_8c_a27f07290dd11c173ec98e6e47ea29937}{ni\+\_\+encoder\+\_\+change\+\_\+params}} (\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$p\+\_\+ctx, \mbox{\hyperlink{ni__device__api__priv_8h_a1fa2f48276e29ed97988189fc369d753}{ni\+\_\+encoder\+\_\+change\+\_\+params\+\_\+t}} $\ast$p\+\_\+change\+\_\+params, \mbox{\hyperlink{ni__device__api_8h_ae25208c62cb821686c92b409d4e3815d}{ni\+\_\+encoder\+\_\+params\+\_\+t}} $\ast$p\+\_\+src, \mbox{\hyperlink{ni__device__api_8h_a427bd615ace53eaae95b20f3c5ba121f}{ni\+\_\+param\+\_\+change\+\_\+flags\+\_\+t}} change\+\_\+flags)
+\begin{DoxyCompactList}\small\item\em Setup all xcoder encoder reconfigurations parameters. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ni__device__api__priv_8c_a87a95850c5c0068ca479c48ec69c2ba1}{ni\+\_\+set\+\_\+custom\+\_\+template}} (\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$p\+\_\+ctx, \mbox{\hyperlink{ni__device__api__priv_8h_abdce809bcde8bd0b2bb2b0f17620fbb8}{ni\+\_\+encoder\+\_\+config\+\_\+t}} $\ast$p\+\_\+cfg, \mbox{\hyperlink{ni__device__api_8h_ae25208c62cb821686c92b409d4e3815d}{ni\+\_\+encoder\+\_\+params\+\_\+t}} $\ast$p\+\_\+src)
+\begin{DoxyCompactList}\small\item\em Setup all xcoder configurations with custom parameters (Rev. B) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ni__device__api__priv_8c_ae3c5d5e11bb730977f770694e48e74b2}{ni\+\_\+set\+\_\+default\+\_\+template}} (\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$p\+\_\+ctx, \mbox{\hyperlink{ni__device__api__priv_8h_abdce809bcde8bd0b2bb2b0f17620fbb8}{ni\+\_\+encoder\+\_\+config\+\_\+t}} $\ast$p\+\_\+config)
+\begin{DoxyCompactList}\small\item\em Setup and initialize all xcoder configuration to default (Rev. B) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} \mbox{\hyperlink{ni__device__api__priv_8c_a43378253859b5a7534cf22358ac115ff}{ni\+\_\+validate\+\_\+custom\+\_\+template}} (\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$p\+\_\+ctx, \mbox{\hyperlink{ni__device__api__priv_8h_abdce809bcde8bd0b2bb2b0f17620fbb8}{ni\+\_\+encoder\+\_\+config\+\_\+t}} $\ast$p\+\_\+cfg, \mbox{\hyperlink{ni__device__api_8h_ae25208c62cb821686c92b409d4e3815d}{ni\+\_\+encoder\+\_\+params\+\_\+t}} $\ast$p\+\_\+src, char $\ast$p\+\_\+param\+\_\+err, uint32\+\_\+t max\+\_\+err\+\_\+len)
+\begin{DoxyCompactList}\small\item\em Perform validation on custom parameters (Rev. B) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} \mbox{\hyperlink{ni__device__api__priv_8c_afb724d3c35a2ef3f5b3238d714bc8353}{ni\+\_\+check\+\_\+common\+\_\+params}} (\mbox{\hyperlink{ni__device__api__priv_8h_ab1c9fee12ac7f38b4a737a0e093b632d}{ni\+\_\+t408\+\_\+config\+\_\+t}} $\ast$param, \mbox{\hyperlink{ni__device__api_8h_ae25208c62cb821686c92b409d4e3815d}{ni\+\_\+encoder\+\_\+params\+\_\+t}} $\ast$p\+\_\+src, char $\ast$p\+\_\+param\+\_\+err, uint32\+\_\+t max\+\_\+err\+\_\+len)
+\item 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} \mbox{\hyperlink{ni__device__api__priv_8c_aafed6af665c1961f780c92e557d048ae}{ni\+\_\+check\+\_\+ratecontrol\+\_\+params}} (\mbox{\hyperlink{ni__device__api__priv_8h_abdce809bcde8bd0b2bb2b0f17620fbb8}{ni\+\_\+encoder\+\_\+config\+\_\+t}} $\ast$p\+\_\+cfg, char $\ast$p\+\_\+param\+\_\+err, uint32\+\_\+t max\+\_\+err\+\_\+len)
+\item 
+void \mbox{\hyperlink{ni__device__api__priv_8c_ae9bf7efcb9729cc22f2337f0b5d6e4a4}{ni\+\_\+params\+\_\+print}} (\mbox{\hyperlink{ni__device__api_8h_ae25208c62cb821686c92b409d4e3815d}{ni\+\_\+encoder\+\_\+params\+\_\+t}} $\ast$const p\+\_\+encoder\+\_\+params)
+\begin{DoxyCompactList}\small\item\em Print xcoder user configurations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Private functions used by main ni\+\_\+device\+\_\+api\+\_\+c file. 
+
+
+
+
+
+\begin{DoxyCopyright}{Copyright}
+(c) 2019 N\+E\+T\+I\+NT Technologies Inc. All rights reserved. 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ni__device__api__priv_8c_afb724d3c35a2ef3f5b3238d714bc8353}\label{ni__device__api__priv_8c_afb724d3c35a2ef3f5b3238d714bc8353}} 
+\index{ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}!ni\_check\_common\_params@{ni\_check\_common\_params}}
+\index{ni\_check\_common\_params@{ni\_check\_common\_params}!ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}}
+\subsubsection{\texorpdfstring{ni\_check\_common\_params()}{ni\_check\_common\_params()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} ni\+\_\+check\+\_\+common\+\_\+params (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__device__api__priv_8h_ab1c9fee12ac7f38b4a737a0e093b632d}{ni\+\_\+t408\+\_\+config\+\_\+t}} $\ast$}]{param,  }\item[{\mbox{\hyperlink{ni__device__api_8h_ae25208c62cb821686c92b409d4e3815d}{ni\+\_\+encoder\+\_\+params\+\_\+t}} $\ast$}]{p\+\_\+src,  }\item[{char $\ast$}]{p\+\_\+param\+\_\+err,  }\item[{uint32\+\_\+t}]{max\+\_\+err\+\_\+len }\end{DoxyParamCaption})}
+
+
+
+Definition at line 3297 of file ni\+\_\+device\+\_\+api\+\_\+priv.\+c.
+
+\mbox{\Hypertarget{ni__device__api__priv_8c_aafed6af665c1961f780c92e557d048ae}\label{ni__device__api__priv_8c_aafed6af665c1961f780c92e557d048ae}} 
+\index{ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}!ni\_check\_ratecontrol\_params@{ni\_check\_ratecontrol\_params}}
+\index{ni\_check\_ratecontrol\_params@{ni\_check\_ratecontrol\_params}!ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}}
+\subsubsection{\texorpdfstring{ni\_check\_ratecontrol\_params()}{ni\_check\_ratecontrol\_params()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} ni\+\_\+check\+\_\+ratecontrol\+\_\+params (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__device__api__priv_8h_abdce809bcde8bd0b2bb2b0f17620fbb8}{ni\+\_\+encoder\+\_\+config\+\_\+t}} $\ast$}]{p\+\_\+cfg,  }\item[{char $\ast$}]{p\+\_\+param\+\_\+err,  }\item[{uint32\+\_\+t}]{max\+\_\+err\+\_\+len }\end{DoxyParamCaption})}
+
+
+
+Definition at line 3501 of file ni\+\_\+device\+\_\+api\+\_\+priv.\+c.
+
+\mbox{\Hypertarget{ni__device__api__priv_8c_aa4f3eb88c39d423e0ec6b6c7b33be23b}\label{ni__device__api__priv_8c_aa4f3eb88c39d423e0ec6b6c7b33be23b}} 
+\index{ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}!ni\_config\_instance\_eos@{ni\_config\_instance\_eos}}
+\index{ni\_config\_instance\_eos@{ni\_config\_instance\_eos}!ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}}
+\subsubsection{\texorpdfstring{ni\_config\_instance\_eos()}{ni\_config\_instance\_eos()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} ni\+\_\+config\+\_\+instance\+\_\+eos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$}]{p\+\_\+ctx,  }\item[{\mbox{\hyperlink{ni__defs_8h_a758f24acb02b236820c7390eed53d1cc}{ni\+\_\+device\+\_\+type\+\_\+t}}}]{device\+\_\+type }\end{DoxyParamCaption})}
+
+
+
+Send a p\+\_\+config command for End Of Stream. 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em ni\+\_\+session\+\_\+context\+\_\+t} & p\+\_\+ctx -\/ xcoder Context \\
+\hline
+{\em ni\+\_\+device\+\_\+type\+\_\+t} & device\+\_\+type -\/ xcoder type Encoder or Decoder\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+S\+U\+C\+C\+E\+SS on success, N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+E\+S\+S\+I\+ON, N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+N\+V\+M\+E\+\_\+\+C\+M\+D\+\_\+\+F\+A\+I\+L\+ED on failure 
+\end{DoxyReturn}
+
+
+Definition at line 1683 of file ni\+\_\+device\+\_\+api\+\_\+priv.\+c.
+
+\mbox{\Hypertarget{ni__device__api__priv_8c_a21d144f6662176f9c287c03dc68a05c0}\label{ni__device__api__priv_8c_a21d144f6662176f9c287c03dc68a05c0}} 
+\index{ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}!ni\_config\_instance\_set\_encoder\_frame\_params@{ni\_config\_instance\_set\_encoder\_frame\_params}}
+\index{ni\_config\_instance\_set\_encoder\_frame\_params@{ni\_config\_instance\_set\_encoder\_frame\_params}!ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}}
+\subsubsection{\texorpdfstring{ni\_config\_instance\_set\_encoder\_frame\_params()}{ni\_config\_instance\_set\_encoder\_frame\_params()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} ni\+\_\+config\+\_\+instance\+\_\+set\+\_\+encoder\+\_\+frame\+\_\+params (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$}]{p\+\_\+ctx,  }\item[{\mbox{\hyperlink{ni__device__api__priv_8h_a5561ec5967571d6946c19763400f2a2c}{ni\+\_\+encoder\+\_\+frame\+\_\+params\+\_\+t}} $\ast$}]{p\+\_\+params }\end{DoxyParamCaption})}
+
+
+
+Send a p\+\_\+config command to configure encoding p\+\_\+frame parameters. 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em ni\+\_\+session\+\_\+context\+\_\+t} & p\+\_\+ctx -\/ xcoder Context \\
+\hline
+{\em ni\+\_\+encoder\+\_\+frame\+\_\+params\+\_\+t} & $\ast$ params -\/ pointer to the encoder ni\+\_\+encoder\+\_\+frame\+\_\+params\+\_\+t struct\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+S\+U\+C\+C\+E\+SS on success, N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+E\+S\+S\+I\+ON, N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+N\+V\+M\+E\+\_\+\+C\+M\+D\+\_\+\+F\+A\+I\+L\+ED on failure 
+\end{DoxyReturn}
+
+
+Definition at line 1868 of file ni\+\_\+device\+\_\+api\+\_\+priv.\+c.
+
+\mbox{\Hypertarget{ni__device__api__priv_8c_aa9eed1ff7f4f51d6b096c835058ae2e7}\label{ni__device__api__priv_8c_aa9eed1ff7f4f51d6b096c835058ae2e7}} 
+\index{ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}!ni\_config\_instance\_set\_encoder\_params@{ni\_config\_instance\_set\_encoder\_params}}
+\index{ni\_config\_instance\_set\_encoder\_params@{ni\_config\_instance\_set\_encoder\_params}!ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}}
+\subsubsection{\texorpdfstring{ni\_config\_instance\_set\_encoder\_params()}{ni\_config\_instance\_set\_encoder\_params()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} ni\+\_\+config\+\_\+instance\+\_\+set\+\_\+encoder\+\_\+params (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$}]{p\+\_\+ctx,  }\item[{\mbox{\hyperlink{ni__device__api_8h_a339e8b5178897f31af91ea5543d8d23a}{ni\+\_\+session\+\_\+config\+\_\+t}} $\ast$}]{p\+\_\+config }\end{DoxyParamCaption})}
+
+
+
+Send a p\+\_\+config command to configure encoding parameters. 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em ni\+\_\+session\+\_\+context\+\_\+t} & p\+\_\+ctx -\/ xcoder Context \\
+\hline
+{\em ni\+\_\+session\+\_\+config\+\_\+t} & $\ast$ p\+\_\+config -\/ pointer to the encoder p\+\_\+config struct\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+S\+U\+C\+C\+E\+SS on success, N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+E\+S\+S\+I\+ON, N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+N\+V\+M\+E\+\_\+\+C\+M\+D\+\_\+\+F\+A\+I\+L\+ED on failure 
+\end{DoxyReturn}
+
+
+Definition at line 1777 of file ni\+\_\+device\+\_\+api\+\_\+priv.\+c.
+
+\mbox{\Hypertarget{ni__device__api__priv_8c_a3a05402112c2a7994ed66a3ca913bafa}\label{ni__device__api__priv_8c_a3a05402112c2a7994ed66a3ca913bafa}} 
+\index{ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}!ni\_config\_instance\_sos@{ni\_config\_instance\_sos}}
+\index{ni\_config\_instance\_sos@{ni\_config\_instance\_sos}!ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}}
+\subsubsection{\texorpdfstring{ni\_config\_instance\_sos()}{ni\_config\_instance\_sos()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} ni\+\_\+config\+\_\+instance\+\_\+sos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$}]{p\+\_\+ctx,  }\item[{\mbox{\hyperlink{ni__defs_8h_a758f24acb02b236820c7390eed53d1cc}{ni\+\_\+device\+\_\+type\+\_\+t}}}]{device\+\_\+type }\end{DoxyParamCaption})}
+
+
+
+Send a p\+\_\+config command for Start Of Stream. 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em ni\+\_\+session\+\_\+context\+\_\+t} & p\+\_\+ctx -\/ xcoder Context \\
+\hline
+{\em ni\+\_\+device\+\_\+type\+\_\+t} & device\+\_\+type -\/ xcoder type Encoder or Decoder\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+S\+U\+C\+C\+E\+SS on success, N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+E\+S\+S\+I\+ON. N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+N\+V\+M\+E\+\_\+\+C\+M\+D\+\_\+\+F\+A\+I\+L\+ED on failure 
+\end{DoxyReturn}
+
+
+Definition at line 1636 of file ni\+\_\+device\+\_\+api\+\_\+priv.\+c.
+
+\mbox{\Hypertarget{ni__device__api__priv_8c_a46c634f85759e3e63b1880fe99658fc8}\label{ni__device__api__priv_8c_a46c634f85759e3e63b1880fe99658fc8}} 
+\index{ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}!ni\_config\_instance\_update\_encoder\_params@{ni\_config\_instance\_update\_encoder\_params}}
+\index{ni\_config\_instance\_update\_encoder\_params@{ni\_config\_instance\_update\_encoder\_params}!ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}}
+\subsubsection{\texorpdfstring{ni\_config\_instance\_update\_encoder\_params()}{ni\_config\_instance\_update\_encoder\_params()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} ni\+\_\+config\+\_\+instance\+\_\+update\+\_\+encoder\+\_\+params (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$}]{p\+\_\+ctx,  }\item[{\mbox{\hyperlink{ni__device__api_8h_a339e8b5178897f31af91ea5543d8d23a}{ni\+\_\+session\+\_\+config\+\_\+t}} $\ast$}]{p\+\_\+config,  }\item[{\mbox{\hyperlink{ni__device__api_8h_a427bd615ace53eaae95b20f3c5ba121f}{ni\+\_\+param\+\_\+change\+\_\+flags\+\_\+t}}}]{change\+\_\+flags }\end{DoxyParamCaption})}
+
+
+
+Send a p\+\_\+config command to update encoding parameters. 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em ni\+\_\+session\+\_\+context\+\_\+t} & p\+\_\+ctx -\/ xcoder Context \\
+\hline
+{\em ni\+\_\+session\+\_\+config\+\_\+t} & $\ast$ p\+\_\+config -\/ pointer to the encoder p\+\_\+config struct\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+S\+U\+C\+C\+E\+SS on success, N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+E\+S\+S\+I\+ON, N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+N\+V\+M\+E\+\_\+\+C\+M\+D\+\_\+\+F\+A\+I\+L\+ED on failure 
+\end{DoxyReturn}
+
+
+Definition at line 1944 of file ni\+\_\+device\+\_\+api\+\_\+priv.\+c.
+
+\mbox{\Hypertarget{ni__device__api__priv_8c_a76149cc07ed5ba1ca257ac4426adec8b}\label{ni__device__api__priv_8c_a76149cc07ed5ba1ca257ac4426adec8b}} 
+\index{ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}!ni\_create\_frame@{ni\_create\_frame}}
+\index{ni\_create\_frame@{ni\_create\_frame}!ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}}
+\subsubsection{\texorpdfstring{ni\_create\_frame()}{ni\_create\_frame()}}
+{\footnotesize\ttfamily int ni\+\_\+create\+\_\+frame (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__device__api_8h_a3105b2de7051b2d7e2676b132b1d8b95}{ni\+\_\+frame\+\_\+t}} $\ast$}]{p\+\_\+frame,  }\item[{uint32\+\_\+t}]{read\+\_\+length,  }\item[{uint64\+\_\+t $\ast$}]{frame\+\_\+offset }\end{DoxyParamCaption})}
+
+
+
+Get info from received p\+\_\+frame. 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 2051 of file ni\+\_\+device\+\_\+api\+\_\+priv.\+c.
+
+\mbox{\Hypertarget{ni__device__api__priv_8c_a7d32a0120441bf6ec06b76fc228f0da1}\label{ni__device__api__priv_8c_a7d32a0120441bf6ec06b76fc228f0da1}} 
+\index{ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}!ni\_create\_packet@{ni\_create\_packet}}
+\index{ni\_create\_packet@{ni\_create\_packet}!ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}}
+\subsubsection{\texorpdfstring{ni\_create\_packet()}{ni\_create\_packet()}}
+{\footnotesize\ttfamily int ni\+\_\+create\+\_\+packet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__device__api_8h_aa2b6b671c9baca6fd1eb993a13c04188}{ni\+\_\+packet\+\_\+t}} $\ast$}]{p\+\_\+packet,  }\item[{uint32\+\_\+t $\ast$}]{p\+\_\+value,  }\item[{uint32\+\_\+t}]{max\+\_\+size,  }\item[{uint32\+\_\+t $\ast$}]{p\+\_\+partial\+\_\+data }\end{DoxyParamCaption})}
+
+
+
+Get info from received p\+\_\+packet. 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 2128 of file ni\+\_\+device\+\_\+api\+\_\+priv.\+c.
+
+\mbox{\Hypertarget{ni__device__api__priv_8c_a23feff26f962a8e869123e734f2a2415}\label{ni__device__api__priv_8c_a23feff26f962a8e869123e734f2a2415}} 
+\index{ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}!ni\_decoder\_session\_close@{ni\_decoder\_session\_close}}
+\index{ni\_decoder\_session\_close@{ni\_decoder\_session\_close}!ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}}
+\subsubsection{\texorpdfstring{ni\_decoder\_session\_close()}{ni\_decoder\_session\_close()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} ni\+\_\+decoder\+\_\+session\+\_\+close (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$}]{p\+\_\+ctx,  }\item[{int}]{eos\+\_\+recieved }\end{DoxyParamCaption})}
+
+
+
+Close a xcoder decoder instance. 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 214 of file ni\+\_\+device\+\_\+api\+\_\+priv.\+c.
+
+\mbox{\Hypertarget{ni__device__api__priv_8c_af386d1e714352602189b2773f44f0423}\label{ni__device__api__priv_8c_af386d1e714352602189b2773f44f0423}} 
+\index{ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}!ni\_decoder\_session\_flush@{ni\_decoder\_session\_flush}}
+\index{ni\_decoder\_session\_flush@{ni\_decoder\_session\_flush}!ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}}
+\subsubsection{\texorpdfstring{ni\_decoder\_session\_flush()}{ni\_decoder\_session\_flush()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} ni\+\_\+decoder\+\_\+session\+\_\+flush (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$}]{p\+\_\+ctx }\end{DoxyParamCaption})}
+
+
+
+Flush decoder output. 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 175 of file ni\+\_\+device\+\_\+api\+\_\+priv.\+c.
+
+\mbox{\Hypertarget{ni__device__api__priv_8c_abb59b4625fea99e80d14bd2847931671}\label{ni__device__api__priv_8c_abb59b4625fea99e80d14bd2847931671}} 
+\index{ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}!ni\_decoder\_session\_open@{ni\_decoder\_session\_open}}
+\index{ni\_decoder\_session\_open@{ni\_decoder\_session\_open}!ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}}
+\subsubsection{\texorpdfstring{ni\_decoder\_session\_open()}{ni\_decoder\_session\_open()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} ni\+\_\+decoder\+\_\+session\+\_\+open (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$}]{p\+\_\+ctx,  }\item[{\mbox{\hyperlink{ni__device__api_8h_a339e8b5178897f31af91ea5543d8d23a}{ni\+\_\+session\+\_\+config\+\_\+t}} $\ast$}]{p\+\_\+config }\end{DoxyParamCaption})}
+
+
+
+Open a xcoder decoder instance. 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 65 of file ni\+\_\+device\+\_\+api\+\_\+priv.\+c.
+
+\mbox{\Hypertarget{ni__device__api__priv_8c_a9919687c04f1e97d1258fb728325b968}\label{ni__device__api__priv_8c_a9919687c04f1e97d1258fb728325b968}} 
+\index{ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}!ni\_decoder\_session\_query@{ni\_decoder\_session\_query}}
+\index{ni\_decoder\_session\_query@{ni\_decoder\_session\_query}!ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}}
+\subsubsection{\texorpdfstring{ni\_decoder\_session\_query()}{ni\_decoder\_session\_query()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} ni\+\_\+decoder\+\_\+session\+\_\+query (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$}]{p\+\_\+ctx }\end{DoxyParamCaption})}
+
+
+
+Query current decoder status. 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 648 of file ni\+\_\+device\+\_\+api\+\_\+priv.\+c.
+
+\mbox{\Hypertarget{ni__device__api__priv_8c_a40781fd86f7027c47857bf557ad0aeab}\label{ni__device__api__priv_8c_a40781fd86f7027c47857bf557ad0aeab}} 
+\index{ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}!ni\_decoder\_session\_read@{ni\_decoder\_session\_read}}
+\index{ni\_decoder\_session\_read@{ni\_decoder\_session\_read}!ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}}
+\subsubsection{\texorpdfstring{ni\_decoder\_session\_read()}{ni\_decoder\_session\_read()}}
+{\footnotesize\ttfamily int ni\+\_\+decoder\+\_\+session\+\_\+read (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$}]{p\+\_\+ctx,  }\item[{\mbox{\hyperlink{ni__device__api_8h_a3105b2de7051b2d7e2676b132b1d8b95}{ni\+\_\+frame\+\_\+t}} $\ast$}]{p\+\_\+frame }\end{DoxyParamCaption})}
+
+
+
+Retrieve a Y\+UV p\+\_\+frame from decoder. 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 475 of file ni\+\_\+device\+\_\+api\+\_\+priv.\+c.
+
+\mbox{\Hypertarget{ni__device__api__priv_8c_a1e48e0ff6351326925978e73feaa6b0b}\label{ni__device__api__priv_8c_a1e48e0ff6351326925978e73feaa6b0b}} 
+\index{ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}!ni\_decoder\_session\_write@{ni\_decoder\_session\_write}}
+\index{ni\_decoder\_session\_write@{ni\_decoder\_session\_write}!ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}}
+\subsubsection{\texorpdfstring{ni\_decoder\_session\_write()}{ni\_decoder\_session\_write()}}
+{\footnotesize\ttfamily int ni\+\_\+decoder\+\_\+session\+\_\+write (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$}]{p\+\_\+ctx,  }\item[{\mbox{\hyperlink{ni__device__api_8h_aa2b6b671c9baca6fd1eb993a13c04188}{ni\+\_\+packet\+\_\+t}} $\ast$}]{p\+\_\+packet }\end{DoxyParamCaption})}
+
+
+
+Send a video p\+\_\+packet to decoder. 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 285 of file ni\+\_\+device\+\_\+api\+\_\+priv.\+c.
+
+\mbox{\Hypertarget{ni__device__api__priv_8c_a27f07290dd11c173ec98e6e47ea29937}\label{ni__device__api__priv_8c_a27f07290dd11c173ec98e6e47ea29937}} 
+\index{ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}!ni\_encoder\_change\_params@{ni\_encoder\_change\_params}}
+\index{ni\_encoder\_change\_params@{ni\_encoder\_change\_params}!ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}}
+\subsubsection{\texorpdfstring{ni\_encoder\_change\_params()}{ni\_encoder\_change\_params()}}
+{\footnotesize\ttfamily void ni\+\_\+encoder\+\_\+change\+\_\+params (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$}]{p\+\_\+ctx,  }\item[{\mbox{\hyperlink{ni__device__api__priv_8h_a1fa2f48276e29ed97988189fc369d753}{ni\+\_\+encoder\+\_\+change\+\_\+params\+\_\+t}} $\ast$}]{p\+\_\+change\+\_\+params,  }\item[{\mbox{\hyperlink{ni__device__api_8h_ae25208c62cb821686c92b409d4e3815d}{ni\+\_\+encoder\+\_\+params\+\_\+t}} $\ast$}]{p\+\_\+src,  }\item[{\mbox{\hyperlink{ni__device__api_8h_a427bd615ace53eaae95b20f3c5ba121f}{ni\+\_\+param\+\_\+change\+\_\+flags\+\_\+t}}}]{change\+\_\+flags }\end{DoxyParamCaption})}
+
+
+
+Setup all xcoder encoder reconfigurations parameters. 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 2289 of file ni\+\_\+device\+\_\+api\+\_\+priv.\+c.
+
+\mbox{\Hypertarget{ni__device__api__priv_8c_a3b35d1530c20fce16751f86728b1d9ce}\label{ni__device__api__priv_8c_a3b35d1530c20fce16751f86728b1d9ce}} 
+\index{ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}!ni\_encoder\_session\_close@{ni\_encoder\_session\_close}}
+\index{ni\_encoder\_session\_close@{ni\_encoder\_session\_close}!ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}}
+\subsubsection{\texorpdfstring{ni\_encoder\_session\_close()}{ni\_encoder\_session\_close()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} ni\+\_\+encoder\+\_\+session\+\_\+close (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$}]{p\+\_\+ctx,  }\item[{int}]{eos\+\_\+recieved }\end{DoxyParamCaption})}
+
+
+
+Close a xcoder encoder instance. 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 829 of file ni\+\_\+device\+\_\+api\+\_\+priv.\+c.
+
+\mbox{\Hypertarget{ni__device__api__priv_8c_add50b45913de287bbd5c7832ea3e268f}\label{ni__device__api__priv_8c_add50b45913de287bbd5c7832ea3e268f}} 
+\index{ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}!ni\_encoder\_session\_flush@{ni\_encoder\_session\_flush}}
+\index{ni\_encoder\_session\_flush@{ni\_encoder\_session\_flush}!ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}}
+\subsubsection{\texorpdfstring{ni\_encoder\_session\_flush()}{ni\_encoder\_session\_flush()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} ni\+\_\+encoder\+\_\+session\+\_\+flush (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$}]{p\+\_\+ctx }\end{DoxyParamCaption})}
+
+
+
+Flush encoder output. 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 803 of file ni\+\_\+device\+\_\+api\+\_\+priv.\+c.
+
+\mbox{\Hypertarget{ni__device__api__priv_8c_a8f7b9294936186edc2f919982c8e52b9}\label{ni__device__api__priv_8c_a8f7b9294936186edc2f919982c8e52b9}} 
+\index{ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}!ni\_encoder\_session\_open@{ni\_encoder\_session\_open}}
+\index{ni\_encoder\_session\_open@{ni\_encoder\_session\_open}!ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}}
+\subsubsection{\texorpdfstring{ni\_encoder\_session\_open()}{ni\_encoder\_session\_open()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} ni\+\_\+encoder\+\_\+session\+\_\+open (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$}]{p\+\_\+ctx,  }\item[{\mbox{\hyperlink{ni__device__api_8h_a339e8b5178897f31af91ea5543d8d23a}{ni\+\_\+session\+\_\+config\+\_\+t}} $\ast$}]{p\+\_\+config }\end{DoxyParamCaption})}
+
+
+
+Open a xcoder encoder instance. 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 662 of file ni\+\_\+device\+\_\+api\+\_\+priv.\+c.
+
+\mbox{\Hypertarget{ni__device__api__priv_8c_a14aa5ca8ff18ae7c6f8c941ea09b141d}\label{ni__device__api__priv_8c_a14aa5ca8ff18ae7c6f8c941ea09b141d}} 
+\index{ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}!ni\_encoder\_session\_query@{ni\_encoder\_session\_query}}
+\index{ni\_encoder\_session\_query@{ni\_encoder\_session\_query}!ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}}
+\subsubsection{\texorpdfstring{ni\_encoder\_session\_query()}{ni\_encoder\_session\_query()}}
+{\footnotesize\ttfamily int ni\+\_\+encoder\+\_\+session\+\_\+query (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$}]{p\+\_\+ctx }\end{DoxyParamCaption})}
+
+
+
+Query current encoder status. 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 1406 of file ni\+\_\+device\+\_\+api\+\_\+priv.\+c.
+
+\mbox{\Hypertarget{ni__device__api__priv_8c_abf14c7a62a05e6bc8f11649a88989cde}\label{ni__device__api__priv_8c_abf14c7a62a05e6bc8f11649a88989cde}} 
+\index{ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}!ni\_encoder\_session\_read@{ni\_encoder\_session\_read}}
+\index{ni\_encoder\_session\_read@{ni\_encoder\_session\_read}!ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}}
+\subsubsection{\texorpdfstring{ni\_encoder\_session\_read()}{ni\_encoder\_session\_read()}}
+{\footnotesize\ttfamily int ni\+\_\+encoder\+\_\+session\+\_\+read (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$}]{p\+\_\+ctx,  }\item[{\mbox{\hyperlink{ni__device__api_8h_aa2b6b671c9baca6fd1eb993a13c04188}{ni\+\_\+packet\+\_\+t}} $\ast$}]{p\+\_\+packet }\end{DoxyParamCaption})}
+
+
+
+Retrieve a video p\+\_\+packet from encoder. 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 1243 of file ni\+\_\+device\+\_\+api\+\_\+priv.\+c.
+
+\mbox{\Hypertarget{ni__device__api__priv_8c_af8702e4df322011fb0841ab5d298514f}\label{ni__device__api__priv_8c_af8702e4df322011fb0841ab5d298514f}} 
+\index{ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}!ni\_encoder\_session\_write@{ni\_encoder\_session\_write}}
+\index{ni\_encoder\_session\_write@{ni\_encoder\_session\_write}!ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}}
+\subsubsection{\texorpdfstring{ni\_encoder\_session\_write()}{ni\_encoder\_session\_write()}}
+{\footnotesize\ttfamily int ni\+\_\+encoder\+\_\+session\+\_\+write (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$}]{p\+\_\+ctx,  }\item[{\mbox{\hyperlink{ni__device__api_8h_a3105b2de7051b2d7e2676b132b1d8b95}{ni\+\_\+frame\+\_\+t}} $\ast$}]{p\+\_\+frame }\end{DoxyParamCaption})}
+
+
+
+Send a Y\+UV p\+\_\+frame to encoder. 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$ Sequence Change related stuff
+
+$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$ Sequence Change related stuff end 
+
+Definition at line 917 of file ni\+\_\+device\+\_\+api\+\_\+priv.\+c.
+
+\mbox{\Hypertarget{ni__device__api__priv_8c_ae9bf7efcb9729cc22f2337f0b5d6e4a4}\label{ni__device__api__priv_8c_ae9bf7efcb9729cc22f2337f0b5d6e4a4}} 
+\index{ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}!ni\_params\_print@{ni\_params\_print}}
+\index{ni\_params\_print@{ni\_params\_print}!ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}}
+\subsubsection{\texorpdfstring{ni\_params\_print()}{ni\_params\_print()}}
+{\footnotesize\ttfamily void ni\+\_\+params\+\_\+print (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__device__api_8h_ae25208c62cb821686c92b409d4e3815d}{ni\+\_\+encoder\+\_\+params\+\_\+t}} $\ast$const}]{p\+\_\+encoder\+\_\+params }\end{DoxyParamCaption})}
+
+
+
+Print xcoder user configurations. 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 3539 of file ni\+\_\+device\+\_\+api\+\_\+priv.\+c.
+
+\mbox{\Hypertarget{ni__device__api__priv_8c_a850bccea506c5e90f0b7d5f90204ce47}\label{ni__device__api__priv_8c_a850bccea506c5e90f0b7d5f90204ce47}} 
+\index{ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}!ni\_populate\_device\_capability\_struct@{ni\_populate\_device\_capability\_struct}}
+\index{ni\_populate\_device\_capability\_struct@{ni\_populate\_device\_capability\_struct}!ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}}
+\subsubsection{\texorpdfstring{ni\_populate\_device\_capability\_struct()}{ni\_populate\_device\_capability\_struct()}}
+{\footnotesize\ttfamily void ni\+\_\+populate\+\_\+device\+\_\+capability\+\_\+struct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__device__api_8h_a9d89ffd5129cb745f92b64f6af725613}{ni\+\_\+device\+\_\+capability\+\_\+t}} $\ast$}]{p\+\_\+cap,  }\item[{void $\ast$}]{p\+\_\+data }\end{DoxyParamCaption})}
+
+
+
+Get info from received xcoder capability. 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 2167 of file ni\+\_\+device\+\_\+api\+\_\+priv.\+c.
+
+\mbox{\Hypertarget{ni__device__api__priv_8c_ab0ba72a92ca49838aa8164c0d91f2d22}\label{ni__device__api__priv_8c_ab0ba72a92ca49838aa8164c0d91f2d22}} 
+\index{ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}!ni\_query\_eos@{ni\_query\_eos}}
+\index{ni\_query\_eos@{ni\_query\_eos}!ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}}
+\subsubsection{\texorpdfstring{ni\_query\_eos()}{ni\_query\_eos()}}
+{\footnotesize\ttfamily int ni\+\_\+query\+\_\+eos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$}]{p\+\_\+ctx,  }\item[{\mbox{\hyperlink{ni__defs_8h_a758f24acb02b236820c7390eed53d1cc}{ni\+\_\+device\+\_\+type\+\_\+t}}}]{device\+\_\+type,  }\item[{\mbox{\hyperlink{ni__device__api__priv_8h_a04d0378b675ce7a74c377a505d3e62be}{ni\+\_\+instance\+\_\+mgr\+\_\+stream\+\_\+complete\+\_\+t}} $\ast$}]{p\+\_\+stream\+\_\+complete }\end{DoxyParamCaption})}
+
+
+
+Query a particular xcoder instance to get End of Output data. 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em ni\+\_\+session\+\_\+context\+\_\+t} & p\+\_\+ctx -\/ xcoder Context \\
+\hline
+{\em ni\+\_\+device\+\_\+type\+\_\+t} & device\+\_\+type -\/ xcoder type Encoder or Decoder \\
+\hline
+{\em Inst\+Mgr\+Stream\+Comp} & $\ast$out -\/ Struct preallocated from the caller where the resulting data will be placed\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+S\+U\+C\+C\+E\+SS on success, N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+E\+S\+S\+I\+ON, N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+M\+E\+M\+\_\+\+A\+L\+OC or N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+N\+V\+M\+E\+\_\+\+C\+M\+D\+\_\+\+F\+A\+I\+L\+ED on failure 
+\end{DoxyReturn}
+
+
+Definition at line 1569 of file ni\+\_\+device\+\_\+api\+\_\+priv.\+c.
+
+\mbox{\Hypertarget{ni__device__api__priv_8c_a22fee07c1e50f9947ef5b357cc8afe00}\label{ni__device__api__priv_8c_a22fee07c1e50f9947ef5b357cc8afe00}} 
+\index{ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}!ni\_query\_instance\_status@{ni\_query\_instance\_status}}
+\index{ni\_query\_instance\_status@{ni\_query\_instance\_status}!ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}}
+\subsubsection{\texorpdfstring{ni\_query\_instance\_status()}{ni\_query\_instance\_status()}}
+{\footnotesize\ttfamily int ni\+\_\+query\+\_\+instance\+\_\+status (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$}]{p\+\_\+ctx,  }\item[{\mbox{\hyperlink{ni__defs_8h_a758f24acb02b236820c7390eed53d1cc}{ni\+\_\+device\+\_\+type\+\_\+t}}}]{device\+\_\+type,  }\item[{\mbox{\hyperlink{ni__device__api__priv_8h_a106549e1ec0188f2b02587410f492667}{ni\+\_\+instance\+\_\+mgr\+\_\+general\+\_\+status\+\_\+t}} $\ast$}]{p\+\_\+gen\+\_\+status }\end{DoxyParamCaption})}
+
+
+
+Query a particular xcoder instance to get General\+Status data. 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em ni\+\_\+session\+\_\+context\+\_\+t} & p\+\_\+ctx -\/ xcoder Context \\
+\hline
+{\em ni\+\_\+device\+\_\+type\+\_\+t} & device\+\_\+type -\/ xcoder type Encoder or Decoder \\
+\hline
+{\em ni\+\_\+instance\+\_\+mgr\+\_\+general\+\_\+status\+\_\+t} & $\ast$out -\/ Struct preallocated from the caller where the resulting data will be placed\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+S\+U\+C\+C\+E\+SS on success, N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+M\+E\+M\+\_\+\+A\+L\+OC or N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+N\+V\+M\+E\+\_\+\+C\+M\+D\+\_\+\+F\+A\+I\+L\+ED on failure 
+\end{DoxyReturn}
+
+
+Definition at line 1422 of file ni\+\_\+device\+\_\+api\+\_\+priv.\+c.
+
+\mbox{\Hypertarget{ni__device__api__priv_8c_a86587489c5ad377da3ea0e33b8632a88}\label{ni__device__api__priv_8c_a86587489c5ad377da3ea0e33b8632a88}} 
+\index{ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}!ni\_query\_stream\_info@{ni\_query\_stream\_info}}
+\index{ni\_query\_stream\_info@{ni\_query\_stream\_info}!ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}}
+\subsubsection{\texorpdfstring{ni\_query\_stream\_info()}{ni\_query\_stream\_info()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} ni\+\_\+query\+\_\+stream\+\_\+info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$}]{p\+\_\+ctx,  }\item[{\mbox{\hyperlink{ni__defs_8h_a758f24acb02b236820c7390eed53d1cc}{ni\+\_\+device\+\_\+type\+\_\+t}}}]{device\+\_\+type,  }\item[{\mbox{\hyperlink{ni__device__api__priv_8h_acf17557193f66a201a669d18cba9bf83}{ni\+\_\+instance\+\_\+mgr\+\_\+stream\+\_\+info\+\_\+t}} $\ast$}]{p\+\_\+stream\+\_\+info }\end{DoxyParamCaption})}
+
+
+
+Query a particular xcoder instance to get Stream Info data. 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em ni\+\_\+session\+\_\+context\+\_\+t} & p\+\_\+ctx -\/ xcoder Context \\
+\hline
+{\em ni\+\_\+device\+\_\+type\+\_\+t} & device\+\_\+type -\/ xcoder type Encoder or Decoder \\
+\hline
+{\em ni\+\_\+instance\+\_\+mgr\+\_\+stream\+\_\+info\+\_\+t} & $\ast$out -\/ Struct preallocated from the caller where the resulting data will be placed\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+S\+U\+C\+C\+E\+SS on success, N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+E\+S\+S\+I\+ON, N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+M\+E\+M\+\_\+\+A\+L\+OC or N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+N\+V\+M\+E\+\_\+\+C\+M\+D\+\_\+\+F\+A\+I\+L\+ED on failure 
+\end{DoxyReturn}
+ni\+\_\+debug\+\_\+print(\char`\"{}\+V\+A\+L 1-\/ \%u, 2-\/ \%u, 3-\/ \%u, 4-\/ \%u\textbackslash{}n\char`\"{}, out-\/$>$picture\+\_\+width, out-\/$>$picture\+\_\+height, out-\/$>$frame\+\_\+rate, out-\/$>$is\+\_\+flushed);
+
+Definition at line 1489 of file ni\+\_\+device\+\_\+api\+\_\+priv.\+c.
+
+\mbox{\Hypertarget{ni__device__api__priv_8c_a87a95850c5c0068ca479c48ec69c2ba1}\label{ni__device__api__priv_8c_a87a95850c5c0068ca479c48ec69c2ba1}} 
+\index{ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}!ni\_set\_custom\_template@{ni\_set\_custom\_template}}
+\index{ni\_set\_custom\_template@{ni\_set\_custom\_template}!ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}}
+\subsubsection{\texorpdfstring{ni\_set\_custom\_template()}{ni\_set\_custom\_template()}}
+{\footnotesize\ttfamily void ni\+\_\+set\+\_\+custom\+\_\+template (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$}]{p\+\_\+ctx,  }\item[{\mbox{\hyperlink{ni__device__api__priv_8h_abdce809bcde8bd0b2bb2b0f17620fbb8}{ni\+\_\+encoder\+\_\+config\+\_\+t}} $\ast$}]{p\+\_\+cfg,  }\item[{\mbox{\hyperlink{ni__device__api_8h_ae25208c62cb821686c92b409d4e3815d}{ni\+\_\+encoder\+\_\+params\+\_\+t}} $\ast$}]{p\+\_\+src }\end{DoxyParamCaption})}
+
+
+
+Setup all xcoder configurations with custom parameters (Rev. B) 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 2401 of file ni\+\_\+device\+\_\+api\+\_\+priv.\+c.
+
+\mbox{\Hypertarget{ni__device__api__priv_8c_ae3c5d5e11bb730977f770694e48e74b2}\label{ni__device__api__priv_8c_ae3c5d5e11bb730977f770694e48e74b2}} 
+\index{ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}!ni\_set\_default\_template@{ni\_set\_default\_template}}
+\index{ni\_set\_default\_template@{ni\_set\_default\_template}!ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}}
+\subsubsection{\texorpdfstring{ni\_set\_default\_template()}{ni\_set\_default\_template()}}
+{\footnotesize\ttfamily void ni\+\_\+set\+\_\+default\+\_\+template (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$}]{p\+\_\+ctx,  }\item[{\mbox{\hyperlink{ni__device__api__priv_8h_abdce809bcde8bd0b2bb2b0f17620fbb8}{ni\+\_\+encoder\+\_\+config\+\_\+t}} $\ast$}]{p\+\_\+config }\end{DoxyParamCaption})}
+
+
+
+Setup and initialize all xcoder configuration to default (Rev. B) 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 2838 of file ni\+\_\+device\+\_\+api\+\_\+priv.\+c.
+
+\mbox{\Hypertarget{ni__device__api__priv_8c_a43378253859b5a7534cf22358ac115ff}\label{ni__device__api__priv_8c_a43378253859b5a7534cf22358ac115ff}} 
+\index{ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}!ni\_validate\_custom\_template@{ni\_validate\_custom\_template}}
+\index{ni\_validate\_custom\_template@{ni\_validate\_custom\_template}!ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}}
+\subsubsection{\texorpdfstring{ni\_validate\_custom\_template()}{ni\_validate\_custom\_template()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} ni\+\_\+validate\+\_\+custom\+\_\+template (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$}]{p\+\_\+ctx,  }\item[{\mbox{\hyperlink{ni__device__api__priv_8h_abdce809bcde8bd0b2bb2b0f17620fbb8}{ni\+\_\+encoder\+\_\+config\+\_\+t}} $\ast$}]{p\+\_\+cfg,  }\item[{\mbox{\hyperlink{ni__device__api_8h_ae25208c62cb821686c92b409d4e3815d}{ni\+\_\+encoder\+\_\+params\+\_\+t}} $\ast$}]{p\+\_\+src,  }\item[{char $\ast$}]{p\+\_\+param\+\_\+err,  }\item[{uint32\+\_\+t}]{max\+\_\+err\+\_\+len }\end{DoxyParamCaption})}
+
+
+
+Perform validation on custom parameters (Rev. B) 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 3053 of file ni\+\_\+device\+\_\+api\+\_\+priv.\+c.
+
+\mbox{\Hypertarget{ni__device__api__priv_8c_acad2473d8696f7812ddd6f05d844c2d6}\label{ni__device__api__priv_8c_acad2473d8696f7812ddd6f05d844c2d6}} 
+\index{ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}!xcoder\_config\_instance\_flush@{xcoder\_config\_instance\_flush}}
+\index{xcoder\_config\_instance\_flush@{xcoder\_config\_instance\_flush}!ni\_device\_api\_priv.c@{ni\_device\_api\_priv.c}}
+\subsubsection{\texorpdfstring{xcoder\_config\_instance\_flush()}{xcoder\_config\_instance\_flush()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} xcoder\+\_\+config\+\_\+instance\+\_\+flush (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$}]{p\+\_\+ctx,  }\item[{\mbox{\hyperlink{ni__defs_8h_a758f24acb02b236820c7390eed53d1cc}{ni\+\_\+device\+\_\+type\+\_\+t}}}]{device\+\_\+type }\end{DoxyParamCaption})}
+
+
+
+Send a p\+\_\+config command to flush the stream. 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em ni\+\_\+session\+\_\+context\+\_\+t} & p\+\_\+ctx -\/ xcoder Context \\
+\hline
+{\em ni\+\_\+device\+\_\+type\+\_\+t} & device\+\_\+type -\/ xcoder type Encoder or Decoder\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+S\+U\+C\+C\+E\+SS on success, N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+E\+S\+S\+I\+ON, N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+N\+V\+M\+E\+\_\+\+C\+M\+D\+\_\+\+F\+A\+I\+L\+ED on failure 
+\end{DoxyReturn}
+
+
+Definition at line 1730 of file ni\+\_\+device\+\_\+api\+\_\+priv.\+c.
+

@@ -1,0 +1,117 @@
+\hypertarget{ni__nvme_8c}{}\section{ni\+\_\+nvme.\+c File Reference}
+\label{ni__nvme_8c}\index{ni\_nvme.c@{ni\_nvme.c}}
+
+
+Private routines related to working with NI T-\/408 over N\+V\+ME interface.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}ni\+\_\+nvme.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ni\+\_\+util.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{ni__nvme_8c_aa83dc81688cea2241174ac077b9b87e0}{R\+O\+U\+N\+D\+\_\+\+T\+O\+\_\+\+U\+L\+O\+NG}}(x)~ni\+\_\+round\+\_\+up(x,sizeof(uint32\+\_\+t))
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} \mbox{\hyperlink{ni__nvme_8c_aebed5113473816e1875acb569a699713}{ni\+\_\+nvme\+\_\+check\+\_\+error\+\_\+code}} (int rc, \mbox{\hyperlink{ni__nvme_8h_a2d9979e19435c0b68de9964c19b7799d}{ni\+\_\+nvme\+\_\+admin\+\_\+opcode\+\_\+t}} opcode, uint32\+\_\+t xcoder\+\_\+type, uint32\+\_\+t hw\+\_\+id, int32\+\_\+t $\ast$p\+\_\+instance\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Check f/w error return code, and if it\textquotesingle{}s a fatal one, terminate application\textquotesingle{}s decoding/encoding processing by sending self a S\+I\+G\+T\+E\+RM signal. Application shall handle this gracefully. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{ni__nvme_8c_a8d8c170b89633987a0448f4f0c756bf0}{ni\+\_\+nvme\+\_\+send\+\_\+admin\+\_\+cmd}} (\mbox{\hyperlink{ni__nvme_8h_a2d9979e19435c0b68de9964c19b7799d}{ni\+\_\+nvme\+\_\+admin\+\_\+opcode\+\_\+t}} opcode, ni\+\_\+device\+\_\+handle\+\_\+t handle, \mbox{\hyperlink{ni__nvme_8h_a7ddc246c6522c44c0df99f9f1c80fb11}{ni\+\_\+nvme\+\_\+command\+\_\+t}} $\ast$p\+\_\+ni\+\_\+nvme\+\_\+cmd, uint32\+\_\+t data\+\_\+len, void $\ast$p\+\_\+data, uint32\+\_\+t $\ast$p\+\_\+result)
+\begin{DoxyCompactList}\small\item\em Compose a nvme admin command. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{ni__nvme_8c_acfe2987af48855e8e717857424903570}{ni\+\_\+nvme\+\_\+send\+\_\+io\+\_\+cmd}} (\mbox{\hyperlink{ni__nvme_8h_abb322d0cd1073fb01afed787da5a636c}{ni\+\_\+nvme\+\_\+opcode\+\_\+t}} opcode, ni\+\_\+device\+\_\+handle\+\_\+t handle, \mbox{\hyperlink{ni__nvme_8h_a7ddc246c6522c44c0df99f9f1c80fb11}{ni\+\_\+nvme\+\_\+command\+\_\+t}} $\ast$p\+\_\+ni\+\_\+nvme\+\_\+cmd, uint32\+\_\+t data\+\_\+len, void $\ast$p\+\_\+data, uint32\+\_\+t $\ast$p\+\_\+result)
+\begin{DoxyCompactList}\small\item\em Compose a nvme io command. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Private routines related to working with NI T-\/408 over N\+V\+ME interface. 
+
+
+
+
+
+\begin{DoxyCopyright}{Copyright}
+(c) 2019 N\+E\+T\+I\+NT Technologies Inc. All rights reserved. 
+\end{DoxyCopyright}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{ni__nvme_8c_aa83dc81688cea2241174ac077b9b87e0}\label{ni__nvme_8c_aa83dc81688cea2241174ac077b9b87e0}} 
+\index{ni\_nvme.c@{ni\_nvme.c}!ROUND\_TO\_ULONG@{ROUND\_TO\_ULONG}}
+\index{ROUND\_TO\_ULONG@{ROUND\_TO\_ULONG}!ni\_nvme.c@{ni\_nvme.c}}
+\subsubsection{\texorpdfstring{ROUND\_TO\_ULONG}{ROUND\_TO\_ULONG}}
+{\footnotesize\ttfamily \#define R\+O\+U\+N\+D\+\_\+\+T\+O\+\_\+\+U\+L\+O\+NG(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~ni\+\_\+round\+\_\+up(x,sizeof(uint32\+\_\+t))}
+
+
+
+Definition at line 36 of file ni\+\_\+nvme.\+c.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ni__nvme_8c_aebed5113473816e1875acb569a699713}\label{ni__nvme_8c_aebed5113473816e1875acb569a699713}} 
+\index{ni\_nvme.c@{ni\_nvme.c}!ni\_nvme\_check\_error\_code@{ni\_nvme\_check\_error\_code}}
+\index{ni\_nvme\_check\_error\_code@{ni\_nvme\_check\_error\_code}!ni\_nvme.c@{ni\_nvme.c}}
+\subsubsection{\texorpdfstring{ni\_nvme\_check\_error\_code()}{ni\_nvme\_check\_error\_code()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} ni\+\_\+nvme\+\_\+check\+\_\+error\+\_\+code (\begin{DoxyParamCaption}\item[{int}]{rc,  }\item[{\mbox{\hyperlink{ni__nvme_8h_a2d9979e19435c0b68de9964c19b7799d}{ni\+\_\+nvme\+\_\+admin\+\_\+opcode\+\_\+t}}}]{opcode,  }\item[{uint32\+\_\+t}]{xcoder\+\_\+type,  }\item[{uint32\+\_\+t}]{hw\+\_\+id,  }\item[{int32\+\_\+t $\ast$}]{p\+\_\+instance\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Check f/w error return code, and if it\textquotesingle{}s a fatal one, terminate application\textquotesingle{}s decoding/encoding processing by sending self a S\+I\+G\+T\+E\+RM signal. Application shall handle this gracefully. 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 47 of file ni\+\_\+nvme.\+c.
+
+\mbox{\Hypertarget{ni__nvme_8c_a8d8c170b89633987a0448f4f0c756bf0}\label{ni__nvme_8c_a8d8c170b89633987a0448f4f0c756bf0}} 
+\index{ni\_nvme.c@{ni\_nvme.c}!ni\_nvme\_send\_admin\_cmd@{ni\_nvme\_send\_admin\_cmd}}
+\index{ni\_nvme\_send\_admin\_cmd@{ni\_nvme\_send\_admin\_cmd}!ni\_nvme.c@{ni\_nvme.c}}
+\subsubsection{\texorpdfstring{ni\_nvme\_send\_admin\_cmd()}{ni\_nvme\_send\_admin\_cmd()}}
+{\footnotesize\ttfamily int32\+\_\+t ni\+\_\+nvme\+\_\+send\+\_\+admin\+\_\+cmd (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__nvme_8h_a2d9979e19435c0b68de9964c19b7799d}{ni\+\_\+nvme\+\_\+admin\+\_\+opcode\+\_\+t}}}]{opcode,  }\item[{ni\+\_\+device\+\_\+handle\+\_\+t}]{handle,  }\item[{\mbox{\hyperlink{ni__nvme_8h_a7ddc246c6522c44c0df99f9f1c80fb11}{ni\+\_\+nvme\+\_\+command\+\_\+t}} $\ast$}]{p\+\_\+ni\+\_\+nvme\+\_\+cmd,  }\item[{uint32\+\_\+t}]{data\+\_\+len,  }\item[{void $\ast$}]{p\+\_\+data,  }\item[{uint32\+\_\+t $\ast$}]{p\+\_\+result }\end{DoxyParamCaption})}
+
+
+
+Compose a nvme admin command. 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 890 of file ni\+\_\+nvme.\+c.
+
+\mbox{\Hypertarget{ni__nvme_8c_acfe2987af48855e8e717857424903570}\label{ni__nvme_8c_acfe2987af48855e8e717857424903570}} 
+\index{ni\_nvme.c@{ni\_nvme.c}!ni\_nvme\_send\_io\_cmd@{ni\_nvme\_send\_io\_cmd}}
+\index{ni\_nvme\_send\_io\_cmd@{ni\_nvme\_send\_io\_cmd}!ni\_nvme.c@{ni\_nvme.c}}
+\subsubsection{\texorpdfstring{ni\_nvme\_send\_io\_cmd()}{ni\_nvme\_send\_io\_cmd()}}
+{\footnotesize\ttfamily int32\+\_\+t ni\+\_\+nvme\+\_\+send\+\_\+io\+\_\+cmd (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__nvme_8h_abb322d0cd1073fb01afed787da5a636c}{ni\+\_\+nvme\+\_\+opcode\+\_\+t}}}]{opcode,  }\item[{ni\+\_\+device\+\_\+handle\+\_\+t}]{handle,  }\item[{\mbox{\hyperlink{ni__nvme_8h_a7ddc246c6522c44c0df99f9f1c80fb11}{ni\+\_\+nvme\+\_\+command\+\_\+t}} $\ast$}]{p\+\_\+ni\+\_\+nvme\+\_\+cmd,  }\item[{uint32\+\_\+t}]{data\+\_\+len,  }\item[{void $\ast$}]{p\+\_\+data,  }\item[{uint32\+\_\+t $\ast$}]{p\+\_\+result }\end{DoxyParamCaption})}
+
+
+
+Compose a nvme io command. 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 945 of file ni\+\_\+nvme.\+c.
+

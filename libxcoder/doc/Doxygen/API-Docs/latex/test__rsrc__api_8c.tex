@@ -1,0 +1,219 @@
+\hypertarget{test__rsrc__api_8c}{}\section{test\+\_\+rsrc\+\_\+api.\+c File Reference}
+\label{test__rsrc__api_8c}\index{test\_rsrc\_api.c@{test\_rsrc\_api.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}ni\+\_\+rsrc\+\_\+api.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ni\+\_\+rsrc\+\_\+priv.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{test__rsrc__api_8c_a7fb4975e4b2149554d19f970a6431485}{get\+Str}} (const char $\ast$prompt, char $\ast$str)
+\item 
+int \mbox{\hyperlink{test__rsrc__api_8c_a67934b2c086b54c4cd8480641668955b}{get\+Cmd}} (const char $\ast$prompt)
+\item 
+int \mbox{\hyperlink{test__rsrc__api_8c_a2af35f634cacca2f2509dcea45be7c60}{get\+Int}} (const char $\ast$prompt)
+\item 
+float \mbox{\hyperlink{test__rsrc__api_8c_ac2eb9ef3d61bf798a4dd81fd2525e945}{get\+Float}} (const char $\ast$prompt)
+\item 
+long \mbox{\hyperlink{test__rsrc__api_8c_ae36f6464024ca87ec80f74c80bffb27e}{get\+Long}} (const char $\ast$prompt)
+\item 
+void \mbox{\hyperlink{test__rsrc__api_8c_aafd03bc7fc88606f8052a55c7edaa6ab}{list\+One\+Type\+Coders}} (void)
+\item 
+void \mbox{\hyperlink{test__rsrc__api_8c_a13b7828cd524d22efed17c29e845f1ed}{list\+Module\+Id}} (void)
+\item 
+void \mbox{\hyperlink{test__rsrc__api_8c_aab47bbe1413d0eee6ca20781ae56fa8a}{list\+All\+Coders\+Full}} (void)
+\item 
+void \mbox{\hyperlink{test__rsrc__api_8c_aae4635497e39e81081898dd004acd4cf}{update\+Coder\+Load}} (void)
+\item 
+void \mbox{\hyperlink{test__rsrc__api_8c_acfdc5657b4a77e1d43aa24e7edbcb249}{get\+Coder\+Detail\+Info}} (void)
+\item 
+void \mbox{\hyperlink{test__rsrc__api_8c_a4365082b1ab546b8d12a8143afbe159b}{get\+Least\+Used\+Coder\+For\+Video}} (void)
+\item 
+void \mbox{\hyperlink{test__rsrc__api_8c_abdae656a4c2c1785f7d2ddb3fd7ac35b}{alloc\+Auto}} (void)
+\item 
+void \mbox{\hyperlink{test__rsrc__api_8c_afb4e6049fa07f31d83d11aae9b84e970}{alloc\+Direct}} (void)
+\item 
+void \mbox{\hyperlink{test__rsrc__api_8c_ab5bd34cc7bc9d2106e960888fc2d3e8f}{release\+Enc\+Rsrc}} (void)
+\item 
+void \mbox{\hyperlink{test__rsrc__api_8c_a1fa9e381d180219ac141051f5ad96ef6}{delete\+Coder}} (void)
+\item 
+void \mbox{\hyperlink{test__rsrc__api_8c_a391c04ef16fed6a2d50e49537c9c3050}{add\+Coder}} (void)
+\item 
+int \mbox{\hyperlink{test__rsrc__api_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{test__rsrc__api_8c_a391c04ef16fed6a2d50e49537c9c3050}\label{test__rsrc__api_8c_a391c04ef16fed6a2d50e49537c9c3050}} 
+\index{test\_rsrc\_api.c@{test\_rsrc\_api.c}!addCoder@{addCoder}}
+\index{addCoder@{addCoder}!test\_rsrc\_api.c@{test\_rsrc\_api.c}}
+\subsubsection{\texorpdfstring{addCoder()}{addCoder()}}
+{\footnotesize\ttfamily void add\+Coder (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 404 of file test\+\_\+rsrc\+\_\+api.\+c.
+
+\mbox{\Hypertarget{test__rsrc__api_8c_abdae656a4c2c1785f7d2ddb3fd7ac35b}\label{test__rsrc__api_8c_abdae656a4c2c1785f7d2ddb3fd7ac35b}} 
+\index{test\_rsrc\_api.c@{test\_rsrc\_api.c}!allocAuto@{allocAuto}}
+\index{allocAuto@{allocAuto}!test\_rsrc\_api.c@{test\_rsrc\_api.c}}
+\subsubsection{\texorpdfstring{allocAuto()}{allocAuto()}}
+{\footnotesize\ttfamily void alloc\+Auto (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 312 of file test\+\_\+rsrc\+\_\+api.\+c.
+
+\mbox{\Hypertarget{test__rsrc__api_8c_afb4e6049fa07f31d83d11aae9b84e970}\label{test__rsrc__api_8c_afb4e6049fa07f31d83d11aae9b84e970}} 
+\index{test\_rsrc\_api.c@{test\_rsrc\_api.c}!allocDirect@{allocDirect}}
+\index{allocDirect@{allocDirect}!test\_rsrc\_api.c@{test\_rsrc\_api.c}}
+\subsubsection{\texorpdfstring{allocDirect()}{allocDirect()}}
+{\footnotesize\ttfamily void alloc\+Direct (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 339 of file test\+\_\+rsrc\+\_\+api.\+c.
+
+\mbox{\Hypertarget{test__rsrc__api_8c_a1fa9e381d180219ac141051f5ad96ef6}\label{test__rsrc__api_8c_a1fa9e381d180219ac141051f5ad96ef6}} 
+\index{test\_rsrc\_api.c@{test\_rsrc\_api.c}!deleteCoder@{deleteCoder}}
+\index{deleteCoder@{deleteCoder}!test\_rsrc\_api.c@{test\_rsrc\_api.c}}
+\subsubsection{\texorpdfstring{deleteCoder()}{deleteCoder()}}
+{\footnotesize\ttfamily void delete\+Coder (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 390 of file test\+\_\+rsrc\+\_\+api.\+c.
+
+\mbox{\Hypertarget{test__rsrc__api_8c_a67934b2c086b54c4cd8480641668955b}\label{test__rsrc__api_8c_a67934b2c086b54c4cd8480641668955b}} 
+\index{test\_rsrc\_api.c@{test\_rsrc\_api.c}!getCmd@{getCmd}}
+\index{getCmd@{getCmd}!test\_rsrc\_api.c@{test\_rsrc\_api.c}}
+\subsubsection{\texorpdfstring{getCmd()}{getCmd()}}
+{\footnotesize\ttfamily int get\+Cmd (\begin{DoxyParamCaption}\item[{const char $\ast$}]{prompt }\end{DoxyParamCaption})}
+
+
+
+Definition at line 56 of file test\+\_\+rsrc\+\_\+api.\+c.
+
+\mbox{\Hypertarget{test__rsrc__api_8c_acfdc5657b4a77e1d43aa24e7edbcb249}\label{test__rsrc__api_8c_acfdc5657b4a77e1d43aa24e7edbcb249}} 
+\index{test\_rsrc\_api.c@{test\_rsrc\_api.c}!getCoderDetailInfo@{getCoderDetailInfo}}
+\index{getCoderDetailInfo@{getCoderDetailInfo}!test\_rsrc\_api.c@{test\_rsrc\_api.c}}
+\subsubsection{\texorpdfstring{getCoderDetailInfo()}{getCoderDetailInfo()}}
+{\footnotesize\ttfamily void get\+Coder\+Detail\+Info (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 262 of file test\+\_\+rsrc\+\_\+api.\+c.
+
+\mbox{\Hypertarget{test__rsrc__api_8c_ac2eb9ef3d61bf798a4dd81fd2525e945}\label{test__rsrc__api_8c_ac2eb9ef3d61bf798a4dd81fd2525e945}} 
+\index{test\_rsrc\_api.c@{test\_rsrc\_api.c}!getFloat@{getFloat}}
+\index{getFloat@{getFloat}!test\_rsrc\_api.c@{test\_rsrc\_api.c}}
+\subsubsection{\texorpdfstring{getFloat()}{getFloat()}}
+{\footnotesize\ttfamily float get\+Float (\begin{DoxyParamCaption}\item[{const char $\ast$}]{prompt }\end{DoxyParamCaption})}
+
+
+
+Definition at line 86 of file test\+\_\+rsrc\+\_\+api.\+c.
+
+\mbox{\Hypertarget{test__rsrc__api_8c_a2af35f634cacca2f2509dcea45be7c60}\label{test__rsrc__api_8c_a2af35f634cacca2f2509dcea45be7c60}} 
+\index{test\_rsrc\_api.c@{test\_rsrc\_api.c}!getInt@{getInt}}
+\index{getInt@{getInt}!test\_rsrc\_api.c@{test\_rsrc\_api.c}}
+\subsubsection{\texorpdfstring{getInt()}{getInt()}}
+{\footnotesize\ttfamily int get\+Int (\begin{DoxyParamCaption}\item[{const char $\ast$}]{prompt }\end{DoxyParamCaption})}
+
+
+
+Definition at line 71 of file test\+\_\+rsrc\+\_\+api.\+c.
+
+\mbox{\Hypertarget{test__rsrc__api_8c_a4365082b1ab546b8d12a8143afbe159b}\label{test__rsrc__api_8c_a4365082b1ab546b8d12a8143afbe159b}} 
+\index{test\_rsrc\_api.c@{test\_rsrc\_api.c}!getLeastUsedCoderForVideo@{getLeastUsedCoderForVideo}}
+\index{getLeastUsedCoderForVideo@{getLeastUsedCoderForVideo}!test\_rsrc\_api.c@{test\_rsrc\_api.c}}
+\subsubsection{\texorpdfstring{getLeastUsedCoderForVideo()}{getLeastUsedCoderForVideo()}}
+{\footnotesize\ttfamily void get\+Least\+Used\+Coder\+For\+Video (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 285 of file test\+\_\+rsrc\+\_\+api.\+c.
+
+\mbox{\Hypertarget{test__rsrc__api_8c_ae36f6464024ca87ec80f74c80bffb27e}\label{test__rsrc__api_8c_ae36f6464024ca87ec80f74c80bffb27e}} 
+\index{test\_rsrc\_api.c@{test\_rsrc\_api.c}!getLong@{getLong}}
+\index{getLong@{getLong}!test\_rsrc\_api.c@{test\_rsrc\_api.c}}
+\subsubsection{\texorpdfstring{getLong()}{getLong()}}
+{\footnotesize\ttfamily long get\+Long (\begin{DoxyParamCaption}\item[{const char $\ast$}]{prompt }\end{DoxyParamCaption})}
+
+
+
+Definition at line 101 of file test\+\_\+rsrc\+\_\+api.\+c.
+
+\mbox{\Hypertarget{test__rsrc__api_8c_a7fb4975e4b2149554d19f970a6431485}\label{test__rsrc__api_8c_a7fb4975e4b2149554d19f970a6431485}} 
+\index{test\_rsrc\_api.c@{test\_rsrc\_api.c}!getStr@{getStr}}
+\index{getStr@{getStr}!test\_rsrc\_api.c@{test\_rsrc\_api.c}}
+\subsubsection{\texorpdfstring{getStr()}{getStr()}}
+{\footnotesize\ttfamily void get\+Str (\begin{DoxyParamCaption}\item[{const char $\ast$}]{prompt,  }\item[{char $\ast$}]{str }\end{DoxyParamCaption})}
+
+
+
+Definition at line 36 of file test\+\_\+rsrc\+\_\+api.\+c.
+
+\mbox{\Hypertarget{test__rsrc__api_8c_aab47bbe1413d0eee6ca20781ae56fa8a}\label{test__rsrc__api_8c_aab47bbe1413d0eee6ca20781ae56fa8a}} 
+\index{test\_rsrc\_api.c@{test\_rsrc\_api.c}!listAllCodersFull@{listAllCodersFull}}
+\index{listAllCodersFull@{listAllCodersFull}!test\_rsrc\_api.c@{test\_rsrc\_api.c}}
+\subsubsection{\texorpdfstring{listAllCodersFull()}{listAllCodersFull()}}
+{\footnotesize\ttfamily void list\+All\+Coders\+Full (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 198 of file test\+\_\+rsrc\+\_\+api.\+c.
+
+\mbox{\Hypertarget{test__rsrc__api_8c_a13b7828cd524d22efed17c29e845f1ed}\label{test__rsrc__api_8c_a13b7828cd524d22efed17c29e845f1ed}} 
+\index{test\_rsrc\_api.c@{test\_rsrc\_api.c}!listModuleId@{listModuleId}}
+\index{listModuleId@{listModuleId}!test\_rsrc\_api.c@{test\_rsrc\_api.c}}
+\subsubsection{\texorpdfstring{listModuleId()}{listModuleId()}}
+{\footnotesize\ttfamily void list\+Module\+Id (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 137 of file test\+\_\+rsrc\+\_\+api.\+c.
+
+\mbox{\Hypertarget{test__rsrc__api_8c_aafd03bc7fc88606f8052a55c7edaa6ab}\label{test__rsrc__api_8c_aafd03bc7fc88606f8052a55c7edaa6ab}} 
+\index{test\_rsrc\_api.c@{test\_rsrc\_api.c}!listOneTypeCoders@{listOneTypeCoders}}
+\index{listOneTypeCoders@{listOneTypeCoders}!test\_rsrc\_api.c@{test\_rsrc\_api.c}}
+\subsubsection{\texorpdfstring{listOneTypeCoders()}{listOneTypeCoders()}}
+{\footnotesize\ttfamily void list\+One\+Type\+Coders (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 116 of file test\+\_\+rsrc\+\_\+api.\+c.
+
+\mbox{\Hypertarget{test__rsrc__api_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{test__rsrc__api_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{test\_rsrc\_api.c@{test\_rsrc\_api.c}!main@{main}}
+\index{main@{main}!test\_rsrc\_api.c@{test\_rsrc\_api.c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 418 of file test\+\_\+rsrc\+\_\+api.\+c.
+
+\mbox{\Hypertarget{test__rsrc__api_8c_ab5bd34cc7bc9d2106e960888fc2d3e8f}\label{test__rsrc__api_8c_ab5bd34cc7bc9d2106e960888fc2d3e8f}} 
+\index{test\_rsrc\_api.c@{test\_rsrc\_api.c}!releaseEncRsrc@{releaseEncRsrc}}
+\index{releaseEncRsrc@{releaseEncRsrc}!test\_rsrc\_api.c@{test\_rsrc\_api.c}}
+\subsubsection{\texorpdfstring{releaseEncRsrc()}{releaseEncRsrc()}}
+{\footnotesize\ttfamily void release\+Enc\+Rsrc (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 364 of file test\+\_\+rsrc\+\_\+api.\+c.
+
+\mbox{\Hypertarget{test__rsrc__api_8c_aae4635497e39e81081898dd004acd4cf}\label{test__rsrc__api_8c_aae4635497e39e81081898dd004acd4cf}} 
+\index{test\_rsrc\_api.c@{test\_rsrc\_api.c}!updateCoderLoad@{updateCoderLoad}}
+\index{updateCoderLoad@{updateCoderLoad}!test\_rsrc\_api.c@{test\_rsrc\_api.c}}
+\subsubsection{\texorpdfstring{updateCoderLoad()}{updateCoderLoad()}}
+{\footnotesize\ttfamily void update\+Coder\+Load (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 224 of file test\+\_\+rsrc\+\_\+api.\+c.
+

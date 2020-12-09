@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['file_5fname_5flen',['FILE_NAME_LEN',['../ni__device__test_8h.html#afddfc0468a0fb0d80c116b5e16b9be17',1,'ni_device_test.h']]],
+  ['filename',['fileName',['../struct__tx__data.html#a1d89f9668c6a633415048f1557a27122',1,'_tx_data::fileName()'],['../struct_recv_data_struct__.html#a1d89f9668c6a633415048f1557a27122',1,'RecvDataStruct_::fileName()']]],
+  ['fixedbitratio',['fixedBitRatio',['../struct__ni__t408__config__t.html#a353df24b5bd189d29cd18a776dbda11d',1,'_ni_t408_config_t::fixedBitRatio()'],['../struct__ni__encoder__change__params__t.html#a353df24b5bd189d29cd18a776dbda11d',1,'_ni_encoder_change_params_t::fixedBitRatio()']]],
+  ['force_5fkey_5fframe',['force_key_frame',['../struct__ni__frame.html#a0c0dbb0d46bfff00f7a71a8ea2e993ab',1,'_ni_frame']]],
+  ['force_5fpicture_5ftype',['force_picture_type',['../struct__ni__encoder__frame__params.html#a10042cc3071a6d20bd2d729962fcf1d6',1,'_ni_encoder_frame_params']]],
+  ['fps',['fps',['../struct__ni__context__query.html#a129745a75be674a0496ddd992bc3b22b',1,'_ni_context_query::fps()'],['../struct__ni__rsrc__video__ref__cap.html#a45b67662d620a977a2cfe519f7ab6273',1,'_ni_rsrc_video_ref_cap::fps()'],['../struct__ni__sw__instance__info.html#a45b67662d620a977a2cfe519f7ab6273',1,'_ni_sw_instance_info::fps()']]],
+  ['fps_5fdenominator',['fps_denominator',['../struct__ni__encoder__params.html#a31f2d4e1489807a7553adcb5cc83e44a',1,'_ni_encoder_params']]],
+  ['fps_5fnumber',['fps_number',['../struct__ni__encoder__params.html#a7eb53fb6914d484d437bbaa8a11b8433',1,'_ni_encoder_params']]],
+  ['frame',['frame',['../struct__ni__session__data__io.html#aea2177bca942215ff8bda12a813375f3',1,'_ni_session_data_io']]],
+  ['frame_5fforce_5ftype',['frame_force_type',['../struct__ni__metadata__enc__frame.html#aaa1d91f3a9a5bc82e4f79fd572b24855',1,'_ni_metadata_enc_frame']]],
+  ['frame_5fforce_5ftype_5fenable',['frame_force_type_enable',['../struct__ni__metadata__enc__frame.html#adae7980cdbce9ea4bc33af9db871dce4',1,'_ni_metadata_enc_frame']]],
+  ['frame_5fheight',['frame_height',['../struct__ni__decoder__metadata.html#a54cf73a089957b59b35344c368aa40aa',1,'_ni_decoder_metadata']]],
+  ['frame_5findex',['frame_index',['../struct__ni__nvme__write__complete__dw0__t.html#a05f60adb7ca73495905c236f23d474d6',1,'_ni_nvme_write_complete_dw0_t::frame_index()'],['../struct__ni__nvme__read__complete__dw0__t.html#a05f60adb7ca73495905c236f23d474d6',1,'_ni_nvme_read_complete_dw0_t::frame_index()']]],
+  ['frame_5finfo',['frame_info',['../struct__ni__queue__node__t.html#a4089388889bdd62db8384f3d4f628c30',1,'_ni_queue_node_t']]],
+  ['frame_5fnum',['frame_num',['../struct__ni__session__context.html#aa0e8135e1ff3d1dc3e9909ef61d39e00',1,'_ni_session_context']]],
+  ['frame_5foffset',['frame_offset',['../struct__ni__decoder__metadata.html#a062e9b64b6ad5813dce0a6b71211d75b',1,'_ni_decoder_metadata']]],
+  ['frame_5frate',['frame_rate',['../struct__ni__h265__encoder__params.html#a30b38dbacfbdef6a3e9a33f6feefb6cc',1,'_ni_h265_encoder_params::frame_rate()'],['../struct__ni__instance__mgr__stream__info.html#a5cbd910f7c047f675e5022a0fedbfb88',1,'_ni_instance_mgr_stream_info::frame_rate()'],['../struct__ni__encoder__change__params__t.html#a729fea7e7e39ba5c309e5289844bb285',1,'_ni_encoder_change_params_t::frame_rate()']]],
+  ['frame_5froi_5favg_5fqp',['frame_roi_avg_qp',['../struct__ni__metadata__enc__frame.html#ab1c85dedc25765145b48e50c9e5d6bc2',1,'_ni_metadata_enc_frame']]],
+  ['frame_5froi_5fmap_5fsize',['frame_roi_map_size',['../struct__ni__metadata__enc__frame.html#a95158a54bf256bc60b0ab6a6c52cc910',1,'_ni_metadata_enc_frame']]],
+  ['frame_5fsei_5fdata_5fsize',['frame_sei_data_size',['../struct__ni__metadata__enc__frame.html#a0b582e936695824a6fc3d5f21f045943',1,'_ni_metadata_enc_frame']]],
+  ['frame_5ftstamp',['frame_tstamp',['../struct__ni__decoder__metadata.html#aa94feb8f8cdb18a946cddfd49e096565',1,'_ni_decoder_metadata::frame_tstamp()'],['../struct__ni__metadata__enc__bstream.html#aa94feb8f8cdb18a946cddfd49e096565',1,'_ni_metadata_enc_bstream::frame_tstamp()']]],
+  ['frame_5ftype',['frame_type',['../struct__ni__packet.html#acf47f9b2777759386086e94ed5962f19',1,'_ni_packet::frame_type()'],['../struct__ni__nvme__read__complete__dw0__t.html#acf47f9b2777759386086e94ed5962f19',1,'_ni_nvme_read_complete_dw0_t::frame_type()']]],
+  ['frame_5fwidth',['frame_width',['../struct__ni__decoder__metadata.html#a6bacf410ac8a6e1ed3030b91b6a3bd96',1,'_ni_decoder_metadata']]],
+  ['fwver',['fwVer',['../struct__ni__card__info.html#a4122aea62e012bd58adba35364a737e5',1,'_ni_card_info']]]
+];

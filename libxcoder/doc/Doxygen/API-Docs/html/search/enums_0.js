@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['_5fni_5fcodec_5fformat',['_ni_codec_format',['../ni__device__api_8h.html#ac900ea5dfbebbd891e2c9825a3b568d2',1,'ni_device_api.h']]],
+  ['_5fni_5fgop_5fpreset_5fidx',['_ni_gop_preset_idx',['../ni__device__api__priv_8h.html#a1828a0c2217ab6bbe8a9106d8478920e',1,'ni_device_api_priv.h']]],
+  ['_5fni_5fnvme_5fadmin_5fopcode',['_ni_nvme_admin_opcode',['../ni__nvme_8h.html#a17a0cec03abc8d9d6926a9a34c978b6c',1,'ni_nvme.h']]],
+  ['_5fni_5fnvme_5fopcode',['_ni_nvme_opcode',['../ni__nvme_8h.html#a38558e9c6ef1bec10cc03acbdeb93a05',1,'ni_nvme.h']]],
+  ['_5fni_5fparam_5fchange_5fflags',['_ni_param_change_flags',['../ni__device__api_8h.html#af52402e5214f42cbcc2bd6c5a74472ac',1,'ni_device_api.h']]],
+  ['_5fni_5freconfig',['_ni_reconfig',['../ni__device__api_8h.html#a10e25e8577a58cd3a032c27a8cd05938',1,'ni_device_api.h']]],
+  ['_5fni_5fseq_5fchange_5fstate',['_ni_seq_change_state',['../ni__device__api_8h.html#a29c61588b80b4ddd3b3a287960d65ffa',1,'ni_device_api.h']]],
+  ['_5fnvme_5fclose_5fxcoder_5fsubtype',['_nvme_close_xcoder_subtype',['../ni__nvme_8h.html#ae70466377f57fad6c2e67b09ddd265cc',1,'ni_nvme.h']]],
+  ['_5fnvme_5fconfig_5fxcoder_5fconfig_5finstance_5fsubtype',['_nvme_config_xcoder_config_instance_subtype',['../ni__nvme_8h.html#ad0937d1c212483fc3c89a2cf8187f60a',1,'ni_nvme.h']]],
+  ['_5fnvme_5fconfig_5fxcoder_5fsubtype',['_nvme_config_xcoder_subtype',['../ni__nvme_8h.html#ab3a76de5ec80367749775c8b6414dfd8',1,'ni_nvme.h']]],
+  ['_5fnvme_5fopen_5fxcoder_5fsubtype',['_nvme_open_xcoder_subtype',['../ni__nvme_8h.html#ab2e68366a4957719494f9c76cc1f040c',1,'ni_nvme.h']]],
+  ['_5fnvme_5fquery_5fxcoder_5finstance_5fsubtype',['_nvme_query_xcoder_instance_subtype',['../ni__nvme_8h.html#a6879a530d25cb56f08446ca222f343b1',1,'ni_nvme.h']]],
+  ['_5fnvme_5fquery_5fxcoder_5fsession_5fsubtype',['_nvme_query_xcoder_session_subtype',['../ni__nvme_8h.html#a7bea84559125ff607292b0ea8c331ded',1,'ni_nvme.h']]],
+  ['_5fnvme_5fquery_5fxcoder_5fsubtype',['_nvme_query_xcoder_subtype',['../ni__nvme_8h.html#a126edfa51257db8fc567a7c9f70e4ec2',1,'ni_nvme.h']]],
+  ['_5fnvme_5fread_5fxcoder_5fsubtype',['_nvme_read_xcoder_subtype',['../ni__nvme_8h.html#ae8deabce39265ad2c2a5fba08775a2a5',1,'ni_nvme.h']]],
+  ['_5fnvme_5fwrite_5fxcoder_5fsubtype',['_nvme_write_xcoder_subtype',['../ni__nvme_8h.html#a3b171390b2698987c6989a414a69b37c',1,'ni_nvme.h']]]
+];

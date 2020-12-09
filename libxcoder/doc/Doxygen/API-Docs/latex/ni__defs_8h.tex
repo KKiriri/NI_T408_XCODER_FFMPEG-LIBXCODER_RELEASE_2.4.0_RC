@@ -1,0 +1,465 @@
+\hypertarget{ni__defs_8h}{}\section{ni\+\_\+defs.\+h File Reference}
+\label{ni__defs_8h}\index{ni\_defs.h@{ni\_defs.h}}
+
+
+Common N\+E\+T\+I\+NT definitions used by all modules.  
+
+
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$inttypes.\+h$>$}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{ni__defs_8h_a2cd60ef2a0d9ebef2d263a0098c2a606}{N\+I\+\_\+\+X\+C\+O\+D\+E\+R\+\_\+\+R\+E\+V\+I\+S\+I\+ON}}~\char`\"{}v1.\+0.\+0\char`\"{}
+\item 
+\#define \mbox{\hyperlink{ni__defs_8h_aab91828eb444d4fd4f00be6dc39ef494}{N\+I\+\_\+\+L\+I\+T\+T\+L\+E\+\_\+\+E\+N\+D\+I\+A\+N\+\_\+\+P\+L\+A\+T\+F\+O\+RM}}~0  /$\ast$!!$<$ platform is little endian $\ast$/
+\item 
+\#define \mbox{\hyperlink{ni__defs_8h_a05a1583051be82a4ccba8a1e6ce20a7f}{N\+I\+\_\+\+B\+I\+G\+\_\+\+E\+N\+D\+I\+A\+N\+\_\+\+P\+L\+A\+T\+F\+O\+RM}}~1  /$\ast$!!$<$ platform is big endian $\ast$/
+\item 
+\#define \mbox{\hyperlink{ni__defs_8h_a9e2dea1de6fb223b4d40f312bdf16174}{P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+E\+N\+D\+I\+A\+N\+E\+SS}}~\mbox{\hyperlink{ni__defs_8h_aab91828eb444d4fd4f00be6dc39ef494}{N\+I\+\_\+\+L\+I\+T\+T\+L\+E\+\_\+\+E\+N\+D\+I\+A\+N\+\_\+\+P\+L\+A\+T\+F\+O\+RM}}
+\item 
+\#define \mbox{\hyperlink{ni__defs_8h_a99c105b568bda98883a3c01428440338}{N\+E\+T\+I\+N\+T\+\_\+\+P\+C\+I\+\_\+\+V\+E\+N\+D\+O\+R\+\_\+\+ID}}~0x1\+D82 /$\ast$!!$<$ N\+E\+T\+I\+N\+T P\+C\+Ie V\+E\+N\+D\+O\+R I\+D $\ast$/
+\item 
+\#define \mbox{\hyperlink{ni__defs_8h_a0666ed218212a20f00a6c65caa3141bc}{M\+A\+X\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+N\+A\+M\+E\+\_\+\+L\+EN}}~256
+\item 
+\#define \mbox{\hyperlink{ni__defs_8h_ac52843a63d161bc12b9d52990114f51b}{L\+R\+E\+T\+U\+RN}}~goto end;
+\item 
+\#define \mbox{\hyperlink{ni__defs_8h_a29fd18bed01c4d836c7ebfe73a125c3f}{E\+ND}}~end\+:
+\item 
+\#define \mbox{\hyperlink{ni__defs_8h_a9a43dbd7e7367207237f2943c70517d1}{ni\+\_\+assert}}(expression)~assert(expression)
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{ni__defs_8h_a758f24acb02b236820c7390eed53d1cc}{ni\+\_\+device\+\_\+type\+\_\+t}} \{ \mbox{\hyperlink{ni__defs_8h_a758f24acb02b236820c7390eed53d1cca7b7608dd3a234ed1c5365e94ce46725c}{N\+I\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+E\+C\+O\+D\+ER}} = 0, 
+\mbox{\hyperlink{ni__defs_8h_a758f24acb02b236820c7390eed53d1cca8e25343f2fc9d0e6f6d857fb84d0e5f3}{N\+I\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+E\+N\+C\+O\+D\+ER}} = 1
+ \}
+\item 
+enum \mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} \{ \newline
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a95273da9b03d187079a5894d05910855}{N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+S\+U\+C\+C\+E\+SS}} = 0, 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a226c9efa238b7585f9db99f1418b4252}{N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+F\+A\+I\+L\+U\+RE}} = -\/1, 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247aecd780a09f05d6829c61a6c79053e1fa}{N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+R\+AM}} = -\/2, 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247acb1d6de3dad7f999c95d58cb1ce7e60f}{N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+M\+E\+M\+\_\+\+A\+L\+OC}} = -\/3, 
+\newline
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247ac00216197e6771e48f37803125564f90}{N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+N\+V\+M\+E\+\_\+\+C\+M\+D\+\_\+\+F\+A\+I\+L\+ED}} = -\/4, 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a602ae6aad385b0d07f27ea21332832be}{N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+E\+S\+S\+I\+ON}} = -\/5, 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a9e1314e0d92d50e43348fa6363cf23fb}{N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+R\+E\+S\+O\+U\+R\+C\+E\+\_\+\+U\+N\+A\+V\+A\+I\+L\+A\+B\+LE}} = -\/6, 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a81111e4894b186157c9d330d7e489636}{N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+N\+A\+ME}} = -\/7, 
+\newline
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a9d3ed0f483e9b729230169dff8f121d7}{N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+V\+A\+L\+UE}} = -\/8, 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a8578a2d1c9c9c16d02b8f4fcca330062}{N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+F\+R\+A\+TE}} = -\/9, 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a16599df3616937e1fe3490a58b518bf4}{N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+B\+R\+A\+TE}} = -\/10, 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a0e03cc10167d49b3ae69e82a015fc997}{N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+T\+R\+A\+TE}} = -\/11, 
+\newline
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a4d74a9d579cf9b906defa109bc20a49e}{N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+R\+C\+\_\+\+I\+N\+I\+T\+\_\+\+D\+E\+L\+AY}} = -\/12, 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a0b742784fae95a75fd2699bea80e1ce4}{N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+T\+R\+A\+\_\+\+P\+E\+R\+I\+OD}} = -\/13, 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247aa555507fedbe815d3451558163de4bd2}{N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+T\+R\+A\+\_\+\+QP}} = -\/14, 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247abbab8c282fb1ee071dd74836d18b2619}{N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+G\+O\+P\+\_\+\+P\+R\+E\+S\+ET}} = -\/15, 
+\newline
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a6b0eae777e6bd4ab30fcbad65bb1cbb3}{N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+U\+\_\+\+S\+I\+Z\+E\+\_\+\+M\+O\+DE}} = -\/16, 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a0a8c03a9df9f1be066d4f26ef9aac833}{N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+M\+X\+\_\+\+N\+U\+M\+\_\+\+M\+E\+R\+GE}} = -\/17, 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247adc1ead3da6821001d2fb3e5cf63fb3f9}{N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+D\+Y\+\_\+\+M\+E\+R\+G\+E\+\_\+8\+X8\+\_\+\+EN}} = -\/18, 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247ab63ac0cbaf23da1f2736d9f8d13244da}{N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+D\+Y\+\_\+\+M\+E\+R\+G\+E\+\_\+16\+X16\+\_\+\+EN}} = -\/19, 
+\newline
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247ab3d55f5c846859b6f86d8b512e76450e}{N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+D\+Y\+\_\+\+M\+E\+R\+G\+E\+\_\+32\+X32\+\_\+\+EN}} = -\/20, 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247aa0fda71ffefb2bd3b61a9abcb37d88af}{N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+U\+\_\+\+L\+V\+L\+\_\+\+R\+C\+\_\+\+EN}} = -\/21, 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a224dbb96ac526c56bb871976cd400914}{N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+H\+V\+S\+\_\+\+Q\+P\+\_\+\+EN}} = -\/22, 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a3db15dd54e2a2beb62191f5a5ec81dc7}{N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+H\+V\+S\+\_\+\+Q\+P\+\_\+\+S\+CL}} = -\/23, 
+\newline
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a70aadbd12cf3f62452a5c5a71af0504d}{N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+M\+N\+\_\+\+QP}} = -\/24, 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247af7bc994dc2132efe40d846d1ab53eebd}{N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+M\+X\+\_\+\+QP}} = -\/25, 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a5200dbf60cf7c3418bac2c190fac5088}{N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+M\+X\+\_\+\+D\+E\+L\+T\+A\+\_\+\+QP}} = -\/26, 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a781c7ccaf4d3386c47c85aee5dca0f76}{N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+N\+F\+\_\+\+W\+I\+N\+\_\+\+T\+OP}} = -\/27, 
+\newline
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a6d1f97c4c40ac78458ffebcb177793ef}{N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+N\+F\+\_\+\+W\+I\+N\+\_\+\+B\+OT}} = -\/28, 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a78dfd0c568dbe0c782df4da170c4e645}{N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+N\+F\+\_\+\+W\+I\+N\+\_\+L}} = -\/29, 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a5fee88e88caba80bc0cf51c4c71755da}{N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+N\+F\+\_\+\+W\+I\+N\+\_\+R}} = -\/30, 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247ac2e9bb6b9e389758d70c29e898d55709}{N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+U\+S\+R\+\_\+\+R\+M\+D\+\_\+\+E\+N\+C\+\_\+\+P\+A\+R\+AM}} = -\/31, 
+\newline
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a884b85f50f6f51658fb680b2caed1e14}{N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+B\+R\+A\+T\+E\+\_\+\+L\+T\+\_\+\+T\+R\+A\+TE}} = -\/32, 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a899fe4716ee26a4d7d50dbb44d5c7b88}{N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+R\+C\+I\+N\+I\+T\+D\+E\+L\+AY}} = -\/33, 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a510bfb54c69c782131de95c03e0859b8}{N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+R\+C\+E\+N\+A\+B\+LE}} = -\/34, 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247aaf772c4cf9c570009590f3c95a371aef}{N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+M\+A\+X\+N\+U\+M\+M\+E\+R\+GE}} = -\/35, 
+\newline
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247ae8e875bf74cd9042583fd1d660e41747}{N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+U\+S\+T\+O\+M\+\_\+\+G\+OP}} = -\/36, 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a77abb3993f982fbdbad161be55c56422}{N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+P\+I\+C\+\_\+\+W\+I\+D\+TH}} = -\/37, 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247ac5d7b243ad3f17cbe6bb1064bb78a940}{N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+P\+I\+C\+\_\+\+H\+E\+I\+G\+HT}} = -\/38, 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a7d84bc6769a08fa148474f01bf34bf57}{N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+D\+E\+C\+O\+D\+I\+N\+G\+\_\+\+R\+E\+F\+R\+E\+S\+H\+\_\+\+T\+Y\+PE}} = -\/39, 
+\newline
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a4546924e74670b8cfa1b2ff17bd8f998}{N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+U\+S\+I\+Z\+E\+\_\+\+M\+O\+D\+E\+\_\+8\+X8\+\_\+\+EN}} = -\/40, 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247adc1d9dbfeaf5bd99c99b9b1d2b7c8e8c}{N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+U\+S\+I\+Z\+E\+\_\+\+M\+O\+D\+E\+\_\+16\+X16\+\_\+\+EN}} = -\/41, 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a507fe7281b693a5e8df8cfda6d695f3a}{N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+U\+S\+I\+Z\+E\+\_\+\+M\+O\+D\+E\+\_\+32\+X32\+\_\+\+EN}} = -\/42, 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a23ef47fb7105c5acd95a334e454764dd}{N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+N\+V\+M\+E\+\_\+\+S\+C\+\_\+\+S\+T\+A\+R\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+ID}} = 0x\+C0, 
+\newline
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a0704d0f562efbbe19ae0bae2a73df1bb}{N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+N\+V\+M\+E\+\_\+\+S\+C\+\_\+\+S\+T\+A\+R\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+W\+R\+O\+N\+G\+\_\+\+T\+C\+O\+N\+F\+\_\+\+ID}} = 0x\+C1, 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a882d2a068a0a773bc998309cb2a05b6d}{N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+N\+V\+M\+E\+\_\+\+S\+C\+\_\+\+W\+R\+I\+T\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+F\+U\+LL}} = 0x\+C2, 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a36b4cd3f1272b459fc0b223f64308cc7}{N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+N\+V\+M\+E\+\_\+\+S\+C\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+X\+C\+O\+D\+E\+R\+\_\+\+ID}} = 0x300, 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247ab4d2aaf1f252e443a838b41dc3021b91}{N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+N\+V\+M\+E\+\_\+\+S\+C\+\_\+\+R\+E\+S\+O\+U\+R\+C\+E\+\_\+\+U\+N\+A\+V\+A\+I\+L\+A\+B\+LE}} = 0x301, 
+\newline
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a2d9b346ac315aefc62daf7278b77dec8}{N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+N\+V\+M\+E\+\_\+\+S\+C\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+N\+O\+T\+\_\+\+O\+P\+E\+N\+ED}} = 0x302, 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a5abe394aa34dc92428211f916730d041}{N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+N\+V\+M\+E\+\_\+\+S\+C\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+I\+N\+\_\+\+P\+R\+O\+G\+R\+E\+SS}} = 0x303, 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a6efa6a2e5c75a6b39f7601bac6a68c52}{N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+N\+V\+M\+E\+\_\+\+S\+C\+\_\+\+S\+E\+Q\+U\+E\+N\+C\+E\+\_\+\+C\+H\+A\+N\+G\+ED}} = 0x304, 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247aaed2d7e206d9ac30f5a64686c2b1b428}{N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+N\+V\+M\+E\+\_\+\+S\+C\+\_\+\+S\+E\+Q\+U\+E\+N\+C\+E\+\_\+\+I\+N\+\_\+\+P\+R\+O\+G\+R\+E\+SS}} = 0x305, 
+\newline
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247affe4591eb37c35ef7b32171df2a18a8d}{N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+N\+V\+M\+E\+\_\+\+S\+C\+\_\+\+C\+A\+N\+N\+O\+T\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+B\+I\+T\+S\+T\+R\+E\+A\+M\+\_\+\+N\+OW}} = 0x306, 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a14d0f4760aa7c354638f111c71110a53}{N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+N\+V\+M\+E\+\_\+\+S\+C\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+T\+O\+K\+EN}} = 0x307
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Common N\+E\+T\+I\+NT definitions used by all modules. 
+
+
+
+
+
+\begin{DoxyCopyright}{Copyright}
+(c) 2019 N\+E\+T\+I\+NT Technologies Inc. All rights reserved. 
+\end{DoxyCopyright}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{ni__defs_8h_a29fd18bed01c4d836c7ebfe73a125c3f}\label{ni__defs_8h_a29fd18bed01c4d836c7ebfe73a125c3f}} 
+\index{ni\_defs.h@{ni\_defs.h}!END@{END}}
+\index{END@{END}!ni\_defs.h@{ni\_defs.h}}
+\subsubsection{\texorpdfstring{END}{END}}
+{\footnotesize\ttfamily \#define E\+ND~end\+:}
+
+
+
+Definition at line 73 of file ni\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{ni__defs_8h_ac52843a63d161bc12b9d52990114f51b}\label{ni__defs_8h_ac52843a63d161bc12b9d52990114f51b}} 
+\index{ni\_defs.h@{ni\_defs.h}!LRETURN@{LRETURN}}
+\index{LRETURN@{LRETURN}!ni\_defs.h@{ni\_defs.h}}
+\subsubsection{\texorpdfstring{LRETURN}{LRETURN}}
+{\footnotesize\ttfamily \#define L\+R\+E\+T\+U\+RN~goto end;}
+
+
+
+Definition at line 72 of file ni\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{ni__defs_8h_a0666ed218212a20f00a6c65caa3141bc}\label{ni__defs_8h_a0666ed218212a20f00a6c65caa3141bc}} 
+\index{ni\_defs.h@{ni\_defs.h}!MAX\_DEVICE\_NAME\_LEN@{MAX\_DEVICE\_NAME\_LEN}}
+\index{MAX\_DEVICE\_NAME\_LEN@{MAX\_DEVICE\_NAME\_LEN}!ni\_defs.h@{ni\_defs.h}}
+\subsubsection{\texorpdfstring{MAX\_DEVICE\_NAME\_LEN}{MAX\_DEVICE\_NAME\_LEN}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+N\+A\+M\+E\+\_\+\+L\+EN~256}
+
+
+
+Definition at line 63 of file ni\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{ni__defs_8h_a99c105b568bda98883a3c01428440338}\label{ni__defs_8h_a99c105b568bda98883a3c01428440338}} 
+\index{ni\_defs.h@{ni\_defs.h}!NETINT\_PCI\_VENDOR\_ID@{NETINT\_PCI\_VENDOR\_ID}}
+\index{NETINT\_PCI\_VENDOR\_ID@{NETINT\_PCI\_VENDOR\_ID}!ni\_defs.h@{ni\_defs.h}}
+\subsubsection{\texorpdfstring{NETINT\_PCI\_VENDOR\_ID}{NETINT\_PCI\_VENDOR\_ID}}
+{\footnotesize\ttfamily \#define N\+E\+T\+I\+N\+T\+\_\+\+P\+C\+I\+\_\+\+V\+E\+N\+D\+O\+R\+\_\+\+ID~0x1\+D82 /$\ast$!!$<$ N\+E\+T\+I\+N\+T P\+C\+Ie V\+E\+N\+D\+O\+R I\+D $\ast$/}
+
+
+
+Definition at line 37 of file ni\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{ni__defs_8h_a9a43dbd7e7367207237f2943c70517d1}\label{ni__defs_8h_a9a43dbd7e7367207237f2943c70517d1}} 
+\index{ni\_defs.h@{ni\_defs.h}!ni\_assert@{ni\_assert}}
+\index{ni\_assert@{ni\_assert}!ni\_defs.h@{ni\_defs.h}}
+\subsubsection{\texorpdfstring{ni\_assert}{ni\_assert}}
+{\footnotesize\ttfamily \#define ni\+\_\+assert(\begin{DoxyParamCaption}\item[{}]{expression }\end{DoxyParamCaption})~assert(expression)}
+
+
+
+Definition at line 77 of file ni\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{ni__defs_8h_a05a1583051be82a4ccba8a1e6ce20a7f}\label{ni__defs_8h_a05a1583051be82a4ccba8a1e6ce20a7f}} 
+\index{ni\_defs.h@{ni\_defs.h}!NI\_BIG\_ENDIAN\_PLATFORM@{NI\_BIG\_ENDIAN\_PLATFORM}}
+\index{NI\_BIG\_ENDIAN\_PLATFORM@{NI\_BIG\_ENDIAN\_PLATFORM}!ni\_defs.h@{ni\_defs.h}}
+\subsubsection{\texorpdfstring{NI\_BIG\_ENDIAN\_PLATFORM}{NI\_BIG\_ENDIAN\_PLATFORM}}
+{\footnotesize\ttfamily \#define N\+I\+\_\+\+B\+I\+G\+\_\+\+E\+N\+D\+I\+A\+N\+\_\+\+P\+L\+A\+T\+F\+O\+RM~1  /$\ast$!!$<$ platform is big endian $\ast$/}
+
+
+
+Definition at line 31 of file ni\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{ni__defs_8h_aab91828eb444d4fd4f00be6dc39ef494}\label{ni__defs_8h_aab91828eb444d4fd4f00be6dc39ef494}} 
+\index{ni\_defs.h@{ni\_defs.h}!NI\_LITTLE\_ENDIAN\_PLATFORM@{NI\_LITTLE\_ENDIAN\_PLATFORM}}
+\index{NI\_LITTLE\_ENDIAN\_PLATFORM@{NI\_LITTLE\_ENDIAN\_PLATFORM}!ni\_defs.h@{ni\_defs.h}}
+\subsubsection{\texorpdfstring{NI\_LITTLE\_ENDIAN\_PLATFORM}{NI\_LITTLE\_ENDIAN\_PLATFORM}}
+{\footnotesize\ttfamily \#define N\+I\+\_\+\+L\+I\+T\+T\+L\+E\+\_\+\+E\+N\+D\+I\+A\+N\+\_\+\+P\+L\+A\+T\+F\+O\+RM~0  /$\ast$!!$<$ platform is little endian $\ast$/}
+
+
+
+Definition at line 30 of file ni\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{ni__defs_8h_a2cd60ef2a0d9ebef2d263a0098c2a606}\label{ni__defs_8h_a2cd60ef2a0d9ebef2d263a0098c2a606}} 
+\index{ni\_defs.h@{ni\_defs.h}!NI\_XCODER\_REVISION@{NI\_XCODER\_REVISION}}
+\index{NI\_XCODER\_REVISION@{NI\_XCODER\_REVISION}!ni\_defs.h@{ni\_defs.h}}
+\subsubsection{\texorpdfstring{NI\_XCODER\_REVISION}{NI\_XCODER\_REVISION}}
+{\footnotesize\ttfamily \#define N\+I\+\_\+\+X\+C\+O\+D\+E\+R\+\_\+\+R\+E\+V\+I\+S\+I\+ON~\char`\"{}v1.\+0.\+0\char`\"{}}
+
+
+
+Definition at line 28 of file ni\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{ni__defs_8h_a9e2dea1de6fb223b4d40f312bdf16174}\label{ni__defs_8h_a9e2dea1de6fb223b4d40f312bdf16174}} 
+\index{ni\_defs.h@{ni\_defs.h}!PLATFORM\_ENDIANESS@{PLATFORM\_ENDIANESS}}
+\index{PLATFORM\_ENDIANESS@{PLATFORM\_ENDIANESS}!ni\_defs.h@{ni\_defs.h}}
+\subsubsection{\texorpdfstring{PLATFORM\_ENDIANESS}{PLATFORM\_ENDIANESS}}
+{\footnotesize\ttfamily \#define P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+E\+N\+D\+I\+A\+N\+E\+SS~\mbox{\hyperlink{ni__defs_8h_aab91828eb444d4fd4f00be6dc39ef494}{N\+I\+\_\+\+L\+I\+T\+T\+L\+E\+\_\+\+E\+N\+D\+I\+A\+N\+\_\+\+P\+L\+A\+T\+F\+O\+RM}}}
+
+
+
+Definition at line 34 of file ni\+\_\+defs.\+h.
+
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{ni__defs_8h_a758f24acb02b236820c7390eed53d1cc}\label{ni__defs_8h_a758f24acb02b236820c7390eed53d1cc}} 
+\index{ni\_defs.h@{ni\_defs.h}!ni\_device\_type\_t@{ni\_device\_type\_t}}
+\index{ni\_device\_type\_t@{ni\_device\_type\_t}!ni\_defs.h@{ni\_defs.h}}
+\subsubsection{\texorpdfstring{ni\_device\_type\_t}{ni\_device\_type\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{ni__defs_8h_a758f24acb02b236820c7390eed53d1cc}{ni\+\_\+device\+\_\+type\+\_\+t}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NI\_DEVICE\_TYPE\_DECODER@{NI\_DEVICE\_TYPE\_DECODER}!ni\_defs.h@{ni\_defs.h}}\index{ni\_defs.h@{ni\_defs.h}!NI\_DEVICE\_TYPE\_DECODER@{NI\_DEVICE\_TYPE\_DECODER}}}\mbox{\Hypertarget{ni__defs_8h_a758f24acb02b236820c7390eed53d1cca7b7608dd3a234ed1c5365e94ce46725c}\label{ni__defs_8h_a758f24acb02b236820c7390eed53d1cca7b7608dd3a234ed1c5365e94ce46725c}} 
+N\+I\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+E\+C\+O\+D\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NI\_DEVICE\_TYPE\_ENCODER@{NI\_DEVICE\_TYPE\_ENCODER}!ni\_defs.h@{ni\_defs.h}}\index{ni\_defs.h@{ni\_defs.h}!NI\_DEVICE\_TYPE\_ENCODER@{NI\_DEVICE\_TYPE\_ENCODER}}}\mbox{\Hypertarget{ni__defs_8h_a758f24acb02b236820c7390eed53d1cca8e25343f2fc9d0e6f6d857fb84d0e5f3}\label{ni__defs_8h_a758f24acb02b236820c7390eed53d1cca8e25343f2fc9d0e6f6d857fb84d0e5f3}} 
+N\+I\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+E\+N\+C\+O\+D\+ER&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 79 of file ni\+\_\+defs.\+h.
+
+\mbox{\Hypertarget{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}\label{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}} 
+\index{ni\_defs.h@{ni\_defs.h}!ni\_retcode\_t@{ni\_retcode\_t}}
+\index{ni\_retcode\_t@{ni\_retcode\_t}!ni\_defs.h@{ni\_defs.h}}
+\subsubsection{\texorpdfstring{ni\_retcode\_t}{ni\_retcode\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NI\_RETCODE\_SUCCESS@{NI\_RETCODE\_SUCCESS}!ni\_defs.h@{ni\_defs.h}}\index{ni\_defs.h@{ni\_defs.h}!NI\_RETCODE\_SUCCESS@{NI\_RETCODE\_SUCCESS}}}\mbox{\Hypertarget{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a95273da9b03d187079a5894d05910855}\label{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a95273da9b03d187079a5894d05910855}} 
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+S\+U\+C\+C\+E\+SS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NI\_RETCODE\_FAILURE@{NI\_RETCODE\_FAILURE}!ni\_defs.h@{ni\_defs.h}}\index{ni\_defs.h@{ni\_defs.h}!NI\_RETCODE\_FAILURE@{NI\_RETCODE\_FAILURE}}}\mbox{\Hypertarget{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a226c9efa238b7585f9db99f1418b4252}\label{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a226c9efa238b7585f9db99f1418b4252}} 
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+F\+A\+I\+L\+U\+RE&!$<$ successful return code \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NI\_RETCODE\_INVALID\_PARAM@{NI\_RETCODE\_INVALID\_PARAM}!ni\_defs.h@{ni\_defs.h}}\index{ni\_defs.h@{ni\_defs.h}!NI\_RETCODE\_INVALID\_PARAM@{NI\_RETCODE\_INVALID\_PARAM}}}\mbox{\Hypertarget{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247aecd780a09f05d6829c61a6c79053e1fa}\label{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247aecd780a09f05d6829c61a6c79053e1fa}} 
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+R\+AM&!$<$ unrecoverable failure \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NI\_RETCODE\_ERROR\_MEM\_ALOC@{NI\_RETCODE\_ERROR\_MEM\_ALOC}!ni\_defs.h@{ni\_defs.h}}\index{ni\_defs.h@{ni\_defs.h}!NI\_RETCODE\_ERROR\_MEM\_ALOC@{NI\_RETCODE\_ERROR\_MEM\_ALOC}}}\mbox{\Hypertarget{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247acb1d6de3dad7f999c95d58cb1ce7e60f}\label{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247acb1d6de3dad7f999c95d58cb1ce7e60f}} 
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+M\+E\+M\+\_\+\+A\+L\+OC&!$<$ invalid/uninitialized/null pointer parameter encountered \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NI\_RETCODE\_ERROR\_NVME\_CMD\_FAILED@{NI\_RETCODE\_ERROR\_NVME\_CMD\_FAILED}!ni\_defs.h@{ni\_defs.h}}\index{ni\_defs.h@{ni\_defs.h}!NI\_RETCODE\_ERROR\_NVME\_CMD\_FAILED@{NI\_RETCODE\_ERROR\_NVME\_CMD\_FAILED}}}\mbox{\Hypertarget{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247ac00216197e6771e48f37803125564f90}\label{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247ac00216197e6771e48f37803125564f90}} 
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+N\+V\+M\+E\+\_\+\+C\+M\+D\+\_\+\+F\+A\+I\+L\+ED&!$<$ memory allocation failure \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NI\_RETCODE\_ERROR\_INVALID\_SESSION@{NI\_RETCODE\_ERROR\_INVALID\_SESSION}!ni\_defs.h@{ni\_defs.h}}\index{ni\_defs.h@{ni\_defs.h}!NI\_RETCODE\_ERROR\_INVALID\_SESSION@{NI\_RETCODE\_ERROR\_INVALID\_SESSION}}}\mbox{\Hypertarget{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a602ae6aad385b0d07f27ea21332832be}\label{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a602ae6aad385b0d07f27ea21332832be}} 
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+E\+S\+S\+I\+ON&!$<$ nvme command failure \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NI\_RETCODE\_ERROR\_RESOURCE\_UNAVAILABLE@{NI\_RETCODE\_ERROR\_RESOURCE\_UNAVAILABLE}!ni\_defs.h@{ni\_defs.h}}\index{ni\_defs.h@{ni\_defs.h}!NI\_RETCODE\_ERROR\_RESOURCE\_UNAVAILABLE@{NI\_RETCODE\_ERROR\_RESOURCE\_UNAVAILABLE}}}\mbox{\Hypertarget{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a9e1314e0d92d50e43348fa6363cf23fb}\label{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a9e1314e0d92d50e43348fa6363cf23fb}} 
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+R\+E\+S\+O\+U\+R\+C\+E\+\_\+\+U\+N\+A\+V\+A\+I\+L\+A\+B\+LE&!$<$ invalid session \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NI\_RETCODE\_PARAM\_INVALID\_NAME@{NI\_RETCODE\_PARAM\_INVALID\_NAME}!ni\_defs.h@{ni\_defs.h}}\index{ni\_defs.h@{ni\_defs.h}!NI\_RETCODE\_PARAM\_INVALID\_NAME@{NI\_RETCODE\_PARAM\_INVALID\_NAME}}}\mbox{\Hypertarget{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a81111e4894b186157c9d330d7e489636}\label{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a81111e4894b186157c9d330d7e489636}} 
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+N\+A\+ME&!$<$ resource currently unavailable \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NI\_RETCODE\_PARAM\_INVALID\_VALUE@{NI\_RETCODE\_PARAM\_INVALID\_VALUE}!ni\_defs.h@{ni\_defs.h}}\index{ni\_defs.h@{ni\_defs.h}!NI\_RETCODE\_PARAM\_INVALID\_VALUE@{NI\_RETCODE\_PARAM\_INVALID\_VALUE}}}\mbox{\Hypertarget{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a9d3ed0f483e9b729230169dff8f121d7}\label{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a9d3ed0f483e9b729230169dff8f121d7}} 
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+V\+A\+L\+UE&!$<$ invalid parameter name \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NI\_RETCODE\_PARAM\_ERROR\_FRATE@{NI\_RETCODE\_PARAM\_ERROR\_FRATE}!ni\_defs.h@{ni\_defs.h}}\index{ni\_defs.h@{ni\_defs.h}!NI\_RETCODE\_PARAM\_ERROR\_FRATE@{NI\_RETCODE\_PARAM\_ERROR\_FRATE}}}\mbox{\Hypertarget{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a8578a2d1c9c9c16d02b8f4fcca330062}\label{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a8578a2d1c9c9c16d02b8f4fcca330062}} 
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+F\+R\+A\+TE&!$<$ invalid parameter value \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NI\_RETCODE\_PARAM\_ERROR\_BRATE@{NI\_RETCODE\_PARAM\_ERROR\_BRATE}!ni\_defs.h@{ni\_defs.h}}\index{ni\_defs.h@{ni\_defs.h}!NI\_RETCODE\_PARAM\_ERROR\_BRATE@{NI\_RETCODE\_PARAM\_ERROR\_BRATE}}}\mbox{\Hypertarget{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a16599df3616937e1fe3490a58b518bf4}\label{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a16599df3616937e1fe3490a58b518bf4}} 
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+B\+R\+A\+TE&!$<$ invalid frame rate parameter value \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NI\_RETCODE\_PARAM\_ERROR\_TRATE@{NI\_RETCODE\_PARAM\_ERROR\_TRATE}!ni\_defs.h@{ni\_defs.h}}\index{ni\_defs.h@{ni\_defs.h}!NI\_RETCODE\_PARAM\_ERROR\_TRATE@{NI\_RETCODE\_PARAM\_ERROR\_TRATE}}}\mbox{\Hypertarget{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a0e03cc10167d49b3ae69e82a015fc997}\label{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a0e03cc10167d49b3ae69e82a015fc997}} 
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+T\+R\+A\+TE&!$<$ invalid bit rate parameter value \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NI\_RETCODE\_PARAM\_ERROR\_RC\_INIT\_DELAY@{NI\_RETCODE\_PARAM\_ERROR\_RC\_INIT\_DELAY}!ni\_defs.h@{ni\_defs.h}}\index{ni\_defs.h@{ni\_defs.h}!NI\_RETCODE\_PARAM\_ERROR\_RC\_INIT\_DELAY@{NI\_RETCODE\_PARAM\_ERROR\_RC\_INIT\_DELAY}}}\mbox{\Hypertarget{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a4d74a9d579cf9b906defa109bc20a49e}\label{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a4d74a9d579cf9b906defa109bc20a49e}} 
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+R\+C\+\_\+\+I\+N\+I\+T\+\_\+\+D\+E\+L\+AY&!$<$ invalid bit rate parameter value \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NI\_RETCODE\_PARAM\_ERROR\_INTRA\_PERIOD@{NI\_RETCODE\_PARAM\_ERROR\_INTRA\_PERIOD}!ni\_defs.h@{ni\_defs.h}}\index{ni\_defs.h@{ni\_defs.h}!NI\_RETCODE\_PARAM\_ERROR\_INTRA\_PERIOD@{NI\_RETCODE\_PARAM\_ERROR\_INTRA\_PERIOD}}}\mbox{\Hypertarget{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a0b742784fae95a75fd2699bea80e1ce4}\label{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a0b742784fae95a75fd2699bea80e1ce4}} 
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+T\+R\+A\+\_\+\+P\+E\+R\+I\+OD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NI\_RETCODE\_PARAM\_ERROR\_INTRA\_QP@{NI\_RETCODE\_PARAM\_ERROR\_INTRA\_QP}!ni\_defs.h@{ni\_defs.h}}\index{ni\_defs.h@{ni\_defs.h}!NI\_RETCODE\_PARAM\_ERROR\_INTRA\_QP@{NI\_RETCODE\_PARAM\_ERROR\_INTRA\_QP}}}\mbox{\Hypertarget{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247aa555507fedbe815d3451558163de4bd2}\label{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247aa555507fedbe815d3451558163de4bd2}} 
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+T\+R\+A\+\_\+\+QP&!$<$ invalid intra period parameter value \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NI\_RETCODE\_PARAM\_ERROR\_GOP\_PRESET@{NI\_RETCODE\_PARAM\_ERROR\_GOP\_PRESET}!ni\_defs.h@{ni\_defs.h}}\index{ni\_defs.h@{ni\_defs.h}!NI\_RETCODE\_PARAM\_ERROR\_GOP\_PRESET@{NI\_RETCODE\_PARAM\_ERROR\_GOP\_PRESET}}}\mbox{\Hypertarget{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247abbab8c282fb1ee071dd74836d18b2619}\label{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247abbab8c282fb1ee071dd74836d18b2619}} 
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+G\+O\+P\+\_\+\+P\+R\+E\+S\+ET&!$<$ invalid qp parameter value \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NI\_RETCODE\_PARAM\_ERROR\_CU\_SIZE\_MODE@{NI\_RETCODE\_PARAM\_ERROR\_CU\_SIZE\_MODE}!ni\_defs.h@{ni\_defs.h}}\index{ni\_defs.h@{ni\_defs.h}!NI\_RETCODE\_PARAM\_ERROR\_CU\_SIZE\_MODE@{NI\_RETCODE\_PARAM\_ERROR\_CU\_SIZE\_MODE}}}\mbox{\Hypertarget{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a6b0eae777e6bd4ab30fcbad65bb1cbb3}\label{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a6b0eae777e6bd4ab30fcbad65bb1cbb3}} 
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+U\+\_\+\+S\+I\+Z\+E\+\_\+\+M\+O\+DE&!$<$ invalid got preset parameter value \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NI\_RETCODE\_PARAM\_ERROR\_MX\_NUM\_MERGE@{NI\_RETCODE\_PARAM\_ERROR\_MX\_NUM\_MERGE}!ni\_defs.h@{ni\_defs.h}}\index{ni\_defs.h@{ni\_defs.h}!NI\_RETCODE\_PARAM\_ERROR\_MX\_NUM\_MERGE@{NI\_RETCODE\_PARAM\_ERROR\_MX\_NUM\_MERGE}}}\mbox{\Hypertarget{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a0a8c03a9df9f1be066d4f26ef9aac833}\label{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a0a8c03a9df9f1be066d4f26ef9aac833}} 
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+M\+X\+\_\+\+N\+U\+M\+\_\+\+M\+E\+R\+GE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NI\_RETCODE\_PARAM\_ERROR\_DY\_MERGE\_8X8\_EN@{NI\_RETCODE\_PARAM\_ERROR\_DY\_MERGE\_8X8\_EN}!ni\_defs.h@{ni\_defs.h}}\index{ni\_defs.h@{ni\_defs.h}!NI\_RETCODE\_PARAM\_ERROR\_DY\_MERGE\_8X8\_EN@{NI\_RETCODE\_PARAM\_ERROR\_DY\_MERGE\_8X8\_EN}}}\mbox{\Hypertarget{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247adc1ead3da6821001d2fb3e5cf63fb3f9}\label{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247adc1ead3da6821001d2fb3e5cf63fb3f9}} 
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+D\+Y\+\_\+\+M\+E\+R\+G\+E\+\_\+8\+X8\+\_\+\+EN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NI\_RETCODE\_PARAM\_ERROR\_DY\_MERGE\_16X16\_EN@{NI\_RETCODE\_PARAM\_ERROR\_DY\_MERGE\_16X16\_EN}!ni\_defs.h@{ni\_defs.h}}\index{ni\_defs.h@{ni\_defs.h}!NI\_RETCODE\_PARAM\_ERROR\_DY\_MERGE\_16X16\_EN@{NI\_RETCODE\_PARAM\_ERROR\_DY\_MERGE\_16X16\_EN}}}\mbox{\Hypertarget{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247ab63ac0cbaf23da1f2736d9f8d13244da}\label{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247ab63ac0cbaf23da1f2736d9f8d13244da}} 
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+D\+Y\+\_\+\+M\+E\+R\+G\+E\+\_\+16\+X16\+\_\+\+EN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NI\_RETCODE\_PARAM\_ERROR\_DY\_MERGE\_32X32\_EN@{NI\_RETCODE\_PARAM\_ERROR\_DY\_MERGE\_32X32\_EN}!ni\_defs.h@{ni\_defs.h}}\index{ni\_defs.h@{ni\_defs.h}!NI\_RETCODE\_PARAM\_ERROR\_DY\_MERGE\_32X32\_EN@{NI\_RETCODE\_PARAM\_ERROR\_DY\_MERGE\_32X32\_EN}}}\mbox{\Hypertarget{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247ab3d55f5c846859b6f86d8b512e76450e}\label{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247ab3d55f5c846859b6f86d8b512e76450e}} 
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+D\+Y\+\_\+\+M\+E\+R\+G\+E\+\_\+32\+X32\+\_\+\+EN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NI\_RETCODE\_PARAM\_ERROR\_CU\_LVL\_RC\_EN@{NI\_RETCODE\_PARAM\_ERROR\_CU\_LVL\_RC\_EN}!ni\_defs.h@{ni\_defs.h}}\index{ni\_defs.h@{ni\_defs.h}!NI\_RETCODE\_PARAM\_ERROR\_CU\_LVL\_RC\_EN@{NI\_RETCODE\_PARAM\_ERROR\_CU\_LVL\_RC\_EN}}}\mbox{\Hypertarget{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247aa0fda71ffefb2bd3b61a9abcb37d88af}\label{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247aa0fda71ffefb2bd3b61a9abcb37d88af}} 
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+U\+\_\+\+L\+V\+L\+\_\+\+R\+C\+\_\+\+EN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NI\_RETCODE\_PARAM\_ERROR\_HVS\_QP\_EN@{NI\_RETCODE\_PARAM\_ERROR\_HVS\_QP\_EN}!ni\_defs.h@{ni\_defs.h}}\index{ni\_defs.h@{ni\_defs.h}!NI\_RETCODE\_PARAM\_ERROR\_HVS\_QP\_EN@{NI\_RETCODE\_PARAM\_ERROR\_HVS\_QP\_EN}}}\mbox{\Hypertarget{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a224dbb96ac526c56bb871976cd400914}\label{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a224dbb96ac526c56bb871976cd400914}} 
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+H\+V\+S\+\_\+\+Q\+P\+\_\+\+EN&!$<$ invalid cu level rate control parameter value \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NI\_RETCODE\_PARAM\_ERROR\_HVS\_QP\_SCL@{NI\_RETCODE\_PARAM\_ERROR\_HVS\_QP\_SCL}!ni\_defs.h@{ni\_defs.h}}\index{ni\_defs.h@{ni\_defs.h}!NI\_RETCODE\_PARAM\_ERROR\_HVS\_QP\_SCL@{NI\_RETCODE\_PARAM\_ERROR\_HVS\_QP\_SCL}}}\mbox{\Hypertarget{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a3db15dd54e2a2beb62191f5a5ec81dc7}\label{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a3db15dd54e2a2beb62191f5a5ec81dc7}} 
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+H\+V\+S\+\_\+\+Q\+P\+\_\+\+S\+CL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NI\_RETCODE\_PARAM\_ERROR\_MN\_QP@{NI\_RETCODE\_PARAM\_ERROR\_MN\_QP}!ni\_defs.h@{ni\_defs.h}}\index{ni\_defs.h@{ni\_defs.h}!NI\_RETCODE\_PARAM\_ERROR\_MN\_QP@{NI\_RETCODE\_PARAM\_ERROR\_MN\_QP}}}\mbox{\Hypertarget{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a70aadbd12cf3f62452a5c5a71af0504d}\label{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a70aadbd12cf3f62452a5c5a71af0504d}} 
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+M\+N\+\_\+\+QP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NI\_RETCODE\_PARAM\_ERROR\_MX\_QP@{NI\_RETCODE\_PARAM\_ERROR\_MX\_QP}!ni\_defs.h@{ni\_defs.h}}\index{ni\_defs.h@{ni\_defs.h}!NI\_RETCODE\_PARAM\_ERROR\_MX\_QP@{NI\_RETCODE\_PARAM\_ERROR\_MX\_QP}}}\mbox{\Hypertarget{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247af7bc994dc2132efe40d846d1ab53eebd}\label{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247af7bc994dc2132efe40d846d1ab53eebd}} 
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+M\+X\+\_\+\+QP&!$<$ invalid minimum qp parameter value \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NI\_RETCODE\_PARAM\_ERROR\_MX\_DELTA\_QP@{NI\_RETCODE\_PARAM\_ERROR\_MX\_DELTA\_QP}!ni\_defs.h@{ni\_defs.h}}\index{ni\_defs.h@{ni\_defs.h}!NI\_RETCODE\_PARAM\_ERROR\_MX\_DELTA\_QP@{NI\_RETCODE\_PARAM\_ERROR\_MX\_DELTA\_QP}}}\mbox{\Hypertarget{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a5200dbf60cf7c3418bac2c190fac5088}\label{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a5200dbf60cf7c3418bac2c190fac5088}} 
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+M\+X\+\_\+\+D\+E\+L\+T\+A\+\_\+\+QP&!$<$ invalid maximum qp parameter value \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NI\_RETCODE\_PARAM\_ERROR\_CONF\_WIN\_TOP@{NI\_RETCODE\_PARAM\_ERROR\_CONF\_WIN\_TOP}!ni\_defs.h@{ni\_defs.h}}\index{ni\_defs.h@{ni\_defs.h}!NI\_RETCODE\_PARAM\_ERROR\_CONF\_WIN\_TOP@{NI\_RETCODE\_PARAM\_ERROR\_CONF\_WIN\_TOP}}}\mbox{\Hypertarget{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a781c7ccaf4d3386c47c85aee5dca0f76}\label{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a781c7ccaf4d3386c47c85aee5dca0f76}} 
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+N\+F\+\_\+\+W\+I\+N\+\_\+\+T\+OP&!$<$ invalid maximum delta qp parameter value \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NI\_RETCODE\_PARAM\_ERROR\_CONF\_WIN\_BOT@{NI\_RETCODE\_PARAM\_ERROR\_CONF\_WIN\_BOT}!ni\_defs.h@{ni\_defs.h}}\index{ni\_defs.h@{ni\_defs.h}!NI\_RETCODE\_PARAM\_ERROR\_CONF\_WIN\_BOT@{NI\_RETCODE\_PARAM\_ERROR\_CONF\_WIN\_BOT}}}\mbox{\Hypertarget{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a6d1f97c4c40ac78458ffebcb177793ef}\label{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a6d1f97c4c40ac78458ffebcb177793ef}} 
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+N\+F\+\_\+\+W\+I\+N\+\_\+\+B\+OT&!$<$ invalid top offset of conformance window parameter value \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NI\_RETCODE\_PARAM\_ERROR\_CONF\_WIN\_L@{NI\_RETCODE\_PARAM\_ERROR\_CONF\_WIN\_L}!ni\_defs.h@{ni\_defs.h}}\index{ni\_defs.h@{ni\_defs.h}!NI\_RETCODE\_PARAM\_ERROR\_CONF\_WIN\_L@{NI\_RETCODE\_PARAM\_ERROR\_CONF\_WIN\_L}}}\mbox{\Hypertarget{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a78dfd0c568dbe0c782df4da170c4e645}\label{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a78dfd0c568dbe0c782df4da170c4e645}} 
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+N\+F\+\_\+\+W\+I\+N\+\_\+L&!$<$ invalid bottom offset of conformance window parameter value \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NI\_RETCODE\_PARAM\_ERROR\_CONF\_WIN\_R@{NI\_RETCODE\_PARAM\_ERROR\_CONF\_WIN\_R}!ni\_defs.h@{ni\_defs.h}}\index{ni\_defs.h@{ni\_defs.h}!NI\_RETCODE\_PARAM\_ERROR\_CONF\_WIN\_R@{NI\_RETCODE\_PARAM\_ERROR\_CONF\_WIN\_R}}}\mbox{\Hypertarget{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a5fee88e88caba80bc0cf51c4c71755da}\label{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a5fee88e88caba80bc0cf51c4c71755da}} 
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+N\+F\+\_\+\+W\+I\+N\+\_\+R&!$<$ invalid left offset of conformance window parameter value \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NI\_RETCODE\_PARAM\_ERROR\_USR\_RMD\_ENC\_PARAM@{NI\_RETCODE\_PARAM\_ERROR\_USR\_RMD\_ENC\_PARAM}!ni\_defs.h@{ni\_defs.h}}\index{ni\_defs.h@{ni\_defs.h}!NI\_RETCODE\_PARAM\_ERROR\_USR\_RMD\_ENC\_PARAM@{NI\_RETCODE\_PARAM\_ERROR\_USR\_RMD\_ENC\_PARAM}}}\mbox{\Hypertarget{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247ac2e9bb6b9e389758d70c29e898d55709}\label{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247ac2e9bb6b9e389758d70c29e898d55709}} 
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+U\+S\+R\+\_\+\+R\+M\+D\+\_\+\+E\+N\+C\+\_\+\+P\+A\+R\+AM&!$<$ invalid right offset of conformance window parameter value \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NI\_RETCODE\_PARAM\_ERROR\_BRATE\_LT\_TRATE@{NI\_RETCODE\_PARAM\_ERROR\_BRATE\_LT\_TRATE}!ni\_defs.h@{ni\_defs.h}}\index{ni\_defs.h@{ni\_defs.h}!NI\_RETCODE\_PARAM\_ERROR\_BRATE\_LT\_TRATE@{NI\_RETCODE\_PARAM\_ERROR\_BRATE\_LT\_TRATE}}}\mbox{\Hypertarget{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a884b85f50f6f51658fb680b2caed1e14}\label{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a884b85f50f6f51658fb680b2caed1e14}} 
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+B\+R\+A\+T\+E\+\_\+\+L\+T\+\_\+\+T\+R\+A\+TE&!$<$ invalid user recommended parameter value \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NI\_RETCODE\_PARAM\_ERROR\_RCINITDELAY@{NI\_RETCODE\_PARAM\_ERROR\_RCINITDELAY}!ni\_defs.h@{ni\_defs.h}}\index{ni\_defs.h@{ni\_defs.h}!NI\_RETCODE\_PARAM\_ERROR\_RCINITDELAY@{NI\_RETCODE\_PARAM\_ERROR\_RCINITDELAY}}}\mbox{\Hypertarget{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a899fe4716ee26a4d7d50dbb44d5c7b88}\label{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a899fe4716ee26a4d7d50dbb44d5c7b88}} 
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+R\+C\+I\+N\+I\+T\+D\+E\+L\+AY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NI\_RETCODE\_PARAM\_ERROR\_RCENABLE@{NI\_RETCODE\_PARAM\_ERROR\_RCENABLE}!ni\_defs.h@{ni\_defs.h}}\index{ni\_defs.h@{ni\_defs.h}!NI\_RETCODE\_PARAM\_ERROR\_RCENABLE@{NI\_RETCODE\_PARAM\_ERROR\_RCENABLE}}}\mbox{\Hypertarget{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a510bfb54c69c782131de95c03e0859b8}\label{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a510bfb54c69c782131de95c03e0859b8}} 
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+R\+C\+E\+N\+A\+B\+LE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NI\_RETCODE\_PARAM\_ERROR\_MAXNUMMERGE@{NI\_RETCODE\_PARAM\_ERROR\_MAXNUMMERGE}!ni\_defs.h@{ni\_defs.h}}\index{ni\_defs.h@{ni\_defs.h}!NI\_RETCODE\_PARAM\_ERROR\_MAXNUMMERGE@{NI\_RETCODE\_PARAM\_ERROR\_MAXNUMMERGE}}}\mbox{\Hypertarget{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247aaf772c4cf9c570009590f3c95a371aef}\label{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247aaf772c4cf9c570009590f3c95a371aef}} 
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+M\+A\+X\+N\+U\+M\+M\+E\+R\+GE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NI\_RETCODE\_PARAM\_ERROR\_CUSTOM\_GOP@{NI\_RETCODE\_PARAM\_ERROR\_CUSTOM\_GOP}!ni\_defs.h@{ni\_defs.h}}\index{ni\_defs.h@{ni\_defs.h}!NI\_RETCODE\_PARAM\_ERROR\_CUSTOM\_GOP@{NI\_RETCODE\_PARAM\_ERROR\_CUSTOM\_GOP}}}\mbox{\Hypertarget{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247ae8e875bf74cd9042583fd1d660e41747}\label{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247ae8e875bf74cd9042583fd1d660e41747}} 
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+U\+S\+T\+O\+M\+\_\+\+G\+OP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NI\_RETCODE\_PARAM\_ERROR\_PIC\_WIDTH@{NI\_RETCODE\_PARAM\_ERROR\_PIC\_WIDTH}!ni\_defs.h@{ni\_defs.h}}\index{ni\_defs.h@{ni\_defs.h}!NI\_RETCODE\_PARAM\_ERROR\_PIC\_WIDTH@{NI\_RETCODE\_PARAM\_ERROR\_PIC\_WIDTH}}}\mbox{\Hypertarget{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a77abb3993f982fbdbad161be55c56422}\label{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a77abb3993f982fbdbad161be55c56422}} 
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+P\+I\+C\+\_\+\+W\+I\+D\+TH&!$<$ invalid custom gop preset parameter value \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NI\_RETCODE\_PARAM\_ERROR\_PIC\_HEIGHT@{NI\_RETCODE\_PARAM\_ERROR\_PIC\_HEIGHT}!ni\_defs.h@{ni\_defs.h}}\index{ni\_defs.h@{ni\_defs.h}!NI\_RETCODE\_PARAM\_ERROR\_PIC\_HEIGHT@{NI\_RETCODE\_PARAM\_ERROR\_PIC\_HEIGHT}}}\mbox{\Hypertarget{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247ac5d7b243ad3f17cbe6bb1064bb78a940}\label{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247ac5d7b243ad3f17cbe6bb1064bb78a940}} 
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+P\+I\+C\+\_\+\+H\+E\+I\+G\+HT&!$<$ invalid picture width parameter value \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NI\_RETCODE\_PARAM\_ERROR\_DECODING\_REFRESH\_TYPE@{NI\_RETCODE\_PARAM\_ERROR\_DECODING\_REFRESH\_TYPE}!ni\_defs.h@{ni\_defs.h}}\index{ni\_defs.h@{ni\_defs.h}!NI\_RETCODE\_PARAM\_ERROR\_DECODING\_REFRESH\_TYPE@{NI\_RETCODE\_PARAM\_ERROR\_DECODING\_REFRESH\_TYPE}}}\mbox{\Hypertarget{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a7d84bc6769a08fa148474f01bf34bf57}\label{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a7d84bc6769a08fa148474f01bf34bf57}} 
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+D\+E\+C\+O\+D\+I\+N\+G\+\_\+\+R\+E\+F\+R\+E\+S\+H\+\_\+\+T\+Y\+PE&!$<$ invalid picture height parameter value \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NI\_RETCODE\_PARAM\_ERROR\_CUSIZE\_MODE\_8X8\_EN@{NI\_RETCODE\_PARAM\_ERROR\_CUSIZE\_MODE\_8X8\_EN}!ni\_defs.h@{ni\_defs.h}}\index{ni\_defs.h@{ni\_defs.h}!NI\_RETCODE\_PARAM\_ERROR\_CUSIZE\_MODE\_8X8\_EN@{NI\_RETCODE\_PARAM\_ERROR\_CUSIZE\_MODE\_8X8\_EN}}}\mbox{\Hypertarget{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a4546924e74670b8cfa1b2ff17bd8f998}\label{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a4546924e74670b8cfa1b2ff17bd8f998}} 
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+U\+S\+I\+Z\+E\+\_\+\+M\+O\+D\+E\+\_\+8\+X8\+\_\+\+EN&!$<$ invalid decoding refresh type parameter value \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NI\_RETCODE\_PARAM\_ERROR\_CUSIZE\_MODE\_16X16\_EN@{NI\_RETCODE\_PARAM\_ERROR\_CUSIZE\_MODE\_16X16\_EN}!ni\_defs.h@{ni\_defs.h}}\index{ni\_defs.h@{ni\_defs.h}!NI\_RETCODE\_PARAM\_ERROR\_CUSIZE\_MODE\_16X16\_EN@{NI\_RETCODE\_PARAM\_ERROR\_CUSIZE\_MODE\_16X16\_EN}}}\mbox{\Hypertarget{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247adc1d9dbfeaf5bd99c99b9b1d2b7c8e8c}\label{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247adc1d9dbfeaf5bd99c99b9b1d2b7c8e8c}} 
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+U\+S\+I\+Z\+E\+\_\+\+M\+O\+D\+E\+\_\+16\+X16\+\_\+\+EN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NI\_RETCODE\_PARAM\_ERROR\_CUSIZE\_MODE\_32X32\_EN@{NI\_RETCODE\_PARAM\_ERROR\_CUSIZE\_MODE\_32X32\_EN}!ni\_defs.h@{ni\_defs.h}}\index{ni\_defs.h@{ni\_defs.h}!NI\_RETCODE\_PARAM\_ERROR\_CUSIZE\_MODE\_32X32\_EN@{NI\_RETCODE\_PARAM\_ERROR\_CUSIZE\_MODE\_32X32\_EN}}}\mbox{\Hypertarget{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a507fe7281b693a5e8df8cfda6d695f3a}\label{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a507fe7281b693a5e8df8cfda6d695f3a}} 
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+U\+S\+I\+Z\+E\+\_\+\+M\+O\+D\+E\+\_\+32\+X32\+\_\+\+EN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NI\_RETCODE\_NVME\_SC\_START\_ERROR\_INVALID\_ID@{NI\_RETCODE\_NVME\_SC\_START\_ERROR\_INVALID\_ID}!ni\_defs.h@{ni\_defs.h}}\index{ni\_defs.h@{ni\_defs.h}!NI\_RETCODE\_NVME\_SC\_START\_ERROR\_INVALID\_ID@{NI\_RETCODE\_NVME\_SC\_START\_ERROR\_INVALID\_ID}}}\mbox{\Hypertarget{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a23ef47fb7105c5acd95a334e454764dd}\label{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a23ef47fb7105c5acd95a334e454764dd}} 
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+N\+V\+M\+E\+\_\+\+S\+C\+\_\+\+S\+T\+A\+R\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+ID&Xcoder Start Command Specific \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NI\_RETCODE\_NVME\_SC\_START\_ERROR\_WRONG\_TCONF\_ID@{NI\_RETCODE\_NVME\_SC\_START\_ERROR\_WRONG\_TCONF\_ID}!ni\_defs.h@{ni\_defs.h}}\index{ni\_defs.h@{ni\_defs.h}!NI\_RETCODE\_NVME\_SC\_START\_ERROR\_WRONG\_TCONF\_ID@{NI\_RETCODE\_NVME\_SC\_START\_ERROR\_WRONG\_TCONF\_ID}}}\mbox{\Hypertarget{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a0704d0f562efbbe19ae0bae2a73df1bb}\label{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a0704d0f562efbbe19ae0bae2a73df1bb}} 
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+N\+V\+M\+E\+\_\+\+S\+C\+\_\+\+S\+T\+A\+R\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+W\+R\+O\+N\+G\+\_\+\+T\+C\+O\+N\+F\+\_\+\+ID&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NI\_RETCODE\_NVME\_SC\_WRITE\_BUFFER\_FULL@{NI\_RETCODE\_NVME\_SC\_WRITE\_BUFFER\_FULL}!ni\_defs.h@{ni\_defs.h}}\index{ni\_defs.h@{ni\_defs.h}!NI\_RETCODE\_NVME\_SC\_WRITE\_BUFFER\_FULL@{NI\_RETCODE\_NVME\_SC\_WRITE\_BUFFER\_FULL}}}\mbox{\Hypertarget{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a882d2a068a0a773bc998309cb2a05b6d}\label{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a882d2a068a0a773bc998309cb2a05b6d}} 
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+N\+V\+M\+E\+\_\+\+S\+C\+\_\+\+W\+R\+I\+T\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+F\+U\+LL&Hardware Specific Error codes \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NI\_RETCODE\_NVME\_SC\_INVALID\_XCODER\_ID@{NI\_RETCODE\_NVME\_SC\_INVALID\_XCODER\_ID}!ni\_defs.h@{ni\_defs.h}}\index{ni\_defs.h@{ni\_defs.h}!NI\_RETCODE\_NVME\_SC\_INVALID\_XCODER\_ID@{NI\_RETCODE\_NVME\_SC\_INVALID\_XCODER\_ID}}}\mbox{\Hypertarget{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a36b4cd3f1272b459fc0b223f64308cc7}\label{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a36b4cd3f1272b459fc0b223f64308cc7}} 
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+N\+V\+M\+E\+\_\+\+S\+C\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+X\+C\+O\+D\+E\+R\+\_\+\+ID&!$<$ nvme device write buffer is full \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NI\_RETCODE\_NVME\_SC\_RESOURCE\_UNAVAILABLE@{NI\_RETCODE\_NVME\_SC\_RESOURCE\_UNAVAILABLE}!ni\_defs.h@{ni\_defs.h}}\index{ni\_defs.h@{ni\_defs.h}!NI\_RETCODE\_NVME\_SC\_RESOURCE\_UNAVAILABLE@{NI\_RETCODE\_NVME\_SC\_RESOURCE\_UNAVAILABLE}}}\mbox{\Hypertarget{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247ab4d2aaf1f252e443a838b41dc3021b91}\label{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247ab4d2aaf1f252e443a838b41dc3021b91}} 
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+N\+V\+M\+E\+\_\+\+S\+C\+\_\+\+R\+E\+S\+O\+U\+R\+C\+E\+\_\+\+U\+N\+A\+V\+A\+I\+L\+A\+B\+LE&!$<$ invalid nvme device id \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NI\_RETCODE\_NVME\_SC\_INSTANCE\_NOT\_OPENED@{NI\_RETCODE\_NVME\_SC\_INSTANCE\_NOT\_OPENED}!ni\_defs.h@{ni\_defs.h}}\index{ni\_defs.h@{ni\_defs.h}!NI\_RETCODE\_NVME\_SC\_INSTANCE\_NOT\_OPENED@{NI\_RETCODE\_NVME\_SC\_INSTANCE\_NOT\_OPENED}}}\mbox{\Hypertarget{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a2d9b346ac315aefc62daf7278b77dec8}\label{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a2d9b346ac315aefc62daf7278b77dec8}} 
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+N\+V\+M\+E\+\_\+\+S\+C\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+N\+O\+T\+\_\+\+O\+P\+E\+N\+ED&!$<$ nvme device unavailable \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NI\_RETCODE\_NVME\_SC\_OPERATION\_IN\_PROGRESS@{NI\_RETCODE\_NVME\_SC\_OPERATION\_IN\_PROGRESS}!ni\_defs.h@{ni\_defs.h}}\index{ni\_defs.h@{ni\_defs.h}!NI\_RETCODE\_NVME\_SC\_OPERATION\_IN\_PROGRESS@{NI\_RETCODE\_NVME\_SC\_OPERATION\_IN\_PROGRESS}}}\mbox{\Hypertarget{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a5abe394aa34dc92428211f916730d041}\label{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a5abe394aa34dc92428211f916730d041}} 
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+N\+V\+M\+E\+\_\+\+S\+C\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+I\+N\+\_\+\+P\+R\+O\+G\+R\+E\+SS&!$<$ nvme device instance was not opened with device\+\_\+session\+\_\+open call \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NI\_RETCODE\_NVME\_SC\_SEQUENCE\_CHANGED@{NI\_RETCODE\_NVME\_SC\_SEQUENCE\_CHANGED}!ni\_defs.h@{ni\_defs.h}}\index{ni\_defs.h@{ni\_defs.h}!NI\_RETCODE\_NVME\_SC\_SEQUENCE\_CHANGED@{NI\_RETCODE\_NVME\_SC\_SEQUENCE\_CHANGED}}}\mbox{\Hypertarget{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a6efa6a2e5c75a6b39f7601bac6a68c52}\label{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a6efa6a2e5c75a6b39f7601bac6a68c52}} 
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+N\+V\+M\+E\+\_\+\+S\+C\+\_\+\+S\+E\+Q\+U\+E\+N\+C\+E\+\_\+\+C\+H\+A\+N\+G\+ED&!$<$ nvme device busy processing previous requested task \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NI\_RETCODE\_NVME\_SC\_SEQUENCE\_IN\_PROGRESS@{NI\_RETCODE\_NVME\_SC\_SEQUENCE\_IN\_PROGRESS}!ni\_defs.h@{ni\_defs.h}}\index{ni\_defs.h@{ni\_defs.h}!NI\_RETCODE\_NVME\_SC\_SEQUENCE\_IN\_PROGRESS@{NI\_RETCODE\_NVME\_SC\_SEQUENCE\_IN\_PROGRESS}}}\mbox{\Hypertarget{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247aaed2d7e206d9ac30f5a64686c2b1b428}\label{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247aaed2d7e206d9ac30f5a64686c2b1b428}} 
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+N\+V\+M\+E\+\_\+\+S\+C\+\_\+\+S\+E\+Q\+U\+E\+N\+C\+E\+\_\+\+I\+N\+\_\+\+P\+R\+O\+G\+R\+E\+SS&!$<$ nvme device busy processing previous requested task \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NI\_RETCODE\_NVME\_SC\_CANNOT\_UPDATE\_BITSTREAM\_NOW@{NI\_RETCODE\_NVME\_SC\_CANNOT\_UPDATE\_BITSTREAM\_NOW}!ni\_defs.h@{ni\_defs.h}}\index{ni\_defs.h@{ni\_defs.h}!NI\_RETCODE\_NVME\_SC\_CANNOT\_UPDATE\_BITSTREAM\_NOW@{NI\_RETCODE\_NVME\_SC\_CANNOT\_UPDATE\_BITSTREAM\_NOW}}}\mbox{\Hypertarget{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247affe4591eb37c35ef7b32171df2a18a8d}\label{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247affe4591eb37c35ef7b32171df2a18a8d}} 
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+N\+V\+M\+E\+\_\+\+S\+C\+\_\+\+C\+A\+N\+N\+O\+T\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+B\+I\+T\+S\+T\+R\+E\+A\+M\+\_\+\+N\+OW&!$<$ nvme device detected sequence change event \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NI\_RETCODE\_NVME\_SC\_INVALID\_TOKEN@{NI\_RETCODE\_NVME\_SC\_INVALID\_TOKEN}!ni\_defs.h@{ni\_defs.h}}\index{ni\_defs.h@{ni\_defs.h}!NI\_RETCODE\_NVME\_SC\_INVALID\_TOKEN@{NI\_RETCODE\_NVME\_SC\_INVALID\_TOKEN}}}\mbox{\Hypertarget{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a14d0f4760aa7c354638f111c71110a53}\label{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247a14d0f4760aa7c354638f111c71110a53}} 
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+N\+V\+M\+E\+\_\+\+S\+C\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+T\+O\+K\+EN&!$<$ nvme device can\textquotesingle{}t update bitstream \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 85 of file ni\+\_\+defs.\+h.
+

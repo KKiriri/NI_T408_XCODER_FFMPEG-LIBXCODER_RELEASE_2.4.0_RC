@@ -1,0 +1,300 @@
+\hypertarget{struct__ni__session__context}{}\section{\+\_\+ni\+\_\+session\+\_\+context Struct Reference}
+\label{struct__ni__session__context}\index{\_ni\_session\_context@{\_ni\_session\_context}}
+
+
+{\ttfamily \#include $<$ni\+\_\+device\+\_\+api.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+ni\+\_\+device\+\_\+handle\+\_\+t \mbox{\hyperlink{struct__ni__session__context_a4be6f6176ef1c1f36c9b873e0ac598ee}{device\+\_\+handle}}
+\item 
+ni\+\_\+device\+\_\+handle\+\_\+t \mbox{\hyperlink{struct__ni__session__context_aa375b9ac96074ffc858e6e9ecfb915bd}{blk\+\_\+io\+\_\+handle}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct__ni__session__context_a6118a901150ca3895d21bdad25430334}{hw\+\_\+id}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct__ni__session__context_a946f27f64a6c7500925f6d10c0b007aa}{session\+\_\+id}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct__ni__session__context_a11b71a6f868cf4482a6cfee4a08d13a0}{device\+\_\+type}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct__ni__session__context_a6972a0220282afb0857578bfe45fc53a}{codec\+\_\+format}}
+\item 
+\mbox{\hyperlink{ni__device__api_8h_a1338909d39289df25dc6df89904f5829}{ni\+\_\+load\+\_\+query\+\_\+t}} \mbox{\hyperlink{struct__ni__session__context_a54d72487a13f40c8d30ecdb2967fb7e0}{load\+\_\+query}}
+\item 
+void $\ast$ \mbox{\hyperlink{struct__ni__session__context_ac905a055d881964165495005536651de}{p\+\_\+leftover}}
+\item 
+int \mbox{\hyperlink{struct__ni__session__context_a16043d3d20e5bd0abbd2324e1c348066}{prev\+\_\+size}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct__ni__session__context_a85c1b2e9244d04321a8e54557704d7c6}{sent\+\_\+size}}
+\item 
+void $\ast$ \mbox{\hyperlink{struct__ni__session__context_a3fb8e824300426ee92c82f3ea744f6cf}{pts\+\_\+table}}
+\item 
+void $\ast$ \mbox{\hyperlink{struct__ni__session__context_a4d72ef2de1e0134204bc716d47e94080}{dts\+\_\+queue}}
+\item 
+int \mbox{\hyperlink{struct__ni__session__context_a6e27f49150e9a14580fb313cc2777e00}{status}}
+\item 
+int \mbox{\hyperlink{struct__ni__session__context_ae2603216ff320a51d17789cc8183f6b0}{key\+\_\+frame\+\_\+type}}
+\item 
+void $\ast$ \mbox{\hyperlink{struct__ni__session__context_aaaf3f4ab34f8bc046c56fb3e915b7581}{p\+\_\+dump}} \mbox{[}2\mbox{]}
+\item 
+char \mbox{\hyperlink{struct__ni__session__context_a27b70a4bd5e29c151436424c29b5b016}{param\+\_\+err\+\_\+msg}} \mbox{[}512\mbox{]}
+\item 
+int \mbox{\hyperlink{struct__ni__session__context_acb2f4c740e7dfbe1f89618131ada24ff}{keyframe\+\_\+factor}}
+\item 
+int \mbox{\hyperlink{struct__ni__session__context_aa0e8135e1ff3d1dc3e9909ef61d39e00}{frame\+\_\+num}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct__ni__session__context_a5b2b5d5bc3b8d8a808a941ac238be6c8}{ready\+\_\+to\+\_\+close}}
+\item 
+\mbox{\hyperlink{ni__device__api_8h_a339e8b5178897f31af91ea5543d8d23a}{ni\+\_\+session\+\_\+config\+\_\+t}} $\ast$ \mbox{\hyperlink{struct__ni__session__context_a7c5d054f53b7b7ecd27b38705139e847}{activ\+\_\+session\+\_\+config}}
+\item 
+\mbox{\hyperlink{ni__device__api_8h_a139b7f0724b1c7ef7135df09e70eb814}{ni\+\_\+seq\+\_\+change\+\_\+state\+\_\+t}} \mbox{\hyperlink{struct__ni__session__context_a64ed8372b7bdc10e85c161c9e1c43d8e}{seq\+\_\+change\+\_\+state}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct__ni__session__context_ae50c7a634ab2eb49088193b2dc18e70e}{active\+\_\+video\+\_\+width}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct__ni__session__context_ae71fa3483543c59c91f3db39f7016092}{active\+\_\+video\+\_\+height}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 200 of file ni\+\_\+device\+\_\+api.\+h.
+
+
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{struct__ni__session__context_a7c5d054f53b7b7ecd27b38705139e847}\label{struct__ni__session__context_a7c5d054f53b7b7ecd27b38705139e847}} 
+\index{\_ni\_session\_context@{\_ni\_session\_context}!activ\_session\_config@{activ\_session\_config}}
+\index{activ\_session\_config@{activ\_session\_config}!\_ni\_session\_context@{\_ni\_session\_context}}
+\subsubsection{\texorpdfstring{activ\_session\_config}{activ\_session\_config}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ni__device__api_8h_a339e8b5178897f31af91ea5543d8d23a}{ni\+\_\+session\+\_\+config\+\_\+t}}$\ast$ activ\+\_\+session\+\_\+config}
+
+
+
+Definition at line 241 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__session__context_ae71fa3483543c59c91f3db39f7016092}\label{struct__ni__session__context_ae71fa3483543c59c91f3db39f7016092}} 
+\index{\_ni\_session\_context@{\_ni\_session\_context}!active\_video\_height@{active\_video\_height}}
+\index{active\_video\_height@{active\_video\_height}!\_ni\_session\_context@{\_ni\_session\_context}}
+\subsubsection{\texorpdfstring{active\_video\_height}{active\_video\_height}}
+{\footnotesize\ttfamily uint32\+\_\+t active\+\_\+video\+\_\+height}
+
+
+
+Definition at line 244 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__session__context_ae50c7a634ab2eb49088193b2dc18e70e}\label{struct__ni__session__context_ae50c7a634ab2eb49088193b2dc18e70e}} 
+\index{\_ni\_session\_context@{\_ni\_session\_context}!active\_video\_width@{active\_video\_width}}
+\index{active\_video\_width@{active\_video\_width}!\_ni\_session\_context@{\_ni\_session\_context}}
+\subsubsection{\texorpdfstring{active\_video\_width}{active\_video\_width}}
+{\footnotesize\ttfamily uint32\+\_\+t active\+\_\+video\+\_\+width}
+
+
+
+Definition at line 243 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__session__context_aa375b9ac96074ffc858e6e9ecfb915bd}\label{struct__ni__session__context_aa375b9ac96074ffc858e6e9ecfb915bd}} 
+\index{\_ni\_session\_context@{\_ni\_session\_context}!blk\_io\_handle@{blk\_io\_handle}}
+\index{blk\_io\_handle@{blk\_io\_handle}!\_ni\_session\_context@{\_ni\_session\_context}}
+\subsubsection{\texorpdfstring{blk\_io\_handle}{blk\_io\_handle}}
+{\footnotesize\ttfamily ni\+\_\+device\+\_\+handle\+\_\+t blk\+\_\+io\+\_\+handle}
+
+block device fd 
+
+Definition at line 205 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__session__context_a6972a0220282afb0857578bfe45fc53a}\label{struct__ni__session__context_a6972a0220282afb0857578bfe45fc53a}} 
+\index{\_ni\_session\_context@{\_ni\_session\_context}!codec\_format@{codec\_format}}
+\index{codec\_format@{codec\_format}!\_ni\_session\_context@{\_ni\_session\_context}}
+\subsubsection{\texorpdfstring{codec\_format}{codec\_format}}
+{\footnotesize\ttfamily uint32\+\_\+t codec\+\_\+format}
+
+Device Type, Either N\+I\+\_\+\+C\+O\+D\+E\+C\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+H264 or N\+I\+\_\+\+C\+O\+D\+E\+C\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+H265 
+
+Definition at line 213 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__session__context_a4be6f6176ef1c1f36c9b873e0ac598ee}\label{struct__ni__session__context_a4be6f6176ef1c1f36c9b873e0ac598ee}} 
+\index{\_ni\_session\_context@{\_ni\_session\_context}!device\_handle@{device\_handle}}
+\index{device\_handle@{device\_handle}!\_ni\_session\_context@{\_ni\_session\_context}}
+\subsubsection{\texorpdfstring{device\_handle}{device\_handle}}
+{\footnotesize\ttfamily ni\+\_\+device\+\_\+handle\+\_\+t device\+\_\+handle}
+
+Device Card ID 
+
+Definition at line 203 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__session__context_a11b71a6f868cf4482a6cfee4a08d13a0}\label{struct__ni__session__context_a11b71a6f868cf4482a6cfee4a08d13a0}} 
+\index{\_ni\_session\_context@{\_ni\_session\_context}!device\_type@{device\_type}}
+\index{device\_type@{device\_type}!\_ni\_session\_context@{\_ni\_session\_context}}
+\subsubsection{\texorpdfstring{device\_type}{device\_type}}
+{\footnotesize\ttfamily uint32\+\_\+t device\+\_\+type}
+
+Device Type, Either N\+I\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+E\+C\+O\+D\+ER or N\+I\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+E\+N\+C\+O\+D\+ER 
+
+Definition at line 211 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__session__context_a4d72ef2de1e0134204bc716d47e94080}\label{struct__ni__session__context_a4d72ef2de1e0134204bc716d47e94080}} 
+\index{\_ni\_session\_context@{\_ni\_session\_context}!dts\_queue@{dts\_queue}}
+\index{dts\_queue@{dts\_queue}!\_ni\_session\_context@{\_ni\_session\_context}}
+\subsubsection{\texorpdfstring{dts\_queue}{dts\_queue}}
+{\footnotesize\ttfamily void$\ast$ dts\+\_\+queue}
+
+D\+TS Queue 
+
+Definition at line 227 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__session__context_aa0e8135e1ff3d1dc3e9909ef61d39e00}\label{struct__ni__session__context_aa0e8135e1ff3d1dc3e9909ef61d39e00}} 
+\index{\_ni\_session\_context@{\_ni\_session\_context}!frame\_num@{frame\_num}}
+\index{frame\_num@{frame\_num}!\_ni\_session\_context@{\_ni\_session\_context}}
+\subsubsection{\texorpdfstring{frame\_num}{frame\_num}}
+{\footnotesize\ttfamily int frame\+\_\+num}
+
+
+
+Definition at line 237 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__session__context_a6118a901150ca3895d21bdad25430334}\label{struct__ni__session__context_a6118a901150ca3895d21bdad25430334}} 
+\index{\_ni\_session\_context@{\_ni\_session\_context}!hw\_id@{hw\_id}}
+\index{hw\_id@{hw\_id}!\_ni\_session\_context@{\_ni\_session\_context}}
+\subsubsection{\texorpdfstring{hw\_id}{hw\_id}}
+{\footnotesize\ttfamily uint32\+\_\+t hw\+\_\+id}
+
+Codec ID 
+
+Definition at line 207 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__session__context_ae2603216ff320a51d17789cc8183f6b0}\label{struct__ni__session__context_ae2603216ff320a51d17789cc8183f6b0}} 
+\index{\_ni\_session\_context@{\_ni\_session\_context}!key\_frame\_type@{key\_frame\_type}}
+\index{key\_frame\_type@{key\_frame\_type}!\_ni\_session\_context@{\_ni\_session\_context}}
+\subsubsection{\texorpdfstring{key\_frame\_type}{key\_frame\_type}}
+{\footnotesize\ttfamily int key\+\_\+frame\+\_\+type}
+
+
+
+Definition at line 231 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__session__context_acb2f4c740e7dfbe1f89618131ada24ff}\label{struct__ni__session__context_acb2f4c740e7dfbe1f89618131ada24ff}} 
+\index{\_ni\_session\_context@{\_ni\_session\_context}!keyframe\_factor@{keyframe\_factor}}
+\index{keyframe\_factor@{keyframe\_factor}!\_ni\_session\_context@{\_ni\_session\_context}}
+\subsubsection{\texorpdfstring{keyframe\_factor}{keyframe\_factor}}
+{\footnotesize\ttfamily int keyframe\+\_\+factor}
+
+
+
+Definition at line 236 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__session__context_a54d72487a13f40c8d30ecdb2967fb7e0}\label{struct__ni__session__context_a54d72487a13f40c8d30ecdb2967fb7e0}} 
+\index{\_ni\_session\_context@{\_ni\_session\_context}!load\_query@{load\_query}}
+\index{load\_query@{load\_query}!\_ni\_session\_context@{\_ni\_session\_context}}
+\subsubsection{\texorpdfstring{load\_query}{load\_query}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ni__device__api_8h_a1338909d39289df25dc6df89904f5829}{ni\+\_\+load\+\_\+query\+\_\+t}} load\+\_\+query}
+
+Context Query 
+
+Definition at line 216 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__session__context_aaaf3f4ab34f8bc046c56fb3e915b7581}\label{struct__ni__session__context_aaaf3f4ab34f8bc046c56fb3e915b7581}} 
+\index{\_ni\_session\_context@{\_ni\_session\_context}!p\_dump@{p\_dump}}
+\index{p\_dump@{p\_dump}!\_ni\_session\_context@{\_ni\_session\_context}}
+\subsubsection{\texorpdfstring{p\_dump}{p\_dump}}
+{\footnotesize\ttfamily void$\ast$ p\+\_\+dump\mbox{[}2\mbox{]}}
+
+
+
+Definition at line 233 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__session__context_ac905a055d881964165495005536651de}\label{struct__ni__session__context_ac905a055d881964165495005536651de}} 
+\index{\_ni\_session\_context@{\_ni\_session\_context}!p\_leftover@{p\_leftover}}
+\index{p\_leftover@{p\_leftover}!\_ni\_session\_context@{\_ni\_session\_context}}
+\subsubsection{\texorpdfstring{p\_leftover}{p\_leftover}}
+{\footnotesize\ttfamily void$\ast$ p\+\_\+leftover}
+
+Leftover Buffer 
+
+Definition at line 219 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__session__context_a27b70a4bd5e29c151436424c29b5b016}\label{struct__ni__session__context_a27b70a4bd5e29c151436424c29b5b016}} 
+\index{\_ni\_session\_context@{\_ni\_session\_context}!param\_err\_msg@{param\_err\_msg}}
+\index{param\_err\_msg@{param\_err\_msg}!\_ni\_session\_context@{\_ni\_session\_context}}
+\subsubsection{\texorpdfstring{param\_err\_msg}{param\_err\_msg}}
+{\footnotesize\ttfamily char param\+\_\+err\+\_\+msg\mbox{[}512\mbox{]}}
+
+
+
+Definition at line 234 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__session__context_a16043d3d20e5bd0abbd2324e1c348066}\label{struct__ni__session__context_a16043d3d20e5bd0abbd2324e1c348066}} 
+\index{\_ni\_session\_context@{\_ni\_session\_context}!prev\_size@{prev\_size}}
+\index{prev\_size@{prev\_size}!\_ni\_session\_context@{\_ni\_session\_context}}
+\subsubsection{\texorpdfstring{prev\_size}{prev\_size}}
+{\footnotesize\ttfamily int prev\+\_\+size}
+
+
+
+Definition at line 220 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__session__context_a3fb8e824300426ee92c82f3ea744f6cf}\label{struct__ni__session__context_a3fb8e824300426ee92c82f3ea744f6cf}} 
+\index{\_ni\_session\_context@{\_ni\_session\_context}!pts\_table@{pts\_table}}
+\index{pts\_table@{pts\_table}!\_ni\_session\_context@{\_ni\_session\_context}}
+\subsubsection{\texorpdfstring{pts\_table}{pts\_table}}
+{\footnotesize\ttfamily void$\ast$ pts\+\_\+table}
+
+P\+TS Table 
+
+Definition at line 224 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__session__context_a5b2b5d5bc3b8d8a808a941ac238be6c8}\label{struct__ni__session__context_a5b2b5d5bc3b8d8a808a941ac238be6c8}} 
+\index{\_ni\_session\_context@{\_ni\_session\_context}!ready\_to\_close@{ready\_to\_close}}
+\index{ready\_to\_close@{ready\_to\_close}!\_ni\_session\_context@{\_ni\_session\_context}}
+\subsubsection{\texorpdfstring{ready\_to\_close}{ready\_to\_close}}
+{\footnotesize\ttfamily uint32\+\_\+t ready\+\_\+to\+\_\+close}
+
+
+
+Definition at line 239 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__session__context_a85c1b2e9244d04321a8e54557704d7c6}\label{struct__ni__session__context_a85c1b2e9244d04321a8e54557704d7c6}} 
+\index{\_ni\_session\_context@{\_ni\_session\_context}!sent\_size@{sent\_size}}
+\index{sent\_size@{sent\_size}!\_ni\_session\_context@{\_ni\_session\_context}}
+\subsubsection{\texorpdfstring{sent\_size}{sent\_size}}
+{\footnotesize\ttfamily uint32\+\_\+t sent\+\_\+size}
+
+
+
+Definition at line 221 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__session__context_a64ed8372b7bdc10e85c161c9e1c43d8e}\label{struct__ni__session__context_a64ed8372b7bdc10e85c161c9e1c43d8e}} 
+\index{\_ni\_session\_context@{\_ni\_session\_context}!seq\_change\_state@{seq\_change\_state}}
+\index{seq\_change\_state@{seq\_change\_state}!\_ni\_session\_context@{\_ni\_session\_context}}
+\subsubsection{\texorpdfstring{seq\_change\_state}{seq\_change\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ni__device__api_8h_a139b7f0724b1c7ef7135df09e70eb814}{ni\+\_\+seq\+\_\+change\+\_\+state\+\_\+t}} seq\+\_\+change\+\_\+state}
+
+
+
+Definition at line 242 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__session__context_a946f27f64a6c7500925f6d10c0b007aa}\label{struct__ni__session__context_a946f27f64a6c7500925f6d10c0b007aa}} 
+\index{\_ni\_session\_context@{\_ni\_session\_context}!session\_id@{session\_id}}
+\index{session\_id@{session\_id}!\_ni\_session\_context@{\_ni\_session\_context}}
+\subsubsection{\texorpdfstring{session\_id}{session\_id}}
+{\footnotesize\ttfamily uint32\+\_\+t session\+\_\+id}
+
+Session ID 
+
+Definition at line 209 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__session__context_a6e27f49150e9a14580fb313cc2777e00}\label{struct__ni__session__context_a6e27f49150e9a14580fb313cc2777e00}} 
+\index{\_ni\_session\_context@{\_ni\_session\_context}!status@{status}}
+\index{status@{status}!\_ni\_session\_context@{\_ni\_session\_context}}
+\subsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily int status}
+
+Other 
+
+Definition at line 230 of file ni\+\_\+device\+\_\+api.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ni__device__api_8h}{ni\+\_\+device\+\_\+api.\+h}}\end{DoxyCompactItemize}

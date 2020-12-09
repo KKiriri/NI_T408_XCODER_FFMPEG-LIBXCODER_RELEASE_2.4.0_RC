@@ -1,0 +1,205 @@
+\hypertarget{ni__rsrc__priv_8h}{}\section{ni\+\_\+rsrc\+\_\+priv.\+h File Reference}
+\label{ni__rsrc__priv_8h}\index{ni\_rsrc\_priv.h@{ni\_rsrc\_priv.h}}
+
+
+Private definitions related to resource management of NI T-\/408 devices.  
+
+
+{\ttfamily \#include \char`\"{}ni\+\_\+device\+\_\+api.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{ni__rsrc__priv_8h_aa7f4787da1c1b2255c5617df33b8225c}{L\+O\+C\+K\+\_\+\+D\+IR}}~\char`\"{}/dev/shm\char`\"{}
+\item 
+\#define \mbox{\hyperlink{ni__rsrc__priv_8h_a7262999e6bd54339d11f90e008338eef}{C\+O\+D\+E\+R\+S\+\_\+\+S\+H\+M\+\_\+\+N\+A\+ME}}~\char`\"{}S\+H\+M\+\_\+\+C\+O\+D\+E\+RS\char`\"{}
+\item 
+\#define \mbox{\hyperlink{ni__rsrc__priv_8h_a15059e74b720ecc9677a0561224cfc66}{C\+O\+D\+E\+R\+S\+\_\+\+L\+C\+K\+\_\+\+N\+A\+ME}}~\char`\"{}/dev/shm/L\+C\+K\+\_\+\+C\+O\+D\+E\+RS\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{ni__rsrc__priv_8h_a5e95a7589304087ada735d0eb6d6a980}{ni\+\_\+rsrc\+\_\+get\+\_\+lock\+\_\+name}} (\mbox{\hyperlink{ni__defs_8h_a758f24acb02b236820c7390eed53d1cc}{ni\+\_\+device\+\_\+type\+\_\+t}} device\+\_\+type, int32\+\_\+t guid, char $\ast$p\+\_\+name, size\+\_\+t max\+\_\+name\+\_\+len)
+\item 
+void \mbox{\hyperlink{ni__rsrc__priv_8h_a4561ae0d980be86add9c589340215bf0}{ni\+\_\+rsrc\+\_\+get\+\_\+shm\+\_\+name}} (\mbox{\hyperlink{ni__defs_8h_a758f24acb02b236820c7390eed53d1cc}{ni\+\_\+device\+\_\+type\+\_\+t}} device\+\_\+type, int32\+\_\+t guid, char $\ast$p\+\_\+name, size\+\_\+t max\+\_\+name\+\_\+len)
+\item 
+void \mbox{\hyperlink{ni__rsrc__priv_8h_a5ef9ae00327af0841c370f7ea2f379d1}{ni\+\_\+rsrc\+\_\+update\+\_\+record}} (\mbox{\hyperlink{ni__rsrc__api_8h_a880a361e6e867b45d102656e813a046f}{ni\+\_\+device\+\_\+context\+\_\+t}} $\ast$p\+\_\+device\+\_\+context, \mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$p\+\_\+session\+\_\+ctx)
+\item 
+void \mbox{\hyperlink{ni__rsrc__priv_8h_a7863fef6ad9656ddca545b83a1b48a2f}{ni\+\_\+rsrc\+\_\+get\+\_\+one\+\_\+device\+\_\+info}} (\mbox{\hyperlink{ni__rsrc__api_8h_a37a9b9f89ba495d469222af27ce3058b}{ni\+\_\+device\+\_\+info\+\_\+t}} $\ast$p\+\_\+device\+\_\+info)
+\item 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} \mbox{\hyperlink{ni__rsrc__priv_8h_a46c8ad8263b7fc520ff237d00d9c51d3}{ni\+\_\+rsrc\+\_\+fill\+\_\+device\+\_\+info}} (\mbox{\hyperlink{ni__rsrc__api_8h_a37a9b9f89ba495d469222af27ce3058b}{ni\+\_\+device\+\_\+info\+\_\+t}} $\ast$p\+\_\+device\+\_\+info, \mbox{\hyperlink{ni__rsrc__api_8h_a9945b3a5098e949d3e596e6f778e01bc}{ni\+\_\+codec\+\_\+t}} fmt, \mbox{\hyperlink{ni__defs_8h_a758f24acb02b236820c7390eed53d1cc}{ni\+\_\+device\+\_\+type\+\_\+t}} type, \mbox{\hyperlink{ni__device__api_8h_aa613b88d7181b67f6fabca9f0a1ea37c}{ni\+\_\+hw\+\_\+capability\+\_\+t}} $\ast$p\+\_\+hw\+\_\+cap)
+\item 
+int \mbox{\hyperlink{ni__rsrc__priv_8h_afc9a0dfe437d5de20983725b6b2ce8fd}{ni\+\_\+rsrc\+\_\+enumerate\+\_\+devices}} (char ni\+\_\+devices\mbox{[}$\,$\mbox{]}\mbox{[}\mbox{\hyperlink{ni__defs_8h_a0666ed218212a20f00a6c65caa3141bc}{M\+A\+X\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+N\+A\+M\+E\+\_\+\+L\+EN}}\mbox{]}, int max\+\_\+handles)
+\item 
+int \mbox{\hyperlink{ni__rsrc__priv_8h_ac200a1532aff2308fac6aedc71935d15}{ni\+\_\+rsrc\+\_\+strcmp}} (const void $\ast$p\+\_\+str, const void $\ast$p\+\_\+str1)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{ni__rsrc__priv_8h_ad1ddc34a16a508a48f018ce78261c9c9}{stop\+\_\+process}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Private definitions related to resource management of NI T-\/408 devices. 
+
+
+
+
+
+\begin{DoxyCopyright}{Copyright}
+(c) 2019 N\+E\+T\+I\+NT Technologies Inc. All rights reserved. 
+\end{DoxyCopyright}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{ni__rsrc__priv_8h_a15059e74b720ecc9677a0561224cfc66}\label{ni__rsrc__priv_8h_a15059e74b720ecc9677a0561224cfc66}} 
+\index{ni\_rsrc\_priv.h@{ni\_rsrc\_priv.h}!CODERS\_LCK\_NAME@{CODERS\_LCK\_NAME}}
+\index{CODERS\_LCK\_NAME@{CODERS\_LCK\_NAME}!ni\_rsrc\_priv.h@{ni\_rsrc\_priv.h}}
+\subsubsection{\texorpdfstring{CODERS\_LCK\_NAME}{CODERS\_LCK\_NAME}}
+{\footnotesize\ttfamily \#define C\+O\+D\+E\+R\+S\+\_\+\+L\+C\+K\+\_\+\+N\+A\+ME~\char`\"{}/dev/shm/L\+C\+K\+\_\+\+C\+O\+D\+E\+RS\char`\"{}}
+
+
+
+Definition at line 19 of file ni\+\_\+rsrc\+\_\+priv.\+h.
+
+\mbox{\Hypertarget{ni__rsrc__priv_8h_a7262999e6bd54339d11f90e008338eef}\label{ni__rsrc__priv_8h_a7262999e6bd54339d11f90e008338eef}} 
+\index{ni\_rsrc\_priv.h@{ni\_rsrc\_priv.h}!CODERS\_SHM\_NAME@{CODERS\_SHM\_NAME}}
+\index{CODERS\_SHM\_NAME@{CODERS\_SHM\_NAME}!ni\_rsrc\_priv.h@{ni\_rsrc\_priv.h}}
+\subsubsection{\texorpdfstring{CODERS\_SHM\_NAME}{CODERS\_SHM\_NAME}}
+{\footnotesize\ttfamily \#define C\+O\+D\+E\+R\+S\+\_\+\+S\+H\+M\+\_\+\+N\+A\+ME~\char`\"{}S\+H\+M\+\_\+\+C\+O\+D\+E\+RS\char`\"{}}
+
+
+
+Definition at line 18 of file ni\+\_\+rsrc\+\_\+priv.\+h.
+
+\mbox{\Hypertarget{ni__rsrc__priv_8h_aa7f4787da1c1b2255c5617df33b8225c}\label{ni__rsrc__priv_8h_aa7f4787da1c1b2255c5617df33b8225c}} 
+\index{ni\_rsrc\_priv.h@{ni\_rsrc\_priv.h}!LOCK\_DIR@{LOCK\_DIR}}
+\index{LOCK\_DIR@{LOCK\_DIR}!ni\_rsrc\_priv.h@{ni\_rsrc\_priv.h}}
+\subsubsection{\texorpdfstring{LOCK\_DIR}{LOCK\_DIR}}
+{\footnotesize\ttfamily \#define L\+O\+C\+K\+\_\+\+D\+IR~\char`\"{}/dev/shm\char`\"{}}
+
+
+
+Definition at line 17 of file ni\+\_\+rsrc\+\_\+priv.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ni__rsrc__priv_8h_afc9a0dfe437d5de20983725b6b2ce8fd}\label{ni__rsrc__priv_8h_afc9a0dfe437d5de20983725b6b2ce8fd}} 
+\index{ni\_rsrc\_priv.h@{ni\_rsrc\_priv.h}!ni\_rsrc\_enumerate\_devices@{ni\_rsrc\_enumerate\_devices}}
+\index{ni\_rsrc\_enumerate\_devices@{ni\_rsrc\_enumerate\_devices}!ni\_rsrc\_priv.h@{ni\_rsrc\_priv.h}}
+\subsubsection{\texorpdfstring{ni\_rsrc\_enumerate\_devices()}{ni\_rsrc\_enumerate\_devices()}}
+{\footnotesize\ttfamily int ni\+\_\+rsrc\+\_\+enumerate\+\_\+devices (\begin{DoxyParamCaption}\item[{char}]{ni\+\_\+devices\mbox{[}$\,$\mbox{]}\mbox{[}\+M\+A\+X\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+N\+A\+M\+E\+\_\+\+L\+E\+N\mbox{]},  }\item[{int}]{max\+\_\+handles }\end{DoxyParamCaption})}
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ni__rsrc__priv_8h_a46c8ad8263b7fc520ff237d00d9c51d3}\label{ni__rsrc__priv_8h_a46c8ad8263b7fc520ff237d00d9c51d3}} 
+\index{ni\_rsrc\_priv.h@{ni\_rsrc\_priv.h}!ni\_rsrc\_fill\_device\_info@{ni\_rsrc\_fill\_device\_info}}
+\index{ni\_rsrc\_fill\_device\_info@{ni\_rsrc\_fill\_device\_info}!ni\_rsrc\_priv.h@{ni\_rsrc\_priv.h}}
+\subsubsection{\texorpdfstring{ni\_rsrc\_fill\_device\_info()}{ni\_rsrc\_fill\_device\_info()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} ni\+\_\+rsrc\+\_\+fill\+\_\+device\+\_\+info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__rsrc__api_8h_a37a9b9f89ba495d469222af27ce3058b}{ni\+\_\+device\+\_\+info\+\_\+t}} $\ast$}]{p\+\_\+device\+\_\+info,  }\item[{\mbox{\hyperlink{ni__rsrc__api_8h_a9945b3a5098e949d3e596e6f778e01bc}{ni\+\_\+codec\+\_\+t}}}]{fmt,  }\item[{\mbox{\hyperlink{ni__defs_8h_a758f24acb02b236820c7390eed53d1cc}{ni\+\_\+device\+\_\+type\+\_\+t}}}]{type,  }\item[{\mbox{\hyperlink{ni__device__api_8h_aa613b88d7181b67f6fabca9f0a1ea37c}{ni\+\_\+hw\+\_\+capability\+\_\+t}} $\ast$}]{p\+\_\+hw\+\_\+cap }\end{DoxyParamCaption})}
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+T\+BD\+: convert id to text
+
+To\+Do\+: Rev. B
+
+T\+BD\+: convert id to text
+
+encoder
+
+To\+Do\+: Rev. B
+
+T\+BD\+: convert id to text
+
+T\+BD\+: convert id to text 
+
+Definition at line 37 of file ni\+\_\+rsrc\+\_\+priv.\+c.
+
+\mbox{\Hypertarget{ni__rsrc__priv_8h_a5e95a7589304087ada735d0eb6d6a980}\label{ni__rsrc__priv_8h_a5e95a7589304087ada735d0eb6d6a980}} 
+\index{ni\_rsrc\_priv.h@{ni\_rsrc\_priv.h}!ni\_rsrc\_get\_lock\_name@{ni\_rsrc\_get\_lock\_name}}
+\index{ni\_rsrc\_get\_lock\_name@{ni\_rsrc\_get\_lock\_name}!ni\_rsrc\_priv.h@{ni\_rsrc\_priv.h}}
+\subsubsection{\texorpdfstring{ni\_rsrc\_get\_lock\_name()}{ni\_rsrc\_get\_lock\_name()}}
+{\footnotesize\ttfamily void ni\+\_\+rsrc\+\_\+get\+\_\+lock\+\_\+name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__defs_8h_a758f24acb02b236820c7390eed53d1cc}{ni\+\_\+device\+\_\+type\+\_\+t}}}]{device\+\_\+type,  }\item[{int32\+\_\+t}]{guid,  }\item[{char $\ast$}]{p\+\_\+name,  }\item[{size\+\_\+t}]{max\+\_\+name\+\_\+len }\end{DoxyParamCaption})}
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 188 of file ni\+\_\+rsrc\+\_\+priv.\+c.
+
+\mbox{\Hypertarget{ni__rsrc__priv_8h_a7863fef6ad9656ddca545b83a1b48a2f}\label{ni__rsrc__priv_8h_a7863fef6ad9656ddca545b83a1b48a2f}} 
+\index{ni\_rsrc\_priv.h@{ni\_rsrc\_priv.h}!ni\_rsrc\_get\_one\_device\_info@{ni\_rsrc\_get\_one\_device\_info}}
+\index{ni\_rsrc\_get\_one\_device\_info@{ni\_rsrc\_get\_one\_device\_info}!ni\_rsrc\_priv.h@{ni\_rsrc\_priv.h}}
+\subsubsection{\texorpdfstring{ni\_rsrc\_get\_one\_device\_info()}{ni\_rsrc\_get\_one\_device\_info()}}
+{\footnotesize\ttfamily void ni\+\_\+rsrc\+\_\+get\+\_\+one\+\_\+device\+\_\+info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__rsrc__api_8h_a37a9b9f89ba495d469222af27ce3058b}{ni\+\_\+device\+\_\+info\+\_\+t}} $\ast$}]{p\+\_\+device\+\_\+info }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ni__rsrc__priv_8h_a4561ae0d980be86add9c589340215bf0}\label{ni__rsrc__priv_8h_a4561ae0d980be86add9c589340215bf0}} 
+\index{ni\_rsrc\_priv.h@{ni\_rsrc\_priv.h}!ni\_rsrc\_get\_shm\_name@{ni\_rsrc\_get\_shm\_name}}
+\index{ni\_rsrc\_get\_shm\_name@{ni\_rsrc\_get\_shm\_name}!ni\_rsrc\_priv.h@{ni\_rsrc\_priv.h}}
+\subsubsection{\texorpdfstring{ni\_rsrc\_get\_shm\_name()}{ni\_rsrc\_get\_shm\_name()}}
+{\footnotesize\ttfamily void ni\+\_\+rsrc\+\_\+get\+\_\+shm\+\_\+name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__defs_8h_a758f24acb02b236820c7390eed53d1cc}{ni\+\_\+device\+\_\+type\+\_\+t}}}]{device\+\_\+type,  }\item[{int32\+\_\+t}]{guid,  }\item[{char $\ast$}]{p\+\_\+name,  }\item[{size\+\_\+t}]{max\+\_\+name\+\_\+len }\end{DoxyParamCaption})}
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+assume there is enough space allocated in name 
+
+Definition at line 204 of file ni\+\_\+rsrc\+\_\+priv.\+c.
+
+\mbox{\Hypertarget{ni__rsrc__priv_8h_ac200a1532aff2308fac6aedc71935d15}\label{ni__rsrc__priv_8h_ac200a1532aff2308fac6aedc71935d15}} 
+\index{ni\_rsrc\_priv.h@{ni\_rsrc\_priv.h}!ni\_rsrc\_strcmp@{ni\_rsrc\_strcmp}}
+\index{ni\_rsrc\_strcmp@{ni\_rsrc\_strcmp}!ni\_rsrc\_priv.h@{ni\_rsrc\_priv.h}}
+\subsubsection{\texorpdfstring{ni\_rsrc\_strcmp()}{ni\_rsrc\_strcmp()}}
+{\footnotesize\ttfamily int ni\+\_\+rsrc\+\_\+strcmp (\begin{DoxyParamCaption}\item[{const void $\ast$}]{p\+\_\+str,  }\item[{const void $\ast$}]{p\+\_\+str1 }\end{DoxyParamCaption})}
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 151 of file ni\+\_\+rsrc\+\_\+priv.\+c.
+
+\mbox{\Hypertarget{ni__rsrc__priv_8h_a5ef9ae00327af0841c370f7ea2f379d1}\label{ni__rsrc__priv_8h_a5ef9ae00327af0841c370f7ea2f379d1}} 
+\index{ni\_rsrc\_priv.h@{ni\_rsrc\_priv.h}!ni\_rsrc\_update\_record@{ni\_rsrc\_update\_record}}
+\index{ni\_rsrc\_update\_record@{ni\_rsrc\_update\_record}!ni\_rsrc\_priv.h@{ni\_rsrc\_priv.h}}
+\subsubsection{\texorpdfstring{ni\_rsrc\_update\_record()}{ni\_rsrc\_update\_record()}}
+{\footnotesize\ttfamily void ni\+\_\+rsrc\+\_\+update\+\_\+record (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__rsrc__api_8h_a880a361e6e867b45d102656e813a046f}{ni\+\_\+device\+\_\+context\+\_\+t}} $\ast$}]{p\+\_\+device\+\_\+context,  }\item[{\mbox{\hyperlink{ni__device__api_8h_a9fdb59b68eed0a6ee64b44827cbb729d}{ni\+\_\+session\+\_\+context\+\_\+t}} $\ast$}]{p\+\_\+session\+\_\+ctx }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{ni__rsrc__priv_8h_ad1ddc34a16a508a48f018ce78261c9c9}\label{ni__rsrc__priv_8h_ad1ddc34a16a508a48f018ce78261c9c9}} 
+\index{ni\_rsrc\_priv.h@{ni\_rsrc\_priv.h}!stop\_process@{stop\_process}}
+\index{stop\_process@{stop\_process}!ni\_rsrc\_priv.h@{ni\_rsrc\_priv.h}}
+\subsubsection{\texorpdfstring{stop\_process}{stop\_process}}
+{\footnotesize\ttfamily uint32\+\_\+t stop\+\_\+process}
+
+
+
+Definition at line 21 of file ni\+\_\+rsrc\+\_\+priv.\+h.
+

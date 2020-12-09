@@ -1,0 +1,456 @@
+\hypertarget{struct__ni__h265__encoder__params}{}\section{\+\_\+ni\+\_\+h265\+\_\+encoder\+\_\+params Struct Reference}
+\label{struct__ni__h265__encoder__params}\index{\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}}
+
+
+{\ttfamily \#include $<$ni\+\_\+device\+\_\+api.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{struct__ni__h265__encoder__params_a41cdb4a229a3d71837d607124f8a07a4}{profile}}
+\item 
+int \mbox{\hyperlink{struct__ni__h265__encoder__params_ab4a08f9d64a0d901c25eed4855931c4f}{level\+\_\+idc}}
+\item 
+int \mbox{\hyperlink{struct__ni__h265__encoder__params_a9ee92d08bee21b03c9b7ba79592e7f57}{high\+\_\+tier}}
+\item 
+int \mbox{\hyperlink{struct__ni__h265__encoder__params_a30b38dbacfbdef6a3e9a33f6feefb6cc}{frame\+\_\+rate}}
+\item 
+int \mbox{\hyperlink{struct__ni__h265__encoder__params_ad0f3c78d3822f30b1ab84612ef0e7bcd}{gop\+\_\+preset\+\_\+index}}
+\item 
+\mbox{\hyperlink{ni__device__api_8h_aa270bcddd5fd34880207abe21ac6ce31}{ni\+\_\+custom\+\_\+gop\+\_\+params\+\_\+t}} \mbox{\hyperlink{struct__ni__h265__encoder__params_a527c5bcdee05a1fe4ec5d8493aa5c795}{custom\+\_\+gop\+\_\+params}}
+\item 
+int \mbox{\hyperlink{struct__ni__h265__encoder__params_adc903dccf6e4a3f07bf75e217746a385}{use\+\_\+recommend\+\_\+enc\+\_\+params}}
+\item 
+int \mbox{\hyperlink{struct__ni__h265__encoder__params_afb6a6b097bc20cdd486f8d5080ae3fdb}{cu\+\_\+size\+\_\+mode}}
+\item 
+int \mbox{\hyperlink{struct__ni__h265__encoder__params_aedcd486a694046c0fa431385d675d6ae}{max\+\_\+num\+\_\+merge}}
+\item 
+int \mbox{\hyperlink{struct__ni__h265__encoder__params_a55fb30a8806fbf5e11151bbd24c1b54e}{enable\+\_\+dynamic\+\_\+8x8\+\_\+merge}}
+\item 
+int \mbox{\hyperlink{struct__ni__h265__encoder__params_a0951dd10ed1c02130e4801d8a313524f}{enable\+\_\+dynamic\+\_\+16x16\+\_\+merge}}
+\item 
+int \mbox{\hyperlink{struct__ni__h265__encoder__params_a526d3078cc86f7a3ef75d755d2c562a6}{enable\+\_\+dynamic\+\_\+32x32\+\_\+merge}}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>int \mbox{\hyperlink{struct__ni__h265__encoder__params_a7e4a0437694f47c25d4508ac1d10df94}{enable\_rate\_control}}\\
+\>int \mbox{\hyperlink{struct__ni__h265__encoder__params_abde71773ecfa983574a6a468a63340d3}{enable\_cu\_level\_rate\_control}}\\
+\>int \mbox{\hyperlink{struct__ni__h265__encoder__params_a95b299d976acd00bb9568a21fb14d40c}{enable\_hvs\_qp}}\\
+\>int \mbox{\hyperlink{struct__ni__h265__encoder__params_aec89abe8604d9c07d2e75121475b310b}{enable\_hvs\_qp\_scale}}\\
+\>int \mbox{\hyperlink{struct__ni__h265__encoder__params_a97cdf54a377f20c7d5a8cb6b1b64638e}{hvs\_qp\_scale}}\\
+\>int \mbox{\hyperlink{struct__ni__h265__encoder__params_ae2cec09c3e909a286c748752e64b525f}{min\_qp}}\\
+\>int \mbox{\hyperlink{struct__ni__h265__encoder__params_acff03cfff15f1a977034e13c3b0e22b3}{max\_qp}}\\
+\>int \mbox{\hyperlink{struct__ni__h265__encoder__params_a1c47fade4f37ccafd70fa9a452c484ee}{max\_delta\_qp}}\\
+\>int \mbox{\hyperlink{struct__ni__h265__encoder__params_a01615b41f132092598e0447950fedf48}{trans\_rate}}\\
+\>int \mbox{\hyperlink{struct__ni__h265__encoder__params_a0c87f76fbff54b7a9bb5ee198624cc41}{rc\_init\_delay}}\\
+\>int \mbox{\hyperlink{struct__ni__h265__encoder__params_a6b647649e5ffff9eab7d59856bfcda12}{intra\_qp}}\\
+\>int \mbox{\hyperlink{struct__ni__h265__encoder__params_ab3d0e2a08977ef7cd9948169f6c35b44}{enable\_mb\_level\_rc}}\\
+\} \mbox{\hyperlink{struct__ni__h265__encoder__params_a32ca9373be06c80ae282afa01807a091}{rc}}\\
+
+\end{tabbing}\item 
+int \mbox{\hyperlink{struct__ni__h265__encoder__params_a28675a27ecf8f69841385808fccbe5d2}{conf\+\_\+win\+\_\+top}}
+\item 
+int \mbox{\hyperlink{struct__ni__h265__encoder__params_ae87a12f694772e7d335ab7a101e6e1ee}{conf\+\_\+win\+\_\+bottom}}
+\item 
+int \mbox{\hyperlink{struct__ni__h265__encoder__params_a52d9275a8bba85c0e297611232e31bd8}{conf\+\_\+win\+\_\+left}}
+\item 
+int \mbox{\hyperlink{struct__ni__h265__encoder__params_a5e76f1f86e2dda6acc7bf512ecb5398f}{conf\+\_\+win\+\_\+right}}
+\item 
+int \mbox{\hyperlink{struct__ni__h265__encoder__params_a1e0be905fc80736667643088f1def90e}{intra\+\_\+period}}
+\item 
+int \mbox{\hyperlink{struct__ni__h265__encoder__params_a3d4a3cbebef9410eb0d41a0ea2ddf6a0}{decoding\+\_\+refresh\+\_\+type}}
+\item 
+int \mbox{\hyperlink{struct__ni__h265__encoder__params_a188de70352dee96bc41527e46f7dd3ea}{enable\+\_\+transform\+\_\+8x8}}
+\item 
+int \mbox{\hyperlink{struct__ni__h265__encoder__params_abe5cbbd0936da157c4f4dd7ef4dabbca}{avc\+\_\+slice\+\_\+mode}}
+\item 
+int \mbox{\hyperlink{struct__ni__h265__encoder__params_abc9a7f2ea1bea20a7fbb59fe200daf3a}{avc\+\_\+slice\+\_\+arg}}
+\item 
+int \mbox{\hyperlink{struct__ni__h265__encoder__params_aa1a95059daa21bc2c8fac01a862436ed}{entropy\+\_\+coding\+\_\+mode}}
+\item 
+int \mbox{\hyperlink{struct__ni__h265__encoder__params_a2adb9c9df8b31513a54d04e4562a145f}{intra\+\_\+mb\+\_\+refresh\+\_\+mode}}
+\item 
+int \mbox{\hyperlink{struct__ni__h265__encoder__params_a0c16a48413703d6d912dd8c5c4f97eef}{intra\+\_\+mb\+\_\+refresh\+\_\+arg}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 342 of file ni\+\_\+device\+\_\+api.\+h.
+
+
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{struct__ni__h265__encoder__params_abc9a7f2ea1bea20a7fbb59fe200daf3a}\label{struct__ni__h265__encoder__params_abc9a7f2ea1bea20a7fbb59fe200daf3a}} 
+\index{\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}!avc\_slice\_arg@{avc\_slice\_arg}}
+\index{avc\_slice\_arg@{avc\_slice\_arg}!\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}}
+\subsubsection{\texorpdfstring{avc\_slice\_arg}{avc\_slice\_arg}}
+{\footnotesize\ttfamily int avc\+\_\+slice\+\_\+arg}
+
+
+
+Definition at line 444 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__h265__encoder__params_abe5cbbd0936da157c4f4dd7ef4dabbca}\label{struct__ni__h265__encoder__params_abe5cbbd0936da157c4f4dd7ef4dabbca}} 
+\index{\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}!avc\_slice\_mode@{avc\_slice\_mode}}
+\index{avc\_slice\_mode@{avc\_slice\_mode}!\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}}
+\subsubsection{\texorpdfstring{avc\_slice\_mode}{avc\_slice\_mode}}
+{\footnotesize\ttfamily int avc\+\_\+slice\+\_\+mode}
+
+
+
+Definition at line 443 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__h265__encoder__params_ae87a12f694772e7d335ab7a101e6e1ee}\label{struct__ni__h265__encoder__params_ae87a12f694772e7d335ab7a101e6e1ee}} 
+\index{\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}!conf\_win\_bottom@{conf\_win\_bottom}}
+\index{conf\_win\_bottom@{conf\_win\_bottom}!\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}}
+\subsubsection{\texorpdfstring{conf\_win\_bottom}{conf\_win\_bottom}}
+{\footnotesize\ttfamily int conf\+\_\+win\+\_\+bottom}
+
+$\ast$$<$ A conformance window size of T\+OP 
+
+Definition at line 432 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__h265__encoder__params_a52d9275a8bba85c0e297611232e31bd8}\label{struct__ni__h265__encoder__params_a52d9275a8bba85c0e297611232e31bd8}} 
+\index{\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}!conf\_win\_left@{conf\_win\_left}}
+\index{conf\_win\_left@{conf\_win\_left}!\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}}
+\subsubsection{\texorpdfstring{conf\_win\_left}{conf\_win\_left}}
+{\footnotesize\ttfamily int conf\+\_\+win\+\_\+left}
+
+$\ast$$<$ A conformance window size of B\+O\+T\+T\+OM 
+
+Definition at line 433 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__h265__encoder__params_a5e76f1f86e2dda6acc7bf512ecb5398f}\label{struct__ni__h265__encoder__params_a5e76f1f86e2dda6acc7bf512ecb5398f}} 
+\index{\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}!conf\_win\_right@{conf\_win\_right}}
+\index{conf\_win\_right@{conf\_win\_right}!\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}}
+\subsubsection{\texorpdfstring{conf\_win\_right}{conf\_win\_right}}
+{\footnotesize\ttfamily int conf\+\_\+win\+\_\+right}
+
+$\ast$$<$ A conformance window size of L\+E\+FT 
+
+Definition at line 434 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__h265__encoder__params_a28675a27ecf8f69841385808fccbe5d2}\label{struct__ni__h265__encoder__params_a28675a27ecf8f69841385808fccbe5d2}} 
+\index{\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}!conf\_win\_top@{conf\_win\_top}}
+\index{conf\_win\_top@{conf\_win\_top}!\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}}
+\subsubsection{\texorpdfstring{conf\_win\_top}{conf\_win\_top}}
+{\footnotesize\ttfamily int conf\+\_\+win\+\_\+top}
+
+
+
+Definition at line 431 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__h265__encoder__params_afb6a6b097bc20cdd486f8d5080ae3fdb}\label{struct__ni__h265__encoder__params_afb6a6b097bc20cdd486f8d5080ae3fdb}} 
+\index{\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}!cu\_size\_mode@{cu\_size\_mode}}
+\index{cu\_size\_mode@{cu\_size\_mode}!\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}}
+\subsubsection{\texorpdfstring{cu\_size\_mode}{cu\_size\_mode}}
+{\footnotesize\ttfamily int cu\+\_\+size\+\_\+mode}
+
+$\ast$$<$ 0\+: Custom, 1\+: Slow speed and best quality, 2\+: Normal Speed and quality, 3\+: Fast Speed and Low Quality 
+
+Definition at line 360 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__h265__encoder__params_a527c5bcdee05a1fe4ec5d8493aa5c795}\label{struct__ni__h265__encoder__params_a527c5bcdee05a1fe4ec5d8493aa5c795}} 
+\index{\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}!custom\_gop\_params@{custom\_gop\_params}}
+\index{custom\_gop\_params@{custom\_gop\_params}!\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}}
+\subsubsection{\texorpdfstring{custom\_gop\_params}{custom\_gop\_params}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ni__device__api_8h_aa270bcddd5fd34880207abe21ac6ce31}{ni\+\_\+custom\+\_\+gop\+\_\+params\+\_\+t}} custom\+\_\+gop\+\_\+params}
+
+$\ast$$<$ A G\+OP structure preset option (I\+PP, I\+BP, I\+B\+BP, Ib\+BbP, use Custom G\+OP, etc) 
+
+Definition at line 354 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__h265__encoder__params_a3d4a3cbebef9410eb0d41a0ea2ddf6a0}\label{struct__ni__h265__encoder__params_a3d4a3cbebef9410eb0d41a0ea2ddf6a0}} 
+\index{\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}!decoding\_refresh\_type@{decoding\_refresh\_type}}
+\index{decoding\_refresh\_type@{decoding\_refresh\_type}!\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}}
+\subsubsection{\texorpdfstring{decoding\_refresh\_type}{decoding\_refresh\_type}}
+{\footnotesize\ttfamily int decoding\+\_\+refresh\+\_\+type}
+
+Key Frame Interval 
+
+Definition at line 438 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__h265__encoder__params_abde71773ecfa983574a6a468a63340d3}\label{struct__ni__h265__encoder__params_abde71773ecfa983574a6a468a63340d3}} 
+\index{\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}!enable\_cu\_level\_rate\_control@{enable\_cu\_level\_rate\_control}}
+\index{enable\_cu\_level\_rate\_control@{enable\_cu\_level\_rate\_control}!\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}}
+\subsubsection{\texorpdfstring{enable\_cu\_level\_rate\_control}{enable\_cu\_level\_rate\_control}}
+{\footnotesize\ttfamily int enable\+\_\+cu\+\_\+level\+\_\+rate\+\_\+control}
+
+$\ast$$<$ It enable rate control 
+
+Definition at line 415 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__h265__encoder__params_a0951dd10ed1c02130e4801d8a313524f}\label{struct__ni__h265__encoder__params_a0951dd10ed1c02130e4801d8a313524f}} 
+\index{\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}!enable\_dynamic\_16x16\_merge@{enable\_dynamic\_16x16\_merge}}
+\index{enable\_dynamic\_16x16\_merge@{enable\_dynamic\_16x16\_merge}!\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}}
+\subsubsection{\texorpdfstring{enable\_dynamic\_16x16\_merge}{enable\_dynamic\_16x16\_merge}}
+{\footnotesize\ttfamily int enable\+\_\+dynamic\+\_\+16x16\+\_\+merge}
+
+$\ast$$<$ It enables dynamic merge 8x8 candidates. 
+
+Definition at line 363 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__h265__encoder__params_a526d3078cc86f7a3ef75d755d2c562a6}\label{struct__ni__h265__encoder__params_a526d3078cc86f7a3ef75d755d2c562a6}} 
+\index{\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}!enable\_dynamic\_32x32\_merge@{enable\_dynamic\_32x32\_merge}}
+\index{enable\_dynamic\_32x32\_merge@{enable\_dynamic\_32x32\_merge}!\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}}
+\subsubsection{\texorpdfstring{enable\_dynamic\_32x32\_merge}{enable\_dynamic\_32x32\_merge}}
+{\footnotesize\ttfamily int enable\+\_\+dynamic\+\_\+32x32\+\_\+merge}
+
+$\ast$$<$ It enables dynamic merge 16x16 candidates. 
+
+Definition at line 364 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__h265__encoder__params_a55fb30a8806fbf5e11151bbd24c1b54e}\label{struct__ni__h265__encoder__params_a55fb30a8806fbf5e11151bbd24c1b54e}} 
+\index{\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}!enable\_dynamic\_8x8\_merge@{enable\_dynamic\_8x8\_merge}}
+\index{enable\_dynamic\_8x8\_merge@{enable\_dynamic\_8x8\_merge}!\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}}
+\subsubsection{\texorpdfstring{enable\_dynamic\_8x8\_merge}{enable\_dynamic\_8x8\_merge}}
+{\footnotesize\ttfamily int enable\+\_\+dynamic\+\_\+8x8\+\_\+merge}
+
+$\ast$$<$ Maximum number of merge candidates (0$\sim$2) 
+
+Definition at line 362 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__h265__encoder__params_a95b299d976acd00bb9568a21fb14d40c}\label{struct__ni__h265__encoder__params_a95b299d976acd00bb9568a21fb14d40c}} 
+\index{\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}!enable\_hvs\_qp@{enable\_hvs\_qp}}
+\index{enable\_hvs\_qp@{enable\_hvs\_qp}!\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}}
+\subsubsection{\texorpdfstring{enable\_hvs\_qp}{enable\_hvs\_qp}}
+{\footnotesize\ttfamily int enable\+\_\+hvs\+\_\+qp}
+
+$\ast$$<$ It enable CU level rate control 
+
+Definition at line 416 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__h265__encoder__params_aec89abe8604d9c07d2e75121475b310b}\label{struct__ni__h265__encoder__params_aec89abe8604d9c07d2e75121475b310b}} 
+\index{\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}!enable\_hvs\_qp\_scale@{enable\_hvs\_qp\_scale}}
+\index{enable\_hvs\_qp\_scale@{enable\_hvs\_qp\_scale}!\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}}
+\subsubsection{\texorpdfstring{enable\_hvs\_qp\_scale}{enable\_hvs\_qp\_scale}}
+{\footnotesize\ttfamily int enable\+\_\+hvs\+\_\+qp\+\_\+scale}
+
+$\ast$$<$ It enable CU QP adjustment for subjective quality enhancement 
+
+Definition at line 417 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__h265__encoder__params_ab3d0e2a08977ef7cd9948169f6c35b44}\label{struct__ni__h265__encoder__params_ab3d0e2a08977ef7cd9948169f6c35b44}} 
+\index{\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}!enable\_mb\_level\_rc@{enable\_mb\_level\_rc}}
+\index{enable\_mb\_level\_rc@{enable\_mb\_level\_rc}!\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}}
+\subsubsection{\texorpdfstring{enable\_mb\_level\_rc}{enable\_mb\_level\_rc}}
+{\footnotesize\ttfamily int enable\+\_\+mb\+\_\+level\+\_\+rc}
+
+
+
+Definition at line 427 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__h265__encoder__params_a7e4a0437694f47c25d4508ac1d10df94}\label{struct__ni__h265__encoder__params_a7e4a0437694f47c25d4508ac1d10df94}} 
+\index{\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}!enable\_rate\_control@{enable\_rate\_control}}
+\index{enable\_rate\_control@{enable\_rate\_control}!\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}}
+\subsubsection{\texorpdfstring{enable\_rate\_control}{enable\_rate\_control}}
+{\footnotesize\ttfamily int enable\+\_\+rate\+\_\+control}
+
+
+
+Definition at line 414 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__h265__encoder__params_a188de70352dee96bc41527e46f7dd3ea}\label{struct__ni__h265__encoder__params_a188de70352dee96bc41527e46f7dd3ea}} 
+\index{\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}!enable\_transform\_8x8@{enable\_transform\_8x8}}
+\index{enable\_transform\_8x8@{enable\_transform\_8x8}!\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}}
+\subsubsection{\texorpdfstring{enable\_transform\_8x8}{enable\_transform\_8x8}}
+{\footnotesize\ttfamily int enable\+\_\+transform\+\_\+8x8}
+
+
+
+Definition at line 442 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__h265__encoder__params_aa1a95059daa21bc2c8fac01a862436ed}\label{struct__ni__h265__encoder__params_aa1a95059daa21bc2c8fac01a862436ed}} 
+\index{\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}!entropy\_coding\_mode@{entropy\_coding\_mode}}
+\index{entropy\_coding\_mode@{entropy\_coding\_mode}!\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}}
+\subsubsection{\texorpdfstring{entropy\_coding\_mode}{entropy\_coding\_mode}}
+{\footnotesize\ttfamily int entropy\+\_\+coding\+\_\+mode}
+
+
+
+Definition at line 445 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__h265__encoder__params_a30b38dbacfbdef6a3e9a33f6feefb6cc}\label{struct__ni__h265__encoder__params_a30b38dbacfbdef6a3e9a33f6feefb6cc}} 
+\index{\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}!frame\_rate@{frame\_rate}}
+\index{frame\_rate@{frame\_rate}!\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}}
+\subsubsection{\texorpdfstring{frame\_rate}{frame\_rate}}
+{\footnotesize\ttfamily int frame\+\_\+rate}
+
+
+
+Definition at line 348 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__h265__encoder__params_ad0f3c78d3822f30b1ab84612ef0e7bcd}\label{struct__ni__h265__encoder__params_ad0f3c78d3822f30b1ab84612ef0e7bcd}} 
+\index{\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}!gop\_preset\_index@{gop\_preset\_index}}
+\index{gop\_preset\_index@{gop\_preset\_index}!\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}}
+\subsubsection{\texorpdfstring{gop\_preset\_index}{gop\_preset\_index}}
+{\footnotesize\ttfamily int gop\+\_\+preset\+\_\+index}
+
+
+
+Definition at line 351 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__h265__encoder__params_a9ee92d08bee21b03c9b7ba79592e7f57}\label{struct__ni__h265__encoder__params_a9ee92d08bee21b03c9b7ba79592e7f57}} 
+\index{\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}!high\_tier@{high\_tier}}
+\index{high\_tier@{high\_tier}!\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}}
+\subsubsection{\texorpdfstring{high\_tier}{high\_tier}}
+{\footnotesize\ttfamily int high\+\_\+tier}
+
+
+
+Definition at line 347 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__h265__encoder__params_a97cdf54a377f20c7d5a8cb6b1b64638e}\label{struct__ni__h265__encoder__params_a97cdf54a377f20c7d5a8cb6b1b64638e}} 
+\index{\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}!hvs\_qp\_scale@{hvs\_qp\_scale}}
+\index{hvs\_qp\_scale@{hvs\_qp\_scale}!\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}}
+\subsubsection{\texorpdfstring{hvs\_qp\_scale}{hvs\_qp\_scale}}
+{\footnotesize\ttfamily int hvs\+\_\+qp\+\_\+scale}
+
+$\ast$$<$ It enable QP scaling factor for CU QP adjustment when enable\+\_\+hvs\+\_\+qp = 1 
+
+Definition at line 418 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__h265__encoder__params_a0c16a48413703d6d912dd8c5c4f97eef}\label{struct__ni__h265__encoder__params_a0c16a48413703d6d912dd8c5c4f97eef}} 
+\index{\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}!intra\_mb\_refresh\_arg@{intra\_mb\_refresh\_arg}}
+\index{intra\_mb\_refresh\_arg@{intra\_mb\_refresh\_arg}!\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}}
+\subsubsection{\texorpdfstring{intra\_mb\_refresh\_arg}{intra\_mb\_refresh\_arg}}
+{\footnotesize\ttfamily int intra\+\_\+mb\+\_\+refresh\+\_\+arg}
+
+
+
+Definition at line 449 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__h265__encoder__params_a2adb9c9df8b31513a54d04e4562a145f}\label{struct__ni__h265__encoder__params_a2adb9c9df8b31513a54d04e4562a145f}} 
+\index{\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}!intra\_mb\_refresh\_mode@{intra\_mb\_refresh\_mode}}
+\index{intra\_mb\_refresh\_mode@{intra\_mb\_refresh\_mode}!\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}}
+\subsubsection{\texorpdfstring{intra\_mb\_refresh\_mode}{intra\_mb\_refresh\_mode}}
+{\footnotesize\ttfamily int intra\+\_\+mb\+\_\+refresh\+\_\+mode}
+
+
+
+Definition at line 448 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__h265__encoder__params_a1e0be905fc80736667643088f1def90e}\label{struct__ni__h265__encoder__params_a1e0be905fc80736667643088f1def90e}} 
+\index{\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}!intra\_period@{intra\_period}}
+\index{intra\_period@{intra\_period}!\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}}
+\subsubsection{\texorpdfstring{intra\_period}{intra\_period}}
+{\footnotesize\ttfamily int intra\+\_\+period}
+
+$\ast$$<$ A conformance window size of R\+I\+G\+HT 
+
+Definition at line 436 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__h265__encoder__params_a6b647649e5ffff9eab7d59856bfcda12}\label{struct__ni__h265__encoder__params_a6b647649e5ffff9eab7d59856bfcda12}} 
+\index{\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}!intra\_qp@{intra\_qp}}
+\index{intra\_qp@{intra\_qp}!\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}}
+\subsubsection{\texorpdfstring{intra\_qp}{intra\_qp}}
+{\footnotesize\ttfamily int intra\+\_\+qp}
+
+
+
+Definition at line 424 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__h265__encoder__params_ab4a08f9d64a0d901c25eed4855931c4f}\label{struct__ni__h265__encoder__params_ab4a08f9d64a0d901c25eed4855931c4f}} 
+\index{\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}!level\_idc@{level\_idc}}
+\index{level\_idc@{level\_idc}!\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}}
+\subsubsection{\texorpdfstring{level\_idc}{level\_idc}}
+{\footnotesize\ttfamily int level\+\_\+idc}
+
+
+
+Definition at line 346 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__h265__encoder__params_a1c47fade4f37ccafd70fa9a452c484ee}\label{struct__ni__h265__encoder__params_a1c47fade4f37ccafd70fa9a452c484ee}} 
+\index{\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}!max\_delta\_qp@{max\_delta\_qp}}
+\index{max\_delta\_qp@{max\_delta\_qp}!\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}}
+\subsubsection{\texorpdfstring{max\_delta\_qp}{max\_delta\_qp}}
+{\footnotesize\ttfamily int max\+\_\+delta\+\_\+qp}
+
+$\ast$$<$ A maximum QP for rate control 
+
+Definition at line 421 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__h265__encoder__params_aedcd486a694046c0fa431385d675d6ae}\label{struct__ni__h265__encoder__params_aedcd486a694046c0fa431385d675d6ae}} 
+\index{\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}!max\_num\_merge@{max\_num\_merge}}
+\index{max\_num\_merge@{max\_num\_merge}!\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}}
+\subsubsection{\texorpdfstring{max\_num\_merge}{max\_num\_merge}}
+{\footnotesize\ttfamily int max\+\_\+num\+\_\+merge}
+
+$\ast$$<$ bit 0\+: enable 8x8 CU, bit 1\+: enable 16x16 CU, bit 2\+: enable 32x32 CU 
+
+Definition at line 361 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__h265__encoder__params_acff03cfff15f1a977034e13c3b0e22b3}\label{struct__ni__h265__encoder__params_acff03cfff15f1a977034e13c3b0e22b3}} 
+\index{\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}!max\_qp@{max\_qp}}
+\index{max\_qp@{max\_qp}!\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}}
+\subsubsection{\texorpdfstring{max\_qp}{max\_qp}}
+{\footnotesize\ttfamily int max\+\_\+qp}
+
+$\ast$$<$ A minimum QP for rate control 
+
+Definition at line 420 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__h265__encoder__params_ae2cec09c3e909a286c748752e64b525f}\label{struct__ni__h265__encoder__params_ae2cec09c3e909a286c748752e64b525f}} 
+\index{\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}!min\_qp@{min\_qp}}
+\index{min\_qp@{min\_qp}!\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}}
+\subsubsection{\texorpdfstring{min\_qp}{min\_qp}}
+{\footnotesize\ttfamily int min\+\_\+qp}
+
+$\ast$$<$ A QP scaling factor for CU QP adjustment when hvc\+Qpenable = 1 
+
+Definition at line 419 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__h265__encoder__params_a41cdb4a229a3d71837d607124f8a07a4}\label{struct__ni__h265__encoder__params_a41cdb4a229a3d71837d607124f8a07a4}} 
+\index{\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}!profile@{profile}}
+\index{profile@{profile}!\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}}
+\subsubsection{\texorpdfstring{profile}{profile}}
+{\footnotesize\ttfamily int profile}
+
+
+
+Definition at line 345 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__h265__encoder__params_a32ca9373be06c80ae282afa01807a091}\label{struct__ni__h265__encoder__params_a32ca9373be06c80ae282afa01807a091}} 
+\index{\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}!rc@{rc}}
+\index{rc@{rc}!\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}}
+\subsubsection{\texorpdfstring{rc}{rc}}
+{\footnotesize\ttfamily struct \{ ... \}   rc}
+
+\mbox{\Hypertarget{struct__ni__h265__encoder__params_a0c87f76fbff54b7a9bb5ee198624cc41}\label{struct__ni__h265__encoder__params_a0c87f76fbff54b7a9bb5ee198624cc41}} 
+\index{\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}!rc\_init\_delay@{rc\_init\_delay}}
+\index{rc\_init\_delay@{rc\_init\_delay}!\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}}
+\subsubsection{\texorpdfstring{rc\_init\_delay}{rc\_init\_delay}}
+{\footnotesize\ttfamily int rc\+\_\+init\+\_\+delay}
+
+$\ast$$<$ trans\+\_\+rate 
+
+Definition at line 423 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__h265__encoder__params_a01615b41f132092598e0447950fedf48}\label{struct__ni__h265__encoder__params_a01615b41f132092598e0447950fedf48}} 
+\index{\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}!trans\_rate@{trans\_rate}}
+\index{trans\_rate@{trans\_rate}!\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}}
+\subsubsection{\texorpdfstring{trans\_rate}{trans\_rate}}
+{\footnotesize\ttfamily int trans\+\_\+rate}
+
+$\ast$$<$ A maximum delta QP for rate control 
+
+Definition at line 422 of file ni\+\_\+device\+\_\+api.\+h.
+
+\mbox{\Hypertarget{struct__ni__h265__encoder__params_adc903dccf6e4a3f07bf75e217746a385}\label{struct__ni__h265__encoder__params_adc903dccf6e4a3f07bf75e217746a385}} 
+\index{\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}!use\_recommend\_enc\_params@{use\_recommend\_enc\_params}}
+\index{use\_recommend\_enc\_params@{use\_recommend\_enc\_params}!\_ni\_h265\_encoder\_params@{\_ni\_h265\_encoder\_params}}
+\subsubsection{\texorpdfstring{use\_recommend\_enc\_params}{use\_recommend\_enc\_params}}
+{\footnotesize\ttfamily int use\+\_\+recommend\+\_\+enc\+\_\+params}
+
+
+
+Definition at line 357 of file ni\+\_\+device\+\_\+api.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ni__device__api_8h}{ni\+\_\+device\+\_\+api.\+h}}\end{DoxyCompactItemize}

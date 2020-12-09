@@ -1,0 +1,1077 @@
+\hypertarget{ni__nvme_8h}{}\section{ni\+\_\+nvme.\+h File Reference}
+\label{ni__nvme_8h}\index{ni\_nvme.h@{ni\_nvme.h}}
+
+
+Definitions related to working with NI T-\/408 over N\+V\+ME interface.  
+
+
+{\ttfamily \#include \char`\"{}ni\+\_\+defs.\+h\char`\"{}}\newline
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct__ni__nvme__id__power__state}{\+\_\+ni\+\_\+nvme\+\_\+id\+\_\+power\+\_\+state}}
+\item 
+struct \mbox{\hyperlink{struct__ni__nvme__identity}{\+\_\+ni\+\_\+nvme\+\_\+identity}}
+\item 
+struct \mbox{\hyperlink{struct__ni__nvme__command__t}{\+\_\+ni\+\_\+nvme\+\_\+command\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{struct__ni__nvme__write__complete__dw0__t}{\+\_\+ni\+\_\+nvme\+\_\+write\+\_\+complete\+\_\+dw0\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{struct__ni__nvme__read__complete__dw0__t}{\+\_\+ni\+\_\+nvme\+\_\+read\+\_\+complete\+\_\+dw0\+\_\+t}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{ni__nvme_8h_ac7220ab9a3e18ef5dd0ce9ac54b6b953}{N\+I\+\_\+\+N\+V\+M\+E\+\_\+\+I\+D\+E\+N\+T\+I\+T\+Y\+\_\+\+C\+M\+D\+\_\+\+D\+A\+T\+A\+\_\+\+SZ}}~4096
+\item 
+\#define \mbox{\hyperlink{ni__nvme_8h_aaae10b57520e791f5b66081bd63dd947}{C\+R\+E\+A\+T\+E\+\_\+\+S\+E\+S\+S\+I\+O\+N\+\_\+\+S\+E\+T\+\_\+\+D\+W10\+\_\+\+S\+U\+B\+T\+Y\+PE}}(dst)~(dst = (\mbox{\hyperlink{ni__nvme_8h_ab2e68366a4957719494f9c76cc1f040ca55abfb5760653f21ecab6c0da2c4aac0}{nvme\+\_\+open\+\_\+xcoder\+\_\+create\+\_\+session}} \& 0x\+F\+F\+F\+F\+U\+L))
+\item 
+\#define \mbox{\hyperlink{ni__nvme_8h_a16a1dc71c12663862b0e3f7985766e27}{C\+R\+E\+A\+T\+E\+\_\+\+S\+E\+S\+S\+I\+O\+N\+\_\+\+S\+E\+T\+\_\+\+D\+W11\+\_\+\+I\+N\+S\+T\+A\+N\+CE}}(dst,  instance)~(dst = (instance \& 0x\+F\+F\+F\+F\+U\+L))
+\item 
+\#define \mbox{\hyperlink{ni__nvme_8h_a6ace376e1211b30196d0a09568a35918}{C\+R\+E\+A\+T\+E\+\_\+\+S\+E\+S\+S\+I\+O\+N\+\_\+\+S\+E\+T\+\_\+\+D\+W12\+\_\+\+D\+E\+C\+\_\+\+C\+ID}}(dst,  cid)~(dst = (cid \& 0x\+F\+F\+F\+F\+U\+L))
+\item 
+\#define \mbox{\hyperlink{ni__nvme_8h_a64336a16c4f59a4635c3a282387cd824}{C\+R\+E\+A\+T\+E\+\_\+\+S\+E\+S\+S\+I\+O\+N\+\_\+\+S\+E\+T\+\_\+\+D\+W12\+\_\+\+E\+N\+C\+\_\+\+C\+I\+D\+\_\+\+F\+R\+W\+I\+D\+TH}}(dst,  cid,  width)~(dst = (((width $<$$<$ 16) \& 0x\+F\+F\+F\+F0000\+U\+L) $\vert$ (cid \& 0x\+F\+F\+F\+F\+U\+L)))
+\item 
+\#define \mbox{\hyperlink{ni__nvme_8h_a040c8dde0db768109a6cd82d2b4c28a0}{C\+R\+E\+A\+T\+E\+\_\+\+S\+E\+S\+S\+I\+O\+N\+\_\+\+S\+E\+T\+\_\+\+D\+W13\+\_\+\+E\+N\+C\+\_\+\+F\+R\+H\+I\+G\+HT}}(dst,  hight)~(dst = (hight \& 0x\+F\+F\+F\+F\+U\+L))
+\item 
+\#define \mbox{\hyperlink{ni__nvme_8h_a162f4d53c6742f4b17b98b88a0a2a6bc}{D\+E\+S\+T\+R\+O\+Y\+\_\+\+S\+E\+S\+S\+I\+O\+N\+\_\+\+S\+E\+T\+\_\+\+D\+W10\+\_\+\+I\+N\+S\+T\+A\+N\+CE}}(dst,  sid)~(dst = (((sid $<$$<$ 16) \& 0x\+F\+F\+F\+F0000\+U\+L) $\vert$ (nvme\+\_\+close\+\_\+xcoder\+\_\+destroy\+\_\+session \& 0x\+F\+F\+F\+F\+U\+L)))
+\item 
+\#define \mbox{\hyperlink{ni__nvme_8h_aaad7db713c0bfd3beeb6531d931acafb}{R\+E\+A\+D\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+S\+E\+T\+\_\+\+D\+W10\+\_\+\+S\+U\+B\+T\+Y\+PE}}(dst,  sid)~(dst = (((sid $<$$<$ 16) \& 0x\+F\+F\+F\+F0000\+U\+L) $\vert$ (nvme\+\_\+write\+\_\+xcoder\+\_\+write\+\_\+instance \& 0x\+F\+F\+F\+F\+U\+L)))
+\item 
+\#define \mbox{\hyperlink{ni__nvme_8h_a8b9a04366a9b54df3a230dfda1a58fb2}{R\+E\+A\+D\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+S\+E\+T\+\_\+\+D\+W11\+\_\+\+I\+N\+S\+T\+A\+N\+CE}}(dst,  instance)~(dst = (instance \& 0x\+F\+F\+F\+F\+U\+L))
+\item 
+\#define \mbox{\hyperlink{ni__nvme_8h_aafc068ebb7932b792cec352c4320b800}{R\+E\+A\+D\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+S\+E\+T\+\_\+\+D\+W15\+\_\+\+S\+I\+ZE}}(dst,  size)~(dst = (size \& 0x\+F\+F\+F\+F\+F\+F\+F\+F\+U\+L))
+\item 
+\#define \mbox{\hyperlink{ni__nvme_8h_a2a2ab869f563877c725b8cdf6e07b3c5}{W\+R\+I\+T\+E\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+S\+E\+T\+\_\+\+D\+W10\+\_\+\+S\+U\+B\+T\+Y\+PE}}(dst,  sid)~(dst = (((sid $<$$<$ 16) \& 0x\+F\+F\+F\+F0000\+U\+L) $\vert$ (nvme\+\_\+write\+\_\+xcoder\+\_\+write\+\_\+instance \& 0x\+F\+F\+F\+F\+U\+L)))
+\item 
+\#define \mbox{\hyperlink{ni__nvme_8h_ad6dbc9ebbe15b31c3f80edfe7f53e2a7}{W\+R\+I\+T\+E\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+S\+E\+T\+\_\+\+D\+W11\+\_\+\+I\+N\+S\+T\+A\+N\+CE}}(dst,  instance)~(dst = (instance \& 0x\+F\+F\+F\+F\+U\+L))
+\item 
+\#define \mbox{\hyperlink{ni__nvme_8h_addd359c398327aba9689b58b2a995e64}{W\+R\+I\+T\+E\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+S\+E\+T\+\_\+\+D\+W15\+\_\+\+S\+I\+ZE}}(dst,  size)~(dst = (size \& 0x\+F\+F\+F\+F\+F\+F\+F\+F\+U\+L))
+\item 
+\#define \mbox{\hyperlink{ni__nvme_8h_a55e02a1e26ab82123ee922008f6226d7}{Q\+U\+E\+R\+Y\+\_\+\+S\+E\+S\+S\+I\+O\+N\+\_\+\+S\+E\+T\+\_\+\+D\+W10\+\_\+\+S\+U\+B\+T\+Y\+PE}}(dst,  sid)~(dst = (((sid $<$$<$ 16) \& 0x\+F\+F\+F\+F0000\+U\+L) $\vert$ (nvme\+\_\+query\+\_\+xcoder\+\_\+query\+\_\+session \& 0x\+F\+F\+F\+F\+U\+L)))
+\item 
+\#define \mbox{\hyperlink{ni__nvme_8h_ad05167c17b2a232c39d356a7ad76bb81}{Q\+U\+E\+R\+Y\+\_\+\+S\+E\+S\+S\+I\+O\+N\+\_\+\+S\+E\+T\+\_\+\+D\+W11\+\_\+\+I\+N\+S\+T\+A\+N\+CE}}(dst,  instance)~(dst = (instance \& 0x\+F\+F\+F\+F\+U\+L))
+\item 
+\#define \mbox{\hyperlink{ni__nvme_8h_ac586fbbbcd229923f6131c62167497fb}{Q\+U\+E\+R\+Y\+\_\+\+S\+E\+S\+S\+I\+O\+N\+\_\+\+S\+E\+T\+\_\+\+D\+W15\+\_\+\+S\+I\+ZE}}(dst,  size)~(dst = (size \& 0x\+F\+F\+F\+F\+F\+F\+F\+F\+U\+L))
+\item 
+\#define \mbox{\hyperlink{ni__nvme_8h_a59812cba1fedc0f7fc2e24924829b411}{Q\+U\+E\+R\+Y\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+S\+E\+T\+\_\+\+D\+W10\+\_\+\+S\+U\+B\+T\+Y\+PE}}(dst,  sid)~(dst = (((sid $<$$<$ 16) \& 0x\+F\+F\+F\+F0000\+U\+L) $\vert$ (nvme\+\_\+query\+\_\+xcoder\+\_\+query\+\_\+instance \& 0x\+F\+F\+F\+F\+U\+L)))
+\item 
+\#define \mbox{\hyperlink{ni__nvme_8h_a991aacf771a60dd752a4da6639d40fc9}{Q\+U\+E\+R\+Y\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+S\+E\+T\+\_\+\+D\+W11\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+S\+T\+A\+T\+US}}(dst,  instance)~(dst = (((\mbox{\hyperlink{ni__nvme_8h_a6879a530d25cb56f08446ca222f343b1a0a4637eb990decb7d3fcb1f53baf27d7}{nvme\+\_\+query\+\_\+xcoder\+\_\+instance\+\_\+get\+\_\+status}} $<$$<$ 16) \& 0x\+F\+F\+F\+F0000\+U\+L) $\vert$ (instance \& 0x\+F\+F\+F\+F\+U\+L)))
+\item 
+\#define \mbox{\hyperlink{ni__nvme_8h_ae245e33581c805bbbfc87747bae2cd2b}{Q\+U\+E\+R\+Y\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+S\+E\+T\+\_\+\+D\+W11\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+S\+T\+R\+E\+A\+M\+\_\+\+I\+N\+FO}}(dst,  instance)~(dst = (((\mbox{\hyperlink{ni__nvme_8h_a6879a530d25cb56f08446ca222f343b1a75db85ab652a195c391730022e4f818d}{nvme\+\_\+query\+\_\+xcoder\+\_\+instance\+\_\+get\+\_\+stream\+\_\+info}} $<$$<$ 16) \& 0x\+F\+F\+F\+F0000\+U\+L) $\vert$ (instance \& 0x\+F\+F\+F\+F\+U\+L)))
+\item 
+\#define \mbox{\hyperlink{ni__nvme_8h_a820b44fb5ad7a065e0f4ef1b460603c4}{Q\+U\+E\+R\+Y\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+S\+E\+T\+\_\+\+D\+W11\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+O\+U\+T\+P\+UT}}(dst,  instance)~(dst = (((\mbox{\hyperlink{ni__nvme_8h_a6879a530d25cb56f08446ca222f343b1a8979f4b3eab897be7b0943a9f1877cfb}{nvme\+\_\+query\+\_\+xcoder\+\_\+instance\+\_\+get\+\_\+end\+\_\+of\+\_\+output}} $<$$<$ 16) \& 0x\+F\+F\+F\+F0000\+U\+L) $\vert$ (instance \& 0x\+F\+F\+F\+F\+U\+L)))
+\item 
+\#define \mbox{\hyperlink{ni__nvme_8h_a5c2b782dcafca4fcbf2aa3d497fd791b}{Q\+U\+E\+R\+Y\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+S\+E\+T\+\_\+\+D\+W15\+\_\+\+S\+I\+ZE}}(dst,  size)~(dst = (size \& 0x\+F\+F\+F\+F\+F\+F\+F\+F\+U\+L))
+\item 
+\#define \mbox{\hyperlink{ni__nvme_8h_a818b48033a79074bbcd260af4692b6f1}{C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+S\+E\+T\+\_\+\+D\+W10\+\_\+\+S\+U\+B\+T\+Y\+PE}}(dst,  sid)~(dst = (((sid $<$$<$ 16) \& 0x\+F\+F\+F\+F0000\+U\+L) $\vert$ (nvme\+\_\+config\+\_\+xcoder\+\_\+config\+\_\+instance \& 0x\+F\+F\+F\+F\+U\+L)))
+\item 
+\#define \mbox{\hyperlink{ni__nvme_8h_a5945ebddecbbb1a9b95f2689266fcc34}{C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+S\+E\+T\+\_\+\+D\+W11\+\_\+\+S\+OS}}(dst,  instance)~(dst = (((\mbox{\hyperlink{ni__nvme_8h_ad0937d1c212483fc3c89a2cf8187f60aa8bf9bcc44f63f1df22a61c33e3cfdd00}{nvme\+\_\+config\+\_\+xcoder\+\_\+config\+\_\+set\+\_\+sos}} $<$$<$ 16) \& 0x\+F\+F\+F\+F0000\+U\+L) $\vert$ (instance \& 0x\+F\+F\+F\+F\+U\+L)))
+\item 
+\#define \mbox{\hyperlink{ni__nvme_8h_a44e168ca57fb5ab7d3c33af466906937}{C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+S\+E\+T\+\_\+\+D\+W11\+\_\+\+E\+OS}}(dst,  instance)~(dst = (((\mbox{\hyperlink{ni__nvme_8h_ad0937d1c212483fc3c89a2cf8187f60aac9d61fcad60f2c0cf72058088b29020d}{nvme\+\_\+config\+\_\+xcoder\+\_\+config\+\_\+set\+\_\+eos}} $<$$<$ 16) \& 0x\+F\+F\+F\+F0000\+U\+L) $\vert$ (instance \& 0x\+F\+F\+F\+F\+U\+L)))
+\item 
+\#define \mbox{\hyperlink{ni__nvme_8h_a89023a6bf0e5194104e56f028d2f722e}{C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+S\+E\+T\+\_\+\+D\+W11\+\_\+\+E\+N\+C\+\_\+\+P\+A\+R\+A\+MS}}(dst,  instance)~(dst = (((\mbox{\hyperlink{ni__nvme_8h_ad0937d1c212483fc3c89a2cf8187f60aa49929e0ce9e39198a1317c18efb48b7d}{nvme\+\_\+config\+\_\+xcoder\+\_\+config\+\_\+set\+\_\+enc\+\_\+params}} $<$$<$ 16) \& 0x\+F\+F\+F\+F0000\+U\+L) $\vert$ (instance \& 0x\+F\+F\+F\+F\+U\+L)))
+\item 
+\#define \mbox{\hyperlink{ni__nvme_8h_ae828a9c742323b6896a602ccebf4917a}{C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+S\+E\+T\+\_\+\+D\+W11\+\_\+\+E\+N\+C\+\_\+\+F\+R\+A\+M\+E\+\_\+\+P\+A\+R\+A\+MS}}(dst,  instance)~(dst = (((\mbox{\hyperlink{ni__nvme_8h_ad0937d1c212483fc3c89a2cf8187f60aacb3d6ad5e6b13f783ba45e3c2d4a560a}{nvme\+\_\+config\+\_\+xcoder\+\_\+config\+\_\+set\+\_\+enc\+\_\+frame\+\_\+params}} $<$$<$ 16) \& 0x\+F\+F\+F\+F0000\+U\+L) $\vert$ (instance \& 0x\+F\+F\+F\+F\+U\+L)))
+\item 
+\#define \mbox{\hyperlink{ni__nvme_8h_a32ea2b4562811393464ef92fe4b03107}{C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+S\+E\+T\+\_\+\+D\+W11\+\_\+\+F\+L\+U\+SH}}(dst,  instance)~(dst = (((\mbox{\hyperlink{ni__nvme_8h_ad0937d1c212483fc3c89a2cf8187f60aa940fc9c67623edf3c82511708fb2ee97}{nvme\+\_\+config\+\_\+xcoder\+\_\+config\+\_\+flush}} $<$$<$ 16) \& 0x\+F\+F\+F\+F0000\+U\+L) $\vert$ (instance \& 0x\+F\+F\+F\+F\+U\+L)))
+\item 
+\#define \mbox{\hyperlink{ni__nvme_8h_ae8cb871ea110284cf7acc9f0b47116a9}{C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+S\+E\+T\+\_\+\+D\+W11\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+P\+A\+R\+A\+MS}}(dst,  instance)~(dst = (((\mbox{\hyperlink{ni__nvme_8h_ad0937d1c212483fc3c89a2cf8187f60aab61efd90132c1dd7f0b75a2cf75b3e68}{nvme\+\_\+config\+\_\+xcoder\+\_\+config\+\_\+update\+\_\+enc\+\_\+params}} $<$$<$ 16) \& 0x\+F\+F\+F\+F0000\+U\+L) $\vert$ (instance \& 0x\+F\+F\+F\+F\+U\+L)))
+\item 
+\#define \mbox{\hyperlink{ni__nvme_8h_a0cc260488c08561361e59bc063b82ccf}{C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+S\+E\+T\+\_\+\+D\+W15\+\_\+\+S\+I\+ZE}}(dst,  size)~(dst = (size \& 0x\+F\+F\+F\+F\+F\+F\+F\+F\+U\+L))
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct__ni__nvme__id__power__state}{\+\_\+ni\+\_\+nvme\+\_\+id\+\_\+power\+\_\+state}} \mbox{\hyperlink{ni__nvme_8h_a1a1a76137cfb375acef1331f45fb31e3}{ni\+\_\+nvme\+\_\+id\+\_\+power\+\_\+state\+\_\+t}}
+\item 
+typedef struct \mbox{\hyperlink{struct__ni__nvme__identity}{\+\_\+ni\+\_\+nvme\+\_\+identity}} \mbox{\hyperlink{ni__nvme_8h_aba62b801cd87a56704b5526b0abf17b4}{ni\+\_\+nvme\+\_\+identity\+\_\+t}}
+\item 
+typedef enum \mbox{\hyperlink{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6c}{\+\_\+ni\+\_\+nvme\+\_\+admin\+\_\+opcode}} \mbox{\hyperlink{ni__nvme_8h_a2d9979e19435c0b68de9964c19b7799d}{ni\+\_\+nvme\+\_\+admin\+\_\+opcode\+\_\+t}}
+\item 
+typedef enum \mbox{\hyperlink{ni__nvme_8h_a38558e9c6ef1bec10cc03acbdeb93a05}{\+\_\+ni\+\_\+nvme\+\_\+opcode}} \mbox{\hyperlink{ni__nvme_8h_abb322d0cd1073fb01afed787da5a636c}{ni\+\_\+nvme\+\_\+opcode\+\_\+t}}
+\item 
+typedef enum \mbox{\hyperlink{ni__nvme_8h_ab2e68366a4957719494f9c76cc1f040c}{\+\_\+nvme\+\_\+open\+\_\+xcoder\+\_\+subtype}} \mbox{\hyperlink{ni__nvme_8h_a050b89d456b26b4cc22c068cc765ea6d}{nvme\+\_\+open\+\_\+xcoder\+\_\+subtype\+\_\+t}}
+\item 
+typedef enum \mbox{\hyperlink{ni__nvme_8h_ae70466377f57fad6c2e67b09ddd265cc}{\+\_\+nvme\+\_\+close\+\_\+xcoder\+\_\+subtype}} \mbox{\hyperlink{ni__nvme_8h_a8daa4721abba880e5ceebaeed504c797}{nvme\+\_\+close\+\_\+xcoder\+\_\+subtype\+\_\+t}}
+\item 
+typedef enum \mbox{\hyperlink{ni__nvme_8h_ae8deabce39265ad2c2a5fba08775a2a5}{\+\_\+nvme\+\_\+read\+\_\+xcoder\+\_\+subtype}} \mbox{\hyperlink{ni__nvme_8h_aaa94339703010cb100bc5b70ebcc7f70}{nvme\+\_\+read\+\_\+xcoder\+\_\+subtype\+\_\+t}}
+\item 
+typedef enum \mbox{\hyperlink{ni__nvme_8h_a3b171390b2698987c6989a414a69b37c}{\+\_\+nvme\+\_\+write\+\_\+xcoder\+\_\+subtype}} \mbox{\hyperlink{ni__nvme_8h_a1b76af7b3387d249eb1deeca7c038599}{nvme\+\_\+write\+\_\+xcoder\+\_\+subtype\+\_\+t}}
+\item 
+typedef enum \mbox{\hyperlink{ni__nvme_8h_a126edfa51257db8fc567a7c9f70e4ec2}{\+\_\+nvme\+\_\+query\+\_\+xcoder\+\_\+subtype}} \mbox{\hyperlink{ni__nvme_8h_a0eaae4a15ac13728f36673bb2411e3e9}{nvme\+\_\+query\+\_\+xcoder\+\_\+subtype\+\_\+t}}
+\item 
+typedef enum \mbox{\hyperlink{ni__nvme_8h_a7bea84559125ff607292b0ea8c331ded}{\+\_\+nvme\+\_\+query\+\_\+xcoder\+\_\+session\+\_\+subtype}} \mbox{\hyperlink{ni__nvme_8h_aaf454816fcfa3b0a8a1eed27f5026edb}{nvme\+\_\+query\+\_\+xcoder\+\_\+session\+\_\+subtype\+\_\+t}}
+\item 
+typedef enum \mbox{\hyperlink{ni__nvme_8h_a6879a530d25cb56f08446ca222f343b1}{\+\_\+nvme\+\_\+query\+\_\+xcoder\+\_\+instance\+\_\+subtype}} \mbox{\hyperlink{ni__nvme_8h_aadc6a9f5a74a48e5696f84623b69535d}{nvme\+\_\+query\+\_\+xcoder\+\_\+instance\+\_\+subtype\+\_\+t}}
+\item 
+typedef enum \mbox{\hyperlink{ni__nvme_8h_ab3a76de5ec80367749775c8b6414dfd8}{\+\_\+nvme\+\_\+config\+\_\+xcoder\+\_\+subtype}} \mbox{\hyperlink{ni__nvme_8h_acfcafe044bd77428e012bd5a6889c6cc}{nvme\+\_\+config\+\_\+xcoder\+\_\+subtype\+\_\+t}}
+\item 
+typedef enum \mbox{\hyperlink{ni__nvme_8h_ad0937d1c212483fc3c89a2cf8187f60a}{\+\_\+nvme\+\_\+config\+\_\+xcoder\+\_\+config\+\_\+instance\+\_\+subtype}} \mbox{\hyperlink{ni__nvme_8h_ac7e47a10728009d50fb968aa58c9dae7}{nvme\+\_\+config\+\_\+xcoder\+\_\+config\+\_\+instance\+\_\+subtype\+\_\+t}}
+\item 
+typedef struct \mbox{\hyperlink{struct__ni__nvme__command__t}{\+\_\+ni\+\_\+nvme\+\_\+command\+\_\+t}} \mbox{\hyperlink{ni__nvme_8h_a7ddc246c6522c44c0df99f9f1c80fb11}{ni\+\_\+nvme\+\_\+command\+\_\+t}}
+\item 
+typedef struct \mbox{\hyperlink{struct__ni__nvme__write__complete__dw0__t}{\+\_\+ni\+\_\+nvme\+\_\+write\+\_\+complete\+\_\+dw0\+\_\+t}} \mbox{\hyperlink{ni__nvme_8h_ae61cc385e22fa1176d914f9e261ed029}{ni\+\_\+nvme\+\_\+write\+\_\+complete\+\_\+dw0\+\_\+t}}
+\item 
+typedef struct \mbox{\hyperlink{struct__ni__nvme__read__complete__dw0__t}{\+\_\+ni\+\_\+nvme\+\_\+read\+\_\+complete\+\_\+dw0\+\_\+t}} \mbox{\hyperlink{ni__nvme_8h_a9eb97bb8db04a3b1d40e764ef5c08126}{ni\+\_\+nvme\+\_\+read\+\_\+complete\+\_\+dw0\+\_\+t}}
+\item 
+typedef uint32\+\_\+t \mbox{\hyperlink{ni__nvme_8h_aa4edf4f28bac9474ee3fd828aac08033}{ni\+\_\+nvme\+\_\+result\+\_\+t}}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6c}{\+\_\+ni\+\_\+nvme\+\_\+admin\+\_\+opcode}} \{ \newline
+\mbox{\hyperlink{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6caa83dab9278cd05a12616d942297729d9}{nvme\+\_\+admin\+\_\+cmd\+\_\+delete\+\_\+sq}} = 0x00, 
+\mbox{\hyperlink{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6cad2065cdfdefd9cf449bd27ecf2b5a36c}{nvme\+\_\+admin\+\_\+cmd\+\_\+create\+\_\+sq}} = 0x01, 
+\mbox{\hyperlink{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6caca5ffa0c1eb414d39cf7d41ed70dae14}{nvme\+\_\+admin\+\_\+cmd\+\_\+get\+\_\+log\+\_\+page}} = 0x02, 
+\mbox{\hyperlink{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6ca903d6b43e35a2b4313fdf61a2c801b0b}{nvme\+\_\+admin\+\_\+cmd\+\_\+delete\+\_\+cq}} = 0x04, 
+\newline
+\mbox{\hyperlink{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6ca19f5c46d53b11a78126ceed55df86952}{nvme\+\_\+admin\+\_\+cmd\+\_\+create\+\_\+cq}} = 0x05, 
+\mbox{\hyperlink{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6ca28f298110fd6fbaa69291bb698ea8ece}{nvme\+\_\+admin\+\_\+cmd\+\_\+identify}} = 0x06, 
+\mbox{\hyperlink{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6ca53c881884feee9c86a4ae7e61d18d75a}{nvme\+\_\+admin\+\_\+cmd\+\_\+abort\+\_\+cmd}} = 0x08, 
+\mbox{\hyperlink{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6ca350e686ad8e22d1e477b74671aa01190}{nvme\+\_\+admin\+\_\+cmd\+\_\+set\+\_\+features}} = 0x09, 
+\newline
+\mbox{\hyperlink{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6cad9563fbfb87959f73b34e9189191e12f}{nvme\+\_\+admin\+\_\+cmd\+\_\+get\+\_\+features}} = 0x0a, 
+\mbox{\hyperlink{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6ca3238db0f8816116a80fec6f80066fbb0}{nvme\+\_\+admin\+\_\+cmd\+\_\+async\+\_\+event}} = 0x0c, 
+\mbox{\hyperlink{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6cadb09c98376403798841db1897d3161c9}{nvme\+\_\+admin\+\_\+cmd\+\_\+ns\+\_\+mgmt}} = 0x0d, 
+\mbox{\hyperlink{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6ca91acdc0d8c98a389f085ea633bc76d9a}{nvme\+\_\+admin\+\_\+cmd\+\_\+activate\+\_\+fw}} = 0x10, 
+\newline
+\mbox{\hyperlink{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6cabaa1e57a088127a91b26839fcc0de353}{nvme\+\_\+admin\+\_\+cmd\+\_\+download\+\_\+fw}} = 0x11, 
+\mbox{\hyperlink{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6ca3dd234c5d37de14d510e56592ceabb3b}{nvme\+\_\+admin\+\_\+cmd\+\_\+ns\+\_\+attach}} = 0x15, 
+\mbox{\hyperlink{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6ca4b829d8a3a2dff8bd2cb93972e49b2d9}{nvme\+\_\+admin\+\_\+cmd\+\_\+keep\+\_\+alive}} = 0x18, 
+\mbox{\hyperlink{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6caa2126a0813e487bb85fffd18a0343af3}{nvme\+\_\+admin\+\_\+cmd\+\_\+format\+\_\+nvm}} = 0x80, 
+\newline
+\mbox{\hyperlink{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6cad5206a95e684760b5bf8731226bd20e3}{nvme\+\_\+admin\+\_\+cmd\+\_\+security\+\_\+send}} = 0x81, 
+\mbox{\hyperlink{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6cae3b778b6a730855bd1eed92251ee00fb}{nvme\+\_\+admin\+\_\+cmd\+\_\+security\+\_\+recv}} = 0x82, 
+\mbox{\hyperlink{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6ca74126991add2fea356c9c428f7c59471}{nvme\+\_\+admin\+\_\+cmd\+\_\+xcoder\+\_\+open}} = 0x\+D0, 
+\mbox{\hyperlink{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6ca9aafda524f000f52ae25a1eff8ba0308}{nvme\+\_\+admin\+\_\+cmd\+\_\+xcoder\+\_\+close}} = 0x\+D1, 
+\newline
+\mbox{\hyperlink{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6ca774afc262ef3c0678119230d3862b5c8}{nvme\+\_\+admin\+\_\+cmd\+\_\+xcoder\+\_\+query}} = 0x\+D2, 
+\mbox{\hyperlink{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6cadc4a7bc90d88d704645f03ea5da14317}{nvme\+\_\+admin\+\_\+cmd\+\_\+xcoder\+\_\+connect}} = 0x\+D3, 
+\mbox{\hyperlink{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6ca7e927c208ca65f4980c358bbf64cc8f2}{nvme\+\_\+admin\+\_\+cmd\+\_\+xcoder\+\_\+read}} = 0x\+D4, 
+\mbox{\hyperlink{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6cac54ddf8e257d3f5941817be582e07aad}{nvme\+\_\+admin\+\_\+cmd\+\_\+xcoder\+\_\+write}} = 0x\+D5, 
+\newline
+\mbox{\hyperlink{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6ca3b315b1c29834af85fc69f8b85a5b711}{nvme\+\_\+admin\+\_\+cmd\+\_\+xcoder\+\_\+config}} = 0x\+D6
+ \}
+\item 
+enum \mbox{\hyperlink{ni__nvme_8h_a38558e9c6ef1bec10cc03acbdeb93a05}{\+\_\+ni\+\_\+nvme\+\_\+opcode}} \{ \newline
+\mbox{\hyperlink{ni__nvme_8h_a38558e9c6ef1bec10cc03acbdeb93a05a647dbe630c1444a17c89942e87dd72a8}{nvme\+\_\+cmd\+\_\+flush}} = 0x00, 
+\mbox{\hyperlink{ni__nvme_8h_a38558e9c6ef1bec10cc03acbdeb93a05a5129a432a595e671a7e2b02b20916e6c}{nvme\+\_\+cmd\+\_\+write}} = 0x01, 
+\mbox{\hyperlink{ni__nvme_8h_a38558e9c6ef1bec10cc03acbdeb93a05aa9dcd0454a2007fdc8b4acdfab2e72b8}{nvme\+\_\+cmd\+\_\+read}} = 0x02, 
+\mbox{\hyperlink{ni__nvme_8h_a38558e9c6ef1bec10cc03acbdeb93a05a08d2c425688748d98556f1b0b808210b}{nvme\+\_\+cmd\+\_\+write\+\_\+uncor}} = 0x04, 
+\newline
+\mbox{\hyperlink{ni__nvme_8h_a38558e9c6ef1bec10cc03acbdeb93a05a9ace53ed2cdc07dc1be53f823ba11f3f}{nvme\+\_\+cmd\+\_\+compare}} = 0x05, 
+\mbox{\hyperlink{ni__nvme_8h_a38558e9c6ef1bec10cc03acbdeb93a05a68f6a37f1c0dc31c7956251800c8fec1}{nvme\+\_\+cmd\+\_\+write\+\_\+zeroes}} = 0x08, 
+\mbox{\hyperlink{ni__nvme_8h_a38558e9c6ef1bec10cc03acbdeb93a05af5d1da9050149adb7e24cff76559007c}{nvme\+\_\+cmd\+\_\+dsm}} = 0x09, 
+\mbox{\hyperlink{ni__nvme_8h_a38558e9c6ef1bec10cc03acbdeb93a05a2df874a47a0967722dba45f237f34b62}{nvme\+\_\+cmd\+\_\+resv\+\_\+register}} = 0x0d, 
+\newline
+\mbox{\hyperlink{ni__nvme_8h_a38558e9c6ef1bec10cc03acbdeb93a05ad9f20882974066bbf5ce9e57c9c1bc45}{nvme\+\_\+cmd\+\_\+resv\+\_\+report}} = 0x0e, 
+\mbox{\hyperlink{ni__nvme_8h_a38558e9c6ef1bec10cc03acbdeb93a05a4cd61b5eed2e3c86ae84ac8364884bea}{nvme\+\_\+cmd\+\_\+resv\+\_\+acquire}} = 0x11, 
+\mbox{\hyperlink{ni__nvme_8h_a38558e9c6ef1bec10cc03acbdeb93a05a36ffa8150f6ee06ea434a6e6ce63f6c8}{nvme\+\_\+cmd\+\_\+resv\+\_\+release}} = 0x15, 
+\mbox{\hyperlink{ni__nvme_8h_a38558e9c6ef1bec10cc03acbdeb93a05a0d73d803ca4d06860a4301f8dcfacf1e}{nvme\+\_\+cmd\+\_\+xcoder\+\_\+write}} = 0x83, 
+\newline
+\mbox{\hyperlink{ni__nvme_8h_a38558e9c6ef1bec10cc03acbdeb93a05ac2318a6ebd6ba2c3d85c8ae9e7fda5f2}{nvme\+\_\+cmd\+\_\+xcoder\+\_\+read}} = 0x84
+ \}
+\item 
+enum \mbox{\hyperlink{ni__nvme_8h_ab2e68366a4957719494f9c76cc1f040c}{\+\_\+nvme\+\_\+open\+\_\+xcoder\+\_\+subtype}} \{ \mbox{\hyperlink{ni__nvme_8h_ab2e68366a4957719494f9c76cc1f040ca55abfb5760653f21ecab6c0da2c4aac0}{nvme\+\_\+open\+\_\+xcoder\+\_\+create\+\_\+session}} = 0x0000
+ \}
+\item 
+enum \mbox{\hyperlink{ni__nvme_8h_ae70466377f57fad6c2e67b09ddd265cc}{\+\_\+nvme\+\_\+close\+\_\+xcoder\+\_\+subtype}} \{ \mbox{\hyperlink{ni__nvme_8h_ae70466377f57fad6c2e67b09ddd265ccae055abf22514c7793d2a56fa1a305376}{nvme\+\_\+close\+\_\+xcoder\+\_\+destroy\+\_\+session}} = 0x0000
+ \}
+\item 
+enum \mbox{\hyperlink{ni__nvme_8h_ae8deabce39265ad2c2a5fba08775a2a5}{\+\_\+nvme\+\_\+read\+\_\+xcoder\+\_\+subtype}} \{ \mbox{\hyperlink{ni__nvme_8h_ae8deabce39265ad2c2a5fba08775a2a5a143421e7b35b36c5edd2122ad2ce78d5}{nvme\+\_\+read\+\_\+xcoder\+\_\+read\+\_\+instance}} = 0x0001
+ \}
+\item 
+enum \mbox{\hyperlink{ni__nvme_8h_a3b171390b2698987c6989a414a69b37c}{\+\_\+nvme\+\_\+write\+\_\+xcoder\+\_\+subtype}} \{ \mbox{\hyperlink{ni__nvme_8h_a3b171390b2698987c6989a414a69b37ca2a2ec886a3ccb9b9876e1fcadea8701b}{nvme\+\_\+write\+\_\+xcoder\+\_\+write\+\_\+instance}} = 0x0001
+ \}
+\item 
+enum \mbox{\hyperlink{ni__nvme_8h_a126edfa51257db8fc567a7c9f70e4ec2}{\+\_\+nvme\+\_\+query\+\_\+xcoder\+\_\+subtype}} \{ \mbox{\hyperlink{ni__nvme_8h_a126edfa51257db8fc567a7c9f70e4ec2a3fa8fb71e2b05aea5e2527c287c382cd}{nvme\+\_\+query\+\_\+xcoder\+\_\+query\+\_\+session}} = 0x0000, 
+\mbox{\hyperlink{ni__nvme_8h_a126edfa51257db8fc567a7c9f70e4ec2a7f8c90f94f78a29908782da057e73d49}{nvme\+\_\+query\+\_\+xcoder\+\_\+query\+\_\+instance}} = 0x0001
+ \}
+\item 
+enum \mbox{\hyperlink{ni__nvme_8h_a7bea84559125ff607292b0ea8c331ded}{\+\_\+nvme\+\_\+query\+\_\+xcoder\+\_\+session\+\_\+subtype}} \{ \mbox{\hyperlink{ni__nvme_8h_a7bea84559125ff607292b0ea8c331deda7d2a922489d0003837768136004ed6db}{nvme\+\_\+query\+\_\+xcoder\+\_\+session}} = 0x0001
+ \}
+\item 
+enum \mbox{\hyperlink{ni__nvme_8h_a6879a530d25cb56f08446ca222f343b1}{\+\_\+nvme\+\_\+query\+\_\+xcoder\+\_\+instance\+\_\+subtype}} \{ \mbox{\hyperlink{ni__nvme_8h_a6879a530d25cb56f08446ca222f343b1a0a4637eb990decb7d3fcb1f53baf27d7}{nvme\+\_\+query\+\_\+xcoder\+\_\+instance\+\_\+get\+\_\+status}} = 0x0002, 
+\mbox{\hyperlink{ni__nvme_8h_a6879a530d25cb56f08446ca222f343b1a75db85ab652a195c391730022e4f818d}{nvme\+\_\+query\+\_\+xcoder\+\_\+instance\+\_\+get\+\_\+stream\+\_\+info}} = 0x0004, 
+\mbox{\hyperlink{ni__nvme_8h_a6879a530d25cb56f08446ca222f343b1a8979f4b3eab897be7b0943a9f1877cfb}{nvme\+\_\+query\+\_\+xcoder\+\_\+instance\+\_\+get\+\_\+end\+\_\+of\+\_\+output}} = 0x0005
+ \}
+\item 
+enum \mbox{\hyperlink{ni__nvme_8h_ab3a76de5ec80367749775c8b6414dfd8}{\+\_\+nvme\+\_\+config\+\_\+xcoder\+\_\+subtype}} \{ \mbox{\hyperlink{ni__nvme_8h_ab3a76de5ec80367749775c8b6414dfd8a1e69f539e834271bb14c093bc5f91fef}{nvme\+\_\+config\+\_\+xcoder\+\_\+config\+\_\+session}} = 0x0000, 
+\mbox{\hyperlink{ni__nvme_8h_ab3a76de5ec80367749775c8b6414dfd8af2151af1c0c4833fbede9edea47323d7}{nvme\+\_\+config\+\_\+xcoder\+\_\+config\+\_\+instance}} = 0x0001
+ \}
+\item 
+enum \mbox{\hyperlink{ni__nvme_8h_ad0937d1c212483fc3c89a2cf8187f60a}{\+\_\+nvme\+\_\+config\+\_\+xcoder\+\_\+config\+\_\+instance\+\_\+subtype}} \{ \newline
+\mbox{\hyperlink{ni__nvme_8h_ad0937d1c212483fc3c89a2cf8187f60aa8bf9bcc44f63f1df22a61c33e3cfdd00}{nvme\+\_\+config\+\_\+xcoder\+\_\+config\+\_\+set\+\_\+sos}} = 0x0000, 
+\mbox{\hyperlink{ni__nvme_8h_ad0937d1c212483fc3c89a2cf8187f60aac9d61fcad60f2c0cf72058088b29020d}{nvme\+\_\+config\+\_\+xcoder\+\_\+config\+\_\+set\+\_\+eos}} = 0x0001, 
+\mbox{\hyperlink{ni__nvme_8h_ad0937d1c212483fc3c89a2cf8187f60aa49929e0ce9e39198a1317c18efb48b7d}{nvme\+\_\+config\+\_\+xcoder\+\_\+config\+\_\+set\+\_\+enc\+\_\+params}} = 0x0005, 
+\mbox{\hyperlink{ni__nvme_8h_ad0937d1c212483fc3c89a2cf8187f60aa940fc9c67623edf3c82511708fb2ee97}{nvme\+\_\+config\+\_\+xcoder\+\_\+config\+\_\+flush}} = 0x0007, 
+\newline
+\mbox{\hyperlink{ni__nvme_8h_ad0937d1c212483fc3c89a2cf8187f60aab61efd90132c1dd7f0b75a2cf75b3e68}{nvme\+\_\+config\+\_\+xcoder\+\_\+config\+\_\+update\+\_\+enc\+\_\+params}} = 0x0008, 
+\mbox{\hyperlink{ni__nvme_8h_ad0937d1c212483fc3c89a2cf8187f60aacb3d6ad5e6b13f783ba45e3c2d4a560a}{nvme\+\_\+config\+\_\+xcoder\+\_\+config\+\_\+set\+\_\+enc\+\_\+frame\+\_\+params}} = 0x0009
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \mbox{\hyperlink{ni__nvme_8h_a936892f0955205ac266a4f6d81908fef}{ni\+\_\+nvme\+\_\+send\+\_\+admin\+\_\+cmd}} (\mbox{\hyperlink{ni__nvme_8h_a2d9979e19435c0b68de9964c19b7799d}{ni\+\_\+nvme\+\_\+admin\+\_\+opcode\+\_\+t}} opcode, ni\+\_\+device\+\_\+handle\+\_\+t fd, \mbox{\hyperlink{ni__nvme_8h_a7ddc246c6522c44c0df99f9f1c80fb11}{ni\+\_\+nvme\+\_\+command\+\_\+t}} $\ast$p\+\_\+ni\+\_\+nvme\+\_\+cmd, uint32\+\_\+t data\+\_\+len, void $\ast$data, uint32\+\_\+t $\ast$p\+Result)
+\begin{DoxyCompactList}\small\item\em Compose a nvme admin command. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{ni__nvme_8h_a8c2c59b2a845963c3f449382a994ec6f}{ni\+\_\+nvme\+\_\+send\+\_\+io\+\_\+cmd}} (\mbox{\hyperlink{ni__nvme_8h_abb322d0cd1073fb01afed787da5a636c}{ni\+\_\+nvme\+\_\+opcode\+\_\+t}} opcode, ni\+\_\+device\+\_\+handle\+\_\+t fd, \mbox{\hyperlink{ni__nvme_8h_a7ddc246c6522c44c0df99f9f1c80fb11}{ni\+\_\+nvme\+\_\+command\+\_\+t}} $\ast$p\+\_\+ni\+\_\+nvme\+\_\+cmd, uint32\+\_\+t data\+\_\+len, void $\ast$data, uint32\+\_\+t $\ast$p\+Result)
+\begin{DoxyCompactList}\small\item\em Compose a nvme io command. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{ni__nvme_8h_a045656cc96478f7ca5c4cf56ad5b5734}{ni\+\_\+nvme\+\_\+send\+\_\+io\+\_\+cmd\+\_\+thru\+\_\+admin\+\_\+queue}} (\mbox{\hyperlink{ni__nvme_8h_a2d9979e19435c0b68de9964c19b7799d}{ni\+\_\+nvme\+\_\+admin\+\_\+opcode\+\_\+t}} opcode, ni\+\_\+device\+\_\+handle\+\_\+t fd, \mbox{\hyperlink{ni__nvme_8h_a7ddc246c6522c44c0df99f9f1c80fb11}{ni\+\_\+nvme\+\_\+command\+\_\+t}} $\ast$p\+\_\+ni\+\_\+nvme\+\_\+cmd, uint32\+\_\+t data\+\_\+len, void $\ast$data, uint32\+\_\+t $\ast$p\+Result)
+\item 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} \mbox{\hyperlink{ni__nvme_8h_a37d1e1fead4686c0bb2158ccc0ea7da7}{ni\+\_\+nvme\+\_\+check\+\_\+error\+\_\+code}} (int rc, \mbox{\hyperlink{ni__nvme_8h_a2d9979e19435c0b68de9964c19b7799d}{ni\+\_\+nvme\+\_\+admin\+\_\+opcode\+\_\+t}} opcode, uint32\+\_\+t xcoder\+\_\+type, uint32\+\_\+t hw\+\_\+id, int32\+\_\+t $\ast$inst\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Check f/w error return code, and if it\textquotesingle{}s a fatal one, terminate application\textquotesingle{}s decoding/encoding processing by sending self a S\+I\+G\+T\+E\+RM signal. Application shall handle this gracefully. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{ni__nvme_8h_a05dd7dfd79a59cf84bcb208e87a3fa5f}{ni\+\_\+nvme\+\_\+enumerate\+\_\+devices}} (char ni\+\_\+devices\mbox{[}$\,$\mbox{]}\mbox{[}\mbox{\hyperlink{ni__defs_8h_a0666ed218212a20f00a6c65caa3141bc}{M\+A\+X\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+N\+A\+M\+E\+\_\+\+L\+EN}}\mbox{]}, int max\+\_\+handles)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Definitions related to working with NI T-\/408 over N\+V\+ME interface. 
+
+
+
+
+
+\begin{DoxyCopyright}{Copyright}
+(c) 2019 N\+E\+T\+I\+NT Technologies Inc. All rights reserved. 
+\end{DoxyCopyright}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{ni__nvme_8h_a818b48033a79074bbcd260af4692b6f1}\label{ni__nvme_8h_a818b48033a79074bbcd260af4692b6f1}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!CONFIG\_INSTANCE\_SET\_DW10\_SUBTYPE@{CONFIG\_INSTANCE\_SET\_DW10\_SUBTYPE}}
+\index{CONFIG\_INSTANCE\_SET\_DW10\_SUBTYPE@{CONFIG\_INSTANCE\_SET\_DW10\_SUBTYPE}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{CONFIG\_INSTANCE\_SET\_DW10\_SUBTYPE}{CONFIG\_INSTANCE\_SET\_DW10\_SUBTYPE}}
+{\footnotesize\ttfamily \#define C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+S\+E\+T\+\_\+\+D\+W10\+\_\+\+S\+U\+B\+T\+Y\+PE(\begin{DoxyParamCaption}\item[{}]{dst,  }\item[{}]{sid }\end{DoxyParamCaption})~(dst = (((sid $<$$<$ 16) \& 0x\+F\+F\+F\+F0000\+U\+L) $\vert$ (nvme\+\_\+config\+\_\+xcoder\+\_\+config\+\_\+instance \& 0x\+F\+F\+F\+F\+U\+L)))}
+
+
+
+Definition at line 456 of file ni\+\_\+nvme.\+h.
+
+\mbox{\Hypertarget{ni__nvme_8h_ae828a9c742323b6896a602ccebf4917a}\label{ni__nvme_8h_ae828a9c742323b6896a602ccebf4917a}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!CONFIG\_INSTANCE\_SET\_DW11\_ENC\_FRAME\_PARAMS@{CONFIG\_INSTANCE\_SET\_DW11\_ENC\_FRAME\_PARAMS}}
+\index{CONFIG\_INSTANCE\_SET\_DW11\_ENC\_FRAME\_PARAMS@{CONFIG\_INSTANCE\_SET\_DW11\_ENC\_FRAME\_PARAMS}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{CONFIG\_INSTANCE\_SET\_DW11\_ENC\_FRAME\_PARAMS}{CONFIG\_INSTANCE\_SET\_DW11\_ENC\_FRAME\_PARAMS}}
+{\footnotesize\ttfamily \#define C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+S\+E\+T\+\_\+\+D\+W11\+\_\+\+E\+N\+C\+\_\+\+F\+R\+A\+M\+E\+\_\+\+P\+A\+R\+A\+MS(\begin{DoxyParamCaption}\item[{}]{dst,  }\item[{}]{instance }\end{DoxyParamCaption})~(dst = (((\mbox{\hyperlink{ni__nvme_8h_ad0937d1c212483fc3c89a2cf8187f60aacb3d6ad5e6b13f783ba45e3c2d4a560a}{nvme\+\_\+config\+\_\+xcoder\+\_\+config\+\_\+set\+\_\+enc\+\_\+frame\+\_\+params}} $<$$<$ 16) \& 0x\+F\+F\+F\+F0000\+U\+L) $\vert$ (instance \& 0x\+F\+F\+F\+F\+U\+L)))}
+
+
+
+Definition at line 460 of file ni\+\_\+nvme.\+h.
+
+\mbox{\Hypertarget{ni__nvme_8h_a89023a6bf0e5194104e56f028d2f722e}\label{ni__nvme_8h_a89023a6bf0e5194104e56f028d2f722e}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!CONFIG\_INSTANCE\_SET\_DW11\_ENC\_PARAMS@{CONFIG\_INSTANCE\_SET\_DW11\_ENC\_PARAMS}}
+\index{CONFIG\_INSTANCE\_SET\_DW11\_ENC\_PARAMS@{CONFIG\_INSTANCE\_SET\_DW11\_ENC\_PARAMS}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{CONFIG\_INSTANCE\_SET\_DW11\_ENC\_PARAMS}{CONFIG\_INSTANCE\_SET\_DW11\_ENC\_PARAMS}}
+{\footnotesize\ttfamily \#define C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+S\+E\+T\+\_\+\+D\+W11\+\_\+\+E\+N\+C\+\_\+\+P\+A\+R\+A\+MS(\begin{DoxyParamCaption}\item[{}]{dst,  }\item[{}]{instance }\end{DoxyParamCaption})~(dst = (((\mbox{\hyperlink{ni__nvme_8h_ad0937d1c212483fc3c89a2cf8187f60aa49929e0ce9e39198a1317c18efb48b7d}{nvme\+\_\+config\+\_\+xcoder\+\_\+config\+\_\+set\+\_\+enc\+\_\+params}} $<$$<$ 16) \& 0x\+F\+F\+F\+F0000\+U\+L) $\vert$ (instance \& 0x\+F\+F\+F\+F\+U\+L)))}
+
+
+
+Definition at line 459 of file ni\+\_\+nvme.\+h.
+
+\mbox{\Hypertarget{ni__nvme_8h_a44e168ca57fb5ab7d3c33af466906937}\label{ni__nvme_8h_a44e168ca57fb5ab7d3c33af466906937}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!CONFIG\_INSTANCE\_SET\_DW11\_EOS@{CONFIG\_INSTANCE\_SET\_DW11\_EOS}}
+\index{CONFIG\_INSTANCE\_SET\_DW11\_EOS@{CONFIG\_INSTANCE\_SET\_DW11\_EOS}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{CONFIG\_INSTANCE\_SET\_DW11\_EOS}{CONFIG\_INSTANCE\_SET\_DW11\_EOS}}
+{\footnotesize\ttfamily \#define C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+S\+E\+T\+\_\+\+D\+W11\+\_\+\+E\+OS(\begin{DoxyParamCaption}\item[{}]{dst,  }\item[{}]{instance }\end{DoxyParamCaption})~(dst = (((\mbox{\hyperlink{ni__nvme_8h_ad0937d1c212483fc3c89a2cf8187f60aac9d61fcad60f2c0cf72058088b29020d}{nvme\+\_\+config\+\_\+xcoder\+\_\+config\+\_\+set\+\_\+eos}} $<$$<$ 16) \& 0x\+F\+F\+F\+F0000\+U\+L) $\vert$ (instance \& 0x\+F\+F\+F\+F\+U\+L)))}
+
+
+
+Definition at line 458 of file ni\+\_\+nvme.\+h.
+
+\mbox{\Hypertarget{ni__nvme_8h_a32ea2b4562811393464ef92fe4b03107}\label{ni__nvme_8h_a32ea2b4562811393464ef92fe4b03107}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!CONFIG\_INSTANCE\_SET\_DW11\_FLUSH@{CONFIG\_INSTANCE\_SET\_DW11\_FLUSH}}
+\index{CONFIG\_INSTANCE\_SET\_DW11\_FLUSH@{CONFIG\_INSTANCE\_SET\_DW11\_FLUSH}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{CONFIG\_INSTANCE\_SET\_DW11\_FLUSH}{CONFIG\_INSTANCE\_SET\_DW11\_FLUSH}}
+{\footnotesize\ttfamily \#define C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+S\+E\+T\+\_\+\+D\+W11\+\_\+\+F\+L\+U\+SH(\begin{DoxyParamCaption}\item[{}]{dst,  }\item[{}]{instance }\end{DoxyParamCaption})~(dst = (((\mbox{\hyperlink{ni__nvme_8h_ad0937d1c212483fc3c89a2cf8187f60aa940fc9c67623edf3c82511708fb2ee97}{nvme\+\_\+config\+\_\+xcoder\+\_\+config\+\_\+flush}} $<$$<$ 16) \& 0x\+F\+F\+F\+F0000\+U\+L) $\vert$ (instance \& 0x\+F\+F\+F\+F\+U\+L)))}
+
+
+
+Definition at line 461 of file ni\+\_\+nvme.\+h.
+
+\mbox{\Hypertarget{ni__nvme_8h_a5945ebddecbbb1a9b95f2689266fcc34}\label{ni__nvme_8h_a5945ebddecbbb1a9b95f2689266fcc34}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!CONFIG\_INSTANCE\_SET\_DW11\_SOS@{CONFIG\_INSTANCE\_SET\_DW11\_SOS}}
+\index{CONFIG\_INSTANCE\_SET\_DW11\_SOS@{CONFIG\_INSTANCE\_SET\_DW11\_SOS}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{CONFIG\_INSTANCE\_SET\_DW11\_SOS}{CONFIG\_INSTANCE\_SET\_DW11\_SOS}}
+{\footnotesize\ttfamily \#define C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+S\+E\+T\+\_\+\+D\+W11\+\_\+\+S\+OS(\begin{DoxyParamCaption}\item[{}]{dst,  }\item[{}]{instance }\end{DoxyParamCaption})~(dst = (((\mbox{\hyperlink{ni__nvme_8h_ad0937d1c212483fc3c89a2cf8187f60aa8bf9bcc44f63f1df22a61c33e3cfdd00}{nvme\+\_\+config\+\_\+xcoder\+\_\+config\+\_\+set\+\_\+sos}} $<$$<$ 16) \& 0x\+F\+F\+F\+F0000\+U\+L) $\vert$ (instance \& 0x\+F\+F\+F\+F\+U\+L)))}
+
+
+
+Definition at line 457 of file ni\+\_\+nvme.\+h.
+
+\mbox{\Hypertarget{ni__nvme_8h_ae8cb871ea110284cf7acc9f0b47116a9}\label{ni__nvme_8h_ae8cb871ea110284cf7acc9f0b47116a9}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!CONFIG\_INSTANCE\_SET\_DW11\_UPDATE\_PARAMS@{CONFIG\_INSTANCE\_SET\_DW11\_UPDATE\_PARAMS}}
+\index{CONFIG\_INSTANCE\_SET\_DW11\_UPDATE\_PARAMS@{CONFIG\_INSTANCE\_SET\_DW11\_UPDATE\_PARAMS}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{CONFIG\_INSTANCE\_SET\_DW11\_UPDATE\_PARAMS}{CONFIG\_INSTANCE\_SET\_DW11\_UPDATE\_PARAMS}}
+{\footnotesize\ttfamily \#define C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+S\+E\+T\+\_\+\+D\+W11\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+P\+A\+R\+A\+MS(\begin{DoxyParamCaption}\item[{}]{dst,  }\item[{}]{instance }\end{DoxyParamCaption})~(dst = (((\mbox{\hyperlink{ni__nvme_8h_ad0937d1c212483fc3c89a2cf8187f60aab61efd90132c1dd7f0b75a2cf75b3e68}{nvme\+\_\+config\+\_\+xcoder\+\_\+config\+\_\+update\+\_\+enc\+\_\+params}} $<$$<$ 16) \& 0x\+F\+F\+F\+F0000\+U\+L) $\vert$ (instance \& 0x\+F\+F\+F\+F\+U\+L)))}
+
+
+
+Definition at line 462 of file ni\+\_\+nvme.\+h.
+
+\mbox{\Hypertarget{ni__nvme_8h_a0cc260488c08561361e59bc063b82ccf}\label{ni__nvme_8h_a0cc260488c08561361e59bc063b82ccf}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!CONFIG\_INSTANCE\_SET\_DW15\_SIZE@{CONFIG\_INSTANCE\_SET\_DW15\_SIZE}}
+\index{CONFIG\_INSTANCE\_SET\_DW15\_SIZE@{CONFIG\_INSTANCE\_SET\_DW15\_SIZE}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{CONFIG\_INSTANCE\_SET\_DW15\_SIZE}{CONFIG\_INSTANCE\_SET\_DW15\_SIZE}}
+{\footnotesize\ttfamily \#define C\+O\+N\+F\+I\+G\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+S\+E\+T\+\_\+\+D\+W15\+\_\+\+S\+I\+ZE(\begin{DoxyParamCaption}\item[{}]{dst,  }\item[{}]{size }\end{DoxyParamCaption})~(dst = (size \& 0x\+F\+F\+F\+F\+F\+F\+F\+F\+U\+L))}
+
+
+
+Definition at line 463 of file ni\+\_\+nvme.\+h.
+
+\mbox{\Hypertarget{ni__nvme_8h_aaae10b57520e791f5b66081bd63dd947}\label{ni__nvme_8h_aaae10b57520e791f5b66081bd63dd947}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!CREATE\_SESSION\_SET\_DW10\_SUBTYPE@{CREATE\_SESSION\_SET\_DW10\_SUBTYPE}}
+\index{CREATE\_SESSION\_SET\_DW10\_SUBTYPE@{CREATE\_SESSION\_SET\_DW10\_SUBTYPE}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{CREATE\_SESSION\_SET\_DW10\_SUBTYPE}{CREATE\_SESSION\_SET\_DW10\_SUBTYPE}}
+{\footnotesize\ttfamily \#define C\+R\+E\+A\+T\+E\+\_\+\+S\+E\+S\+S\+I\+O\+N\+\_\+\+S\+E\+T\+\_\+\+D\+W10\+\_\+\+S\+U\+B\+T\+Y\+PE(\begin{DoxyParamCaption}\item[{}]{dst }\end{DoxyParamCaption})~(dst = (\mbox{\hyperlink{ni__nvme_8h_ab2e68366a4957719494f9c76cc1f040ca55abfb5760653f21ecab6c0da2c4aac0}{nvme\+\_\+open\+\_\+xcoder\+\_\+create\+\_\+session}} \& 0x\+F\+F\+F\+F\+U\+L))}
+
+
+
+Definition at line 429 of file ni\+\_\+nvme.\+h.
+
+\mbox{\Hypertarget{ni__nvme_8h_a16a1dc71c12663862b0e3f7985766e27}\label{ni__nvme_8h_a16a1dc71c12663862b0e3f7985766e27}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!CREATE\_SESSION\_SET\_DW11\_INSTANCE@{CREATE\_SESSION\_SET\_DW11\_INSTANCE}}
+\index{CREATE\_SESSION\_SET\_DW11\_INSTANCE@{CREATE\_SESSION\_SET\_DW11\_INSTANCE}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{CREATE\_SESSION\_SET\_DW11\_INSTANCE}{CREATE\_SESSION\_SET\_DW11\_INSTANCE}}
+{\footnotesize\ttfamily \#define C\+R\+E\+A\+T\+E\+\_\+\+S\+E\+S\+S\+I\+O\+N\+\_\+\+S\+E\+T\+\_\+\+D\+W11\+\_\+\+I\+N\+S\+T\+A\+N\+CE(\begin{DoxyParamCaption}\item[{}]{dst,  }\item[{}]{instance }\end{DoxyParamCaption})~(dst = (instance \& 0x\+F\+F\+F\+F\+U\+L))}
+
+
+
+Definition at line 430 of file ni\+\_\+nvme.\+h.
+
+\mbox{\Hypertarget{ni__nvme_8h_a6ace376e1211b30196d0a09568a35918}\label{ni__nvme_8h_a6ace376e1211b30196d0a09568a35918}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!CREATE\_SESSION\_SET\_DW12\_DEC\_CID@{CREATE\_SESSION\_SET\_DW12\_DEC\_CID}}
+\index{CREATE\_SESSION\_SET\_DW12\_DEC\_CID@{CREATE\_SESSION\_SET\_DW12\_DEC\_CID}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{CREATE\_SESSION\_SET\_DW12\_DEC\_CID}{CREATE\_SESSION\_SET\_DW12\_DEC\_CID}}
+{\footnotesize\ttfamily \#define C\+R\+E\+A\+T\+E\+\_\+\+S\+E\+S\+S\+I\+O\+N\+\_\+\+S\+E\+T\+\_\+\+D\+W12\+\_\+\+D\+E\+C\+\_\+\+C\+ID(\begin{DoxyParamCaption}\item[{}]{dst,  }\item[{}]{cid }\end{DoxyParamCaption})~(dst = (cid \& 0x\+F\+F\+F\+F\+U\+L))}
+
+
+
+Definition at line 431 of file ni\+\_\+nvme.\+h.
+
+\mbox{\Hypertarget{ni__nvme_8h_a64336a16c4f59a4635c3a282387cd824}\label{ni__nvme_8h_a64336a16c4f59a4635c3a282387cd824}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!CREATE\_SESSION\_SET\_DW12\_ENC\_CID\_FRWIDTH@{CREATE\_SESSION\_SET\_DW12\_ENC\_CID\_FRWIDTH}}
+\index{CREATE\_SESSION\_SET\_DW12\_ENC\_CID\_FRWIDTH@{CREATE\_SESSION\_SET\_DW12\_ENC\_CID\_FRWIDTH}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{CREATE\_SESSION\_SET\_DW12\_ENC\_CID\_FRWIDTH}{CREATE\_SESSION\_SET\_DW12\_ENC\_CID\_FRWIDTH}}
+{\footnotesize\ttfamily \#define C\+R\+E\+A\+T\+E\+\_\+\+S\+E\+S\+S\+I\+O\+N\+\_\+\+S\+E\+T\+\_\+\+D\+W12\+\_\+\+E\+N\+C\+\_\+\+C\+I\+D\+\_\+\+F\+R\+W\+I\+D\+TH(\begin{DoxyParamCaption}\item[{}]{dst,  }\item[{}]{cid,  }\item[{}]{width }\end{DoxyParamCaption})~(dst = (((width $<$$<$ 16) \& 0x\+F\+F\+F\+F0000\+U\+L) $\vert$ (cid \& 0x\+F\+F\+F\+F\+U\+L)))}
+
+
+
+Definition at line 433 of file ni\+\_\+nvme.\+h.
+
+\mbox{\Hypertarget{ni__nvme_8h_a040c8dde0db768109a6cd82d2b4c28a0}\label{ni__nvme_8h_a040c8dde0db768109a6cd82d2b4c28a0}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!CREATE\_SESSION\_SET\_DW13\_ENC\_FRHIGHT@{CREATE\_SESSION\_SET\_DW13\_ENC\_FRHIGHT}}
+\index{CREATE\_SESSION\_SET\_DW13\_ENC\_FRHIGHT@{CREATE\_SESSION\_SET\_DW13\_ENC\_FRHIGHT}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{CREATE\_SESSION\_SET\_DW13\_ENC\_FRHIGHT}{CREATE\_SESSION\_SET\_DW13\_ENC\_FRHIGHT}}
+{\footnotesize\ttfamily \#define C\+R\+E\+A\+T\+E\+\_\+\+S\+E\+S\+S\+I\+O\+N\+\_\+\+S\+E\+T\+\_\+\+D\+W13\+\_\+\+E\+N\+C\+\_\+\+F\+R\+H\+I\+G\+HT(\begin{DoxyParamCaption}\item[{}]{dst,  }\item[{}]{hight }\end{DoxyParamCaption})~(dst = (hight \& 0x\+F\+F\+F\+F\+U\+L))}
+
+
+
+Definition at line 434 of file ni\+\_\+nvme.\+h.
+
+\mbox{\Hypertarget{ni__nvme_8h_a162f4d53c6742f4b17b98b88a0a2a6bc}\label{ni__nvme_8h_a162f4d53c6742f4b17b98b88a0a2a6bc}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!DESTROY\_SESSION\_SET\_DW10\_INSTANCE@{DESTROY\_SESSION\_SET\_DW10\_INSTANCE}}
+\index{DESTROY\_SESSION\_SET\_DW10\_INSTANCE@{DESTROY\_SESSION\_SET\_DW10\_INSTANCE}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{DESTROY\_SESSION\_SET\_DW10\_INSTANCE}{DESTROY\_SESSION\_SET\_DW10\_INSTANCE}}
+{\footnotesize\ttfamily \#define D\+E\+S\+T\+R\+O\+Y\+\_\+\+S\+E\+S\+S\+I\+O\+N\+\_\+\+S\+E\+T\+\_\+\+D\+W10\+\_\+\+I\+N\+S\+T\+A\+N\+CE(\begin{DoxyParamCaption}\item[{}]{dst,  }\item[{}]{sid }\end{DoxyParamCaption})~(dst = (((sid $<$$<$ 16) \& 0x\+F\+F\+F\+F0000\+U\+L) $\vert$ (nvme\+\_\+close\+\_\+xcoder\+\_\+destroy\+\_\+session \& 0x\+F\+F\+F\+F\+U\+L)))}
+
+
+
+Definition at line 436 of file ni\+\_\+nvme.\+h.
+
+\mbox{\Hypertarget{ni__nvme_8h_ac7220ab9a3e18ef5dd0ce9ac54b6b953}\label{ni__nvme_8h_ac7220ab9a3e18ef5dd0ce9ac54b6b953}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!NI\_NVME\_IDENTITY\_CMD\_DATA\_SZ@{NI\_NVME\_IDENTITY\_CMD\_DATA\_SZ}}
+\index{NI\_NVME\_IDENTITY\_CMD\_DATA\_SZ@{NI\_NVME\_IDENTITY\_CMD\_DATA\_SZ}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{NI\_NVME\_IDENTITY\_CMD\_DATA\_SZ}{NI\_NVME\_IDENTITY\_CMD\_DATA\_SZ}}
+{\footnotesize\ttfamily \#define N\+I\+\_\+\+N\+V\+M\+E\+\_\+\+I\+D\+E\+N\+T\+I\+T\+Y\+\_\+\+C\+M\+D\+\_\+\+D\+A\+T\+A\+\_\+\+SZ~4096}
+
+
+
+Definition at line 18 of file ni\+\_\+nvme.\+h.
+
+\mbox{\Hypertarget{ni__nvme_8h_a59812cba1fedc0f7fc2e24924829b411}\label{ni__nvme_8h_a59812cba1fedc0f7fc2e24924829b411}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!QUERY\_INSTANCE\_SET\_DW10\_SUBTYPE@{QUERY\_INSTANCE\_SET\_DW10\_SUBTYPE}}
+\index{QUERY\_INSTANCE\_SET\_DW10\_SUBTYPE@{QUERY\_INSTANCE\_SET\_DW10\_SUBTYPE}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{QUERY\_INSTANCE\_SET\_DW10\_SUBTYPE}{QUERY\_INSTANCE\_SET\_DW10\_SUBTYPE}}
+{\footnotesize\ttfamily \#define Q\+U\+E\+R\+Y\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+S\+E\+T\+\_\+\+D\+W10\+\_\+\+S\+U\+B\+T\+Y\+PE(\begin{DoxyParamCaption}\item[{}]{dst,  }\item[{}]{sid }\end{DoxyParamCaption})~(dst = (((sid $<$$<$ 16) \& 0x\+F\+F\+F\+F0000\+U\+L) $\vert$ (nvme\+\_\+query\+\_\+xcoder\+\_\+query\+\_\+instance \& 0x\+F\+F\+F\+F\+U\+L)))}
+
+
+
+Definition at line 450 of file ni\+\_\+nvme.\+h.
+
+\mbox{\Hypertarget{ni__nvme_8h_a820b44fb5ad7a065e0f4ef1b460603c4}\label{ni__nvme_8h_a820b44fb5ad7a065e0f4ef1b460603c4}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!QUERY\_INSTANCE\_SET\_DW11\_INSTANCE\_END\_OF\_OUTPUT@{QUERY\_INSTANCE\_SET\_DW11\_INSTANCE\_END\_OF\_OUTPUT}}
+\index{QUERY\_INSTANCE\_SET\_DW11\_INSTANCE\_END\_OF\_OUTPUT@{QUERY\_INSTANCE\_SET\_DW11\_INSTANCE\_END\_OF\_OUTPUT}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{QUERY\_INSTANCE\_SET\_DW11\_INSTANCE\_END\_OF\_OUTPUT}{QUERY\_INSTANCE\_SET\_DW11\_INSTANCE\_END\_OF\_OUTPUT}}
+{\footnotesize\ttfamily \#define Q\+U\+E\+R\+Y\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+S\+E\+T\+\_\+\+D\+W11\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+O\+U\+T\+P\+UT(\begin{DoxyParamCaption}\item[{}]{dst,  }\item[{}]{instance }\end{DoxyParamCaption})~(dst = (((\mbox{\hyperlink{ni__nvme_8h_a6879a530d25cb56f08446ca222f343b1a8979f4b3eab897be7b0943a9f1877cfb}{nvme\+\_\+query\+\_\+xcoder\+\_\+instance\+\_\+get\+\_\+end\+\_\+of\+\_\+output}} $<$$<$ 16) \& 0x\+F\+F\+F\+F0000\+U\+L) $\vert$ (instance \& 0x\+F\+F\+F\+F\+U\+L)))}
+
+
+
+Definition at line 453 of file ni\+\_\+nvme.\+h.
+
+\mbox{\Hypertarget{ni__nvme_8h_a991aacf771a60dd752a4da6639d40fc9}\label{ni__nvme_8h_a991aacf771a60dd752a4da6639d40fc9}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!QUERY\_INSTANCE\_SET\_DW11\_INSTANCE\_STATUS@{QUERY\_INSTANCE\_SET\_DW11\_INSTANCE\_STATUS}}
+\index{QUERY\_INSTANCE\_SET\_DW11\_INSTANCE\_STATUS@{QUERY\_INSTANCE\_SET\_DW11\_INSTANCE\_STATUS}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{QUERY\_INSTANCE\_SET\_DW11\_INSTANCE\_STATUS}{QUERY\_INSTANCE\_SET\_DW11\_INSTANCE\_STATUS}}
+{\footnotesize\ttfamily \#define Q\+U\+E\+R\+Y\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+S\+E\+T\+\_\+\+D\+W11\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+S\+T\+A\+T\+US(\begin{DoxyParamCaption}\item[{}]{dst,  }\item[{}]{instance }\end{DoxyParamCaption})~(dst = (((\mbox{\hyperlink{ni__nvme_8h_a6879a530d25cb56f08446ca222f343b1a0a4637eb990decb7d3fcb1f53baf27d7}{nvme\+\_\+query\+\_\+xcoder\+\_\+instance\+\_\+get\+\_\+status}} $<$$<$ 16) \& 0x\+F\+F\+F\+F0000\+U\+L) $\vert$ (instance \& 0x\+F\+F\+F\+F\+U\+L)))}
+
+
+
+Definition at line 451 of file ni\+\_\+nvme.\+h.
+
+\mbox{\Hypertarget{ni__nvme_8h_ae245e33581c805bbbfc87747bae2cd2b}\label{ni__nvme_8h_ae245e33581c805bbbfc87747bae2cd2b}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!QUERY\_INSTANCE\_SET\_DW11\_INSTANCE\_STREAM\_INFO@{QUERY\_INSTANCE\_SET\_DW11\_INSTANCE\_STREAM\_INFO}}
+\index{QUERY\_INSTANCE\_SET\_DW11\_INSTANCE\_STREAM\_INFO@{QUERY\_INSTANCE\_SET\_DW11\_INSTANCE\_STREAM\_INFO}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{QUERY\_INSTANCE\_SET\_DW11\_INSTANCE\_STREAM\_INFO}{QUERY\_INSTANCE\_SET\_DW11\_INSTANCE\_STREAM\_INFO}}
+{\footnotesize\ttfamily \#define Q\+U\+E\+R\+Y\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+S\+E\+T\+\_\+\+D\+W11\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+S\+T\+R\+E\+A\+M\+\_\+\+I\+N\+FO(\begin{DoxyParamCaption}\item[{}]{dst,  }\item[{}]{instance }\end{DoxyParamCaption})~(dst = (((\mbox{\hyperlink{ni__nvme_8h_a6879a530d25cb56f08446ca222f343b1a75db85ab652a195c391730022e4f818d}{nvme\+\_\+query\+\_\+xcoder\+\_\+instance\+\_\+get\+\_\+stream\+\_\+info}} $<$$<$ 16) \& 0x\+F\+F\+F\+F0000\+U\+L) $\vert$ (instance \& 0x\+F\+F\+F\+F\+U\+L)))}
+
+
+
+Definition at line 452 of file ni\+\_\+nvme.\+h.
+
+\mbox{\Hypertarget{ni__nvme_8h_a5c2b782dcafca4fcbf2aa3d497fd791b}\label{ni__nvme_8h_a5c2b782dcafca4fcbf2aa3d497fd791b}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!QUERY\_INSTANCE\_SET\_DW15\_SIZE@{QUERY\_INSTANCE\_SET\_DW15\_SIZE}}
+\index{QUERY\_INSTANCE\_SET\_DW15\_SIZE@{QUERY\_INSTANCE\_SET\_DW15\_SIZE}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{QUERY\_INSTANCE\_SET\_DW15\_SIZE}{QUERY\_INSTANCE\_SET\_DW15\_SIZE}}
+{\footnotesize\ttfamily \#define Q\+U\+E\+R\+Y\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+S\+E\+T\+\_\+\+D\+W15\+\_\+\+S\+I\+ZE(\begin{DoxyParamCaption}\item[{}]{dst,  }\item[{}]{size }\end{DoxyParamCaption})~(dst = (size \& 0x\+F\+F\+F\+F\+F\+F\+F\+F\+U\+L))}
+
+
+
+Definition at line 454 of file ni\+\_\+nvme.\+h.
+
+\mbox{\Hypertarget{ni__nvme_8h_a55e02a1e26ab82123ee922008f6226d7}\label{ni__nvme_8h_a55e02a1e26ab82123ee922008f6226d7}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!QUERY\_SESSION\_SET\_DW10\_SUBTYPE@{QUERY\_SESSION\_SET\_DW10\_SUBTYPE}}
+\index{QUERY\_SESSION\_SET\_DW10\_SUBTYPE@{QUERY\_SESSION\_SET\_DW10\_SUBTYPE}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{QUERY\_SESSION\_SET\_DW10\_SUBTYPE}{QUERY\_SESSION\_SET\_DW10\_SUBTYPE}}
+{\footnotesize\ttfamily \#define Q\+U\+E\+R\+Y\+\_\+\+S\+E\+S\+S\+I\+O\+N\+\_\+\+S\+E\+T\+\_\+\+D\+W10\+\_\+\+S\+U\+B\+T\+Y\+PE(\begin{DoxyParamCaption}\item[{}]{dst,  }\item[{}]{sid }\end{DoxyParamCaption})~(dst = (((sid $<$$<$ 16) \& 0x\+F\+F\+F\+F0000\+U\+L) $\vert$ (nvme\+\_\+query\+\_\+xcoder\+\_\+query\+\_\+session \& 0x\+F\+F\+F\+F\+U\+L)))}
+
+
+
+Definition at line 446 of file ni\+\_\+nvme.\+h.
+
+\mbox{\Hypertarget{ni__nvme_8h_ad05167c17b2a232c39d356a7ad76bb81}\label{ni__nvme_8h_ad05167c17b2a232c39d356a7ad76bb81}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!QUERY\_SESSION\_SET\_DW11\_INSTANCE@{QUERY\_SESSION\_SET\_DW11\_INSTANCE}}
+\index{QUERY\_SESSION\_SET\_DW11\_INSTANCE@{QUERY\_SESSION\_SET\_DW11\_INSTANCE}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{QUERY\_SESSION\_SET\_DW11\_INSTANCE}{QUERY\_SESSION\_SET\_DW11\_INSTANCE}}
+{\footnotesize\ttfamily \#define Q\+U\+E\+R\+Y\+\_\+\+S\+E\+S\+S\+I\+O\+N\+\_\+\+S\+E\+T\+\_\+\+D\+W11\+\_\+\+I\+N\+S\+T\+A\+N\+CE(\begin{DoxyParamCaption}\item[{}]{dst,  }\item[{}]{instance }\end{DoxyParamCaption})~(dst = (instance \& 0x\+F\+F\+F\+F\+U\+L))}
+
+
+
+Definition at line 447 of file ni\+\_\+nvme.\+h.
+
+\mbox{\Hypertarget{ni__nvme_8h_ac586fbbbcd229923f6131c62167497fb}\label{ni__nvme_8h_ac586fbbbcd229923f6131c62167497fb}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!QUERY\_SESSION\_SET\_DW15\_SIZE@{QUERY\_SESSION\_SET\_DW15\_SIZE}}
+\index{QUERY\_SESSION\_SET\_DW15\_SIZE@{QUERY\_SESSION\_SET\_DW15\_SIZE}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{QUERY\_SESSION\_SET\_DW15\_SIZE}{QUERY\_SESSION\_SET\_DW15\_SIZE}}
+{\footnotesize\ttfamily \#define Q\+U\+E\+R\+Y\+\_\+\+S\+E\+S\+S\+I\+O\+N\+\_\+\+S\+E\+T\+\_\+\+D\+W15\+\_\+\+S\+I\+ZE(\begin{DoxyParamCaption}\item[{}]{dst,  }\item[{}]{size }\end{DoxyParamCaption})~(dst = (size \& 0x\+F\+F\+F\+F\+F\+F\+F\+F\+U\+L))}
+
+
+
+Definition at line 448 of file ni\+\_\+nvme.\+h.
+
+\mbox{\Hypertarget{ni__nvme_8h_aaad7db713c0bfd3beeb6531d931acafb}\label{ni__nvme_8h_aaad7db713c0bfd3beeb6531d931acafb}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!READ\_INSTANCE\_SET\_DW10\_SUBTYPE@{READ\_INSTANCE\_SET\_DW10\_SUBTYPE}}
+\index{READ\_INSTANCE\_SET\_DW10\_SUBTYPE@{READ\_INSTANCE\_SET\_DW10\_SUBTYPE}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{READ\_INSTANCE\_SET\_DW10\_SUBTYPE}{READ\_INSTANCE\_SET\_DW10\_SUBTYPE}}
+{\footnotesize\ttfamily \#define R\+E\+A\+D\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+S\+E\+T\+\_\+\+D\+W10\+\_\+\+S\+U\+B\+T\+Y\+PE(\begin{DoxyParamCaption}\item[{}]{dst,  }\item[{}]{sid }\end{DoxyParamCaption})~(dst = (((sid $<$$<$ 16) \& 0x\+F\+F\+F\+F0000\+U\+L) $\vert$ (nvme\+\_\+write\+\_\+xcoder\+\_\+write\+\_\+instance \& 0x\+F\+F\+F\+F\+U\+L)))}
+
+
+
+Definition at line 438 of file ni\+\_\+nvme.\+h.
+
+\mbox{\Hypertarget{ni__nvme_8h_a8b9a04366a9b54df3a230dfda1a58fb2}\label{ni__nvme_8h_a8b9a04366a9b54df3a230dfda1a58fb2}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!READ\_INSTANCE\_SET\_DW11\_INSTANCE@{READ\_INSTANCE\_SET\_DW11\_INSTANCE}}
+\index{READ\_INSTANCE\_SET\_DW11\_INSTANCE@{READ\_INSTANCE\_SET\_DW11\_INSTANCE}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{READ\_INSTANCE\_SET\_DW11\_INSTANCE}{READ\_INSTANCE\_SET\_DW11\_INSTANCE}}
+{\footnotesize\ttfamily \#define R\+E\+A\+D\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+S\+E\+T\+\_\+\+D\+W11\+\_\+\+I\+N\+S\+T\+A\+N\+CE(\begin{DoxyParamCaption}\item[{}]{dst,  }\item[{}]{instance }\end{DoxyParamCaption})~(dst = (instance \& 0x\+F\+F\+F\+F\+U\+L))}
+
+
+
+Definition at line 439 of file ni\+\_\+nvme.\+h.
+
+\mbox{\Hypertarget{ni__nvme_8h_aafc068ebb7932b792cec352c4320b800}\label{ni__nvme_8h_aafc068ebb7932b792cec352c4320b800}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!READ\_INSTANCE\_SET\_DW15\_SIZE@{READ\_INSTANCE\_SET\_DW15\_SIZE}}
+\index{READ\_INSTANCE\_SET\_DW15\_SIZE@{READ\_INSTANCE\_SET\_DW15\_SIZE}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{READ\_INSTANCE\_SET\_DW15\_SIZE}{READ\_INSTANCE\_SET\_DW15\_SIZE}}
+{\footnotesize\ttfamily \#define R\+E\+A\+D\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+S\+E\+T\+\_\+\+D\+W15\+\_\+\+S\+I\+ZE(\begin{DoxyParamCaption}\item[{}]{dst,  }\item[{}]{size }\end{DoxyParamCaption})~(dst = (size \& 0x\+F\+F\+F\+F\+F\+F\+F\+F\+U\+L))}
+
+
+
+Definition at line 440 of file ni\+\_\+nvme.\+h.
+
+\mbox{\Hypertarget{ni__nvme_8h_a2a2ab869f563877c725b8cdf6e07b3c5}\label{ni__nvme_8h_a2a2ab869f563877c725b8cdf6e07b3c5}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!WRITE\_INSTANCE\_SET\_DW10\_SUBTYPE@{WRITE\_INSTANCE\_SET\_DW10\_SUBTYPE}}
+\index{WRITE\_INSTANCE\_SET\_DW10\_SUBTYPE@{WRITE\_INSTANCE\_SET\_DW10\_SUBTYPE}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{WRITE\_INSTANCE\_SET\_DW10\_SUBTYPE}{WRITE\_INSTANCE\_SET\_DW10\_SUBTYPE}}
+{\footnotesize\ttfamily \#define W\+R\+I\+T\+E\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+S\+E\+T\+\_\+\+D\+W10\+\_\+\+S\+U\+B\+T\+Y\+PE(\begin{DoxyParamCaption}\item[{}]{dst,  }\item[{}]{sid }\end{DoxyParamCaption})~(dst = (((sid $<$$<$ 16) \& 0x\+F\+F\+F\+F0000\+U\+L) $\vert$ (nvme\+\_\+write\+\_\+xcoder\+\_\+write\+\_\+instance \& 0x\+F\+F\+F\+F\+U\+L)))}
+
+
+
+Definition at line 442 of file ni\+\_\+nvme.\+h.
+
+\mbox{\Hypertarget{ni__nvme_8h_ad6dbc9ebbe15b31c3f80edfe7f53e2a7}\label{ni__nvme_8h_ad6dbc9ebbe15b31c3f80edfe7f53e2a7}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!WRITE\_INSTANCE\_SET\_DW11\_INSTANCE@{WRITE\_INSTANCE\_SET\_DW11\_INSTANCE}}
+\index{WRITE\_INSTANCE\_SET\_DW11\_INSTANCE@{WRITE\_INSTANCE\_SET\_DW11\_INSTANCE}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{WRITE\_INSTANCE\_SET\_DW11\_INSTANCE}{WRITE\_INSTANCE\_SET\_DW11\_INSTANCE}}
+{\footnotesize\ttfamily \#define W\+R\+I\+T\+E\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+S\+E\+T\+\_\+\+D\+W11\+\_\+\+I\+N\+S\+T\+A\+N\+CE(\begin{DoxyParamCaption}\item[{}]{dst,  }\item[{}]{instance }\end{DoxyParamCaption})~(dst = (instance \& 0x\+F\+F\+F\+F\+U\+L))}
+
+
+
+Definition at line 443 of file ni\+\_\+nvme.\+h.
+
+\mbox{\Hypertarget{ni__nvme_8h_addd359c398327aba9689b58b2a995e64}\label{ni__nvme_8h_addd359c398327aba9689b58b2a995e64}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!WRITE\_INSTANCE\_SET\_DW15\_SIZE@{WRITE\_INSTANCE\_SET\_DW15\_SIZE}}
+\index{WRITE\_INSTANCE\_SET\_DW15\_SIZE@{WRITE\_INSTANCE\_SET\_DW15\_SIZE}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{WRITE\_INSTANCE\_SET\_DW15\_SIZE}{WRITE\_INSTANCE\_SET\_DW15\_SIZE}}
+{\footnotesize\ttfamily \#define W\+R\+I\+T\+E\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+S\+E\+T\+\_\+\+D\+W15\+\_\+\+S\+I\+ZE(\begin{DoxyParamCaption}\item[{}]{dst,  }\item[{}]{size }\end{DoxyParamCaption})~(dst = (size \& 0x\+F\+F\+F\+F\+F\+F\+F\+F\+U\+L))}
+
+
+
+Definition at line 444 of file ni\+\_\+nvme.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{ni__nvme_8h_a2d9979e19435c0b68de9964c19b7799d}\label{ni__nvme_8h_a2d9979e19435c0b68de9964c19b7799d}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!ni\_nvme\_admin\_opcode\_t@{ni\_nvme\_admin\_opcode\_t}}
+\index{ni\_nvme\_admin\_opcode\_t@{ni\_nvme\_admin\_opcode\_t}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{ni\_nvme\_admin\_opcode\_t}{ni\_nvme\_admin\_opcode\_t}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6c}{\+\_\+ni\+\_\+nvme\+\_\+admin\+\_\+opcode}}  \mbox{\hyperlink{ni__nvme_8h_a2d9979e19435c0b68de9964c19b7799d}{ni\+\_\+nvme\+\_\+admin\+\_\+opcode\+\_\+t}}}
+
+\mbox{\Hypertarget{ni__nvme_8h_a7ddc246c6522c44c0df99f9f1c80fb11}\label{ni__nvme_8h_a7ddc246c6522c44c0df99f9f1c80fb11}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!ni\_nvme\_command\_t@{ni\_nvme\_command\_t}}
+\index{ni\_nvme\_command\_t@{ni\_nvme\_command\_t}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{ni\_nvme\_command\_t}{ni\_nvme\_command\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct__ni__nvme__command__t}{\+\_\+ni\+\_\+nvme\+\_\+command\+\_\+t}}  \mbox{\hyperlink{ni__nvme_8h_a7ddc246c6522c44c0df99f9f1c80fb11}{ni\+\_\+nvme\+\_\+command\+\_\+t}}}
+
+\mbox{\Hypertarget{ni__nvme_8h_a1a1a76137cfb375acef1331f45fb31e3}\label{ni__nvme_8h_a1a1a76137cfb375acef1331f45fb31e3}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!ni\_nvme\_id\_power\_state\_t@{ni\_nvme\_id\_power\_state\_t}}
+\index{ni\_nvme\_id\_power\_state\_t@{ni\_nvme\_id\_power\_state\_t}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{ni\_nvme\_id\_power\_state\_t}{ni\_nvme\_id\_power\_state\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct__ni__nvme__id__power__state}{\+\_\+ni\+\_\+nvme\+\_\+id\+\_\+power\+\_\+state}}  \mbox{\hyperlink{ni__nvme_8h_a1a1a76137cfb375acef1331f45fb31e3}{ni\+\_\+nvme\+\_\+id\+\_\+power\+\_\+state\+\_\+t}}}
+
+\mbox{\Hypertarget{ni__nvme_8h_aba62b801cd87a56704b5526b0abf17b4}\label{ni__nvme_8h_aba62b801cd87a56704b5526b0abf17b4}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!ni\_nvme\_identity\_t@{ni\_nvme\_identity\_t}}
+\index{ni\_nvme\_identity\_t@{ni\_nvme\_identity\_t}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{ni\_nvme\_identity\_t}{ni\_nvme\_identity\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct__ni__nvme__identity}{\+\_\+ni\+\_\+nvme\+\_\+identity}}  \mbox{\hyperlink{ni__nvme_8h_aba62b801cd87a56704b5526b0abf17b4}{ni\+\_\+nvme\+\_\+identity\+\_\+t}}}
+
+\mbox{\Hypertarget{ni__nvme_8h_abb322d0cd1073fb01afed787da5a636c}\label{ni__nvme_8h_abb322d0cd1073fb01afed787da5a636c}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!ni\_nvme\_opcode\_t@{ni\_nvme\_opcode\_t}}
+\index{ni\_nvme\_opcode\_t@{ni\_nvme\_opcode\_t}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{ni\_nvme\_opcode\_t}{ni\_nvme\_opcode\_t}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{ni__nvme_8h_a38558e9c6ef1bec10cc03acbdeb93a05}{\+\_\+ni\+\_\+nvme\+\_\+opcode}}  \mbox{\hyperlink{ni__nvme_8h_abb322d0cd1073fb01afed787da5a636c}{ni\+\_\+nvme\+\_\+opcode\+\_\+t}}}
+
+\mbox{\Hypertarget{ni__nvme_8h_a9eb97bb8db04a3b1d40e764ef5c08126}\label{ni__nvme_8h_a9eb97bb8db04a3b1d40e764ef5c08126}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!ni\_nvme\_read\_complete\_dw0\_t@{ni\_nvme\_read\_complete\_dw0\_t}}
+\index{ni\_nvme\_read\_complete\_dw0\_t@{ni\_nvme\_read\_complete\_dw0\_t}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{ni\_nvme\_read\_complete\_dw0\_t}{ni\_nvme\_read\_complete\_dw0\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct__ni__nvme__read__complete__dw0__t}{\+\_\+ni\+\_\+nvme\+\_\+read\+\_\+complete\+\_\+dw0\+\_\+t}}  \mbox{\hyperlink{ni__nvme_8h_a9eb97bb8db04a3b1d40e764ef5c08126}{ni\+\_\+nvme\+\_\+read\+\_\+complete\+\_\+dw0\+\_\+t}}}
+
+\mbox{\Hypertarget{ni__nvme_8h_aa4edf4f28bac9474ee3fd828aac08033}\label{ni__nvme_8h_aa4edf4f28bac9474ee3fd828aac08033}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!ni\_nvme\_result\_t@{ni\_nvme\_result\_t}}
+\index{ni\_nvme\_result\_t@{ni\_nvme\_result\_t}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{ni\_nvme\_result\_t}{ni\_nvme\_result\_t}}
+{\footnotesize\ttfamily typedef uint32\+\_\+t \mbox{\hyperlink{ni__nvme_8h_aa4edf4f28bac9474ee3fd828aac08033}{ni\+\_\+nvme\+\_\+result\+\_\+t}}}
+
+
+
+Definition at line 366 of file ni\+\_\+nvme.\+h.
+
+\mbox{\Hypertarget{ni__nvme_8h_ae61cc385e22fa1176d914f9e261ed029}\label{ni__nvme_8h_ae61cc385e22fa1176d914f9e261ed029}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!ni\_nvme\_write\_complete\_dw0\_t@{ni\_nvme\_write\_complete\_dw0\_t}}
+\index{ni\_nvme\_write\_complete\_dw0\_t@{ni\_nvme\_write\_complete\_dw0\_t}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{ni\_nvme\_write\_complete\_dw0\_t}{ni\_nvme\_write\_complete\_dw0\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct__ni__nvme__write__complete__dw0__t}{\+\_\+ni\+\_\+nvme\+\_\+write\+\_\+complete\+\_\+dw0\+\_\+t}}  \mbox{\hyperlink{ni__nvme_8h_ae61cc385e22fa1176d914f9e261ed029}{ni\+\_\+nvme\+\_\+write\+\_\+complete\+\_\+dw0\+\_\+t}}}
+
+\mbox{\Hypertarget{ni__nvme_8h_a8daa4721abba880e5ceebaeed504c797}\label{ni__nvme_8h_a8daa4721abba880e5ceebaeed504c797}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_close\_xcoder\_subtype\_t@{nvme\_close\_xcoder\_subtype\_t}}
+\index{nvme\_close\_xcoder\_subtype\_t@{nvme\_close\_xcoder\_subtype\_t}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{nvme\_close\_xcoder\_subtype\_t}{nvme\_close\_xcoder\_subtype\_t}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{ni__nvme_8h_ae70466377f57fad6c2e67b09ddd265cc}{\+\_\+nvme\+\_\+close\+\_\+xcoder\+\_\+subtype}}  \mbox{\hyperlink{ni__nvme_8h_a8daa4721abba880e5ceebaeed504c797}{nvme\+\_\+close\+\_\+xcoder\+\_\+subtype\+\_\+t}}}
+
+\mbox{\Hypertarget{ni__nvme_8h_ac7e47a10728009d50fb968aa58c9dae7}\label{ni__nvme_8h_ac7e47a10728009d50fb968aa58c9dae7}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_config\_xcoder\_config\_instance\_subtype\_t@{nvme\_config\_xcoder\_config\_instance\_subtype\_t}}
+\index{nvme\_config\_xcoder\_config\_instance\_subtype\_t@{nvme\_config\_xcoder\_config\_instance\_subtype\_t}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{nvme\_config\_xcoder\_config\_instance\_subtype\_t}{nvme\_config\_xcoder\_config\_instance\_subtype\_t}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{ni__nvme_8h_ad0937d1c212483fc3c89a2cf8187f60a}{\+\_\+nvme\+\_\+config\+\_\+xcoder\+\_\+config\+\_\+instance\+\_\+subtype}}  \mbox{\hyperlink{ni__nvme_8h_ac7e47a10728009d50fb968aa58c9dae7}{nvme\+\_\+config\+\_\+xcoder\+\_\+config\+\_\+instance\+\_\+subtype\+\_\+t}}}
+
+\mbox{\Hypertarget{ni__nvme_8h_acfcafe044bd77428e012bd5a6889c6cc}\label{ni__nvme_8h_acfcafe044bd77428e012bd5a6889c6cc}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_config\_xcoder\_subtype\_t@{nvme\_config\_xcoder\_subtype\_t}}
+\index{nvme\_config\_xcoder\_subtype\_t@{nvme\_config\_xcoder\_subtype\_t}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{nvme\_config\_xcoder\_subtype\_t}{nvme\_config\_xcoder\_subtype\_t}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{ni__nvme_8h_ab3a76de5ec80367749775c8b6414dfd8}{\+\_\+nvme\+\_\+config\+\_\+xcoder\+\_\+subtype}}  \mbox{\hyperlink{ni__nvme_8h_acfcafe044bd77428e012bd5a6889c6cc}{nvme\+\_\+config\+\_\+xcoder\+\_\+subtype\+\_\+t}}}
+
+\mbox{\Hypertarget{ni__nvme_8h_a050b89d456b26b4cc22c068cc765ea6d}\label{ni__nvme_8h_a050b89d456b26b4cc22c068cc765ea6d}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_open\_xcoder\_subtype\_t@{nvme\_open\_xcoder\_subtype\_t}}
+\index{nvme\_open\_xcoder\_subtype\_t@{nvme\_open\_xcoder\_subtype\_t}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{nvme\_open\_xcoder\_subtype\_t}{nvme\_open\_xcoder\_subtype\_t}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{ni__nvme_8h_ab2e68366a4957719494f9c76cc1f040c}{\+\_\+nvme\+\_\+open\+\_\+xcoder\+\_\+subtype}}  \mbox{\hyperlink{ni__nvme_8h_a050b89d456b26b4cc22c068cc765ea6d}{nvme\+\_\+open\+\_\+xcoder\+\_\+subtype\+\_\+t}}}
+
+\mbox{\Hypertarget{ni__nvme_8h_aadc6a9f5a74a48e5696f84623b69535d}\label{ni__nvme_8h_aadc6a9f5a74a48e5696f84623b69535d}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_query\_xcoder\_instance\_subtype\_t@{nvme\_query\_xcoder\_instance\_subtype\_t}}
+\index{nvme\_query\_xcoder\_instance\_subtype\_t@{nvme\_query\_xcoder\_instance\_subtype\_t}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{nvme\_query\_xcoder\_instance\_subtype\_t}{nvme\_query\_xcoder\_instance\_subtype\_t}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{ni__nvme_8h_a6879a530d25cb56f08446ca222f343b1}{\+\_\+nvme\+\_\+query\+\_\+xcoder\+\_\+instance\+\_\+subtype}}  \mbox{\hyperlink{ni__nvme_8h_aadc6a9f5a74a48e5696f84623b69535d}{nvme\+\_\+query\+\_\+xcoder\+\_\+instance\+\_\+subtype\+\_\+t}}}
+
+\mbox{\Hypertarget{ni__nvme_8h_aaf454816fcfa3b0a8a1eed27f5026edb}\label{ni__nvme_8h_aaf454816fcfa3b0a8a1eed27f5026edb}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_query\_xcoder\_session\_subtype\_t@{nvme\_query\_xcoder\_session\_subtype\_t}}
+\index{nvme\_query\_xcoder\_session\_subtype\_t@{nvme\_query\_xcoder\_session\_subtype\_t}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{nvme\_query\_xcoder\_session\_subtype\_t}{nvme\_query\_xcoder\_session\_subtype\_t}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{ni__nvme_8h_a7bea84559125ff607292b0ea8c331ded}{\+\_\+nvme\+\_\+query\+\_\+xcoder\+\_\+session\+\_\+subtype}}  \mbox{\hyperlink{ni__nvme_8h_aaf454816fcfa3b0a8a1eed27f5026edb}{nvme\+\_\+query\+\_\+xcoder\+\_\+session\+\_\+subtype\+\_\+t}}}
+
+\mbox{\Hypertarget{ni__nvme_8h_a0eaae4a15ac13728f36673bb2411e3e9}\label{ni__nvme_8h_a0eaae4a15ac13728f36673bb2411e3e9}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_query\_xcoder\_subtype\_t@{nvme\_query\_xcoder\_subtype\_t}}
+\index{nvme\_query\_xcoder\_subtype\_t@{nvme\_query\_xcoder\_subtype\_t}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{nvme\_query\_xcoder\_subtype\_t}{nvme\_query\_xcoder\_subtype\_t}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{ni__nvme_8h_a126edfa51257db8fc567a7c9f70e4ec2}{\+\_\+nvme\+\_\+query\+\_\+xcoder\+\_\+subtype}}  \mbox{\hyperlink{ni__nvme_8h_a0eaae4a15ac13728f36673bb2411e3e9}{nvme\+\_\+query\+\_\+xcoder\+\_\+subtype\+\_\+t}}}
+
+\mbox{\Hypertarget{ni__nvme_8h_aaa94339703010cb100bc5b70ebcc7f70}\label{ni__nvme_8h_aaa94339703010cb100bc5b70ebcc7f70}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_read\_xcoder\_subtype\_t@{nvme\_read\_xcoder\_subtype\_t}}
+\index{nvme\_read\_xcoder\_subtype\_t@{nvme\_read\_xcoder\_subtype\_t}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{nvme\_read\_xcoder\_subtype\_t}{nvme\_read\_xcoder\_subtype\_t}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{ni__nvme_8h_ae8deabce39265ad2c2a5fba08775a2a5}{\+\_\+nvme\+\_\+read\+\_\+xcoder\+\_\+subtype}}  \mbox{\hyperlink{ni__nvme_8h_aaa94339703010cb100bc5b70ebcc7f70}{nvme\+\_\+read\+\_\+xcoder\+\_\+subtype\+\_\+t}}}
+
+\mbox{\Hypertarget{ni__nvme_8h_a1b76af7b3387d249eb1deeca7c038599}\label{ni__nvme_8h_a1b76af7b3387d249eb1deeca7c038599}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_write\_xcoder\_subtype\_t@{nvme\_write\_xcoder\_subtype\_t}}
+\index{nvme\_write\_xcoder\_subtype\_t@{nvme\_write\_xcoder\_subtype\_t}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{nvme\_write\_xcoder\_subtype\_t}{nvme\_write\_xcoder\_subtype\_t}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{ni__nvme_8h_a3b171390b2698987c6989a414a69b37c}{\+\_\+nvme\+\_\+write\+\_\+xcoder\+\_\+subtype}}  \mbox{\hyperlink{ni__nvme_8h_a1b76af7b3387d249eb1deeca7c038599}{nvme\+\_\+write\+\_\+xcoder\+\_\+subtype\+\_\+t}}}
+
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6c}\label{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6c}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!\_ni\_nvme\_admin\_opcode@{\_ni\_nvme\_admin\_opcode}}
+\index{\_ni\_nvme\_admin\_opcode@{\_ni\_nvme\_admin\_opcode}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{\_ni\_nvme\_admin\_opcode}{\_ni\_nvme\_admin\_opcode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6c}{\+\_\+ni\+\_\+nvme\+\_\+admin\+\_\+opcode}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nvme\_admin\_cmd\_delete\_sq@{nvme\_admin\_cmd\_delete\_sq}!ni\_nvme.h@{ni\_nvme.h}}\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_admin\_cmd\_delete\_sq@{nvme\_admin\_cmd\_delete\_sq}}}\mbox{\Hypertarget{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6caa83dab9278cd05a12616d942297729d9}\label{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6caa83dab9278cd05a12616d942297729d9}} 
+nvme\+\_\+admin\+\_\+cmd\+\_\+delete\+\_\+sq&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nvme\_admin\_cmd\_create\_sq@{nvme\_admin\_cmd\_create\_sq}!ni\_nvme.h@{ni\_nvme.h}}\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_admin\_cmd\_create\_sq@{nvme\_admin\_cmd\_create\_sq}}}\mbox{\Hypertarget{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6cad2065cdfdefd9cf449bd27ecf2b5a36c}\label{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6cad2065cdfdefd9cf449bd27ecf2b5a36c}} 
+nvme\+\_\+admin\+\_\+cmd\+\_\+create\+\_\+sq&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nvme\_admin\_cmd\_get\_log\_page@{nvme\_admin\_cmd\_get\_log\_page}!ni\_nvme.h@{ni\_nvme.h}}\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_admin\_cmd\_get\_log\_page@{nvme\_admin\_cmd\_get\_log\_page}}}\mbox{\Hypertarget{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6caca5ffa0c1eb414d39cf7d41ed70dae14}\label{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6caca5ffa0c1eb414d39cf7d41ed70dae14}} 
+nvme\+\_\+admin\+\_\+cmd\+\_\+get\+\_\+log\+\_\+page&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nvme\_admin\_cmd\_delete\_cq@{nvme\_admin\_cmd\_delete\_cq}!ni\_nvme.h@{ni\_nvme.h}}\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_admin\_cmd\_delete\_cq@{nvme\_admin\_cmd\_delete\_cq}}}\mbox{\Hypertarget{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6ca903d6b43e35a2b4313fdf61a2c801b0b}\label{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6ca903d6b43e35a2b4313fdf61a2c801b0b}} 
+nvme\+\_\+admin\+\_\+cmd\+\_\+delete\+\_\+cq&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nvme\_admin\_cmd\_create\_cq@{nvme\_admin\_cmd\_create\_cq}!ni\_nvme.h@{ni\_nvme.h}}\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_admin\_cmd\_create\_cq@{nvme\_admin\_cmd\_create\_cq}}}\mbox{\Hypertarget{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6ca19f5c46d53b11a78126ceed55df86952}\label{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6ca19f5c46d53b11a78126ceed55df86952}} 
+nvme\+\_\+admin\+\_\+cmd\+\_\+create\+\_\+cq&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nvme\_admin\_cmd\_identify@{nvme\_admin\_cmd\_identify}!ni\_nvme.h@{ni\_nvme.h}}\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_admin\_cmd\_identify@{nvme\_admin\_cmd\_identify}}}\mbox{\Hypertarget{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6ca28f298110fd6fbaa69291bb698ea8ece}\label{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6ca28f298110fd6fbaa69291bb698ea8ece}} 
+nvme\+\_\+admin\+\_\+cmd\+\_\+identify&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nvme\_admin\_cmd\_abort\_cmd@{nvme\_admin\_cmd\_abort\_cmd}!ni\_nvme.h@{ni\_nvme.h}}\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_admin\_cmd\_abort\_cmd@{nvme\_admin\_cmd\_abort\_cmd}}}\mbox{\Hypertarget{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6ca53c881884feee9c86a4ae7e61d18d75a}\label{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6ca53c881884feee9c86a4ae7e61d18d75a}} 
+nvme\+\_\+admin\+\_\+cmd\+\_\+abort\+\_\+cmd&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nvme\_admin\_cmd\_set\_features@{nvme\_admin\_cmd\_set\_features}!ni\_nvme.h@{ni\_nvme.h}}\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_admin\_cmd\_set\_features@{nvme\_admin\_cmd\_set\_features}}}\mbox{\Hypertarget{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6ca350e686ad8e22d1e477b74671aa01190}\label{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6ca350e686ad8e22d1e477b74671aa01190}} 
+nvme\+\_\+admin\+\_\+cmd\+\_\+set\+\_\+features&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nvme\_admin\_cmd\_get\_features@{nvme\_admin\_cmd\_get\_features}!ni\_nvme.h@{ni\_nvme.h}}\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_admin\_cmd\_get\_features@{nvme\_admin\_cmd\_get\_features}}}\mbox{\Hypertarget{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6cad9563fbfb87959f73b34e9189191e12f}\label{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6cad9563fbfb87959f73b34e9189191e12f}} 
+nvme\+\_\+admin\+\_\+cmd\+\_\+get\+\_\+features&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nvme\_admin\_cmd\_async\_event@{nvme\_admin\_cmd\_async\_event}!ni\_nvme.h@{ni\_nvme.h}}\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_admin\_cmd\_async\_event@{nvme\_admin\_cmd\_async\_event}}}\mbox{\Hypertarget{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6ca3238db0f8816116a80fec6f80066fbb0}\label{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6ca3238db0f8816116a80fec6f80066fbb0}} 
+nvme\+\_\+admin\+\_\+cmd\+\_\+async\+\_\+event&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nvme\_admin\_cmd\_ns\_mgmt@{nvme\_admin\_cmd\_ns\_mgmt}!ni\_nvme.h@{ni\_nvme.h}}\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_admin\_cmd\_ns\_mgmt@{nvme\_admin\_cmd\_ns\_mgmt}}}\mbox{\Hypertarget{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6cadb09c98376403798841db1897d3161c9}\label{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6cadb09c98376403798841db1897d3161c9}} 
+nvme\+\_\+admin\+\_\+cmd\+\_\+ns\+\_\+mgmt&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nvme\_admin\_cmd\_activate\_fw@{nvme\_admin\_cmd\_activate\_fw}!ni\_nvme.h@{ni\_nvme.h}}\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_admin\_cmd\_activate\_fw@{nvme\_admin\_cmd\_activate\_fw}}}\mbox{\Hypertarget{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6ca91acdc0d8c98a389f085ea633bc76d9a}\label{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6ca91acdc0d8c98a389f085ea633bc76d9a}} 
+nvme\+\_\+admin\+\_\+cmd\+\_\+activate\+\_\+fw&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nvme\_admin\_cmd\_download\_fw@{nvme\_admin\_cmd\_download\_fw}!ni\_nvme.h@{ni\_nvme.h}}\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_admin\_cmd\_download\_fw@{nvme\_admin\_cmd\_download\_fw}}}\mbox{\Hypertarget{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6cabaa1e57a088127a91b26839fcc0de353}\label{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6cabaa1e57a088127a91b26839fcc0de353}} 
+nvme\+\_\+admin\+\_\+cmd\+\_\+download\+\_\+fw&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nvme\_admin\_cmd\_ns\_attach@{nvme\_admin\_cmd\_ns\_attach}!ni\_nvme.h@{ni\_nvme.h}}\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_admin\_cmd\_ns\_attach@{nvme\_admin\_cmd\_ns\_attach}}}\mbox{\Hypertarget{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6ca3dd234c5d37de14d510e56592ceabb3b}\label{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6ca3dd234c5d37de14d510e56592ceabb3b}} 
+nvme\+\_\+admin\+\_\+cmd\+\_\+ns\+\_\+attach&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nvme\_admin\_cmd\_keep\_alive@{nvme\_admin\_cmd\_keep\_alive}!ni\_nvme.h@{ni\_nvme.h}}\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_admin\_cmd\_keep\_alive@{nvme\_admin\_cmd\_keep\_alive}}}\mbox{\Hypertarget{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6ca4b829d8a3a2dff8bd2cb93972e49b2d9}\label{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6ca4b829d8a3a2dff8bd2cb93972e49b2d9}} 
+nvme\+\_\+admin\+\_\+cmd\+\_\+keep\+\_\+alive&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nvme\_admin\_cmd\_format\_nvm@{nvme\_admin\_cmd\_format\_nvm}!ni\_nvme.h@{ni\_nvme.h}}\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_admin\_cmd\_format\_nvm@{nvme\_admin\_cmd\_format\_nvm}}}\mbox{\Hypertarget{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6caa2126a0813e487bb85fffd18a0343af3}\label{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6caa2126a0813e487bb85fffd18a0343af3}} 
+nvme\+\_\+admin\+\_\+cmd\+\_\+format\+\_\+nvm&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nvme\_admin\_cmd\_security\_send@{nvme\_admin\_cmd\_security\_send}!ni\_nvme.h@{ni\_nvme.h}}\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_admin\_cmd\_security\_send@{nvme\_admin\_cmd\_security\_send}}}\mbox{\Hypertarget{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6cad5206a95e684760b5bf8731226bd20e3}\label{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6cad5206a95e684760b5bf8731226bd20e3}} 
+nvme\+\_\+admin\+\_\+cmd\+\_\+security\+\_\+send&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nvme\_admin\_cmd\_security\_recv@{nvme\_admin\_cmd\_security\_recv}!ni\_nvme.h@{ni\_nvme.h}}\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_admin\_cmd\_security\_recv@{nvme\_admin\_cmd\_security\_recv}}}\mbox{\Hypertarget{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6cae3b778b6a730855bd1eed92251ee00fb}\label{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6cae3b778b6a730855bd1eed92251ee00fb}} 
+nvme\+\_\+admin\+\_\+cmd\+\_\+security\+\_\+recv&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nvme\_admin\_cmd\_xcoder\_open@{nvme\_admin\_cmd\_xcoder\_open}!ni\_nvme.h@{ni\_nvme.h}}\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_admin\_cmd\_xcoder\_open@{nvme\_admin\_cmd\_xcoder\_open}}}\mbox{\Hypertarget{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6ca74126991add2fea356c9c428f7c59471}\label{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6ca74126991add2fea356c9c428f7c59471}} 
+nvme\+\_\+admin\+\_\+cmd\+\_\+xcoder\+\_\+open&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nvme\_admin\_cmd\_xcoder\_close@{nvme\_admin\_cmd\_xcoder\_close}!ni\_nvme.h@{ni\_nvme.h}}\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_admin\_cmd\_xcoder\_close@{nvme\_admin\_cmd\_xcoder\_close}}}\mbox{\Hypertarget{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6ca9aafda524f000f52ae25a1eff8ba0308}\label{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6ca9aafda524f000f52ae25a1eff8ba0308}} 
+nvme\+\_\+admin\+\_\+cmd\+\_\+xcoder\+\_\+close&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nvme\_admin\_cmd\_xcoder\_query@{nvme\_admin\_cmd\_xcoder\_query}!ni\_nvme.h@{ni\_nvme.h}}\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_admin\_cmd\_xcoder\_query@{nvme\_admin\_cmd\_xcoder\_query}}}\mbox{\Hypertarget{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6ca774afc262ef3c0678119230d3862b5c8}\label{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6ca774afc262ef3c0678119230d3862b5c8}} 
+nvme\+\_\+admin\+\_\+cmd\+\_\+xcoder\+\_\+query&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nvme\_admin\_cmd\_xcoder\_connect@{nvme\_admin\_cmd\_xcoder\_connect}!ni\_nvme.h@{ni\_nvme.h}}\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_admin\_cmd\_xcoder\_connect@{nvme\_admin\_cmd\_xcoder\_connect}}}\mbox{\Hypertarget{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6cadc4a7bc90d88d704645f03ea5da14317}\label{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6cadc4a7bc90d88d704645f03ea5da14317}} 
+nvme\+\_\+admin\+\_\+cmd\+\_\+xcoder\+\_\+connect&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nvme\_admin\_cmd\_xcoder\_read@{nvme\_admin\_cmd\_xcoder\_read}!ni\_nvme.h@{ni\_nvme.h}}\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_admin\_cmd\_xcoder\_read@{nvme\_admin\_cmd\_xcoder\_read}}}\mbox{\Hypertarget{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6ca7e927c208ca65f4980c358bbf64cc8f2}\label{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6ca7e927c208ca65f4980c358bbf64cc8f2}} 
+nvme\+\_\+admin\+\_\+cmd\+\_\+xcoder\+\_\+read&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nvme\_admin\_cmd\_xcoder\_write@{nvme\_admin\_cmd\_xcoder\_write}!ni\_nvme.h@{ni\_nvme.h}}\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_admin\_cmd\_xcoder\_write@{nvme\_admin\_cmd\_xcoder\_write}}}\mbox{\Hypertarget{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6cac54ddf8e257d3f5941817be582e07aad}\label{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6cac54ddf8e257d3f5941817be582e07aad}} 
+nvme\+\_\+admin\+\_\+cmd\+\_\+xcoder\+\_\+write&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nvme\_admin\_cmd\_xcoder\_config@{nvme\_admin\_cmd\_xcoder\_config}!ni\_nvme.h@{ni\_nvme.h}}\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_admin\_cmd\_xcoder\_config@{nvme\_admin\_cmd\_xcoder\_config}}}\mbox{\Hypertarget{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6ca3b315b1c29834af85fc69f8b85a5b711}\label{ni__nvme_8h_a17a0cec03abc8d9d6926a9a34c978b6ca3b315b1c29834af85fc69f8b85a5b711}} 
+nvme\+\_\+admin\+\_\+cmd\+\_\+xcoder\+\_\+config&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 232 of file ni\+\_\+nvme.\+h.
+
+\mbox{\Hypertarget{ni__nvme_8h_a38558e9c6ef1bec10cc03acbdeb93a05}\label{ni__nvme_8h_a38558e9c6ef1bec10cc03acbdeb93a05}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!\_ni\_nvme\_opcode@{\_ni\_nvme\_opcode}}
+\index{\_ni\_nvme\_opcode@{\_ni\_nvme\_opcode}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{\_ni\_nvme\_opcode}{\_ni\_nvme\_opcode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{ni__nvme_8h_a38558e9c6ef1bec10cc03acbdeb93a05}{\+\_\+ni\+\_\+nvme\+\_\+opcode}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nvme\_cmd\_flush@{nvme\_cmd\_flush}!ni\_nvme.h@{ni\_nvme.h}}\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_cmd\_flush@{nvme\_cmd\_flush}}}\mbox{\Hypertarget{ni__nvme_8h_a38558e9c6ef1bec10cc03acbdeb93a05a647dbe630c1444a17c89942e87dd72a8}\label{ni__nvme_8h_a38558e9c6ef1bec10cc03acbdeb93a05a647dbe630c1444a17c89942e87dd72a8}} 
+nvme\+\_\+cmd\+\_\+flush&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nvme\_cmd\_write@{nvme\_cmd\_write}!ni\_nvme.h@{ni\_nvme.h}}\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_cmd\_write@{nvme\_cmd\_write}}}\mbox{\Hypertarget{ni__nvme_8h_a38558e9c6ef1bec10cc03acbdeb93a05a5129a432a595e671a7e2b02b20916e6c}\label{ni__nvme_8h_a38558e9c6ef1bec10cc03acbdeb93a05a5129a432a595e671a7e2b02b20916e6c}} 
+nvme\+\_\+cmd\+\_\+write&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nvme\_cmd\_read@{nvme\_cmd\_read}!ni\_nvme.h@{ni\_nvme.h}}\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_cmd\_read@{nvme\_cmd\_read}}}\mbox{\Hypertarget{ni__nvme_8h_a38558e9c6ef1bec10cc03acbdeb93a05aa9dcd0454a2007fdc8b4acdfab2e72b8}\label{ni__nvme_8h_a38558e9c6ef1bec10cc03acbdeb93a05aa9dcd0454a2007fdc8b4acdfab2e72b8}} 
+nvme\+\_\+cmd\+\_\+read&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nvme\_cmd\_write\_uncor@{nvme\_cmd\_write\_uncor}!ni\_nvme.h@{ni\_nvme.h}}\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_cmd\_write\_uncor@{nvme\_cmd\_write\_uncor}}}\mbox{\Hypertarget{ni__nvme_8h_a38558e9c6ef1bec10cc03acbdeb93a05a08d2c425688748d98556f1b0b808210b}\label{ni__nvme_8h_a38558e9c6ef1bec10cc03acbdeb93a05a08d2c425688748d98556f1b0b808210b}} 
+nvme\+\_\+cmd\+\_\+write\+\_\+uncor&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nvme\_cmd\_compare@{nvme\_cmd\_compare}!ni\_nvme.h@{ni\_nvme.h}}\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_cmd\_compare@{nvme\_cmd\_compare}}}\mbox{\Hypertarget{ni__nvme_8h_a38558e9c6ef1bec10cc03acbdeb93a05a9ace53ed2cdc07dc1be53f823ba11f3f}\label{ni__nvme_8h_a38558e9c6ef1bec10cc03acbdeb93a05a9ace53ed2cdc07dc1be53f823ba11f3f}} 
+nvme\+\_\+cmd\+\_\+compare&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nvme\_cmd\_write\_zeroes@{nvme\_cmd\_write\_zeroes}!ni\_nvme.h@{ni\_nvme.h}}\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_cmd\_write\_zeroes@{nvme\_cmd\_write\_zeroes}}}\mbox{\Hypertarget{ni__nvme_8h_a38558e9c6ef1bec10cc03acbdeb93a05a68f6a37f1c0dc31c7956251800c8fec1}\label{ni__nvme_8h_a38558e9c6ef1bec10cc03acbdeb93a05a68f6a37f1c0dc31c7956251800c8fec1}} 
+nvme\+\_\+cmd\+\_\+write\+\_\+zeroes&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nvme\_cmd\_dsm@{nvme\_cmd\_dsm}!ni\_nvme.h@{ni\_nvme.h}}\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_cmd\_dsm@{nvme\_cmd\_dsm}}}\mbox{\Hypertarget{ni__nvme_8h_a38558e9c6ef1bec10cc03acbdeb93a05af5d1da9050149adb7e24cff76559007c}\label{ni__nvme_8h_a38558e9c6ef1bec10cc03acbdeb93a05af5d1da9050149adb7e24cff76559007c}} 
+nvme\+\_\+cmd\+\_\+dsm&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nvme\_cmd\_resv\_register@{nvme\_cmd\_resv\_register}!ni\_nvme.h@{ni\_nvme.h}}\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_cmd\_resv\_register@{nvme\_cmd\_resv\_register}}}\mbox{\Hypertarget{ni__nvme_8h_a38558e9c6ef1bec10cc03acbdeb93a05a2df874a47a0967722dba45f237f34b62}\label{ni__nvme_8h_a38558e9c6ef1bec10cc03acbdeb93a05a2df874a47a0967722dba45f237f34b62}} 
+nvme\+\_\+cmd\+\_\+resv\+\_\+register&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nvme\_cmd\_resv\_report@{nvme\_cmd\_resv\_report}!ni\_nvme.h@{ni\_nvme.h}}\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_cmd\_resv\_report@{nvme\_cmd\_resv\_report}}}\mbox{\Hypertarget{ni__nvme_8h_a38558e9c6ef1bec10cc03acbdeb93a05ad9f20882974066bbf5ce9e57c9c1bc45}\label{ni__nvme_8h_a38558e9c6ef1bec10cc03acbdeb93a05ad9f20882974066bbf5ce9e57c9c1bc45}} 
+nvme\+\_\+cmd\+\_\+resv\+\_\+report&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nvme\_cmd\_resv\_acquire@{nvme\_cmd\_resv\_acquire}!ni\_nvme.h@{ni\_nvme.h}}\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_cmd\_resv\_acquire@{nvme\_cmd\_resv\_acquire}}}\mbox{\Hypertarget{ni__nvme_8h_a38558e9c6ef1bec10cc03acbdeb93a05a4cd61b5eed2e3c86ae84ac8364884bea}\label{ni__nvme_8h_a38558e9c6ef1bec10cc03acbdeb93a05a4cd61b5eed2e3c86ae84ac8364884bea}} 
+nvme\+\_\+cmd\+\_\+resv\+\_\+acquire&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nvme\_cmd\_resv\_release@{nvme\_cmd\_resv\_release}!ni\_nvme.h@{ni\_nvme.h}}\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_cmd\_resv\_release@{nvme\_cmd\_resv\_release}}}\mbox{\Hypertarget{ni__nvme_8h_a38558e9c6ef1bec10cc03acbdeb93a05a36ffa8150f6ee06ea434a6e6ce63f6c8}\label{ni__nvme_8h_a38558e9c6ef1bec10cc03acbdeb93a05a36ffa8150f6ee06ea434a6e6ce63f6c8}} 
+nvme\+\_\+cmd\+\_\+resv\+\_\+release&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nvme\_cmd\_xcoder\_write@{nvme\_cmd\_xcoder\_write}!ni\_nvme.h@{ni\_nvme.h}}\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_cmd\_xcoder\_write@{nvme\_cmd\_xcoder\_write}}}\mbox{\Hypertarget{ni__nvme_8h_a38558e9c6ef1bec10cc03acbdeb93a05a0d73d803ca4d06860a4301f8dcfacf1e}\label{ni__nvme_8h_a38558e9c6ef1bec10cc03acbdeb93a05a0d73d803ca4d06860a4301f8dcfacf1e}} 
+nvme\+\_\+cmd\+\_\+xcoder\+\_\+write&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nvme\_cmd\_xcoder\_read@{nvme\_cmd\_xcoder\_read}!ni\_nvme.h@{ni\_nvme.h}}\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_cmd\_xcoder\_read@{nvme\_cmd\_xcoder\_read}}}\mbox{\Hypertarget{ni__nvme_8h_a38558e9c6ef1bec10cc03acbdeb93a05ac2318a6ebd6ba2c3d85c8ae9e7fda5f2}\label{ni__nvme_8h_a38558e9c6ef1bec10cc03acbdeb93a05ac2318a6ebd6ba2c3d85c8ae9e7fda5f2}} 
+nvme\+\_\+cmd\+\_\+xcoder\+\_\+read&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 261 of file ni\+\_\+nvme.\+h.
+
+\mbox{\Hypertarget{ni__nvme_8h_ae70466377f57fad6c2e67b09ddd265cc}\label{ni__nvme_8h_ae70466377f57fad6c2e67b09ddd265cc}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!\_nvme\_close\_xcoder\_subtype@{\_nvme\_close\_xcoder\_subtype}}
+\index{\_nvme\_close\_xcoder\_subtype@{\_nvme\_close\_xcoder\_subtype}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{\_nvme\_close\_xcoder\_subtype}{\_nvme\_close\_xcoder\_subtype}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{ni__nvme_8h_ae70466377f57fad6c2e67b09ddd265cc}{\+\_\+nvme\+\_\+close\+\_\+xcoder\+\_\+subtype}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nvme\_close\_xcoder\_destroy\_session@{nvme\_close\_xcoder\_destroy\_session}!ni\_nvme.h@{ni\_nvme.h}}\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_close\_xcoder\_destroy\_session@{nvme\_close\_xcoder\_destroy\_session}}}\mbox{\Hypertarget{ni__nvme_8h_ae70466377f57fad6c2e67b09ddd265ccae055abf22514c7793d2a56fa1a305376}\label{ni__nvme_8h_ae70466377f57fad6c2e67b09ddd265ccae055abf22514c7793d2a56fa1a305376}} 
+nvme\+\_\+close\+\_\+xcoder\+\_\+destroy\+\_\+session&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 283 of file ni\+\_\+nvme.\+h.
+
+\mbox{\Hypertarget{ni__nvme_8h_ad0937d1c212483fc3c89a2cf8187f60a}\label{ni__nvme_8h_ad0937d1c212483fc3c89a2cf8187f60a}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!\_nvme\_config\_xcoder\_config\_instance\_subtype@{\_nvme\_config\_xcoder\_config\_instance\_subtype}}
+\index{\_nvme\_config\_xcoder\_config\_instance\_subtype@{\_nvme\_config\_xcoder\_config\_instance\_subtype}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{\_nvme\_config\_xcoder\_config\_instance\_subtype}{\_nvme\_config\_xcoder\_config\_instance\_subtype}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{ni__nvme_8h_ad0937d1c212483fc3c89a2cf8187f60a}{\+\_\+nvme\+\_\+config\+\_\+xcoder\+\_\+config\+\_\+instance\+\_\+subtype}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nvme\_config\_xcoder\_config\_set\_sos@{nvme\_config\_xcoder\_config\_set\_sos}!ni\_nvme.h@{ni\_nvme.h}}\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_config\_xcoder\_config\_set\_sos@{nvme\_config\_xcoder\_config\_set\_sos}}}\mbox{\Hypertarget{ni__nvme_8h_ad0937d1c212483fc3c89a2cf8187f60aa8bf9bcc44f63f1df22a61c33e3cfdd00}\label{ni__nvme_8h_ad0937d1c212483fc3c89a2cf8187f60aa8bf9bcc44f63f1df22a61c33e3cfdd00}} 
+nvme\+\_\+config\+\_\+xcoder\+\_\+config\+\_\+set\+\_\+sos&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nvme\_config\_xcoder\_config\_set\_eos@{nvme\_config\_xcoder\_config\_set\_eos}!ni\_nvme.h@{ni\_nvme.h}}\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_config\_xcoder\_config\_set\_eos@{nvme\_config\_xcoder\_config\_set\_eos}}}\mbox{\Hypertarget{ni__nvme_8h_ad0937d1c212483fc3c89a2cf8187f60aac9d61fcad60f2c0cf72058088b29020d}\label{ni__nvme_8h_ad0937d1c212483fc3c89a2cf8187f60aac9d61fcad60f2c0cf72058088b29020d}} 
+nvme\+\_\+config\+\_\+xcoder\+\_\+config\+\_\+set\+\_\+eos&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nvme\_config\_xcoder\_config\_set\_enc\_params@{nvme\_config\_xcoder\_config\_set\_enc\_params}!ni\_nvme.h@{ni\_nvme.h}}\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_config\_xcoder\_config\_set\_enc\_params@{nvme\_config\_xcoder\_config\_set\_enc\_params}}}\mbox{\Hypertarget{ni__nvme_8h_ad0937d1c212483fc3c89a2cf8187f60aa49929e0ce9e39198a1317c18efb48b7d}\label{ni__nvme_8h_ad0937d1c212483fc3c89a2cf8187f60aa49929e0ce9e39198a1317c18efb48b7d}} 
+nvme\+\_\+config\+\_\+xcoder\+\_\+config\+\_\+set\+\_\+enc\+\_\+params&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nvme\_config\_xcoder\_config\_flush@{nvme\_config\_xcoder\_config\_flush}!ni\_nvme.h@{ni\_nvme.h}}\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_config\_xcoder\_config\_flush@{nvme\_config\_xcoder\_config\_flush}}}\mbox{\Hypertarget{ni__nvme_8h_ad0937d1c212483fc3c89a2cf8187f60aa940fc9c67623edf3c82511708fb2ee97}\label{ni__nvme_8h_ad0937d1c212483fc3c89a2cf8187f60aa940fc9c67623edf3c82511708fb2ee97}} 
+nvme\+\_\+config\+\_\+xcoder\+\_\+config\+\_\+flush&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nvme\_config\_xcoder\_config\_update\_enc\_params@{nvme\_config\_xcoder\_config\_update\_enc\_params}!ni\_nvme.h@{ni\_nvme.h}}\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_config\_xcoder\_config\_update\_enc\_params@{nvme\_config\_xcoder\_config\_update\_enc\_params}}}\mbox{\Hypertarget{ni__nvme_8h_ad0937d1c212483fc3c89a2cf8187f60aab61efd90132c1dd7f0b75a2cf75b3e68}\label{ni__nvme_8h_ad0937d1c212483fc3c89a2cf8187f60aab61efd90132c1dd7f0b75a2cf75b3e68}} 
+nvme\+\_\+config\+\_\+xcoder\+\_\+config\+\_\+update\+\_\+enc\+\_\+params&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nvme\_config\_xcoder\_config\_set\_enc\_frame\_params@{nvme\_config\_xcoder\_config\_set\_enc\_frame\_params}!ni\_nvme.h@{ni\_nvme.h}}\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_config\_xcoder\_config\_set\_enc\_frame\_params@{nvme\_config\_xcoder\_config\_set\_enc\_frame\_params}}}\mbox{\Hypertarget{ni__nvme_8h_ad0937d1c212483fc3c89a2cf8187f60aacb3d6ad5e6b13f783ba45e3c2d4a560a}\label{ni__nvme_8h_ad0937d1c212483fc3c89a2cf8187f60aacb3d6ad5e6b13f783ba45e3c2d4a560a}} 
+nvme\+\_\+config\+\_\+xcoder\+\_\+config\+\_\+set\+\_\+enc\+\_\+frame\+\_\+params&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 322 of file ni\+\_\+nvme.\+h.
+
+\mbox{\Hypertarget{ni__nvme_8h_ab3a76de5ec80367749775c8b6414dfd8}\label{ni__nvme_8h_ab3a76de5ec80367749775c8b6414dfd8}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!\_nvme\_config\_xcoder\_subtype@{\_nvme\_config\_xcoder\_subtype}}
+\index{\_nvme\_config\_xcoder\_subtype@{\_nvme\_config\_xcoder\_subtype}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{\_nvme\_config\_xcoder\_subtype}{\_nvme\_config\_xcoder\_subtype}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{ni__nvme_8h_ab3a76de5ec80367749775c8b6414dfd8}{\+\_\+nvme\+\_\+config\+\_\+xcoder\+\_\+subtype}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nvme\_config\_xcoder\_config\_session@{nvme\_config\_xcoder\_config\_session}!ni\_nvme.h@{ni\_nvme.h}}\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_config\_xcoder\_config\_session@{nvme\_config\_xcoder\_config\_session}}}\mbox{\Hypertarget{ni__nvme_8h_ab3a76de5ec80367749775c8b6414dfd8a1e69f539e834271bb14c093bc5f91fef}\label{ni__nvme_8h_ab3a76de5ec80367749775c8b6414dfd8a1e69f539e834271bb14c093bc5f91fef}} 
+nvme\+\_\+config\+\_\+xcoder\+\_\+config\+\_\+session&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nvme\_config\_xcoder\_config\_instance@{nvme\_config\_xcoder\_config\_instance}!ni\_nvme.h@{ni\_nvme.h}}\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_config\_xcoder\_config\_instance@{nvme\_config\_xcoder\_config\_instance}}}\mbox{\Hypertarget{ni__nvme_8h_ab3a76de5ec80367749775c8b6414dfd8af2151af1c0c4833fbede9edea47323d7}\label{ni__nvme_8h_ab3a76de5ec80367749775c8b6414dfd8af2151af1c0c4833fbede9edea47323d7}} 
+nvme\+\_\+config\+\_\+xcoder\+\_\+config\+\_\+instance&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 316 of file ni\+\_\+nvme.\+h.
+
+\mbox{\Hypertarget{ni__nvme_8h_ab2e68366a4957719494f9c76cc1f040c}\label{ni__nvme_8h_ab2e68366a4957719494f9c76cc1f040c}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!\_nvme\_open\_xcoder\_subtype@{\_nvme\_open\_xcoder\_subtype}}
+\index{\_nvme\_open\_xcoder\_subtype@{\_nvme\_open\_xcoder\_subtype}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{\_nvme\_open\_xcoder\_subtype}{\_nvme\_open\_xcoder\_subtype}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{ni__nvme_8h_ab2e68366a4957719494f9c76cc1f040c}{\+\_\+nvme\+\_\+open\+\_\+xcoder\+\_\+subtype}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nvme\_open\_xcoder\_create\_session@{nvme\_open\_xcoder\_create\_session}!ni\_nvme.h@{ni\_nvme.h}}\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_open\_xcoder\_create\_session@{nvme\_open\_xcoder\_create\_session}}}\mbox{\Hypertarget{ni__nvme_8h_ab2e68366a4957719494f9c76cc1f040ca55abfb5760653f21ecab6c0da2c4aac0}\label{ni__nvme_8h_ab2e68366a4957719494f9c76cc1f040ca55abfb5760653f21ecab6c0da2c4aac0}} 
+nvme\+\_\+open\+\_\+xcoder\+\_\+create\+\_\+session&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 278 of file ni\+\_\+nvme.\+h.
+
+\mbox{\Hypertarget{ni__nvme_8h_a6879a530d25cb56f08446ca222f343b1}\label{ni__nvme_8h_a6879a530d25cb56f08446ca222f343b1}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!\_nvme\_query\_xcoder\_instance\_subtype@{\_nvme\_query\_xcoder\_instance\_subtype}}
+\index{\_nvme\_query\_xcoder\_instance\_subtype@{\_nvme\_query\_xcoder\_instance\_subtype}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{\_nvme\_query\_xcoder\_instance\_subtype}{\_nvme\_query\_xcoder\_instance\_subtype}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{ni__nvme_8h_a6879a530d25cb56f08446ca222f343b1}{\+\_\+nvme\+\_\+query\+\_\+xcoder\+\_\+instance\+\_\+subtype}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nvme\_query\_xcoder\_instance\_get\_status@{nvme\_query\_xcoder\_instance\_get\_status}!ni\_nvme.h@{ni\_nvme.h}}\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_query\_xcoder\_instance\_get\_status@{nvme\_query\_xcoder\_instance\_get\_status}}}\mbox{\Hypertarget{ni__nvme_8h_a6879a530d25cb56f08446ca222f343b1a0a4637eb990decb7d3fcb1f53baf27d7}\label{ni__nvme_8h_a6879a530d25cb56f08446ca222f343b1a0a4637eb990decb7d3fcb1f53baf27d7}} 
+nvme\+\_\+query\+\_\+xcoder\+\_\+instance\+\_\+get\+\_\+status&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nvme\_query\_xcoder\_instance\_get\_stream\_info@{nvme\_query\_xcoder\_instance\_get\_stream\_info}!ni\_nvme.h@{ni\_nvme.h}}\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_query\_xcoder\_instance\_get\_stream\_info@{nvme\_query\_xcoder\_instance\_get\_stream\_info}}}\mbox{\Hypertarget{ni__nvme_8h_a6879a530d25cb56f08446ca222f343b1a75db85ab652a195c391730022e4f818d}\label{ni__nvme_8h_a6879a530d25cb56f08446ca222f343b1a75db85ab652a195c391730022e4f818d}} 
+nvme\+\_\+query\+\_\+xcoder\+\_\+instance\+\_\+get\+\_\+stream\+\_\+info&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nvme\_query\_xcoder\_instance\_get\_end\_of\_output@{nvme\_query\_xcoder\_instance\_get\_end\_of\_output}!ni\_nvme.h@{ni\_nvme.h}}\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_query\_xcoder\_instance\_get\_end\_of\_output@{nvme\_query\_xcoder\_instance\_get\_end\_of\_output}}}\mbox{\Hypertarget{ni__nvme_8h_a6879a530d25cb56f08446ca222f343b1a8979f4b3eab897be7b0943a9f1877cfb}\label{ni__nvme_8h_a6879a530d25cb56f08446ca222f343b1a8979f4b3eab897be7b0943a9f1877cfb}} 
+nvme\+\_\+query\+\_\+xcoder\+\_\+instance\+\_\+get\+\_\+end\+\_\+of\+\_\+output&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 309 of file ni\+\_\+nvme.\+h.
+
+\mbox{\Hypertarget{ni__nvme_8h_a7bea84559125ff607292b0ea8c331ded}\label{ni__nvme_8h_a7bea84559125ff607292b0ea8c331ded}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!\_nvme\_query\_xcoder\_session\_subtype@{\_nvme\_query\_xcoder\_session\_subtype}}
+\index{\_nvme\_query\_xcoder\_session\_subtype@{\_nvme\_query\_xcoder\_session\_subtype}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{\_nvme\_query\_xcoder\_session\_subtype}{\_nvme\_query\_xcoder\_session\_subtype}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{ni__nvme_8h_a7bea84559125ff607292b0ea8c331ded}{\+\_\+nvme\+\_\+query\+\_\+xcoder\+\_\+session\+\_\+subtype}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nvme\_query\_xcoder\_session@{nvme\_query\_xcoder\_session}!ni\_nvme.h@{ni\_nvme.h}}\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_query\_xcoder\_session@{nvme\_query\_xcoder\_session}}}\mbox{\Hypertarget{ni__nvme_8h_a7bea84559125ff607292b0ea8c331deda7d2a922489d0003837768136004ed6db}\label{ni__nvme_8h_a7bea84559125ff607292b0ea8c331deda7d2a922489d0003837768136004ed6db}} 
+nvme\+\_\+query\+\_\+xcoder\+\_\+session&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 304 of file ni\+\_\+nvme.\+h.
+
+\mbox{\Hypertarget{ni__nvme_8h_a126edfa51257db8fc567a7c9f70e4ec2}\label{ni__nvme_8h_a126edfa51257db8fc567a7c9f70e4ec2}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!\_nvme\_query\_xcoder\_subtype@{\_nvme\_query\_xcoder\_subtype}}
+\index{\_nvme\_query\_xcoder\_subtype@{\_nvme\_query\_xcoder\_subtype}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{\_nvme\_query\_xcoder\_subtype}{\_nvme\_query\_xcoder\_subtype}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{ni__nvme_8h_a126edfa51257db8fc567a7c9f70e4ec2}{\+\_\+nvme\+\_\+query\+\_\+xcoder\+\_\+subtype}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nvme\_query\_xcoder\_query\_session@{nvme\_query\_xcoder\_query\_session}!ni\_nvme.h@{ni\_nvme.h}}\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_query\_xcoder\_query\_session@{nvme\_query\_xcoder\_query\_session}}}\mbox{\Hypertarget{ni__nvme_8h_a126edfa51257db8fc567a7c9f70e4ec2a3fa8fb71e2b05aea5e2527c287c382cd}\label{ni__nvme_8h_a126edfa51257db8fc567a7c9f70e4ec2a3fa8fb71e2b05aea5e2527c287c382cd}} 
+nvme\+\_\+query\+\_\+xcoder\+\_\+query\+\_\+session&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nvme\_query\_xcoder\_query\_instance@{nvme\_query\_xcoder\_query\_instance}!ni\_nvme.h@{ni\_nvme.h}}\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_query\_xcoder\_query\_instance@{nvme\_query\_xcoder\_query\_instance}}}\mbox{\Hypertarget{ni__nvme_8h_a126edfa51257db8fc567a7c9f70e4ec2a7f8c90f94f78a29908782da057e73d49}\label{ni__nvme_8h_a126edfa51257db8fc567a7c9f70e4ec2a7f8c90f94f78a29908782da057e73d49}} 
+nvme\+\_\+query\+\_\+xcoder\+\_\+query\+\_\+instance&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 298 of file ni\+\_\+nvme.\+h.
+
+\mbox{\Hypertarget{ni__nvme_8h_ae8deabce39265ad2c2a5fba08775a2a5}\label{ni__nvme_8h_ae8deabce39265ad2c2a5fba08775a2a5}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!\_nvme\_read\_xcoder\_subtype@{\_nvme\_read\_xcoder\_subtype}}
+\index{\_nvme\_read\_xcoder\_subtype@{\_nvme\_read\_xcoder\_subtype}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{\_nvme\_read\_xcoder\_subtype}{\_nvme\_read\_xcoder\_subtype}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{ni__nvme_8h_ae8deabce39265ad2c2a5fba08775a2a5}{\+\_\+nvme\+\_\+read\+\_\+xcoder\+\_\+subtype}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nvme\_read\_xcoder\_read\_instance@{nvme\_read\_xcoder\_read\_instance}!ni\_nvme.h@{ni\_nvme.h}}\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_read\_xcoder\_read\_instance@{nvme\_read\_xcoder\_read\_instance}}}\mbox{\Hypertarget{ni__nvme_8h_ae8deabce39265ad2c2a5fba08775a2a5a143421e7b35b36c5edd2122ad2ce78d5}\label{ni__nvme_8h_ae8deabce39265ad2c2a5fba08775a2a5a143421e7b35b36c5edd2122ad2ce78d5}} 
+nvme\+\_\+read\+\_\+xcoder\+\_\+read\+\_\+instance&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 288 of file ni\+\_\+nvme.\+h.
+
+\mbox{\Hypertarget{ni__nvme_8h_a3b171390b2698987c6989a414a69b37c}\label{ni__nvme_8h_a3b171390b2698987c6989a414a69b37c}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!\_nvme\_write\_xcoder\_subtype@{\_nvme\_write\_xcoder\_subtype}}
+\index{\_nvme\_write\_xcoder\_subtype@{\_nvme\_write\_xcoder\_subtype}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{\_nvme\_write\_xcoder\_subtype}{\_nvme\_write\_xcoder\_subtype}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{ni__nvme_8h_a3b171390b2698987c6989a414a69b37c}{\+\_\+nvme\+\_\+write\+\_\+xcoder\+\_\+subtype}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nvme\_write\_xcoder\_write\_instance@{nvme\_write\_xcoder\_write\_instance}!ni\_nvme.h@{ni\_nvme.h}}\index{ni\_nvme.h@{ni\_nvme.h}!nvme\_write\_xcoder\_write\_instance@{nvme\_write\_xcoder\_write\_instance}}}\mbox{\Hypertarget{ni__nvme_8h_a3b171390b2698987c6989a414a69b37ca2a2ec886a3ccb9b9876e1fcadea8701b}\label{ni__nvme_8h_a3b171390b2698987c6989a414a69b37ca2a2ec886a3ccb9b9876e1fcadea8701b}} 
+nvme\+\_\+write\+\_\+xcoder\+\_\+write\+\_\+instance&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 293 of file ni\+\_\+nvme.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ni__nvme_8h_a37d1e1fead4686c0bb2158ccc0ea7da7}\label{ni__nvme_8h_a37d1e1fead4686c0bb2158ccc0ea7da7}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!ni\_nvme\_check\_error\_code@{ni\_nvme\_check\_error\_code}}
+\index{ni\_nvme\_check\_error\_code@{ni\_nvme\_check\_error\_code}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{ni\_nvme\_check\_error\_code()}{ni\_nvme\_check\_error\_code()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} ni\+\_\+nvme\+\_\+check\+\_\+error\+\_\+code (\begin{DoxyParamCaption}\item[{int}]{rc,  }\item[{\mbox{\hyperlink{ni__nvme_8h_a2d9979e19435c0b68de9964c19b7799d}{ni\+\_\+nvme\+\_\+admin\+\_\+opcode\+\_\+t}}}]{opcode,  }\item[{uint32\+\_\+t}]{xcoder\+\_\+type,  }\item[{uint32\+\_\+t}]{hw\+\_\+id,  }\item[{int32\+\_\+t $\ast$}]{p\+\_\+instance\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Check f/w error return code, and if it\textquotesingle{}s a fatal one, terminate application\textquotesingle{}s decoding/encoding processing by sending self a S\+I\+G\+T\+E\+RM signal. Application shall handle this gracefully. 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 47 of file ni\+\_\+nvme.\+c.
+
+\mbox{\Hypertarget{ni__nvme_8h_a05dd7dfd79a59cf84bcb208e87a3fa5f}\label{ni__nvme_8h_a05dd7dfd79a59cf84bcb208e87a3fa5f}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!ni\_nvme\_enumerate\_devices@{ni\_nvme\_enumerate\_devices}}
+\index{ni\_nvme\_enumerate\_devices@{ni\_nvme\_enumerate\_devices}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{ni\_nvme\_enumerate\_devices()}{ni\_nvme\_enumerate\_devices()}}
+{\footnotesize\ttfamily int ni\+\_\+nvme\+\_\+enumerate\+\_\+devices (\begin{DoxyParamCaption}\item[{char}]{ni\+\_\+devices\mbox{[}$\,$\mbox{]}\mbox{[}\+M\+A\+X\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+N\+A\+M\+E\+\_\+\+L\+E\+N\mbox{]},  }\item[{int}]{max\+\_\+handles }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ni__nvme_8h_a936892f0955205ac266a4f6d81908fef}\label{ni__nvme_8h_a936892f0955205ac266a4f6d81908fef}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!ni\_nvme\_send\_admin\_cmd@{ni\_nvme\_send\_admin\_cmd}}
+\index{ni\_nvme\_send\_admin\_cmd@{ni\_nvme\_send\_admin\_cmd}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{ni\_nvme\_send\_admin\_cmd()}{ni\_nvme\_send\_admin\_cmd()}}
+{\footnotesize\ttfamily int32\+\_\+t ni\+\_\+nvme\+\_\+send\+\_\+admin\+\_\+cmd (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__nvme_8h_a2d9979e19435c0b68de9964c19b7799d}{ni\+\_\+nvme\+\_\+admin\+\_\+opcode\+\_\+t}}}]{opcode,  }\item[{ni\+\_\+device\+\_\+handle\+\_\+t}]{handle,  }\item[{\mbox{\hyperlink{ni__nvme_8h_a7ddc246c6522c44c0df99f9f1c80fb11}{ni\+\_\+nvme\+\_\+command\+\_\+t}} $\ast$}]{p\+\_\+ni\+\_\+nvme\+\_\+cmd,  }\item[{uint32\+\_\+t}]{data\+\_\+len,  }\item[{void $\ast$}]{p\+\_\+data,  }\item[{uint32\+\_\+t $\ast$}]{p\+\_\+result }\end{DoxyParamCaption})}
+
+
+
+Compose a nvme admin command. 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 890 of file ni\+\_\+nvme.\+c.
+
+\mbox{\Hypertarget{ni__nvme_8h_a8c2c59b2a845963c3f449382a994ec6f}\label{ni__nvme_8h_a8c2c59b2a845963c3f449382a994ec6f}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!ni\_nvme\_send\_io\_cmd@{ni\_nvme\_send\_io\_cmd}}
+\index{ni\_nvme\_send\_io\_cmd@{ni\_nvme\_send\_io\_cmd}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{ni\_nvme\_send\_io\_cmd()}{ni\_nvme\_send\_io\_cmd()}}
+{\footnotesize\ttfamily int32\+\_\+t ni\+\_\+nvme\+\_\+send\+\_\+io\+\_\+cmd (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__nvme_8h_abb322d0cd1073fb01afed787da5a636c}{ni\+\_\+nvme\+\_\+opcode\+\_\+t}}}]{opcode,  }\item[{ni\+\_\+device\+\_\+handle\+\_\+t}]{handle,  }\item[{\mbox{\hyperlink{ni__nvme_8h_a7ddc246c6522c44c0df99f9f1c80fb11}{ni\+\_\+nvme\+\_\+command\+\_\+t}} $\ast$}]{p\+\_\+ni\+\_\+nvme\+\_\+cmd,  }\item[{uint32\+\_\+t}]{data\+\_\+len,  }\item[{void $\ast$}]{p\+\_\+data,  }\item[{uint32\+\_\+t $\ast$}]{p\+\_\+result }\end{DoxyParamCaption})}
+
+
+
+Compose a nvme io command. 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 945 of file ni\+\_\+nvme.\+c.
+
+\mbox{\Hypertarget{ni__nvme_8h_a045656cc96478f7ca5c4cf56ad5b5734}\label{ni__nvme_8h_a045656cc96478f7ca5c4cf56ad5b5734}} 
+\index{ni\_nvme.h@{ni\_nvme.h}!ni\_nvme\_send\_io\_cmd\_thru\_admin\_queue@{ni\_nvme\_send\_io\_cmd\_thru\_admin\_queue}}
+\index{ni\_nvme\_send\_io\_cmd\_thru\_admin\_queue@{ni\_nvme\_send\_io\_cmd\_thru\_admin\_queue}!ni\_nvme.h@{ni\_nvme.h}}
+\subsubsection{\texorpdfstring{ni\_nvme\_send\_io\_cmd\_thru\_admin\_queue()}{ni\_nvme\_send\_io\_cmd\_thru\_admin\_queue()}}
+{\footnotesize\ttfamily int32\+\_\+t ni\+\_\+nvme\+\_\+send\+\_\+io\+\_\+cmd\+\_\+thru\+\_\+admin\+\_\+queue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__nvme_8h_a2d9979e19435c0b68de9964c19b7799d}{ni\+\_\+nvme\+\_\+admin\+\_\+opcode\+\_\+t}}}]{opcode,  }\item[{ni\+\_\+device\+\_\+handle\+\_\+t}]{fd,  }\item[{\mbox{\hyperlink{ni__nvme_8h_a7ddc246c6522c44c0df99f9f1c80fb11}{ni\+\_\+nvme\+\_\+command\+\_\+t}} $\ast$}]{p\+\_\+ni\+\_\+nvme\+\_\+cmd,  }\item[{uint32\+\_\+t}]{data\+\_\+len,  }\item[{void $\ast$}]{data,  }\item[{uint32\+\_\+t $\ast$}]{p\+Result }\end{DoxyParamCaption})}
+

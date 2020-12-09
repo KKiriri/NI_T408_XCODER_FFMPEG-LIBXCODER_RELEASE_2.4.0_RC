@@ -1,0 +1,141 @@
+\hypertarget{ni__rsrc__priv_8c}{}\section{ni\+\_\+rsrc\+\_\+priv.\+c File Reference}
+\label{ni__rsrc__priv_8c}\index{ni\_rsrc\_priv.c@{ni\_rsrc\_priv.c}}
+
+
+Private routines related to resource management of NI T-\/408 devices.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}ni\+\_\+device\+\_\+api.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ni\+\_\+rsrc\+\_\+api.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ni\+\_\+rsrc\+\_\+priv.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ni\+\_\+nvme.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} \mbox{\hyperlink{ni__rsrc__priv_8c_a46c8ad8263b7fc520ff237d00d9c51d3}{ni\+\_\+rsrc\+\_\+fill\+\_\+device\+\_\+info}} (\mbox{\hyperlink{ni__rsrc__api_8h_a37a9b9f89ba495d469222af27ce3058b}{ni\+\_\+device\+\_\+info\+\_\+t}} $\ast$p\+\_\+device\+\_\+info, \mbox{\hyperlink{ni__rsrc__api_8h_a9945b3a5098e949d3e596e6f778e01bc}{ni\+\_\+codec\+\_\+t}} fmt, \mbox{\hyperlink{ni__defs_8h_a758f24acb02b236820c7390eed53d1cc}{ni\+\_\+device\+\_\+type\+\_\+t}} type, \mbox{\hyperlink{ni__device__api_8h_aa613b88d7181b67f6fabca9f0a1ea37c}{ni\+\_\+hw\+\_\+capability\+\_\+t}} $\ast$p\+\_\+hw\+\_\+cap)
+\item 
+int \mbox{\hyperlink{ni__rsrc__priv_8c_ac200a1532aff2308fac6aedc71935d15}{ni\+\_\+rsrc\+\_\+strcmp}} (const void $\ast$p\+\_\+str, const void $\ast$p\+\_\+str1)
+\item 
+void \mbox{\hyperlink{ni__rsrc__priv_8c_a5e95a7589304087ada735d0eb6d6a980}{ni\+\_\+rsrc\+\_\+get\+\_\+lock\+\_\+name}} (\mbox{\hyperlink{ni__defs_8h_a758f24acb02b236820c7390eed53d1cc}{ni\+\_\+device\+\_\+type\+\_\+t}} device\+\_\+type, int32\+\_\+t guid, char $\ast$p\+\_\+name, size\+\_\+t max\+\_\+name\+\_\+len)
+\item 
+void \mbox{\hyperlink{ni__rsrc__priv_8c_a4561ae0d980be86add9c589340215bf0}{ni\+\_\+rsrc\+\_\+get\+\_\+shm\+\_\+name}} (\mbox{\hyperlink{ni__defs_8h_a758f24acb02b236820c7390eed53d1cc}{ni\+\_\+device\+\_\+type\+\_\+t}} device\+\_\+type, int32\+\_\+t guid, char $\ast$p\+\_\+name, size\+\_\+t max\+\_\+name\+\_\+len)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{ni__rsrc__priv_8c_ad1ddc34a16a508a48f018ce78261c9c9}{stop\+\_\+process}} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Private routines related to resource management of NI T-\/408 devices. 
+
+
+
+
+
+\begin{DoxyCopyright}{Copyright}
+(c) 2019 N\+E\+T\+I\+NT Technologies Inc. All rights reserved. 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ni__rsrc__priv_8c_a46c8ad8263b7fc520ff237d00d9c51d3}\label{ni__rsrc__priv_8c_a46c8ad8263b7fc520ff237d00d9c51d3}} 
+\index{ni\_rsrc\_priv.c@{ni\_rsrc\_priv.c}!ni\_rsrc\_fill\_device\_info@{ni\_rsrc\_fill\_device\_info}}
+\index{ni\_rsrc\_fill\_device\_info@{ni\_rsrc\_fill\_device\_info}!ni\_rsrc\_priv.c@{ni\_rsrc\_priv.c}}
+\subsubsection{\texorpdfstring{ni\_rsrc\_fill\_device\_info()}{ni\_rsrc\_fill\_device\_info()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} ni\+\_\+rsrc\+\_\+fill\+\_\+device\+\_\+info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__rsrc__api_8h_a37a9b9f89ba495d469222af27ce3058b}{ni\+\_\+device\+\_\+info\+\_\+t}} $\ast$}]{p\+\_\+device\+\_\+info,  }\item[{\mbox{\hyperlink{ni__rsrc__api_8h_a9945b3a5098e949d3e596e6f778e01bc}{ni\+\_\+codec\+\_\+t}}}]{fmt,  }\item[{\mbox{\hyperlink{ni__defs_8h_a758f24acb02b236820c7390eed53d1cc}{ni\+\_\+device\+\_\+type\+\_\+t}}}]{type,  }\item[{\mbox{\hyperlink{ni__device__api_8h_aa613b88d7181b67f6fabca9f0a1ea37c}{ni\+\_\+hw\+\_\+capability\+\_\+t}} $\ast$}]{p\+\_\+hw\+\_\+cap }\end{DoxyParamCaption})}
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+T\+BD\+: convert id to text
+
+To\+Do\+: Rev. B
+
+T\+BD\+: convert id to text
+
+encoder
+
+To\+Do\+: Rev. B
+
+T\+BD\+: convert id to text
+
+T\+BD\+: convert id to text 
+
+Definition at line 37 of file ni\+\_\+rsrc\+\_\+priv.\+c.
+
+\mbox{\Hypertarget{ni__rsrc__priv_8c_a5e95a7589304087ada735d0eb6d6a980}\label{ni__rsrc__priv_8c_a5e95a7589304087ada735d0eb6d6a980}} 
+\index{ni\_rsrc\_priv.c@{ni\_rsrc\_priv.c}!ni\_rsrc\_get\_lock\_name@{ni\_rsrc\_get\_lock\_name}}
+\index{ni\_rsrc\_get\_lock\_name@{ni\_rsrc\_get\_lock\_name}!ni\_rsrc\_priv.c@{ni\_rsrc\_priv.c}}
+\subsubsection{\texorpdfstring{ni\_rsrc\_get\_lock\_name()}{ni\_rsrc\_get\_lock\_name()}}
+{\footnotesize\ttfamily void ni\+\_\+rsrc\+\_\+get\+\_\+lock\+\_\+name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__defs_8h_a758f24acb02b236820c7390eed53d1cc}{ni\+\_\+device\+\_\+type\+\_\+t}}}]{device\+\_\+type,  }\item[{int32\+\_\+t}]{guid,  }\item[{char $\ast$}]{p\+\_\+name,  }\item[{size\+\_\+t}]{max\+\_\+name\+\_\+len }\end{DoxyParamCaption})}
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 188 of file ni\+\_\+rsrc\+\_\+priv.\+c.
+
+\mbox{\Hypertarget{ni__rsrc__priv_8c_a4561ae0d980be86add9c589340215bf0}\label{ni__rsrc__priv_8c_a4561ae0d980be86add9c589340215bf0}} 
+\index{ni\_rsrc\_priv.c@{ni\_rsrc\_priv.c}!ni\_rsrc\_get\_shm\_name@{ni\_rsrc\_get\_shm\_name}}
+\index{ni\_rsrc\_get\_shm\_name@{ni\_rsrc\_get\_shm\_name}!ni\_rsrc\_priv.c@{ni\_rsrc\_priv.c}}
+\subsubsection{\texorpdfstring{ni\_rsrc\_get\_shm\_name()}{ni\_rsrc\_get\_shm\_name()}}
+{\footnotesize\ttfamily void ni\+\_\+rsrc\+\_\+get\+\_\+shm\+\_\+name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__defs_8h_a758f24acb02b236820c7390eed53d1cc}{ni\+\_\+device\+\_\+type\+\_\+t}}}]{device\+\_\+type,  }\item[{int32\+\_\+t}]{guid,  }\item[{char $\ast$}]{p\+\_\+name,  }\item[{size\+\_\+t}]{max\+\_\+name\+\_\+len }\end{DoxyParamCaption})}
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+assume there is enough space allocated in name 
+
+Definition at line 204 of file ni\+\_\+rsrc\+\_\+priv.\+c.
+
+\mbox{\Hypertarget{ni__rsrc__priv_8c_ac200a1532aff2308fac6aedc71935d15}\label{ni__rsrc__priv_8c_ac200a1532aff2308fac6aedc71935d15}} 
+\index{ni\_rsrc\_priv.c@{ni\_rsrc\_priv.c}!ni\_rsrc\_strcmp@{ni\_rsrc\_strcmp}}
+\index{ni\_rsrc\_strcmp@{ni\_rsrc\_strcmp}!ni\_rsrc\_priv.c@{ni\_rsrc\_priv.c}}
+\subsubsection{\texorpdfstring{ni\_rsrc\_strcmp()}{ni\_rsrc\_strcmp()}}
+{\footnotesize\ttfamily int ni\+\_\+rsrc\+\_\+strcmp (\begin{DoxyParamCaption}\item[{const void $\ast$}]{p\+\_\+str,  }\item[{const void $\ast$}]{p\+\_\+str1 }\end{DoxyParamCaption})}
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 151 of file ni\+\_\+rsrc\+\_\+priv.\+c.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{ni__rsrc__priv_8c_ad1ddc34a16a508a48f018ce78261c9c9}\label{ni__rsrc__priv_8c_ad1ddc34a16a508a48f018ce78261c9c9}} 
+\index{ni\_rsrc\_priv.c@{ni\_rsrc\_priv.c}!stop\_process@{stop\_process}}
+\index{stop\_process@{stop\_process}!ni\_rsrc\_priv.c@{ni\_rsrc\_priv.c}}
+\subsubsection{\texorpdfstring{stop\_process}{stop\_process}}
+{\footnotesize\ttfamily uint32\+\_\+t stop\+\_\+process = 0}
+
+
+
+Definition at line 28 of file ni\+\_\+rsrc\+\_\+priv.\+c.
+

@@ -1,0 +1,834 @@
+\hypertarget{ni__rsrc__api_8h}{}\section{ni\+\_\+rsrc\+\_\+api.\+h File Reference}
+\label{ni__rsrc__api_8h}\index{ni\_rsrc\_api.h@{ni\_rsrc\_api.h}}
+
+
+Exported definitions related to resource management of NI T-\/408 devices.  
+
+
+{\ttfamily \#include \char`\"{}ni\+\_\+defs.\+h\char`\"{}}\newline
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct__ni__rsrc__video__ref__cap}{\+\_\+ni\+\_\+rsrc\+\_\+video\+\_\+ref\+\_\+cap}}
+\item 
+struct \mbox{\hyperlink{struct__ni__device__queue}{\+\_\+ni\+\_\+device\+\_\+queue}}
+\item 
+struct \mbox{\hyperlink{struct__ni__device__video__capability}{\+\_\+ni\+\_\+device\+\_\+video\+\_\+capability}}
+\item 
+struct \mbox{\hyperlink{struct__ni__sw__instance__info}{\+\_\+ni\+\_\+sw\+\_\+instance\+\_\+info}}
+\item 
+struct \mbox{\hyperlink{struct__ni__device__pool}{\+\_\+ni\+\_\+device\+\_\+pool}}
+\item 
+struct \mbox{\hyperlink{struct__ni__device__info}{\+\_\+ni\+\_\+device\+\_\+info}}
+\item 
+struct \mbox{\hyperlink{struct__ni__device}{\+\_\+ni\+\_\+device}}
+\item 
+struct \mbox{\hyperlink{struct__ni__device__context}{\+\_\+ni\+\_\+device\+\_\+context}}
+\item 
+struct \mbox{\hyperlink{struct__ni__card__info}{\+\_\+ni\+\_\+card\+\_\+info}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{ni__rsrc__api_8h_aa1598022fc5ef313306c50f901940946}{N\+I\+\_\+\+M\+A\+X\+\_\+\+H\+W\+\_\+\+D\+E\+C\+O\+D\+E\+R\+\_\+\+C\+O\+U\+NT}}~128
+\item 
+\#define \mbox{\hyperlink{ni__rsrc__api_8h_a41809901a12b4be816387878e15c69f3}{N\+I\+\_\+\+M\+A\+X\+\_\+\+H\+W\+\_\+\+E\+N\+C\+O\+D\+E\+R\+\_\+\+C\+O\+U\+NT}}~128
+\item 
+\#define \mbox{\hyperlink{ni__rsrc__api_8h_a573b669de80ab750cfc3d96da9dbd507}{N\+I\+\_\+\+M\+A\+X\+\_\+\+S\+W\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+C\+O\+U\+NT}}~8
+\item 
+\#define \mbox{\hyperlink{ni__rsrc__api_8h_a38deaa045e5ce61a183c8ceddc618d7e}{N\+I\+\_\+\+M\+A\+X\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+N\+A\+M\+E\+\_\+\+L\+EN}}~32
+\item 
+\#define \mbox{\hyperlink{ni__rsrc__api_8h_a5a7b5c8942cc01883c392e9497c3a99d}{N\+I\+\_\+\+M\+A\+X\+\_\+\+P\+R\+O\+F\+I\+L\+E\+\_\+\+N\+A\+M\+E\+\_\+\+L\+EN}}~128
+\item 
+\#define \mbox{\hyperlink{ni__rsrc__api_8h_a5deb9cb3cd63fd063fc3df62a60d8d40}{N\+I\+\_\+\+M\+A\+X\+\_\+\+L\+E\+V\+E\+L\+\_\+\+N\+A\+M\+E\+\_\+\+L\+EN}}~64
+\item 
+\#define \mbox{\hyperlink{ni__rsrc__api_8h_a865548fd20c8f555b900cdc9df6d31ab}{N\+I\+\_\+\+M\+A\+X\+\_\+\+A\+D\+D\+I\+T\+I\+O\+N\+A\+L\+\_\+\+I\+N\+F\+O\+\_\+\+L\+EN}}~64
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct__ni__rsrc__video__ref__cap}{\+\_\+ni\+\_\+rsrc\+\_\+video\+\_\+ref\+\_\+cap}} \mbox{\hyperlink{ni__rsrc__api_8h_a0857f43549610b9d4a760922c106fe22}{ni\+\_\+rsrc\+\_\+device\+\_\+video\+\_\+ref\+\_\+cap\+\_\+t}}
+\item 
+typedef struct \mbox{\hyperlink{struct__ni__device__queue}{\+\_\+ni\+\_\+device\+\_\+queue}} \mbox{\hyperlink{ni__rsrc__api_8h_a9d2ed9ccf29349d91855dc9db68b3597}{ni\+\_\+device\+\_\+queue\+\_\+t}}
+\item 
+typedef struct \mbox{\hyperlink{struct__ni__device__video__capability}{\+\_\+ni\+\_\+device\+\_\+video\+\_\+capability}} \mbox{\hyperlink{ni__rsrc__api_8h_adf4d30f539dbb9bae2cdf26a53baafeb}{ni\+\_\+device\+\_\+video\+\_\+capability\+\_\+t}}
+\item 
+typedef struct \mbox{\hyperlink{struct__ni__sw__instance__info}{\+\_\+ni\+\_\+sw\+\_\+instance\+\_\+info}} \mbox{\hyperlink{ni__rsrc__api_8h_a9e007bba8915f56c2a096715a4edf473}{ni\+\_\+sw\+\_\+instance\+\_\+info\+\_\+t}}
+\item 
+typedef struct \mbox{\hyperlink{struct__ni__device__pool}{\+\_\+ni\+\_\+device\+\_\+pool}} \mbox{\hyperlink{ni__rsrc__api_8h_a0206515f5df25d796849ae70dd167e44}{ni\+\_\+device\+\_\+pool\+\_\+t}}
+\item 
+typedef struct \mbox{\hyperlink{struct__ni__device__info}{\+\_\+ni\+\_\+device\+\_\+info}} \mbox{\hyperlink{ni__rsrc__api_8h_a37a9b9f89ba495d469222af27ce3058b}{ni\+\_\+device\+\_\+info\+\_\+t}}
+\item 
+typedef struct \mbox{\hyperlink{struct__ni__device}{\+\_\+ni\+\_\+device}} \mbox{\hyperlink{ni__rsrc__api_8h_ae92c73d0b69c4054856fad2f5a013f6e}{ni\+\_\+device\+\_\+t}}
+\item 
+typedef struct \mbox{\hyperlink{struct__ni__device__context}{\+\_\+ni\+\_\+device\+\_\+context}} \mbox{\hyperlink{ni__rsrc__api_8h_a880a361e6e867b45d102656e813a046f}{ni\+\_\+device\+\_\+context\+\_\+t}}
+\item 
+typedef struct \mbox{\hyperlink{struct__ni__card__info}{\+\_\+ni\+\_\+card\+\_\+info}} \mbox{\hyperlink{ni__rsrc__api_8h_ad812d2d2321088c58f5125280852ec1e}{ni\+\_\+card\+\_\+info\+\_\+t}}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{ni__rsrc__api_8h_ab2e7f3b7610f6040df902f0aa2f54e8b}{ni\+\_\+hw\+\_\+revision\+\_\+t}} \{ \mbox{\hyperlink{ni__rsrc__api_8h_ab2e7f3b7610f6040df902f0aa2f54e8ba6aa18d27efdc22d99f15d3a374216400}{H\+W\+\_\+\+R\+E\+V\+\_\+A}}, 
+\mbox{\hyperlink{ni__rsrc__api_8h_ab2e7f3b7610f6040df902f0aa2f54e8baebc6164380452497959020bb5f4e4dba}{H\+W\+\_\+\+R\+E\+V\+\_\+B}}
+ \}
+\item 
+enum \mbox{\hyperlink{ni__rsrc__api_8h_a9945b3a5098e949d3e596e6f778e01bc}{ni\+\_\+codec\+\_\+t}} \{ \mbox{\hyperlink{ni__rsrc__api_8h_a9945b3a5098e949d3e596e6f778e01bca4f8dc4f09b7a6c5719c106724bff7cf5}{E\+N\+\_\+\+H264}}, 
+\mbox{\hyperlink{ni__rsrc__api_8h_a9945b3a5098e949d3e596e6f778e01bca6d3542383ab4e3cf5ecfa084bad49680}{E\+N\+\_\+\+H265}}
+ \}
+\item 
+enum \mbox{\hyperlink{ni__rsrc__api_8h_a64a7b6cabb90ef404ab5425542fefe20}{ni\+\_\+sw\+\_\+instance\+\_\+status\+\_\+t}} \{ \mbox{\hyperlink{ni__rsrc__api_8h_a64a7b6cabb90ef404ab5425542fefe20a04a573c61efb2f13446e4da8d82faae8}{E\+N\+\_\+\+I\+D\+LE}}, 
+\mbox{\hyperlink{ni__rsrc__api_8h_a64a7b6cabb90ef404ab5425542fefe20a21ece68024e9143e07c2fa4957f45599}{E\+N\+\_\+\+A\+C\+T\+I\+VE}}
+ \}
+\item 
+enum \mbox{\hyperlink{ni__rsrc__api_8h_aa7880eaad1b291fe86040967382c8895}{ni\+\_\+alloc\+\_\+rule\+\_\+t}} \{ \mbox{\hyperlink{ni__rsrc__api_8h_aa7880eaad1b291fe86040967382c8895ab71d74283dcba943eb7e575bd6365a50}{E\+N\+\_\+\+A\+L\+L\+O\+C\+\_\+\+L\+E\+A\+S\+T\+\_\+\+L\+O\+AD}}, 
+\mbox{\hyperlink{ni__rsrc__api_8h_aa7880eaad1b291fe86040967382c8895aba3a1cad80820386795a4f4252f7e463}{E\+N\+\_\+\+A\+L\+L\+O\+C\+\_\+\+L\+E\+A\+S\+T\+\_\+\+I\+N\+S\+T\+A\+N\+CE}}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+L\+I\+B\+\_\+\+A\+PI \mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} \mbox{\hyperlink{ni__rsrc__api_8h_a2cd270ed6b73d50859ecb29ea26d2748}{ni\+\_\+rsrc\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize and create all resources required to work with N\+E\+T\+I\+NT N\+V\+Me transcoder devices. This is a high level A\+PI function which is used mostly with user application like F\+F\+Mpeg that relies on those resources. In case of custom application integration, revised functionality might be necessary utilizing coresponding A\+PI functions. \end{DoxyCompactList}\item 
+L\+I\+B\+\_\+\+A\+PI int \mbox{\hyperlink{ni__rsrc__api_8h_ab209a4ceff1f79bfd81da59f16307c00}{ni\+\_\+rsrc\+\_\+get\+\_\+local\+\_\+device\+\_\+list}} (char ni\+\_\+devices\mbox{[}$\,$\mbox{]}\mbox{[}\mbox{\hyperlink{ni__defs_8h_a0666ed218212a20f00a6c65caa3141bc}{M\+A\+X\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+N\+A\+M\+E\+\_\+\+L\+EN}}\mbox{]}, int max\+\_\+handles)
+\begin{DoxyCompactList}\small\item\em Scans system for all N\+V\+Me devices and returns the system device names to the user which where identified as N\+E\+T\+I\+NT transcoder deivices. Names are suitable for Open\+File api usage afterwards. \end{DoxyCompactList}\item 
+L\+I\+B\+\_\+\+A\+PI \mbox{\hyperlink{ni__rsrc__api_8h_a880a361e6e867b45d102656e813a046f}{ni\+\_\+device\+\_\+context\+\_\+t}} $\ast$ \mbox{\hyperlink{ni__rsrc__api_8h_a60bcbd3381ce7ac6a7cb95663762d55c}{ni\+\_\+rsrc\+\_\+get\+\_\+device\+\_\+context}} (\mbox{\hyperlink{ni__defs_8h_a758f24acb02b236820c7390eed53d1cc}{ni\+\_\+device\+\_\+type\+\_\+t}} type, int guid)
+\begin{DoxyCompactList}\small\item\em Allocates and returns a pointer to ni\+\_\+device\+\_\+context\+\_\+t struct based on provided device\+\_\+type and guid. To be used for load update and codec query. \end{DoxyCompactList}\item 
+L\+I\+B\+\_\+\+A\+PI void \mbox{\hyperlink{ni__rsrc__api_8h_a79c5e424fd25053625e843f4fba5df3f}{ni\+\_\+rsrc\+\_\+free\+\_\+device\+\_\+context}} (\mbox{\hyperlink{ni__rsrc__api_8h_a880a361e6e867b45d102656e813a046f}{ni\+\_\+device\+\_\+context\+\_\+t}} $\ast$p\+\_\+ctxt)
+\begin{DoxyCompactList}\small\item\em Free previously allocated device context. \end{DoxyCompactList}\item 
+L\+I\+B\+\_\+\+A\+PI \mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} \mbox{\hyperlink{ni__rsrc__api_8h_a8a35e00081f59e36c61166b584174c22}{ni\+\_\+rsrc\+\_\+list\+\_\+devices}} (\mbox{\hyperlink{ni__defs_8h_a758f24acb02b236820c7390eed53d1cc}{ni\+\_\+device\+\_\+type\+\_\+t}} device\+\_\+type, \mbox{\hyperlink{ni__rsrc__api_8h_a37a9b9f89ba495d469222af27ce3058b}{ni\+\_\+device\+\_\+info\+\_\+t}} $\ast$p\+\_\+device\+\_\+info, int $\ast$p\+\_\+device\+\_\+count)
+\begin{DoxyCompactList}\small\item\em List device(s) based on device type with full information including s/w instances on the system. \end{DoxyCompactList}\item 
+L\+I\+B\+\_\+\+A\+PI \mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} \mbox{\hyperlink{ni__rsrc__api_8h_a8e7382b3d3cd63c1211c6f3846c884f7}{ni\+\_\+rsrc\+\_\+list\+\_\+all\+\_\+devices}} (\mbox{\hyperlink{ni__rsrc__api_8h_ae92c73d0b69c4054856fad2f5a013f6e}{ni\+\_\+device\+\_\+t}} $\ast$p\+\_\+device)
+\begin{DoxyCompactList}\small\item\em List all devices with full information including s/w instances on the system. \end{DoxyCompactList}\item 
+L\+I\+B\+\_\+\+A\+PI \mbox{\hyperlink{ni__rsrc__api_8h_a37a9b9f89ba495d469222af27ce3058b}{ni\+\_\+device\+\_\+info\+\_\+t}} $\ast$ \mbox{\hyperlink{ni__rsrc__api_8h_a5e85c1aa3a7a666178afb1744333dfa6}{ni\+\_\+rsrc\+\_\+get\+\_\+device\+\_\+info}} (\mbox{\hyperlink{ni__defs_8h_a758f24acb02b236820c7390eed53d1cc}{ni\+\_\+device\+\_\+type\+\_\+t}} device\+\_\+type, int guid)
+\begin{DoxyCompactList}\small\item\em Query a specific device with detailed information on the system. \end{DoxyCompactList}\item 
+L\+I\+B\+\_\+\+A\+PI int \mbox{\hyperlink{ni__rsrc__api_8h_af9ce0f68b5af1772a2e887ce3447e778}{ni\+\_\+rsrc\+\_\+get\+\_\+available\+\_\+device}} (int width, int height, int frame\+\_\+rate, \mbox{\hyperlink{ni__rsrc__api_8h_a9945b3a5098e949d3e596e6f778e01bc}{ni\+\_\+codec\+\_\+t}} codec, \mbox{\hyperlink{ni__defs_8h_a758f24acb02b236820c7390eed53d1cc}{ni\+\_\+device\+\_\+type\+\_\+t}} device\+\_\+type, \mbox{\hyperlink{ni__rsrc__api_8h_a37a9b9f89ba495d469222af27ce3058b}{ni\+\_\+device\+\_\+info\+\_\+t}} $\ast$p\+\_\+device\+\_\+info)
+\begin{DoxyCompactList}\small\item\em Get the least used device that can handle decoding or encoding a video stream of certain resolution/frame-\/rate/codec. \end{DoxyCompactList}\item 
+L\+I\+B\+\_\+\+A\+PI int \mbox{\hyperlink{ni__rsrc__api_8h_a870e053f1dcbe7e491a62c73d6979cc9}{ni\+\_\+rsrc\+\_\+update\+\_\+device\+\_\+load}} (\mbox{\hyperlink{ni__rsrc__api_8h_a880a361e6e867b45d102656e813a046f}{ni\+\_\+device\+\_\+context\+\_\+t}} $\ast$p\+\_\+ctxt, int load, int sw\+\_\+instance\+\_\+cnt, const \mbox{\hyperlink{ni__rsrc__api_8h_a9e007bba8915f56c2a096715a4edf473}{ni\+\_\+sw\+\_\+instance\+\_\+info\+\_\+t}} sw\+\_\+instance\+\_\+info\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Update the load value and s/w instances info of a specific decoder or encoder. This is used by resource management daemon to update periodically. \end{DoxyCompactList}\item 
+L\+I\+B\+\_\+\+A\+PI \mbox{\hyperlink{ni__rsrc__api_8h_a880a361e6e867b45d102656e813a046f}{ni\+\_\+device\+\_\+context\+\_\+t}} $\ast$ \mbox{\hyperlink{ni__rsrc__api_8h_a4fb85057b73aa652176f932af2bba5a4}{ni\+\_\+rsrc\+\_\+allocate\+\_\+auto}} (\mbox{\hyperlink{ni__defs_8h_a758f24acb02b236820c7390eed53d1cc}{ni\+\_\+device\+\_\+type\+\_\+t}} device\+\_\+type, \mbox{\hyperlink{ni__rsrc__api_8h_aa7880eaad1b291fe86040967382c8895}{ni\+\_\+alloc\+\_\+rule\+\_\+t}} rule, \mbox{\hyperlink{ni__rsrc__api_8h_a9945b3a5098e949d3e596e6f778e01bc}{ni\+\_\+codec\+\_\+t}} codec, int width, int height, int frame\+\_\+rate, unsigned long $\ast$p\+\_\+load)
+\begin{DoxyCompactList}\small\item\em Allocate resources for decoding/encoding, based on the provided rule. \end{DoxyCompactList}\item 
+L\+I\+B\+\_\+\+A\+PI \mbox{\hyperlink{ni__rsrc__api_8h_a880a361e6e867b45d102656e813a046f}{ni\+\_\+device\+\_\+context\+\_\+t}} $\ast$ \mbox{\hyperlink{ni__rsrc__api_8h_a1b3ca5592e301f6ed48ce04e58a67a10}{ni\+\_\+rsrc\+\_\+allocate\+\_\+direct}} (\mbox{\hyperlink{ni__defs_8h_a758f24acb02b236820c7390eed53d1cc}{ni\+\_\+device\+\_\+type\+\_\+t}} device\+\_\+type, int guid, \mbox{\hyperlink{ni__rsrc__api_8h_a9945b3a5098e949d3e596e6f778e01bc}{ni\+\_\+codec\+\_\+t}} codec, int width, int height, int frame\+\_\+rate, unsigned long $\ast$p\+\_\+load)
+\begin{DoxyCompactList}\small\item\em Allocate resources for decoding/encoding, by designating explicitly the device to use. \end{DoxyCompactList}\item 
+L\+I\+B\+\_\+\+A\+PI void \mbox{\hyperlink{ni__rsrc__api_8h_a1c448527d4018802ec25349d06361359}{ni\+\_\+rsrc\+\_\+release\+\_\+resource}} (\mbox{\hyperlink{ni__rsrc__api_8h_a880a361e6e867b45d102656e813a046f}{ni\+\_\+device\+\_\+context\+\_\+t}} $\ast$p\+\_\+ctxt, \mbox{\hyperlink{ni__rsrc__api_8h_a9945b3a5098e949d3e596e6f778e01bc}{ni\+\_\+codec\+\_\+t}} codec, unsigned long load)
+\begin{DoxyCompactList}\small\item\em Release resources allocated for decoding/encoding. function This {\itshape must} be called at the end of transcoding with previously assigned load value by allocate$\ast$ functions. \end{DoxyCompactList}\item 
+L\+I\+B\+\_\+\+A\+PI int \mbox{\hyperlink{ni__rsrc__api_8h_a59d1248d5fcffab69d634652d707a40e}{ni\+\_\+rsrc\+\_\+remove\+\_\+device}} (const char $\ast$p\+\_\+dev)
+\begin{DoxyCompactList}\small\item\em Remove an Net\+Int h/w device from resource pool on the host. \end{DoxyCompactList}\item 
+L\+I\+B\+\_\+\+A\+PI int \mbox{\hyperlink{ni__rsrc__api_8h_a05fd6603cc63dc256b344da0ec67e9da}{ni\+\_\+rsrc\+\_\+add\+\_\+device}} (const char $\ast$p\+\_\+dev)
+\begin{DoxyCompactList}\small\item\em Add an Net\+Int h/w device into resource pool on the host. \end{DoxyCompactList}\item 
+L\+I\+B\+\_\+\+A\+PI \mbox{\hyperlink{ni__rsrc__api_8h_a0206515f5df25d796849ae70dd167e44}{ni\+\_\+device\+\_\+pool\+\_\+t}} $\ast$ \mbox{\hyperlink{ni__rsrc__api_8h_ab7a2e138aa6bf20b7b4bae47b9eab3dd}{ni\+\_\+rsrc\+\_\+get\+\_\+device\+\_\+pool}} (void)
+\begin{DoxyCompactList}\small\item\em Create and return the allocated ni\+\_\+device\+\_\+pool\+\_\+t struct. \end{DoxyCompactList}\item 
+L\+I\+B\+\_\+\+A\+PI void \mbox{\hyperlink{ni__rsrc__api_8h_ad2149b47c97da16c5ecbf11cd55e7b52}{ni\+\_\+rsrc\+\_\+free\+\_\+device\+\_\+pool}} (\mbox{\hyperlink{ni__rsrc__api_8h_a0206515f5df25d796849ae70dd167e44}{ni\+\_\+device\+\_\+pool\+\_\+t}} $\ast$p\+\_\+device\+\_\+pool)
+\begin{DoxyCompactList}\small\item\em Free all resources taken by the device pool. \end{DoxyCompactList}\item 
+L\+I\+B\+\_\+\+A\+PI void \mbox{\hyperlink{ni__rsrc__api_8h_a40d9c1f65db27b3a3a4422e1f0766a5c}{ni\+\_\+rsrc\+\_\+print\+\_\+device\+\_\+info}} (const \mbox{\hyperlink{ni__rsrc__api_8h_a37a9b9f89ba495d469222af27ce3058b}{ni\+\_\+device\+\_\+info\+\_\+t}} $\ast$p\+\_\+device\+\_\+info)
+\begin{DoxyCompactList}\small\item\em Print the content of the ni\+\_\+device\+\_\+info\+\_\+t struct. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Exported definitions related to resource management of NI T-\/408 devices. 
+
+
+
+
+
+\begin{DoxyCopyright}{Copyright}
+(c) 2019 N\+E\+T\+I\+NT Technologies Inc. All rights reserved. 
+\end{DoxyCopyright}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{ni__rsrc__api_8h_a865548fd20c8f555b900cdc9df6d31ab}\label{ni__rsrc__api_8h_a865548fd20c8f555b900cdc9df6d31ab}} 
+\index{ni\_rsrc\_api.h@{ni\_rsrc\_api.h}!NI\_MAX\_ADDITIONAL\_INFO\_LEN@{NI\_MAX\_ADDITIONAL\_INFO\_LEN}}
+\index{NI\_MAX\_ADDITIONAL\_INFO\_LEN@{NI\_MAX\_ADDITIONAL\_INFO\_LEN}!ni\_rsrc\_api.h@{ni\_rsrc\_api.h}}
+\subsubsection{\texorpdfstring{NI\_MAX\_ADDITIONAL\_INFO\_LEN}{NI\_MAX\_ADDITIONAL\_INFO\_LEN}}
+{\footnotesize\ttfamily \#define N\+I\+\_\+\+M\+A\+X\+\_\+\+A\+D\+D\+I\+T\+I\+O\+N\+A\+L\+\_\+\+I\+N\+F\+O\+\_\+\+L\+EN~64}
+
+
+
+Definition at line 23 of file ni\+\_\+rsrc\+\_\+api.\+h.
+
+\mbox{\Hypertarget{ni__rsrc__api_8h_a38deaa045e5ce61a183c8ceddc618d7e}\label{ni__rsrc__api_8h_a38deaa045e5ce61a183c8ceddc618d7e}} 
+\index{ni\_rsrc\_api.h@{ni\_rsrc\_api.h}!NI\_MAX\_DEVICE\_NAME\_LEN@{NI\_MAX\_DEVICE\_NAME\_LEN}}
+\index{NI\_MAX\_DEVICE\_NAME\_LEN@{NI\_MAX\_DEVICE\_NAME\_LEN}!ni\_rsrc\_api.h@{ni\_rsrc\_api.h}}
+\subsubsection{\texorpdfstring{NI\_MAX\_DEVICE\_NAME\_LEN}{NI\_MAX\_DEVICE\_NAME\_LEN}}
+{\footnotesize\ttfamily \#define N\+I\+\_\+\+M\+A\+X\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+N\+A\+M\+E\+\_\+\+L\+EN~32}
+
+
+
+Definition at line 20 of file ni\+\_\+rsrc\+\_\+api.\+h.
+
+\mbox{\Hypertarget{ni__rsrc__api_8h_aa1598022fc5ef313306c50f901940946}\label{ni__rsrc__api_8h_aa1598022fc5ef313306c50f901940946}} 
+\index{ni\_rsrc\_api.h@{ni\_rsrc\_api.h}!NI\_MAX\_HW\_DECODER\_COUNT@{NI\_MAX\_HW\_DECODER\_COUNT}}
+\index{NI\_MAX\_HW\_DECODER\_COUNT@{NI\_MAX\_HW\_DECODER\_COUNT}!ni\_rsrc\_api.h@{ni\_rsrc\_api.h}}
+\subsubsection{\texorpdfstring{NI\_MAX\_HW\_DECODER\_COUNT}{NI\_MAX\_HW\_DECODER\_COUNT}}
+{\footnotesize\ttfamily \#define N\+I\+\_\+\+M\+A\+X\+\_\+\+H\+W\+\_\+\+D\+E\+C\+O\+D\+E\+R\+\_\+\+C\+O\+U\+NT~128}
+
+
+
+Definition at line 17 of file ni\+\_\+rsrc\+\_\+api.\+h.
+
+\mbox{\Hypertarget{ni__rsrc__api_8h_a41809901a12b4be816387878e15c69f3}\label{ni__rsrc__api_8h_a41809901a12b4be816387878e15c69f3}} 
+\index{ni\_rsrc\_api.h@{ni\_rsrc\_api.h}!NI\_MAX\_HW\_ENCODER\_COUNT@{NI\_MAX\_HW\_ENCODER\_COUNT}}
+\index{NI\_MAX\_HW\_ENCODER\_COUNT@{NI\_MAX\_HW\_ENCODER\_COUNT}!ni\_rsrc\_api.h@{ni\_rsrc\_api.h}}
+\subsubsection{\texorpdfstring{NI\_MAX\_HW\_ENCODER\_COUNT}{NI\_MAX\_HW\_ENCODER\_COUNT}}
+{\footnotesize\ttfamily \#define N\+I\+\_\+\+M\+A\+X\+\_\+\+H\+W\+\_\+\+E\+N\+C\+O\+D\+E\+R\+\_\+\+C\+O\+U\+NT~128}
+
+
+
+Definition at line 18 of file ni\+\_\+rsrc\+\_\+api.\+h.
+
+\mbox{\Hypertarget{ni__rsrc__api_8h_a5deb9cb3cd63fd063fc3df62a60d8d40}\label{ni__rsrc__api_8h_a5deb9cb3cd63fd063fc3df62a60d8d40}} 
+\index{ni\_rsrc\_api.h@{ni\_rsrc\_api.h}!NI\_MAX\_LEVEL\_NAME\_LEN@{NI\_MAX\_LEVEL\_NAME\_LEN}}
+\index{NI\_MAX\_LEVEL\_NAME\_LEN@{NI\_MAX\_LEVEL\_NAME\_LEN}!ni\_rsrc\_api.h@{ni\_rsrc\_api.h}}
+\subsubsection{\texorpdfstring{NI\_MAX\_LEVEL\_NAME\_LEN}{NI\_MAX\_LEVEL\_NAME\_LEN}}
+{\footnotesize\ttfamily \#define N\+I\+\_\+\+M\+A\+X\+\_\+\+L\+E\+V\+E\+L\+\_\+\+N\+A\+M\+E\+\_\+\+L\+EN~64}
+
+
+
+Definition at line 22 of file ni\+\_\+rsrc\+\_\+api.\+h.
+
+\mbox{\Hypertarget{ni__rsrc__api_8h_a5a7b5c8942cc01883c392e9497c3a99d}\label{ni__rsrc__api_8h_a5a7b5c8942cc01883c392e9497c3a99d}} 
+\index{ni\_rsrc\_api.h@{ni\_rsrc\_api.h}!NI\_MAX\_PROFILE\_NAME\_LEN@{NI\_MAX\_PROFILE\_NAME\_LEN}}
+\index{NI\_MAX\_PROFILE\_NAME\_LEN@{NI\_MAX\_PROFILE\_NAME\_LEN}!ni\_rsrc\_api.h@{ni\_rsrc\_api.h}}
+\subsubsection{\texorpdfstring{NI\_MAX\_PROFILE\_NAME\_LEN}{NI\_MAX\_PROFILE\_NAME\_LEN}}
+{\footnotesize\ttfamily \#define N\+I\+\_\+\+M\+A\+X\+\_\+\+P\+R\+O\+F\+I\+L\+E\+\_\+\+N\+A\+M\+E\+\_\+\+L\+EN~128}
+
+
+
+Definition at line 21 of file ni\+\_\+rsrc\+\_\+api.\+h.
+
+\mbox{\Hypertarget{ni__rsrc__api_8h_a573b669de80ab750cfc3d96da9dbd507}\label{ni__rsrc__api_8h_a573b669de80ab750cfc3d96da9dbd507}} 
+\index{ni\_rsrc\_api.h@{ni\_rsrc\_api.h}!NI\_MAX\_SW\_INSTANCE\_COUNT@{NI\_MAX\_SW\_INSTANCE\_COUNT}}
+\index{NI\_MAX\_SW\_INSTANCE\_COUNT@{NI\_MAX\_SW\_INSTANCE\_COUNT}!ni\_rsrc\_api.h@{ni\_rsrc\_api.h}}
+\subsubsection{\texorpdfstring{NI\_MAX\_SW\_INSTANCE\_COUNT}{NI\_MAX\_SW\_INSTANCE\_COUNT}}
+{\footnotesize\ttfamily \#define N\+I\+\_\+\+M\+A\+X\+\_\+\+S\+W\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+C\+O\+U\+NT~8}
+
+
+
+Definition at line 19 of file ni\+\_\+rsrc\+\_\+api.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{ni__rsrc__api_8h_ad812d2d2321088c58f5125280852ec1e}\label{ni__rsrc__api_8h_ad812d2d2321088c58f5125280852ec1e}} 
+\index{ni\_rsrc\_api.h@{ni\_rsrc\_api.h}!ni\_card\_info\_t@{ni\_card\_info\_t}}
+\index{ni\_card\_info\_t@{ni\_card\_info\_t}!ni\_rsrc\_api.h@{ni\_rsrc\_api.h}}
+\subsubsection{\texorpdfstring{ni\_card\_info\_t}{ni\_card\_info\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct__ni__card__info}{\+\_\+ni\+\_\+card\+\_\+info}}  \mbox{\hyperlink{ni__rsrc__api_8h_ad812d2d2321088c58f5125280852ec1e}{ni\+\_\+card\+\_\+info\+\_\+t}}}
+
+\mbox{\Hypertarget{ni__rsrc__api_8h_a880a361e6e867b45d102656e813a046f}\label{ni__rsrc__api_8h_a880a361e6e867b45d102656e813a046f}} 
+\index{ni\_rsrc\_api.h@{ni\_rsrc\_api.h}!ni\_device\_context\_t@{ni\_device\_context\_t}}
+\index{ni\_device\_context\_t@{ni\_device\_context\_t}!ni\_rsrc\_api.h@{ni\_rsrc\_api.h}}
+\subsubsection{\texorpdfstring{ni\_device\_context\_t}{ni\_device\_context\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct__ni__device__context}{\+\_\+ni\+\_\+device\+\_\+context}}  \mbox{\hyperlink{ni__rsrc__api_8h_a880a361e6e867b45d102656e813a046f}{ni\+\_\+device\+\_\+context\+\_\+t}}}
+
+\mbox{\Hypertarget{ni__rsrc__api_8h_a37a9b9f89ba495d469222af27ce3058b}\label{ni__rsrc__api_8h_a37a9b9f89ba495d469222af27ce3058b}} 
+\index{ni\_rsrc\_api.h@{ni\_rsrc\_api.h}!ni\_device\_info\_t@{ni\_device\_info\_t}}
+\index{ni\_device\_info\_t@{ni\_device\_info\_t}!ni\_rsrc\_api.h@{ni\_rsrc\_api.h}}
+\subsubsection{\texorpdfstring{ni\_device\_info\_t}{ni\_device\_info\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct__ni__device__info}{\+\_\+ni\+\_\+device\+\_\+info}}  \mbox{\hyperlink{ni__rsrc__api_8h_a37a9b9f89ba495d469222af27ce3058b}{ni\+\_\+device\+\_\+info\+\_\+t}}}
+
+\mbox{\Hypertarget{ni__rsrc__api_8h_a0206515f5df25d796849ae70dd167e44}\label{ni__rsrc__api_8h_a0206515f5df25d796849ae70dd167e44}} 
+\index{ni\_rsrc\_api.h@{ni\_rsrc\_api.h}!ni\_device\_pool\_t@{ni\_device\_pool\_t}}
+\index{ni\_device\_pool\_t@{ni\_device\_pool\_t}!ni\_rsrc\_api.h@{ni\_rsrc\_api.h}}
+\subsubsection{\texorpdfstring{ni\_device\_pool\_t}{ni\_device\_pool\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct__ni__device__pool}{\+\_\+ni\+\_\+device\+\_\+pool}}  \mbox{\hyperlink{ni__rsrc__api_8h_a0206515f5df25d796849ae70dd167e44}{ni\+\_\+device\+\_\+pool\+\_\+t}}}
+
+\mbox{\Hypertarget{ni__rsrc__api_8h_a9d2ed9ccf29349d91855dc9db68b3597}\label{ni__rsrc__api_8h_a9d2ed9ccf29349d91855dc9db68b3597}} 
+\index{ni\_rsrc\_api.h@{ni\_rsrc\_api.h}!ni\_device\_queue\_t@{ni\_device\_queue\_t}}
+\index{ni\_device\_queue\_t@{ni\_device\_queue\_t}!ni\_rsrc\_api.h@{ni\_rsrc\_api.h}}
+\subsubsection{\texorpdfstring{ni\_device\_queue\_t}{ni\_device\_queue\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct__ni__device__queue}{\+\_\+ni\+\_\+device\+\_\+queue}}  \mbox{\hyperlink{ni__rsrc__api_8h_a9d2ed9ccf29349d91855dc9db68b3597}{ni\+\_\+device\+\_\+queue\+\_\+t}}}
+
+\mbox{\Hypertarget{ni__rsrc__api_8h_ae92c73d0b69c4054856fad2f5a013f6e}\label{ni__rsrc__api_8h_ae92c73d0b69c4054856fad2f5a013f6e}} 
+\index{ni\_rsrc\_api.h@{ni\_rsrc\_api.h}!ni\_device\_t@{ni\_device\_t}}
+\index{ni\_device\_t@{ni\_device\_t}!ni\_rsrc\_api.h@{ni\_rsrc\_api.h}}
+\subsubsection{\texorpdfstring{ni\_device\_t}{ni\_device\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct__ni__device}{\+\_\+ni\+\_\+device}}  \mbox{\hyperlink{ni__rsrc__api_8h_ae92c73d0b69c4054856fad2f5a013f6e}{ni\+\_\+device\+\_\+t}}}
+
+\mbox{\Hypertarget{ni__rsrc__api_8h_adf4d30f539dbb9bae2cdf26a53baafeb}\label{ni__rsrc__api_8h_adf4d30f539dbb9bae2cdf26a53baafeb}} 
+\index{ni\_rsrc\_api.h@{ni\_rsrc\_api.h}!ni\_device\_video\_capability\_t@{ni\_device\_video\_capability\_t}}
+\index{ni\_device\_video\_capability\_t@{ni\_device\_video\_capability\_t}!ni\_rsrc\_api.h@{ni\_rsrc\_api.h}}
+\subsubsection{\texorpdfstring{ni\_device\_video\_capability\_t}{ni\_device\_video\_capability\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct__ni__device__video__capability}{\+\_\+ni\+\_\+device\+\_\+video\+\_\+capability}}  \mbox{\hyperlink{ni__rsrc__api_8h_adf4d30f539dbb9bae2cdf26a53baafeb}{ni\+\_\+device\+\_\+video\+\_\+capability\+\_\+t}}}
+
+\mbox{\Hypertarget{ni__rsrc__api_8h_a0857f43549610b9d4a760922c106fe22}\label{ni__rsrc__api_8h_a0857f43549610b9d4a760922c106fe22}} 
+\index{ni\_rsrc\_api.h@{ni\_rsrc\_api.h}!ni\_rsrc\_device\_video\_ref\_cap\_t@{ni\_rsrc\_device\_video\_ref\_cap\_t}}
+\index{ni\_rsrc\_device\_video\_ref\_cap\_t@{ni\_rsrc\_device\_video\_ref\_cap\_t}!ni\_rsrc\_api.h@{ni\_rsrc\_api.h}}
+\subsubsection{\texorpdfstring{ni\_rsrc\_device\_video\_ref\_cap\_t}{ni\_rsrc\_device\_video\_ref\_cap\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct__ni__rsrc__video__ref__cap}{\+\_\+ni\+\_\+rsrc\+\_\+video\+\_\+ref\+\_\+cap}}  \mbox{\hyperlink{ni__rsrc__api_8h_a0857f43549610b9d4a760922c106fe22}{ni\+\_\+rsrc\+\_\+device\+\_\+video\+\_\+ref\+\_\+cap\+\_\+t}}}
+
+\mbox{\Hypertarget{ni__rsrc__api_8h_a9e007bba8915f56c2a096715a4edf473}\label{ni__rsrc__api_8h_a9e007bba8915f56c2a096715a4edf473}} 
+\index{ni\_rsrc\_api.h@{ni\_rsrc\_api.h}!ni\_sw\_instance\_info\_t@{ni\_sw\_instance\_info\_t}}
+\index{ni\_sw\_instance\_info\_t@{ni\_sw\_instance\_info\_t}!ni\_rsrc\_api.h@{ni\_rsrc\_api.h}}
+\subsubsection{\texorpdfstring{ni\_sw\_instance\_info\_t}{ni\_sw\_instance\_info\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct__ni__sw__instance__info}{\+\_\+ni\+\_\+sw\+\_\+instance\+\_\+info}}  \mbox{\hyperlink{ni__rsrc__api_8h_a9e007bba8915f56c2a096715a4edf473}{ni\+\_\+sw\+\_\+instance\+\_\+info\+\_\+t}}}
+
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{ni__rsrc__api_8h_aa7880eaad1b291fe86040967382c8895}\label{ni__rsrc__api_8h_aa7880eaad1b291fe86040967382c8895}} 
+\index{ni\_rsrc\_api.h@{ni\_rsrc\_api.h}!ni\_alloc\_rule\_t@{ni\_alloc\_rule\_t}}
+\index{ni\_alloc\_rule\_t@{ni\_alloc\_rule\_t}!ni\_rsrc\_api.h@{ni\_rsrc\_api.h}}
+\subsubsection{\texorpdfstring{ni\_alloc\_rule\_t}{ni\_alloc\_rule\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{ni__rsrc__api_8h_aa7880eaad1b291fe86040967382c8895}{ni\+\_\+alloc\+\_\+rule\+\_\+t}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EN\_ALLOC\_LEAST\_LOAD@{EN\_ALLOC\_LEAST\_LOAD}!ni\_rsrc\_api.h@{ni\_rsrc\_api.h}}\index{ni\_rsrc\_api.h@{ni\_rsrc\_api.h}!EN\_ALLOC\_LEAST\_LOAD@{EN\_ALLOC\_LEAST\_LOAD}}}\mbox{\Hypertarget{ni__rsrc__api_8h_aa7880eaad1b291fe86040967382c8895ab71d74283dcba943eb7e575bd6365a50}\label{ni__rsrc__api_8h_aa7880eaad1b291fe86040967382c8895ab71d74283dcba943eb7e575bd6365a50}} 
+E\+N\+\_\+\+A\+L\+L\+O\+C\+\_\+\+L\+E\+A\+S\+T\+\_\+\+L\+O\+AD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EN\_ALLOC\_LEAST\_INSTANCE@{EN\_ALLOC\_LEAST\_INSTANCE}!ni\_rsrc\_api.h@{ni\_rsrc\_api.h}}\index{ni\_rsrc\_api.h@{ni\_rsrc\_api.h}!EN\_ALLOC\_LEAST\_INSTANCE@{EN\_ALLOC\_LEAST\_INSTANCE}}}\mbox{\Hypertarget{ni__rsrc__api_8h_aa7880eaad1b291fe86040967382c8895aba3a1cad80820386795a4f4252f7e463}\label{ni__rsrc__api_8h_aa7880eaad1b291fe86040967382c8895aba3a1cad80820386795a4f4252f7e463}} 
+E\+N\+\_\+\+A\+L\+L\+O\+C\+\_\+\+L\+E\+A\+S\+T\+\_\+\+I\+N\+S\+T\+A\+N\+CE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 82 of file ni\+\_\+rsrc\+\_\+api.\+h.
+
+\mbox{\Hypertarget{ni__rsrc__api_8h_a9945b3a5098e949d3e596e6f778e01bc}\label{ni__rsrc__api_8h_a9945b3a5098e949d3e596e6f778e01bc}} 
+\index{ni\_rsrc\_api.h@{ni\_rsrc\_api.h}!ni\_codec\_t@{ni\_codec\_t}}
+\index{ni\_codec\_t@{ni\_codec\_t}!ni\_rsrc\_api.h@{ni\_rsrc\_api.h}}
+\subsubsection{\texorpdfstring{ni\_codec\_t}{ni\_codec\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{ni__rsrc__api_8h_a9945b3a5098e949d3e596e6f778e01bc}{ni\+\_\+codec\+\_\+t}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EN\_H264@{EN\_H264}!ni\_rsrc\_api.h@{ni\_rsrc\_api.h}}\index{ni\_rsrc\_api.h@{ni\_rsrc\_api.h}!EN\_H264@{EN\_H264}}}\mbox{\Hypertarget{ni__rsrc__api_8h_a9945b3a5098e949d3e596e6f778e01bca4f8dc4f09b7a6c5719c106724bff7cf5}\label{ni__rsrc__api_8h_a9945b3a5098e949d3e596e6f778e01bca4f8dc4f09b7a6c5719c106724bff7cf5}} 
+E\+N\+\_\+\+H264&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EN\_H265@{EN\_H265}!ni\_rsrc\_api.h@{ni\_rsrc\_api.h}}\index{ni\_rsrc\_api.h@{ni\_rsrc\_api.h}!EN\_H265@{EN\_H265}}}\mbox{\Hypertarget{ni__rsrc__api_8h_a9945b3a5098e949d3e596e6f778e01bca6d3542383ab4e3cf5ecfa084bad49680}\label{ni__rsrc__api_8h_a9945b3a5098e949d3e596e6f778e01bca6d3542383ab4e3cf5ecfa084bad49680}} 
+E\+N\+\_\+\+H265&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 69 of file ni\+\_\+rsrc\+\_\+api.\+h.
+
+\mbox{\Hypertarget{ni__rsrc__api_8h_ab2e7f3b7610f6040df902f0aa2f54e8b}\label{ni__rsrc__api_8h_ab2e7f3b7610f6040df902f0aa2f54e8b}} 
+\index{ni\_rsrc\_api.h@{ni\_rsrc\_api.h}!ni\_hw\_revision\_t@{ni\_hw\_revision\_t}}
+\index{ni\_hw\_revision\_t@{ni\_hw\_revision\_t}!ni\_rsrc\_api.h@{ni\_rsrc\_api.h}}
+\subsubsection{\texorpdfstring{ni\_hw\_revision\_t}{ni\_hw\_revision\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{ni__rsrc__api_8h_ab2e7f3b7610f6040df902f0aa2f54e8b}{ni\+\_\+hw\+\_\+revision\+\_\+t}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HW\_REV\_A@{HW\_REV\_A}!ni\_rsrc\_api.h@{ni\_rsrc\_api.h}}\index{ni\_rsrc\_api.h@{ni\_rsrc\_api.h}!HW\_REV\_A@{HW\_REV\_A}}}\mbox{\Hypertarget{ni__rsrc__api_8h_ab2e7f3b7610f6040df902f0aa2f54e8ba6aa18d27efdc22d99f15d3a374216400}\label{ni__rsrc__api_8h_ab2e7f3b7610f6040df902f0aa2f54e8ba6aa18d27efdc22d99f15d3a374216400}} 
+H\+W\+\_\+\+R\+E\+V\+\_\+A&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HW\_REV\_B@{HW\_REV\_B}!ni\_rsrc\_api.h@{ni\_rsrc\_api.h}}\index{ni\_rsrc\_api.h@{ni\_rsrc\_api.h}!HW\_REV\_B@{HW\_REV\_B}}}\mbox{\Hypertarget{ni__rsrc__api_8h_ab2e7f3b7610f6040df902f0aa2f54e8baebc6164380452497959020bb5f4e4dba}\label{ni__rsrc__api_8h_ab2e7f3b7610f6040df902f0aa2f54e8baebc6164380452497959020bb5f4e4dba}} 
+H\+W\+\_\+\+R\+E\+V\+\_\+B&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 25 of file ni\+\_\+rsrc\+\_\+api.\+h.
+
+\mbox{\Hypertarget{ni__rsrc__api_8h_a64a7b6cabb90ef404ab5425542fefe20}\label{ni__rsrc__api_8h_a64a7b6cabb90ef404ab5425542fefe20}} 
+\index{ni\_rsrc\_api.h@{ni\_rsrc\_api.h}!ni\_sw\_instance\_status\_t@{ni\_sw\_instance\_status\_t}}
+\index{ni\_sw\_instance\_status\_t@{ni\_sw\_instance\_status\_t}!ni\_rsrc\_api.h@{ni\_rsrc\_api.h}}
+\subsubsection{\texorpdfstring{ni\_sw\_instance\_status\_t}{ni\_sw\_instance\_status\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{ni__rsrc__api_8h_a64a7b6cabb90ef404ab5425542fefe20}{ni\+\_\+sw\+\_\+instance\+\_\+status\+\_\+t}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EN\_IDLE@{EN\_IDLE}!ni\_rsrc\_api.h@{ni\_rsrc\_api.h}}\index{ni\_rsrc\_api.h@{ni\_rsrc\_api.h}!EN\_IDLE@{EN\_IDLE}}}\mbox{\Hypertarget{ni__rsrc__api_8h_a64a7b6cabb90ef404ab5425542fefe20a04a573c61efb2f13446e4da8d82faae8}\label{ni__rsrc__api_8h_a64a7b6cabb90ef404ab5425542fefe20a04a573c61efb2f13446e4da8d82faae8}} 
+E\+N\+\_\+\+I\+D\+LE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EN\_ACTIVE@{EN\_ACTIVE}!ni\_rsrc\_api.h@{ni\_rsrc\_api.h}}\index{ni\_rsrc\_api.h@{ni\_rsrc\_api.h}!EN\_ACTIVE@{EN\_ACTIVE}}}\mbox{\Hypertarget{ni__rsrc__api_8h_a64a7b6cabb90ef404ab5425542fefe20a21ece68024e9143e07c2fa4957f45599}\label{ni__rsrc__api_8h_a64a7b6cabb90ef404ab5425542fefe20a21ece68024e9143e07c2fa4957f45599}} 
+E\+N\+\_\+\+A\+C\+T\+I\+VE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 76 of file ni\+\_\+rsrc\+\_\+api.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ni__rsrc__api_8h_a05fd6603cc63dc256b344da0ec67e9da}\label{ni__rsrc__api_8h_a05fd6603cc63dc256b344da0ec67e9da}} 
+\index{ni\_rsrc\_api.h@{ni\_rsrc\_api.h}!ni\_rsrc\_add\_device@{ni\_rsrc\_add\_device}}
+\index{ni\_rsrc\_add\_device@{ni\_rsrc\_add\_device}!ni\_rsrc\_api.h@{ni\_rsrc\_api.h}}
+\subsubsection{\texorpdfstring{ni\_rsrc\_add\_device()}{ni\_rsrc\_add\_device()}}
+{\footnotesize\ttfamily L\+I\+B\+\_\+\+A\+PI int ni\+\_\+rsrc\+\_\+add\+\_\+device (\begin{DoxyParamCaption}\item[{const char $\ast$}]{dev }\end{DoxyParamCaption})}
+
+
+
+Add an Net\+Int h/w device into resource pool on the host. 
+
+
+
+ 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+\_\+dev} & the N\+V\+Me device name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+S\+U\+C\+C\+E\+SS N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+F\+A\+I\+L\+U\+RE 
+\end{DoxyReturn}
+add the h/w device\+\_\+info entry 
+
+Definition at line 1906 of file ni\+\_\+rsrc\+\_\+api.\+c.
+
+\mbox{\Hypertarget{ni__rsrc__api_8h_a4fb85057b73aa652176f932af2bba5a4}\label{ni__rsrc__api_8h_a4fb85057b73aa652176f932af2bba5a4}} 
+\index{ni\_rsrc\_api.h@{ni\_rsrc\_api.h}!ni\_rsrc\_allocate\_auto@{ni\_rsrc\_allocate\_auto}}
+\index{ni\_rsrc\_allocate\_auto@{ni\_rsrc\_allocate\_auto}!ni\_rsrc\_api.h@{ni\_rsrc\_api.h}}
+\subsubsection{\texorpdfstring{ni\_rsrc\_allocate\_auto()}{ni\_rsrc\_allocate\_auto()}}
+{\footnotesize\ttfamily L\+I\+B\+\_\+\+A\+PI \mbox{\hyperlink{ni__rsrc__api_8h_a880a361e6e867b45d102656e813a046f}{ni\+\_\+device\+\_\+context\+\_\+t}}$\ast$ ni\+\_\+rsrc\+\_\+allocate\+\_\+auto (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__defs_8h_a758f24acb02b236820c7390eed53d1cc}{ni\+\_\+device\+\_\+type\+\_\+t}}}]{device\+\_\+type,  }\item[{\mbox{\hyperlink{ni__rsrc__api_8h_aa7880eaad1b291fe86040967382c8895}{ni\+\_\+alloc\+\_\+rule\+\_\+t}}}]{rule,  }\item[{\mbox{\hyperlink{ni__rsrc__api_8h_a9945b3a5098e949d3e596e6f778e01bc}{ni\+\_\+codec\+\_\+t}}}]{codec,  }\item[{int}]{width,  }\item[{int}]{height,  }\item[{int}]{frame\+\_\+rate,  }\item[{unsigned long $\ast$}]{p\+\_\+load }\end{DoxyParamCaption})}
+
+
+
+Allocate resources for decoding/encoding, based on the provided rule. 
+
+
+
+ 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em device\+\_\+type} & N\+I\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+E\+C\+O\+D\+ER or N\+I\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+E\+N\+C\+O\+D\+ER \\
+\hline
+\mbox{\texttt{ in}}  & {\em rule} & allocation rule \\
+\hline
+\mbox{\texttt{ in}}  & {\em codec} & E\+N\+\_\+\+H264 or E\+N\+\_\+\+H265 \\
+\hline
+\mbox{\texttt{ in}}  & {\em width} & width of video resolution \\
+\hline
+\mbox{\texttt{ in}}  & {\em height} & height of video resolution \\
+\hline
+\mbox{\texttt{ in}}  & {\em frame\+\_\+rate} & video stream frame rate \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+\_\+load} & the load that will be generated by this encoding task. Returned {\itshape only} for encoder for now.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to ni\+\_\+device\+\_\+context\+\_\+t if found, N\+U\+LL otherwise
+\end{DoxyReturn}
+Note\+: codec, width, height, fps need to be supplied for N\+I\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+E\+N\+C\+O\+D\+ER only, they are ignored otherwize. Note\+: the returned ni\+\_\+device\+\_\+context\+\_\+t content is not supposed to be used by caller directly\+: should only be passed to A\+PI in the subsequent calls; also after its use, the context should be released by calling ni\+\_\+rsrc\+\_\+free\+\_\+device\+\_\+context.
+
+
+
+ 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em type} & N\+I\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+E\+C\+O\+D\+ER or N\+I\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+E\+N\+C\+O\+D\+ER \\
+\hline
+\mbox{\texttt{ in}}  & {\em rule} & allocation rule \\
+\hline
+\mbox{\texttt{ in}}  & {\em codec} & E\+N\+\_\+\+H264 or E\+N\+\_\+\+H265 \\
+\hline
+\mbox{\texttt{ in}}  & {\em width} & width of video resolution \\
+\hline
+\mbox{\texttt{ in}}  & {\em height} & height of video resolution \\
+\hline
+\mbox{\texttt{ in}}  & {\em frame\+\_\+rate} & video stream frame rate \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+\_\+load} & the p\+\_\+load that will be generated by this encoding task. Returned {\itshape only} for encoder for now.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to ni\+\_\+device\+\_\+context\+\_\+t if found, N\+U\+LL otherwise
+\end{DoxyReturn}
+Note\+: codec, width, height, fps need to be supplied for N\+I\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+E\+N\+C\+O\+D\+ER only, they are ignored otherwize. Note\+: the returned ni\+\_\+device\+\_\+context\+\_\+t content is not supposed to be used by caller directly\+: should only be passed to A\+PI in the subsequent calls; also after its use, the context should be released by calling ni\+\_\+rsrc\+\_\+free\+\_\+device\+\_\+context. retrieve the record and based on the allocation rule specified, find the least loaded or least number of s/w instances among the coders
+
+get the individual device\+\_\+info info and check the load/num-\/of-\/instances 
+
+Definition at line 1417 of file ni\+\_\+rsrc\+\_\+api.\+c.
+
+\mbox{\Hypertarget{ni__rsrc__api_8h_a1b3ca5592e301f6ed48ce04e58a67a10}\label{ni__rsrc__api_8h_a1b3ca5592e301f6ed48ce04e58a67a10}} 
+\index{ni\_rsrc\_api.h@{ni\_rsrc\_api.h}!ni\_rsrc\_allocate\_direct@{ni\_rsrc\_allocate\_direct}}
+\index{ni\_rsrc\_allocate\_direct@{ni\_rsrc\_allocate\_direct}!ni\_rsrc\_api.h@{ni\_rsrc\_api.h}}
+\subsubsection{\texorpdfstring{ni\_rsrc\_allocate\_direct()}{ni\_rsrc\_allocate\_direct()}}
+{\footnotesize\ttfamily L\+I\+B\+\_\+\+A\+PI \mbox{\hyperlink{ni__rsrc__api_8h_a880a361e6e867b45d102656e813a046f}{ni\+\_\+device\+\_\+context\+\_\+t}}$\ast$ ni\+\_\+rsrc\+\_\+allocate\+\_\+direct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__defs_8h_a758f24acb02b236820c7390eed53d1cc}{ni\+\_\+device\+\_\+type\+\_\+t}}}]{device\+\_\+type,  }\item[{int}]{guid,  }\item[{\mbox{\hyperlink{ni__rsrc__api_8h_a9945b3a5098e949d3e596e6f778e01bc}{ni\+\_\+codec\+\_\+t}}}]{codec,  }\item[{int}]{width,  }\item[{int}]{height,  }\item[{int}]{frame\+\_\+rate,  }\item[{unsigned long $\ast$}]{p\+\_\+load }\end{DoxyParamCaption})}
+
+
+
+Allocate resources for decoding/encoding, by designating explicitly the device to use. 
+
+
+
+ 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em device\+\_\+type} & N\+I\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+E\+C\+O\+D\+ER or N\+I\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+E\+N\+C\+O\+D\+ER \\
+\hline
+\mbox{\texttt{ in}}  & {\em guid} & unique device (decoder or encoder) module id \\
+\hline
+\mbox{\texttt{ in}}  & {\em codec} & E\+N\+\_\+\+H264 or E\+N\+\_\+\+H265 \\
+\hline
+\mbox{\texttt{ in}}  & {\em width} & width of video resolution \\
+\hline
+\mbox{\texttt{ in}}  & {\em height} & height of video resolution \\
+\hline
+\mbox{\texttt{ in}}  & {\em frame\+\_\+rate} & video stream frame rate \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+\_\+load} & the load that will be generated by this encoding task. Returned {\itshape only} for encoder for now.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to ni\+\_\+device\+\_\+context\+\_\+t if found, N\+U\+LL otherwise
+\end{DoxyReturn}
+Note\+: codec, width, height, fps need to be supplied by encoder; they are ignored for decoder.
+
+Note\+: the returned ni\+\_\+device\+\_\+context\+\_\+t content is not supposed to be used by caller directly\+: should only be passed to A\+PI in the subsequent calls; also after its use, the context should be released by calling ni\+\_\+rsrc\+\_\+free\+\_\+device\+\_\+context. call libxcoder to allocate a s/w instance on the specified h/w device\+\_\+info; this might not be necessary as the actual allocation of s/w instance happens when decoding/encoding starts in the codec
+
+update modelled load for encoder
+
+then move this device\+\_\+info to the end of the device\+\_\+info queue so that it will be selected p\+\_\+last in the auto-\/allocate selection process, for load balancing 
+
+Definition at line 1633 of file ni\+\_\+rsrc\+\_\+api.\+c.
+
+\mbox{\Hypertarget{ni__rsrc__api_8h_a79c5e424fd25053625e843f4fba5df3f}\label{ni__rsrc__api_8h_a79c5e424fd25053625e843f4fba5df3f}} 
+\index{ni\_rsrc\_api.h@{ni\_rsrc\_api.h}!ni\_rsrc\_free\_device\_context@{ni\_rsrc\_free\_device\_context}}
+\index{ni\_rsrc\_free\_device\_context@{ni\_rsrc\_free\_device\_context}!ni\_rsrc\_api.h@{ni\_rsrc\_api.h}}
+\subsubsection{\texorpdfstring{ni\_rsrc\_free\_device\_context()}{ni\_rsrc\_free\_device\_context()}}
+{\footnotesize\ttfamily L\+I\+B\+\_\+\+A\+PI void ni\+\_\+rsrc\+\_\+free\+\_\+device\+\_\+context (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__rsrc__api_8h_a880a361e6e867b45d102656e813a046f}{ni\+\_\+device\+\_\+context\+\_\+t}} $\ast$}]{p\+\_\+device\+\_\+context }\end{DoxyParamCaption})}
+
+
+
+Free previously allocated device context. 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+device\+\_\+context} & Pointer to previously allocated device context\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 875 of file ni\+\_\+rsrc\+\_\+api.\+c.
+
+\mbox{\Hypertarget{ni__rsrc__api_8h_ad2149b47c97da16c5ecbf11cd55e7b52}\label{ni__rsrc__api_8h_ad2149b47c97da16c5ecbf11cd55e7b52}} 
+\index{ni\_rsrc\_api.h@{ni\_rsrc\_api.h}!ni\_rsrc\_free\_device\_pool@{ni\_rsrc\_free\_device\_pool}}
+\index{ni\_rsrc\_free\_device\_pool@{ni\_rsrc\_free\_device\_pool}!ni\_rsrc\_api.h@{ni\_rsrc\_api.h}}
+\subsubsection{\texorpdfstring{ni\_rsrc\_free\_device\_pool()}{ni\_rsrc\_free\_device\_pool()}}
+{\footnotesize\ttfamily L\+I\+B\+\_\+\+A\+PI void ni\+\_\+rsrc\+\_\+free\+\_\+device\+\_\+pool (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__rsrc__api_8h_a0206515f5df25d796849ae70dd167e44}{ni\+\_\+device\+\_\+pool\+\_\+t}} $\ast$}]{p\+\_\+device\+\_\+pool }\end{DoxyParamCaption})}
+
+
+
+Free all resources taken by the device pool. 
+
+
+
+ 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+\_\+device\+\_\+pool} & Poiner to a device pool struct\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 2068 of file ni\+\_\+rsrc\+\_\+api.\+c.
+
+\mbox{\Hypertarget{ni__rsrc__api_8h_af9ce0f68b5af1772a2e887ce3447e778}\label{ni__rsrc__api_8h_af9ce0f68b5af1772a2e887ce3447e778}} 
+\index{ni\_rsrc\_api.h@{ni\_rsrc\_api.h}!ni\_rsrc\_get\_available\_device@{ni\_rsrc\_get\_available\_device}}
+\index{ni\_rsrc\_get\_available\_device@{ni\_rsrc\_get\_available\_device}!ni\_rsrc\_api.h@{ni\_rsrc\_api.h}}
+\subsubsection{\texorpdfstring{ni\_rsrc\_get\_available\_device()}{ni\_rsrc\_get\_available\_device()}}
+{\footnotesize\ttfamily L\+I\+B\+\_\+\+A\+PI int ni\+\_\+rsrc\+\_\+get\+\_\+available\+\_\+device (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height,  }\item[{int}]{frame\+\_\+rate,  }\item[{\mbox{\hyperlink{ni__rsrc__api_8h_a9945b3a5098e949d3e596e6f778e01bc}{ni\+\_\+codec\+\_\+t}}}]{codec,  }\item[{\mbox{\hyperlink{ni__defs_8h_a758f24acb02b236820c7390eed53d1cc}{ni\+\_\+device\+\_\+type\+\_\+t}}}]{device\+\_\+type,  }\item[{\mbox{\hyperlink{ni__rsrc__api_8h_a37a9b9f89ba495d469222af27ce3058b}{ni\+\_\+device\+\_\+info\+\_\+t}} $\ast$}]{p\+\_\+device\+\_\+info }\end{DoxyParamCaption})}
+
+
+
+Get the least used device that can handle decoding or encoding a video stream of certain resolution/frame-\/rate/codec. 
+
+
+
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em width} & width of video resolution \\
+\hline
+\mbox{\texttt{ in}}  & {\em height} & height of video resolution \\
+\hline
+\mbox{\texttt{ in}}  & {\em frame\+\_\+rate} & video stream frame rate \\
+\hline
+\mbox{\texttt{ in}}  & {\em codec} & E\+N\+\_\+\+H264 or E\+N\+\_\+\+H265 \\
+\hline
+\mbox{\texttt{ in}}  & {\em type} & N\+I\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+E\+C\+O\+D\+ER or N\+I\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+E\+N\+C\+O\+D\+ER \\
+\hline
+\mbox{\texttt{ out}}  & {\em info} & detailed device information. If is non-\/\+N\+U\+LL, the device info is stored in the memory pointed to by it.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+device G\+U\+ID ($>$= 0) if found , -\/1 otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 1118 of file ni\+\_\+rsrc\+\_\+api.\+c.
+
+\mbox{\Hypertarget{ni__rsrc__api_8h_a60bcbd3381ce7ac6a7cb95663762d55c}\label{ni__rsrc__api_8h_a60bcbd3381ce7ac6a7cb95663762d55c}} 
+\index{ni\_rsrc\_api.h@{ni\_rsrc\_api.h}!ni\_rsrc\_get\_device\_context@{ni\_rsrc\_get\_device\_context}}
+\index{ni\_rsrc\_get\_device\_context@{ni\_rsrc\_get\_device\_context}!ni\_rsrc\_api.h@{ni\_rsrc\_api.h}}
+\subsubsection{\texorpdfstring{ni\_rsrc\_get\_device\_context()}{ni\_rsrc\_get\_device\_context()}}
+{\footnotesize\ttfamily L\+I\+B\+\_\+\+A\+PI \mbox{\hyperlink{ni__rsrc__api_8h_a880a361e6e867b45d102656e813a046f}{ni\+\_\+device\+\_\+context\+\_\+t}}$\ast$ ni\+\_\+rsrc\+\_\+get\+\_\+device\+\_\+context (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__defs_8h_a758f24acb02b236820c7390eed53d1cc}{ni\+\_\+device\+\_\+type\+\_\+t}}}]{type,  }\item[{int}]{guid }\end{DoxyParamCaption})}
+
+
+
+Allocates and returns a pointer to ni\+\_\+device\+\_\+context\+\_\+t struct based on provided device\+\_\+type and guid. To be used for load update and codec query. 
+
+
+
+ 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em device\+\_\+type} & N\+I\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+E\+C\+O\+D\+ER or N\+I\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+E\+N\+C\+O\+D\+ER \\
+\hline
+\mbox{\texttt{ in}}  & {\em guid} & G\+U\+ID of the encoder or decoder device\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to ni\+\_\+device\+\_\+context\+\_\+t if found, N\+U\+LL otherwise
+\end{DoxyReturn}
+Note\+: The returned ni\+\_\+device\+\_\+context\+\_\+t content is not supposed to be used by caller directly\+: should only be passed to A\+PI in the subsequent calls; also after its use, the context should be released by calling ni\+\_\+rsrc\+\_\+free\+\_\+device\+\_\+context. \mbox{\Hypertarget{ni__rsrc__api_8h_a5e85c1aa3a7a666178afb1744333dfa6}\label{ni__rsrc__api_8h_a5e85c1aa3a7a666178afb1744333dfa6}} 
+\index{ni\_rsrc\_api.h@{ni\_rsrc\_api.h}!ni\_rsrc\_get\_device\_info@{ni\_rsrc\_get\_device\_info}}
+\index{ni\_rsrc\_get\_device\_info@{ni\_rsrc\_get\_device\_info}!ni\_rsrc\_api.h@{ni\_rsrc\_api.h}}
+\subsubsection{\texorpdfstring{ni\_rsrc\_get\_device\_info()}{ni\_rsrc\_get\_device\_info()}}
+{\footnotesize\ttfamily L\+I\+B\+\_\+\+A\+PI \mbox{\hyperlink{ni__rsrc__api_8h_a37a9b9f89ba495d469222af27ce3058b}{ni\+\_\+device\+\_\+info\+\_\+t}}$\ast$ ni\+\_\+rsrc\+\_\+get\+\_\+device\+\_\+info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__defs_8h_a758f24acb02b236820c7390eed53d1cc}{ni\+\_\+device\+\_\+type\+\_\+t}}}]{device\+\_\+type,  }\item[{int}]{guid }\end{DoxyParamCaption})}
+
+
+
+Query a specific device with detailed information on the system. 
+
+
+
+ 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em device\+\_\+type} & N\+I\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+E\+C\+O\+D\+ER or N\+I\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+E\+N\+C\+O\+D\+ER \\
+\hline
+\mbox{\texttt{ in}}  & {\em guid} & unique device(decoder or encoder) id\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to ni\+\_\+device\+\_\+info\+\_\+t if found N\+U\+LL otherwise
+\end{DoxyReturn}
+Note\+: Caller is responsible for releasing memory that was allocated for the returned pointer 
+
+Definition at line 1061 of file ni\+\_\+rsrc\+\_\+api.\+c.
+
+\mbox{\Hypertarget{ni__rsrc__api_8h_ab7a2e138aa6bf20b7b4bae47b9eab3dd}\label{ni__rsrc__api_8h_ab7a2e138aa6bf20b7b4bae47b9eab3dd}} 
+\index{ni\_rsrc\_api.h@{ni\_rsrc\_api.h}!ni\_rsrc\_get\_device\_pool@{ni\_rsrc\_get\_device\_pool}}
+\index{ni\_rsrc\_get\_device\_pool@{ni\_rsrc\_get\_device\_pool}!ni\_rsrc\_api.h@{ni\_rsrc\_api.h}}
+\subsubsection{\texorpdfstring{ni\_rsrc\_get\_device\_pool()}{ni\_rsrc\_get\_device\_pool()}}
+{\footnotesize\ttfamily L\+I\+B\+\_\+\+A\+PI \mbox{\hyperlink{ni__rsrc__api_8h_a0206515f5df25d796849ae70dd167e44}{ni\+\_\+device\+\_\+pool\+\_\+t}}$\ast$ ni\+\_\+rsrc\+\_\+get\+\_\+device\+\_\+pool (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Create and return the allocated ni\+\_\+device\+\_\+pool\+\_\+t struct. 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to ni\+\_\+device\+\_\+pool\+\_\+t struct on success, or N\+U\+LL on failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ni__rsrc__api_8h_ab209a4ceff1f79bfd81da59f16307c00}\label{ni__rsrc__api_8h_ab209a4ceff1f79bfd81da59f16307c00}} 
+\index{ni\_rsrc\_api.h@{ni\_rsrc\_api.h}!ni\_rsrc\_get\_local\_device\_list@{ni\_rsrc\_get\_local\_device\_list}}
+\index{ni\_rsrc\_get\_local\_device\_list@{ni\_rsrc\_get\_local\_device\_list}!ni\_rsrc\_api.h@{ni\_rsrc\_api.h}}
+\subsubsection{\texorpdfstring{ni\_rsrc\_get\_local\_device\_list()}{ni\_rsrc\_get\_local\_device\_list()}}
+{\footnotesize\ttfamily L\+I\+B\+\_\+\+A\+PI int ni\+\_\+rsrc\+\_\+get\+\_\+local\+\_\+device\+\_\+list (\begin{DoxyParamCaption}\item[{char}]{ni\+\_\+devices\mbox{[}$\,$\mbox{]}\mbox{[}\+M\+A\+X\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+N\+A\+M\+E\+\_\+\+L\+E\+N\mbox{]},  }\item[{int}]{max\+\_\+handles }\end{DoxyParamCaption})}
+
+
+
+Scans system for all N\+V\+Me devices and returns the system device names to the user which where identified as N\+E\+T\+I\+NT transcoder deivices. Names are suitable for Open\+File api usage afterwards. 
+
+
+
+ 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em ni\+\_\+devices} & List of device names identified as N\+E\+T\+I\+NT N\+V\+Me transcoders \\
+\hline
+\mbox{\texttt{ in}}  & {\em max\+\_\+handles} & Max number of device names to return\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number if devices found if successfull operation completed 0 if no N\+E\+T\+I\+NT N\+V\+Me transcoder devices were found N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+M\+E\+M\+\_\+\+A\+L\+OC if memory allocation failed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ni__rsrc__api_8h_a2cd270ed6b73d50859ecb29ea26d2748}\label{ni__rsrc__api_8h_a2cd270ed6b73d50859ecb29ea26d2748}} 
+\index{ni\_rsrc\_api.h@{ni\_rsrc\_api.h}!ni\_rsrc\_init@{ni\_rsrc\_init}}
+\index{ni\_rsrc\_init@{ni\_rsrc\_init}!ni\_rsrc\_api.h@{ni\_rsrc\_api.h}}
+\subsubsection{\texorpdfstring{ni\_rsrc\_init()}{ni\_rsrc\_init()}}
+{\footnotesize\ttfamily L\+I\+B\+\_\+\+A\+PI \mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} ni\+\_\+rsrc\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize and create all resources required to work with N\+E\+T\+I\+NT N\+V\+Me transcoder devices. This is a high level A\+PI function which is used mostly with user application like F\+F\+Mpeg that relies on those resources. In case of custom application integration, revised functionality might be necessary utilizing coresponding A\+PI functions. 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+S\+U\+C\+C\+E\+SS on success N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+F\+A\+I\+L\+U\+RE on failure \begin{DoxyVerb}\end{DoxyVerb}
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ni__rsrc__api_8h_a8e7382b3d3cd63c1211c6f3846c884f7}\label{ni__rsrc__api_8h_a8e7382b3d3cd63c1211c6f3846c884f7}} 
+\index{ni\_rsrc\_api.h@{ni\_rsrc\_api.h}!ni\_rsrc\_list\_all\_devices@{ni\_rsrc\_list\_all\_devices}}
+\index{ni\_rsrc\_list\_all\_devices@{ni\_rsrc\_list\_all\_devices}!ni\_rsrc\_api.h@{ni\_rsrc\_api.h}}
+\subsubsection{\texorpdfstring{ni\_rsrc\_list\_all\_devices()}{ni\_rsrc\_list\_all\_devices()}}
+{\footnotesize\ttfamily L\+I\+B\+\_\+\+A\+PI \mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} ni\+\_\+rsrc\+\_\+list\+\_\+all\+\_\+devices (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__rsrc__api_8h_ae92c73d0b69c4054856fad2f5a013f6e}{ni\+\_\+device\+\_\+t}} $\ast$}]{p\+\_\+device }\end{DoxyParamCaption})}
+
+
+
+List all devices with full information including s/w instances on the system. 
+
+
+
+ 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em p\+\_\+device} & The device information returned.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+S\+U\+C\+C\+E\+SS N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+R\+AM N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+F\+A\+I\+L\+U\+RE
+\end{DoxyReturn}
+Note\+: Caller is responsible for allocating memory for \char`\"{}p\+\_\+device\char`\"{}. 
+
+Definition at line 1021 of file ni\+\_\+rsrc\+\_\+api.\+c.
+
+\mbox{\Hypertarget{ni__rsrc__api_8h_a8a35e00081f59e36c61166b584174c22}\label{ni__rsrc__api_8h_a8a35e00081f59e36c61166b584174c22}} 
+\index{ni\_rsrc\_api.h@{ni\_rsrc\_api.h}!ni\_rsrc\_list\_devices@{ni\_rsrc\_list\_devices}}
+\index{ni\_rsrc\_list\_devices@{ni\_rsrc\_list\_devices}!ni\_rsrc\_api.h@{ni\_rsrc\_api.h}}
+\subsubsection{\texorpdfstring{ni\_rsrc\_list\_devices()}{ni\_rsrc\_list\_devices()}}
+{\footnotesize\ttfamily L\+I\+B\+\_\+\+A\+PI \mbox{\hyperlink{ni__defs_8h_ad17d6e18a9823cd16642c7f4aebdd247}{ni\+\_\+retcode\+\_\+t}} ni\+\_\+rsrc\+\_\+list\+\_\+devices (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__defs_8h_a758f24acb02b236820c7390eed53d1cc}{ni\+\_\+device\+\_\+type\+\_\+t}}}]{device\+\_\+type,  }\item[{\mbox{\hyperlink{ni__rsrc__api_8h_a37a9b9f89ba495d469222af27ce3058b}{ni\+\_\+device\+\_\+info\+\_\+t}} $\ast$}]{p\+\_\+device\+\_\+info,  }\item[{int $\ast$}]{p\+\_\+device\+\_\+count }\end{DoxyParamCaption})}
+
+
+
+List device(s) based on device type with full information including s/w instances on the system. 
+
+
+
+ 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em device\+\_\+type} & N\+I\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+E\+C\+O\+D\+ER or N\+I\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+E\+N\+C\+O\+D\+ER \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+\_\+device} & The device information returned. \\
+\hline
+\mbox{\texttt{ out}}  & {\em p\+\_\+device\+\_\+count} & The number of ni\+\_\+device\+\_\+info\+\_\+t structs returned.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+S\+U\+C\+C\+E\+SS N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+F\+A\+I\+L\+U\+RE
+
+Note\+: Caller is responsible for allocating memory for \char`\"{}p\+\_\+device\char`\"{}. 
+
+Definition at line 904 of file ni\+\_\+rsrc\+\_\+api.\+c.
+
+\mbox{\Hypertarget{ni__rsrc__api_8h_a40d9c1f65db27b3a3a4422e1f0766a5c}\label{ni__rsrc__api_8h_a40d9c1f65db27b3a3a4422e1f0766a5c}} 
+\index{ni\_rsrc\_api.h@{ni\_rsrc\_api.h}!ni\_rsrc\_print\_device\_info@{ni\_rsrc\_print\_device\_info}}
+\index{ni\_rsrc\_print\_device\_info@{ni\_rsrc\_print\_device\_info}!ni\_rsrc\_api.h@{ni\_rsrc\_api.h}}
+\subsubsection{\texorpdfstring{ni\_rsrc\_print\_device\_info()}{ni\_rsrc\_print\_device\_info()}}
+{\footnotesize\ttfamily L\+I\+B\+\_\+\+A\+PI void ni\+\_\+rsrc\+\_\+print\+\_\+device\+\_\+info (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{ni__rsrc__api_8h_a37a9b9f89ba495d469222af27ce3058b}{ni\+\_\+device\+\_\+info\+\_\+t}} $\ast$}]{p\+\_\+device\+\_\+info }\end{DoxyParamCaption})}
+
+
+
+Print the content of the ni\+\_\+device\+\_\+info\+\_\+t struct. 
+
+
+
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+device\+\_\+info} & -\/ pointer to the ni\+\_\+device\+\_\+info\+\_\+t struct to print\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 2092 of file ni\+\_\+rsrc\+\_\+api.\+c.
+
+\mbox{\Hypertarget{ni__rsrc__api_8h_a1c448527d4018802ec25349d06361359}\label{ni__rsrc__api_8h_a1c448527d4018802ec25349d06361359}} 
+\index{ni\_rsrc\_api.h@{ni\_rsrc\_api.h}!ni\_rsrc\_release\_resource@{ni\_rsrc\_release\_resource}}
+\index{ni\_rsrc\_release\_resource@{ni\_rsrc\_release\_resource}!ni\_rsrc\_api.h@{ni\_rsrc\_api.h}}
+\subsubsection{\texorpdfstring{ni\_rsrc\_release\_resource()}{ni\_rsrc\_release\_resource()}}
+{\footnotesize\ttfamily L\+I\+B\+\_\+\+A\+PI void ni\+\_\+rsrc\+\_\+release\+\_\+resource (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__rsrc__api_8h_a880a361e6e867b45d102656e813a046f}{ni\+\_\+device\+\_\+context\+\_\+t}} $\ast$}]{p\+\_\+device\+\_\+context,  }\item[{\mbox{\hyperlink{ni__rsrc__api_8h_a9945b3a5098e949d3e596e6f778e01bc}{ni\+\_\+codec\+\_\+t}}}]{codec,  }\item[{unsigned long}]{load }\end{DoxyParamCaption})}
+
+
+
+Release resources allocated for decoding/encoding. function This {\itshape must} be called at the end of transcoding with previously assigned load value by allocate$\ast$ functions. 
+
+
+
+ 
+\begin{DoxyParams}[1]{Parameters}
+ & {\em \mbox{[}in/\mbox{]}} & p\+\_\+ctxt the device context \\
+\hline
+\mbox{\texttt{ in}}  & {\em codec} & E\+N\+\_\+\+H264 or E\+N\+\_\+\+H265 \\
+\hline
+\mbox{\texttt{ in}}  & {\em load} & the load value returned by allocate$\ast$ functions\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 1731 of file ni\+\_\+rsrc\+\_\+api.\+c.
+
+\mbox{\Hypertarget{ni__rsrc__api_8h_a59d1248d5fcffab69d634652d707a40e}\label{ni__rsrc__api_8h_a59d1248d5fcffab69d634652d707a40e}} 
+\index{ni\_rsrc\_api.h@{ni\_rsrc\_api.h}!ni\_rsrc\_remove\_device@{ni\_rsrc\_remove\_device}}
+\index{ni\_rsrc\_remove\_device@{ni\_rsrc\_remove\_device}!ni\_rsrc\_api.h@{ni\_rsrc\_api.h}}
+\subsubsection{\texorpdfstring{ni\_rsrc\_remove\_device()}{ni\_rsrc\_remove\_device()}}
+{\footnotesize\ttfamily L\+I\+B\+\_\+\+A\+PI int ni\+\_\+rsrc\+\_\+remove\+\_\+device (\begin{DoxyParamCaption}\item[{const char $\ast$}]{dev }\end{DoxyParamCaption})}
+
+
+
+Remove an Net\+Int h/w device from resource pool on the host. 
+
+
+
+ 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+\_\+dev} & the N\+V\+Me device name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+S\+U\+C\+C\+E\+SS N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+F\+A\+I\+L\+U\+RE 
+\end{DoxyReturn}
+
+
+Definition at line 1783 of file ni\+\_\+rsrc\+\_\+api.\+c.
+
+\mbox{\Hypertarget{ni__rsrc__api_8h_a870e053f1dcbe7e491a62c73d6979cc9}\label{ni__rsrc__api_8h_a870e053f1dcbe7e491a62c73d6979cc9}} 
+\index{ni\_rsrc\_api.h@{ni\_rsrc\_api.h}!ni\_rsrc\_update\_device\_load@{ni\_rsrc\_update\_device\_load}}
+\index{ni\_rsrc\_update\_device\_load@{ni\_rsrc\_update\_device\_load}!ni\_rsrc\_api.h@{ni\_rsrc\_api.h}}
+\subsubsection{\texorpdfstring{ni\_rsrc\_update\_device\_load()}{ni\_rsrc\_update\_device\_load()}}
+{\footnotesize\ttfamily L\+I\+B\+\_\+\+A\+PI int ni\+\_\+rsrc\+\_\+update\+\_\+device\+\_\+load (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ni__rsrc__api_8h_a880a361e6e867b45d102656e813a046f}{ni\+\_\+device\+\_\+context\+\_\+t}} $\ast$}]{p\+\_\+device\+\_\+context,  }\item[{int}]{load,  }\item[{int}]{sw\+\_\+instance\+\_\+cnt,  }\item[{const \mbox{\hyperlink{ni__rsrc__api_8h_a9e007bba8915f56c2a096715a4edf473}{ni\+\_\+sw\+\_\+instance\+\_\+info\+\_\+t}}}]{sw\+\_\+instance\+\_\+info\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Update the load value and s/w instances info of a specific decoder or encoder. This is used by resource management daemon to update periodically. 
+
+
+
+ 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p\+\_\+ctxt} & The device context returned by ni\+\_\+rsrc\+\_\+get\+\_\+device\+\_\+context \\
+\hline
+\mbox{\texttt{ in}}  & {\em p\+\_\+load} & The latest load value to update \\
+\hline
+\mbox{\texttt{ in}}  & {\em sw\+\_\+instance\+\_\+cnt} & Number of s/w instances \\
+\hline
+\mbox{\texttt{ in}}  & {\em sw\+\_\+instance\+\_\+info} & Info of s/w instances\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+S\+U\+C\+C\+E\+SS N\+I\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+F\+A\+I\+L\+U\+RE 
+
+Definition at line 1317 of file ni\+\_\+rsrc\+\_\+api.\+c.
+

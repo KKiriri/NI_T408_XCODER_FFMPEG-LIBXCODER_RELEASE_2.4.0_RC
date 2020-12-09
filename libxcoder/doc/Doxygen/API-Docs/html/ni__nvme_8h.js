@@ -1,0 +1,137 @@
+var ni__nvme_8h =
+[
+    [ "_ni_nvme_id_power_state", "struct__ni__nvme__id__power__state.html", "struct__ni__nvme__id__power__state" ],
+    [ "_ni_nvme_identity", "struct__ni__nvme__identity.html", "struct__ni__nvme__identity" ],
+    [ "_ni_nvme_command_t", "struct__ni__nvme__command__t.html", "struct__ni__nvme__command__t" ],
+    [ "_ni_nvme_write_complete_dw0_t", "struct__ni__nvme__write__complete__dw0__t.html", "struct__ni__nvme__write__complete__dw0__t" ],
+    [ "_ni_nvme_read_complete_dw0_t", "struct__ni__nvme__read__complete__dw0__t.html", "struct__ni__nvme__read__complete__dw0__t" ],
+    [ "CONFIG_INSTANCE_SET_DW10_SUBTYPE", "ni__nvme_8h.html#a818b48033a79074bbcd260af4692b6f1", null ],
+    [ "CONFIG_INSTANCE_SET_DW11_ENC_FRAME_PARAMS", "ni__nvme_8h.html#ae828a9c742323b6896a602ccebf4917a", null ],
+    [ "CONFIG_INSTANCE_SET_DW11_ENC_PARAMS", "ni__nvme_8h.html#a89023a6bf0e5194104e56f028d2f722e", null ],
+    [ "CONFIG_INSTANCE_SET_DW11_EOS", "ni__nvme_8h.html#a44e168ca57fb5ab7d3c33af466906937", null ],
+    [ "CONFIG_INSTANCE_SET_DW11_FLUSH", "ni__nvme_8h.html#a32ea2b4562811393464ef92fe4b03107", null ],
+    [ "CONFIG_INSTANCE_SET_DW11_SOS", "ni__nvme_8h.html#a5945ebddecbbb1a9b95f2689266fcc34", null ],
+    [ "CONFIG_INSTANCE_SET_DW11_UPDATE_PARAMS", "ni__nvme_8h.html#ae8cb871ea110284cf7acc9f0b47116a9", null ],
+    [ "CONFIG_INSTANCE_SET_DW15_SIZE", "ni__nvme_8h.html#a0cc260488c08561361e59bc063b82ccf", null ],
+    [ "CREATE_SESSION_SET_DW10_SUBTYPE", "ni__nvme_8h.html#aaae10b57520e791f5b66081bd63dd947", null ],
+    [ "CREATE_SESSION_SET_DW11_INSTANCE", "ni__nvme_8h.html#a16a1dc71c12663862b0e3f7985766e27", null ],
+    [ "CREATE_SESSION_SET_DW12_DEC_CID", "ni__nvme_8h.html#a6ace376e1211b30196d0a09568a35918", null ],
+    [ "CREATE_SESSION_SET_DW12_ENC_CID_FRWIDTH", "ni__nvme_8h.html#a64336a16c4f59a4635c3a282387cd824", null ],
+    [ "CREATE_SESSION_SET_DW13_ENC_FRHIGHT", "ni__nvme_8h.html#a040c8dde0db768109a6cd82d2b4c28a0", null ],
+    [ "DESTROY_SESSION_SET_DW10_INSTANCE", "ni__nvme_8h.html#a162f4d53c6742f4b17b98b88a0a2a6bc", null ],
+    [ "NI_NVME_IDENTITY_CMD_DATA_SZ", "ni__nvme_8h.html#ac7220ab9a3e18ef5dd0ce9ac54b6b953", null ],
+    [ "QUERY_INSTANCE_SET_DW10_SUBTYPE", "ni__nvme_8h.html#a59812cba1fedc0f7fc2e24924829b411", null ],
+    [ "QUERY_INSTANCE_SET_DW11_INSTANCE_END_OF_OUTPUT", "ni__nvme_8h.html#a820b44fb5ad7a065e0f4ef1b460603c4", null ],
+    [ "QUERY_INSTANCE_SET_DW11_INSTANCE_STATUS", "ni__nvme_8h.html#a991aacf771a60dd752a4da6639d40fc9", null ],
+    [ "QUERY_INSTANCE_SET_DW11_INSTANCE_STREAM_INFO", "ni__nvme_8h.html#ae245e33581c805bbbfc87747bae2cd2b", null ],
+    [ "QUERY_INSTANCE_SET_DW15_SIZE", "ni__nvme_8h.html#a5c2b782dcafca4fcbf2aa3d497fd791b", null ],
+    [ "QUERY_SESSION_SET_DW10_SUBTYPE", "ni__nvme_8h.html#a55e02a1e26ab82123ee922008f6226d7", null ],
+    [ "QUERY_SESSION_SET_DW11_INSTANCE", "ni__nvme_8h.html#ad05167c17b2a232c39d356a7ad76bb81", null ],
+    [ "QUERY_SESSION_SET_DW15_SIZE", "ni__nvme_8h.html#ac586fbbbcd229923f6131c62167497fb", null ],
+    [ "READ_INSTANCE_SET_DW10_SUBTYPE", "ni__nvme_8h.html#aaad7db713c0bfd3beeb6531d931acafb", null ],
+    [ "READ_INSTANCE_SET_DW11_INSTANCE", "ni__nvme_8h.html#a8b9a04366a9b54df3a230dfda1a58fb2", null ],
+    [ "READ_INSTANCE_SET_DW15_SIZE", "ni__nvme_8h.html#aafc068ebb7932b792cec352c4320b800", null ],
+    [ "WRITE_INSTANCE_SET_DW10_SUBTYPE", "ni__nvme_8h.html#a2a2ab869f563877c725b8cdf6e07b3c5", null ],
+    [ "WRITE_INSTANCE_SET_DW11_INSTANCE", "ni__nvme_8h.html#ad6dbc9ebbe15b31c3f80edfe7f53e2a7", null ],
+    [ "WRITE_INSTANCE_SET_DW15_SIZE", "ni__nvme_8h.html#addd359c398327aba9689b58b2a995e64", null ],
+    [ "ni_nvme_admin_opcode_t", "ni__nvme_8h.html#a2d9979e19435c0b68de9964c19b7799d", null ],
+    [ "ni_nvme_command_t", "ni__nvme_8h.html#a7ddc246c6522c44c0df99f9f1c80fb11", null ],
+    [ "ni_nvme_id_power_state_t", "ni__nvme_8h.html#a1a1a76137cfb375acef1331f45fb31e3", null ],
+    [ "ni_nvme_identity_t", "ni__nvme_8h.html#aba62b801cd87a56704b5526b0abf17b4", null ],
+    [ "ni_nvme_opcode_t", "ni__nvme_8h.html#abb322d0cd1073fb01afed787da5a636c", null ],
+    [ "ni_nvme_read_complete_dw0_t", "ni__nvme_8h.html#a9eb97bb8db04a3b1d40e764ef5c08126", null ],
+    [ "ni_nvme_result_t", "ni__nvme_8h.html#aa4edf4f28bac9474ee3fd828aac08033", null ],
+    [ "ni_nvme_write_complete_dw0_t", "ni__nvme_8h.html#ae61cc385e22fa1176d914f9e261ed029", null ],
+    [ "nvme_close_xcoder_subtype_t", "ni__nvme_8h.html#a8daa4721abba880e5ceebaeed504c797", null ],
+    [ "nvme_config_xcoder_config_instance_subtype_t", "ni__nvme_8h.html#ac7e47a10728009d50fb968aa58c9dae7", null ],
+    [ "nvme_config_xcoder_subtype_t", "ni__nvme_8h.html#acfcafe044bd77428e012bd5a6889c6cc", null ],
+    [ "nvme_open_xcoder_subtype_t", "ni__nvme_8h.html#a050b89d456b26b4cc22c068cc765ea6d", null ],
+    [ "nvme_query_xcoder_instance_subtype_t", "ni__nvme_8h.html#aadc6a9f5a74a48e5696f84623b69535d", null ],
+    [ "nvme_query_xcoder_session_subtype_t", "ni__nvme_8h.html#aaf454816fcfa3b0a8a1eed27f5026edb", null ],
+    [ "nvme_query_xcoder_subtype_t", "ni__nvme_8h.html#a0eaae4a15ac13728f36673bb2411e3e9", null ],
+    [ "nvme_read_xcoder_subtype_t", "ni__nvme_8h.html#aaa94339703010cb100bc5b70ebcc7f70", null ],
+    [ "nvme_write_xcoder_subtype_t", "ni__nvme_8h.html#a1b76af7b3387d249eb1deeca7c038599", null ],
+    [ "_ni_nvme_admin_opcode", "ni__nvme_8h.html#a17a0cec03abc8d9d6926a9a34c978b6c", [
+      [ "nvme_admin_cmd_delete_sq", "ni__nvme_8h.html#a17a0cec03abc8d9d6926a9a34c978b6caa83dab9278cd05a12616d942297729d9", null ],
+      [ "nvme_admin_cmd_create_sq", "ni__nvme_8h.html#a17a0cec03abc8d9d6926a9a34c978b6cad2065cdfdefd9cf449bd27ecf2b5a36c", null ],
+      [ "nvme_admin_cmd_get_log_page", "ni__nvme_8h.html#a17a0cec03abc8d9d6926a9a34c978b6caca5ffa0c1eb414d39cf7d41ed70dae14", null ],
+      [ "nvme_admin_cmd_delete_cq", "ni__nvme_8h.html#a17a0cec03abc8d9d6926a9a34c978b6ca903d6b43e35a2b4313fdf61a2c801b0b", null ],
+      [ "nvme_admin_cmd_create_cq", "ni__nvme_8h.html#a17a0cec03abc8d9d6926a9a34c978b6ca19f5c46d53b11a78126ceed55df86952", null ],
+      [ "nvme_admin_cmd_identify", "ni__nvme_8h.html#a17a0cec03abc8d9d6926a9a34c978b6ca28f298110fd6fbaa69291bb698ea8ece", null ],
+      [ "nvme_admin_cmd_abort_cmd", "ni__nvme_8h.html#a17a0cec03abc8d9d6926a9a34c978b6ca53c881884feee9c86a4ae7e61d18d75a", null ],
+      [ "nvme_admin_cmd_set_features", "ni__nvme_8h.html#a17a0cec03abc8d9d6926a9a34c978b6ca350e686ad8e22d1e477b74671aa01190", null ],
+      [ "nvme_admin_cmd_get_features", "ni__nvme_8h.html#a17a0cec03abc8d9d6926a9a34c978b6cad9563fbfb87959f73b34e9189191e12f", null ],
+      [ "nvme_admin_cmd_async_event", "ni__nvme_8h.html#a17a0cec03abc8d9d6926a9a34c978b6ca3238db0f8816116a80fec6f80066fbb0", null ],
+      [ "nvme_admin_cmd_ns_mgmt", "ni__nvme_8h.html#a17a0cec03abc8d9d6926a9a34c978b6cadb09c98376403798841db1897d3161c9", null ],
+      [ "nvme_admin_cmd_activate_fw", "ni__nvme_8h.html#a17a0cec03abc8d9d6926a9a34c978b6ca91acdc0d8c98a389f085ea633bc76d9a", null ],
+      [ "nvme_admin_cmd_download_fw", "ni__nvme_8h.html#a17a0cec03abc8d9d6926a9a34c978b6cabaa1e57a088127a91b26839fcc0de353", null ],
+      [ "nvme_admin_cmd_ns_attach", "ni__nvme_8h.html#a17a0cec03abc8d9d6926a9a34c978b6ca3dd234c5d37de14d510e56592ceabb3b", null ],
+      [ "nvme_admin_cmd_keep_alive", "ni__nvme_8h.html#a17a0cec03abc8d9d6926a9a34c978b6ca4b829d8a3a2dff8bd2cb93972e49b2d9", null ],
+      [ "nvme_admin_cmd_format_nvm", "ni__nvme_8h.html#a17a0cec03abc8d9d6926a9a34c978b6caa2126a0813e487bb85fffd18a0343af3", null ],
+      [ "nvme_admin_cmd_security_send", "ni__nvme_8h.html#a17a0cec03abc8d9d6926a9a34c978b6cad5206a95e684760b5bf8731226bd20e3", null ],
+      [ "nvme_admin_cmd_security_recv", "ni__nvme_8h.html#a17a0cec03abc8d9d6926a9a34c978b6cae3b778b6a730855bd1eed92251ee00fb", null ],
+      [ "nvme_admin_cmd_xcoder_open", "ni__nvme_8h.html#a17a0cec03abc8d9d6926a9a34c978b6ca74126991add2fea356c9c428f7c59471", null ],
+      [ "nvme_admin_cmd_xcoder_close", "ni__nvme_8h.html#a17a0cec03abc8d9d6926a9a34c978b6ca9aafda524f000f52ae25a1eff8ba0308", null ],
+      [ "nvme_admin_cmd_xcoder_query", "ni__nvme_8h.html#a17a0cec03abc8d9d6926a9a34c978b6ca774afc262ef3c0678119230d3862b5c8", null ],
+      [ "nvme_admin_cmd_xcoder_connect", "ni__nvme_8h.html#a17a0cec03abc8d9d6926a9a34c978b6cadc4a7bc90d88d704645f03ea5da14317", null ],
+      [ "nvme_admin_cmd_xcoder_read", "ni__nvme_8h.html#a17a0cec03abc8d9d6926a9a34c978b6ca7e927c208ca65f4980c358bbf64cc8f2", null ],
+      [ "nvme_admin_cmd_xcoder_write", "ni__nvme_8h.html#a17a0cec03abc8d9d6926a9a34c978b6cac54ddf8e257d3f5941817be582e07aad", null ],
+      [ "nvme_admin_cmd_xcoder_config", "ni__nvme_8h.html#a17a0cec03abc8d9d6926a9a34c978b6ca3b315b1c29834af85fc69f8b85a5b711", null ]
+    ] ],
+    [ "_ni_nvme_opcode", "ni__nvme_8h.html#a38558e9c6ef1bec10cc03acbdeb93a05", [
+      [ "nvme_cmd_flush", "ni__nvme_8h.html#a38558e9c6ef1bec10cc03acbdeb93a05a647dbe630c1444a17c89942e87dd72a8", null ],
+      [ "nvme_cmd_write", "ni__nvme_8h.html#a38558e9c6ef1bec10cc03acbdeb93a05a5129a432a595e671a7e2b02b20916e6c", null ],
+      [ "nvme_cmd_read", "ni__nvme_8h.html#a38558e9c6ef1bec10cc03acbdeb93a05aa9dcd0454a2007fdc8b4acdfab2e72b8", null ],
+      [ "nvme_cmd_write_uncor", "ni__nvme_8h.html#a38558e9c6ef1bec10cc03acbdeb93a05a08d2c425688748d98556f1b0b808210b", null ],
+      [ "nvme_cmd_compare", "ni__nvme_8h.html#a38558e9c6ef1bec10cc03acbdeb93a05a9ace53ed2cdc07dc1be53f823ba11f3f", null ],
+      [ "nvme_cmd_write_zeroes", "ni__nvme_8h.html#a38558e9c6ef1bec10cc03acbdeb93a05a68f6a37f1c0dc31c7956251800c8fec1", null ],
+      [ "nvme_cmd_dsm", "ni__nvme_8h.html#a38558e9c6ef1bec10cc03acbdeb93a05af5d1da9050149adb7e24cff76559007c", null ],
+      [ "nvme_cmd_resv_register", "ni__nvme_8h.html#a38558e9c6ef1bec10cc03acbdeb93a05a2df874a47a0967722dba45f237f34b62", null ],
+      [ "nvme_cmd_resv_report", "ni__nvme_8h.html#a38558e9c6ef1bec10cc03acbdeb93a05ad9f20882974066bbf5ce9e57c9c1bc45", null ],
+      [ "nvme_cmd_resv_acquire", "ni__nvme_8h.html#a38558e9c6ef1bec10cc03acbdeb93a05a4cd61b5eed2e3c86ae84ac8364884bea", null ],
+      [ "nvme_cmd_resv_release", "ni__nvme_8h.html#a38558e9c6ef1bec10cc03acbdeb93a05a36ffa8150f6ee06ea434a6e6ce63f6c8", null ],
+      [ "nvme_cmd_xcoder_write", "ni__nvme_8h.html#a38558e9c6ef1bec10cc03acbdeb93a05a0d73d803ca4d06860a4301f8dcfacf1e", null ],
+      [ "nvme_cmd_xcoder_read", "ni__nvme_8h.html#a38558e9c6ef1bec10cc03acbdeb93a05ac2318a6ebd6ba2c3d85c8ae9e7fda5f2", null ]
+    ] ],
+    [ "_nvme_close_xcoder_subtype", "ni__nvme_8h.html#ae70466377f57fad6c2e67b09ddd265cc", [
+      [ "nvme_close_xcoder_destroy_session", "ni__nvme_8h.html#ae70466377f57fad6c2e67b09ddd265ccae055abf22514c7793d2a56fa1a305376", null ]
+    ] ],
+    [ "_nvme_config_xcoder_config_instance_subtype", "ni__nvme_8h.html#ad0937d1c212483fc3c89a2cf8187f60a", [
+      [ "nvme_config_xcoder_config_set_sos", "ni__nvme_8h.html#ad0937d1c212483fc3c89a2cf8187f60aa8bf9bcc44f63f1df22a61c33e3cfdd00", null ],
+      [ "nvme_config_xcoder_config_set_eos", "ni__nvme_8h.html#ad0937d1c212483fc3c89a2cf8187f60aac9d61fcad60f2c0cf72058088b29020d", null ],
+      [ "nvme_config_xcoder_config_set_enc_params", "ni__nvme_8h.html#ad0937d1c212483fc3c89a2cf8187f60aa49929e0ce9e39198a1317c18efb48b7d", null ],
+      [ "nvme_config_xcoder_config_flush", "ni__nvme_8h.html#ad0937d1c212483fc3c89a2cf8187f60aa940fc9c67623edf3c82511708fb2ee97", null ],
+      [ "nvme_config_xcoder_config_update_enc_params", "ni__nvme_8h.html#ad0937d1c212483fc3c89a2cf8187f60aab61efd90132c1dd7f0b75a2cf75b3e68", null ],
+      [ "nvme_config_xcoder_config_set_enc_frame_params", "ni__nvme_8h.html#ad0937d1c212483fc3c89a2cf8187f60aacb3d6ad5e6b13f783ba45e3c2d4a560a", null ]
+    ] ],
+    [ "_nvme_config_xcoder_subtype", "ni__nvme_8h.html#ab3a76de5ec80367749775c8b6414dfd8", [
+      [ "nvme_config_xcoder_config_session", "ni__nvme_8h.html#ab3a76de5ec80367749775c8b6414dfd8a1e69f539e834271bb14c093bc5f91fef", null ],
+      [ "nvme_config_xcoder_config_instance", "ni__nvme_8h.html#ab3a76de5ec80367749775c8b6414dfd8af2151af1c0c4833fbede9edea47323d7", null ]
+    ] ],
+    [ "_nvme_open_xcoder_subtype", "ni__nvme_8h.html#ab2e68366a4957719494f9c76cc1f040c", [
+      [ "nvme_open_xcoder_create_session", "ni__nvme_8h.html#ab2e68366a4957719494f9c76cc1f040ca55abfb5760653f21ecab6c0da2c4aac0", null ]
+    ] ],
+    [ "_nvme_query_xcoder_instance_subtype", "ni__nvme_8h.html#a6879a530d25cb56f08446ca222f343b1", [
+      [ "nvme_query_xcoder_instance_get_status", "ni__nvme_8h.html#a6879a530d25cb56f08446ca222f343b1a0a4637eb990decb7d3fcb1f53baf27d7", null ],
+      [ "nvme_query_xcoder_instance_get_stream_info", "ni__nvme_8h.html#a6879a530d25cb56f08446ca222f343b1a75db85ab652a195c391730022e4f818d", null ],
+      [ "nvme_query_xcoder_instance_get_end_of_output", "ni__nvme_8h.html#a6879a530d25cb56f08446ca222f343b1a8979f4b3eab897be7b0943a9f1877cfb", null ]
+    ] ],
+    [ "_nvme_query_xcoder_session_subtype", "ni__nvme_8h.html#a7bea84559125ff607292b0ea8c331ded", [
+      [ "nvme_query_xcoder_session", "ni__nvme_8h.html#a7bea84559125ff607292b0ea8c331deda7d2a922489d0003837768136004ed6db", null ]
+    ] ],
+    [ "_nvme_query_xcoder_subtype", "ni__nvme_8h.html#a126edfa51257db8fc567a7c9f70e4ec2", [
+      [ "nvme_query_xcoder_query_session", "ni__nvme_8h.html#a126edfa51257db8fc567a7c9f70e4ec2a3fa8fb71e2b05aea5e2527c287c382cd", null ],
+      [ "nvme_query_xcoder_query_instance", "ni__nvme_8h.html#a126edfa51257db8fc567a7c9f70e4ec2a7f8c90f94f78a29908782da057e73d49", null ]
+    ] ],
+    [ "_nvme_read_xcoder_subtype", "ni__nvme_8h.html#ae8deabce39265ad2c2a5fba08775a2a5", [
+      [ "nvme_read_xcoder_read_instance", "ni__nvme_8h.html#ae8deabce39265ad2c2a5fba08775a2a5a143421e7b35b36c5edd2122ad2ce78d5", null ]
+    ] ],
+    [ "_nvme_write_xcoder_subtype", "ni__nvme_8h.html#a3b171390b2698987c6989a414a69b37c", [
+      [ "nvme_write_xcoder_write_instance", "ni__nvme_8h.html#a3b171390b2698987c6989a414a69b37ca2a2ec886a3ccb9b9876e1fcadea8701b", null ]
+    ] ],
+    [ "ni_nvme_check_error_code", "ni__nvme_8h.html#a37d1e1fead4686c0bb2158ccc0ea7da7", null ],
+    [ "ni_nvme_enumerate_devices", "ni__nvme_8h.html#a05dd7dfd79a59cf84bcb208e87a3fa5f", null ],
+    [ "ni_nvme_send_admin_cmd", "ni__nvme_8h.html#a936892f0955205ac266a4f6d81908fef", null ],
+    [ "ni_nvme_send_io_cmd", "ni__nvme_8h.html#a8c2c59b2a845963c3f449382a994ec6f", null ],
+    [ "ni_nvme_send_io_cmd_thru_admin_queue", "ni__nvme_8h.html#a045656cc96478f7ca5c4cf56ad5b5734", null ]
+];

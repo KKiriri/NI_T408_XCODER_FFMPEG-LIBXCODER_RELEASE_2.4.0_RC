@@ -1,0 +1,142 @@
+\hypertarget{xcoder__util_8h}{}\section{O\+L\+D/xcoder\+\_\+util.h File Reference}
+\label{xcoder__util_8h}\index{OLD/xcoder\_util.h@{OLD/xcoder\_util.h}}
+
+
+A description of the module’s purpose.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$inttypes.\+h$>$}\newline
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct__ni__queue__node__t}{\+\_\+ni\+\_\+queue\+\_\+node\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{struct__ni__queue__t}{\+\_\+ni\+\_\+queue\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{struct__ni__queue__buffer__pool__t}{\+\_\+ni\+\_\+queue\+\_\+buffer\+\_\+pool\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{struct__ni__timestamp__table__t}{\+\_\+ni\+\_\+timestamp\+\_\+table\+\_\+t}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{xcoder__util_8h_a34bf2dade01f80ce7699c56990e4aad7}\label{xcoder__util_8h_a34bf2dade01f80ce7699c56990e4aad7}} 
+\#define {\bfseries ni\+\_\+debug\+\_\+print}(msg, ...)~N\+U\+LL
+\item 
+\mbox{\Hypertarget{xcoder__util_8h_a912a4fc854e77cdf249f9afa97f30379}\label{xcoder__util_8h_a912a4fc854e77cdf249f9afa97f30379}} 
+\#define {\bfseries X\+C\+O\+D\+E\+R\+\_\+\+M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+T\+S\+\_\+\+T\+A\+B\+LE}~32
+\item 
+\mbox{\Hypertarget{xcoder__util_8h_af39c7ca63c9048d40cc24c9e17bb59d0}\label{xcoder__util_8h_af39c7ca63c9048d40cc24c9e17bb59d0}} 
+\#define {\bfseries X\+C\+O\+D\+E\+R\+\_\+\+F\+R\+A\+M\+E\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+D\+I\+F\+F\+\_\+\+T\+H\+R\+ES}~100
+\item 
+\mbox{\Hypertarget{xcoder__util_8h_ac30ff6ab788674133bc00516ea369d92}\label{xcoder__util_8h_ac30ff6ab788674133bc00516ea369d92}} 
+\#define {\bfseries X\+C\+O\+D\+E\+R\+\_\+\+M\+A\+X\+\_\+\+E\+N\+C\+\_\+\+P\+A\+C\+K\+E\+T\+S\+\_\+\+P\+E\+R\+\_\+\+R\+E\+AD}~16
+\item 
+\mbox{\Hypertarget{xcoder__util_8h_a84007ae6fce7b6ac47a8caefd9d5c1ad}\label{xcoder__util_8h_a84007ae6fce7b6ac47a8caefd9d5c1ad}} 
+\#define {\bfseries X\+C\+O\+D\+E\+R\+\_\+\+M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+E\+N\+T\+R\+I\+ES}~6000
+\item 
+\mbox{\Hypertarget{xcoder__util_8h_a6b50e0f756c359df9765adc5d935a36e}\label{xcoder__util_8h_a6b50e0f756c359df9765adc5d935a36e}} 
+\#define {\bfseries X\+C\+O\+D\+E\+R\+\_\+\+M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+T\+E\+M\+P\+O\+R\+A\+L\+\_\+\+L\+A\+Y\+ER}~7
+\item 
+\mbox{\Hypertarget{xcoder__util_8h_a2fcedcf0cb0121f03286dc49539f9aa1}\label{xcoder__util_8h_a2fcedcf0cb0121f03286dc49539f9aa1}} 
+\#define {\bfseries X\+C\+O\+D\+E\+R\+\_\+\+M\+I\+N\+\_\+\+E\+N\+C\+\_\+\+P\+I\+C\+\_\+\+W\+I\+D\+TH}~256
+\item 
+\mbox{\Hypertarget{xcoder__util_8h_aa4846f7a04a2ee2a300e2e02e63dc4ae}\label{xcoder__util_8h_aa4846f7a04a2ee2a300e2e02e63dc4ae}} 
+\#define {\bfseries X\+C\+O\+D\+E\+R\+\_\+\+M\+I\+N\+\_\+\+E\+N\+C\+\_\+\+P\+I\+C\+\_\+\+H\+E\+I\+G\+HT}~128
+\item 
+\mbox{\Hypertarget{xcoder__util_8h_ac5cb89c48a7850e3c7dd03640b573c04}\label{xcoder__util_8h_ac5cb89c48a7850e3c7dd03640b573c04}} 
+\#define {\bfseries X\+C\+O\+D\+E\+R\+\_\+\+M\+A\+X\+\_\+\+E\+N\+C\+\_\+\+P\+I\+C\+\_\+\+W\+I\+D\+TH}~8192
+\item 
+\mbox{\Hypertarget{xcoder__util_8h_a0f81ad8d59debc4cc51a93798e9856fe}\label{xcoder__util_8h_a0f81ad8d59debc4cc51a93798e9856fe}} 
+\#define {\bfseries X\+C\+O\+D\+E\+R\+\_\+\+M\+A\+X\+\_\+\+E\+N\+C\+\_\+\+P\+I\+C\+\_\+\+H\+E\+I\+G\+HT}~8192
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{xcoder__util_8h_aecbc45db1f33b1a7eb1b32a6be3e7cce}\label{xcoder__util_8h_aecbc45db1f33b1a7eb1b32a6be3e7cce}} 
+typedef struct \mbox{\hyperlink{struct__ni__queue__node__t}{\+\_\+ni\+\_\+queue\+\_\+node\+\_\+t}} {\bfseries ni\+\_\+queue\+\_\+node\+\_\+t}
+\item 
+\mbox{\Hypertarget{xcoder__util_8h_a0e1cb2c303be6205ec60736b6a519d84}\label{xcoder__util_8h_a0e1cb2c303be6205ec60736b6a519d84}} 
+typedef struct \mbox{\hyperlink{struct__ni__queue__t}{\+\_\+ni\+\_\+queue\+\_\+t}} {\bfseries ni\+\_\+queue\+\_\+t}
+\item 
+\mbox{\Hypertarget{xcoder__util_8h_a2073cf1ad2ff0a62fb2ff0fbd69a68f0}\label{xcoder__util_8h_a2073cf1ad2ff0a62fb2ff0fbd69a68f0}} 
+typedef struct \mbox{\hyperlink{struct__ni__queue__buffer__pool__t}{\+\_\+ni\+\_\+queue\+\_\+buffer\+\_\+pool\+\_\+t}} {\bfseries ni\+\_\+queue\+\_\+buffer\+\_\+pool\+\_\+t}
+\item 
+\mbox{\Hypertarget{xcoder__util_8h_af31d78a432e1f1dced2f1dcc9711170e}\label{xcoder__util_8h_af31d78a432e1f1dced2f1dcc9711170e}} 
+typedef struct \mbox{\hyperlink{struct__ni__timestamp__table__t}{\+\_\+ni\+\_\+timestamp\+\_\+table\+\_\+t}} {\bfseries ni\+\_\+timestamp\+\_\+table\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{xcoder__util_8h_a2a40772fe954b09720674fa18318aeb1}\label{xcoder__util_8h_a2a40772fe954b09720674fa18318aeb1}} 
+void {\bfseries ni\+\_\+init\+\_\+buffer\+\_\+pool} (void)
+\item 
+\mbox{\Hypertarget{xcoder__util_8h_a95910a68406b9bbbe08e0dbb7e8dba8a}\label{xcoder__util_8h_a95910a68406b9bbbe08e0dbb7e8dba8a}} 
+void {\bfseries ni\+\_\+free\+\_\+buffer\+\_\+pool} (int pool\+\_\+id)
+\item 
+\mbox{\Hypertarget{xcoder__util_8h_a8600c1ef24a30f4eb38b061948f5af7b}\label{xcoder__util_8h_a8600c1ef24a30f4eb38b061948f5af7b}} 
+ni\+\_\+retcode\+\_\+t {\bfseries ni\+\_\+timestamp\+\_\+init} (\mbox{\hyperlink{struct__ni__timestamp__table__t}{ni\+\_\+timestamp\+\_\+table\+\_\+t}} $\ast$$\ast$pp\+\_\+table, const char $\ast$name, int32\+\_\+t buffer\+\_\+pool\+\_\+id)
+\item 
+\mbox{\Hypertarget{xcoder__util_8h_a688b761f9525e494a4de7da4e119cb55}\label{xcoder__util_8h_a688b761f9525e494a4de7da4e119cb55}} 
+ni\+\_\+retcode\+\_\+t {\bfseries ni\+\_\+timestamp\+\_\+done} (\mbox{\hyperlink{struct__ni__timestamp__table__t}{ni\+\_\+timestamp\+\_\+table\+\_\+t}} $\ast$p\+\_\+table)
+\item 
+\mbox{\Hypertarget{xcoder__util_8h_a63c700de32984e5bf0ad4b545ca6fa78}\label{xcoder__util_8h_a63c700de32984e5bf0ad4b545ca6fa78}} 
+ni\+\_\+retcode\+\_\+t {\bfseries ni\+\_\+timestamp\+\_\+register} (\mbox{\hyperlink{struct__ni__timestamp__table__t}{ni\+\_\+timestamp\+\_\+table\+\_\+t}} $\ast$p\+\_\+table, int64\+\_\+t timestamp, uint64\+\_\+t data\+\_\+info)
+\item 
+\mbox{\Hypertarget{xcoder__util_8h_a406be8f927ffa576f539f91525410190}\label{xcoder__util_8h_a406be8f927ffa576f539f91525410190}} 
+ni\+\_\+retcode\+\_\+t {\bfseries ni\+\_\+timestamp\+\_\+get} (\mbox{\hyperlink{struct__ni__timestamp__table__t}{ni\+\_\+timestamp\+\_\+table\+\_\+t}} $\ast$p\+\_\+table, uint64\+\_\+t frame\+\_\+info, int64\+\_\+t $\ast$p\+\_\+timestamp, int32\+\_\+t threshold, int32\+\_\+t print)
+\item 
+\mbox{\Hypertarget{xcoder__util_8h_a9c1c11418348b4e980775ef8e3abd551}\label{xcoder__util_8h_a9c1c11418348b4e980775ef8e3abd551}} 
+ni\+\_\+retcode\+\_\+t {\bfseries ni\+\_\+timestamp\+\_\+get\+\_\+v2} (\mbox{\hyperlink{struct__ni__timestamp__table__t}{ni\+\_\+timestamp\+\_\+table\+\_\+t}} $\ast$p\+\_\+table, uint64\+\_\+t frame\+\_\+offset, int64\+\_\+t $\ast$p\+\_\+timestamp, int32\+\_\+t threshold)
+\item 
+\mbox{\Hypertarget{xcoder__util_8h_ae14915ad338f39fd68476c56119a4504}\label{xcoder__util_8h_ae14915ad338f39fd68476c56119a4504}} 
+ni\+\_\+retcode\+\_\+t {\bfseries ni\+\_\+timestamp\+\_\+get\+\_\+with\+\_\+threshold} (\mbox{\hyperlink{struct__ni__timestamp__table__t}{ni\+\_\+timestamp\+\_\+table\+\_\+t}} $\ast$p\+\_\+table, uint64\+\_\+t frame\+\_\+info, int64\+\_\+t $\ast$p\+\_\+timestamp, int32\+\_\+t threshold, int32\+\_\+t print)
+\item 
+\mbox{\Hypertarget{xcoder__util_8h_a39a1fcca26f15b1997d63d3c807af565}\label{xcoder__util_8h_a39a1fcca26f15b1997d63d3c807af565}} 
+void {\bfseries ni\+\_\+timestamp\+\_\+scan\+\_\+cleanup} (\mbox{\hyperlink{struct__ni__timestamp__table__t}{ni\+\_\+timestamp\+\_\+table\+\_\+t}} $\ast$pts\+\_\+list, \mbox{\hyperlink{struct__ni__timestamp__table__t}{ni\+\_\+timestamp\+\_\+table\+\_\+t}} $\ast$dts\+\_\+list)
+\item 
+\mbox{\Hypertarget{xcoder__util_8h_a46262ea0247933b2a09f0771df460aa4}\label{xcoder__util_8h_a46262ea0247933b2a09f0771df460aa4}} 
+ni\+\_\+retcode\+\_\+t {\bfseries ni\+\_\+queue\+\_\+init} (\mbox{\hyperlink{struct__ni__queue__t}{ni\+\_\+queue\+\_\+t}} $\ast$p\+\_\+queue, const char $\ast$name, int32\+\_\+t buffer\+\_\+pool\+\_\+id)
+\item 
+\mbox{\Hypertarget{xcoder__util_8h_afe25064f9a5e03d240d4052dda225f53}\label{xcoder__util_8h_afe25064f9a5e03d240d4052dda225f53}} 
+ni\+\_\+retcode\+\_\+t {\bfseries ni\+\_\+queue\+\_\+push} (\mbox{\hyperlink{struct__ni__queue__t}{ni\+\_\+queue\+\_\+t}} $\ast$p\+\_\+queue, uint64\+\_\+t frame\+\_\+offset, int64\+\_\+t timestamp)
+\item 
+\mbox{\Hypertarget{xcoder__util_8h_a764ef78fd186d48055d1b65306b5eb5a}\label{xcoder__util_8h_a764ef78fd186d48055d1b65306b5eb5a}} 
+ni\+\_\+retcode\+\_\+t {\bfseries ni\+\_\+queue\+\_\+pop} (\mbox{\hyperlink{struct__ni__queue__t}{ni\+\_\+queue\+\_\+t}} $\ast$p\+\_\+queue, uint64\+\_\+t frame\+\_\+offset, int64\+\_\+t $\ast$p\+\_\+timestamp, int32\+\_\+t threshold, int32\+\_\+t print)
+\item 
+\mbox{\Hypertarget{xcoder__util_8h_abb03374a2bf315061af82948cf547f65}\label{xcoder__util_8h_abb03374a2bf315061af82948cf547f65}} 
+ni\+\_\+retcode\+\_\+t {\bfseries ni\+\_\+queue\+\_\+pop\+\_\+threshold} (\mbox{\hyperlink{struct__ni__queue__t}{ni\+\_\+queue\+\_\+t}} $\ast$p\+\_\+queue, uint64\+\_\+t frame\+\_\+offset, int64\+\_\+t $\ast$p\+\_\+timestamp, int32\+\_\+t threshold, int32\+\_\+t print)
+\item 
+\mbox{\Hypertarget{xcoder__util_8h_aa9223cab35bb7618715e6a08daf28dd7}\label{xcoder__util_8h_aa9223cab35bb7618715e6a08daf28dd7}} 
+ni\+\_\+retcode\+\_\+t {\bfseries ni\+\_\+queue\+\_\+free} (\mbox{\hyperlink{struct__ni__queue__t}{ni\+\_\+queue\+\_\+t}} $\ast$p\+\_\+queue)
+\item 
+\mbox{\Hypertarget{xcoder__util_8h_a32d1e5f97597336e8d5823d0bab7b0dc}\label{xcoder__util_8h_a32d1e5f97597336e8d5823d0bab7b0dc}} 
+ni\+\_\+retcode\+\_\+t {\bfseries ni\+\_\+queue\+\_\+print} (\mbox{\hyperlink{struct__ni__queue__t}{ni\+\_\+queue\+\_\+t}} $\ast$p\+\_\+queue)
+\item 
+\mbox{\Hypertarget{xcoder__util_8h_ad927bcdaa8ddfbc5b66ba80bba50eccf}\label{xcoder__util_8h_ad927bcdaa8ddfbc5b66ba80bba50eccf}} 
+int32\+\_\+t {\bfseries ni\+\_\+atobool} (const char $\ast$p\+\_\+str, bool b\+\_\+error)
+\item 
+\mbox{\Hypertarget{xcoder__util_8h_a6d6bc113e6b66abe1389da119516d23a}\label{xcoder__util_8h_a6d6bc113e6b66abe1389da119516d23a}} 
+int32\+\_\+t {\bfseries ni\+\_\+atoi} (const char $\ast$p\+\_\+str, bool b\+\_\+error)
+\item 
+\mbox{\Hypertarget{xcoder__util_8h_ae928210de0e72d88f92f02ee969760a2}\label{xcoder__util_8h_ae928210de0e72d88f92f02ee969760a2}} 
+double {\bfseries ni\+\_\+atof} (const char $\ast$p\+\_\+str, bool b\+\_\+error)
+\item 
+\mbox{\Hypertarget{xcoder__util_8h_adb9c39ed5d8548ad584f4350002d14e8}\label{xcoder__util_8h_adb9c39ed5d8548ad584f4350002d14e8}} 
+int32\+\_\+t {\bfseries ni\+\_\+parse\+\_\+name} (const char $\ast$arg, const char $\ast$const $\ast$names, bool b\+\_\+error)
+\item 
+\mbox{\Hypertarget{xcoder__util_8h_a3460195c0dca1dde1976df09f6d98fb2}\label{xcoder__util_8h_a3460195c0dca1dde1976df09f6d98fb2}} 
+uint64\+\_\+t {\bfseries ni\+\_\+get\+\_\+utime} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A description of the module’s purpose. 
+
+\begin{DoxyParagraph}{}
+C\+O\+P\+Y\+R\+I\+G\+HT N\+O\+T\+I\+CE\+: (c) 2019 N\+E\+T\+I\+NT Technolgies Inc. All rights reserved. 
+\end{DoxyParagraph}
